@@ -9,10 +9,10 @@ NOMBRE=`echo "$1" | cut -d'.' -f1`
 CPP=algoritmos_cpp/$1
 C_EJECUTABLES=`echo ${3}/${NOMBRE}_ejecutables`
 
-EJE_O0=`echo ${NOMBRE}_linux_O0`
-EJE_O1=`echo ${NOMBRE}_linux_O1`
-EJE_O2=`echo ${NOMBRE}_linux_O2`
-EJE_O3=`echo ${NOMBRE}_linux_O3`
+EJE_O0=`echo ${NOMBRE}-linux-O0`
+EJE_O1=`echo ${NOMBRE}-linux-O1`
+EJE_O2=`echo ${NOMBRE}-linux-O2`
+EJE_O3=`echo ${NOMBRE}-linux-O3`
 
 mkdir -p $C_EJECUTABLES
 g++ -O0 $CPP -o $C_EJECUTABLES/$EJE_O0
