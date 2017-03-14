@@ -88,8 +88,6 @@ int main(int argc, char* argv[])
   int n = atoi(argv[1]);
   int * T = new int[n];
 
-  bool debug = false;
-
   assert(T);
 
   srandom(time(0));
