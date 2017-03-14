@@ -31,11 +31,25 @@
 
 \setbeamertemplate{itemize items}[circle]
 
+%%% PGFPLOTSTABLE
+
+\usepackage{pgfplotstable}
+
+
+\pgfplotstableset{
+columns/0/.style={
+     column name={Elementos},
+   },
+columns/1/.style={
+     column name={Tiempo en segundos},
+   },
+}
+
 %%% INFORMACIÓN DEL DOCUMENTO
 
 \title{Algorítmica: práctica 1}
 \subtitle{Análisis de la eficiencia de algoritmos}
-\author{Sofía Almeida Bruno \and Antonio Coín Castro \and María Victoria Granados Pozo \and Miguel Lentisco Ballesteros \and José María Martín Luque}
+\author{Sofía Almeida Bruno\\ Antonio Coín Castro\\ María Victoria Granados Pozo\\ Miguel Lentisco Ballesteros\\ José María Martín Luque}
 \begin{document}
 
 %%% CONFIGURACIÓN DE COLORES DE BEAMER
@@ -50,6 +64,8 @@
 \setbeamercolor*{title}{fg=accent}
 \setbeamercolor{qed symbol}{fg=accent}
 \usebeamercolor[fg]{normal text}
+
+
 
 \maketitle
 
@@ -93,17 +109,59 @@
 
 \begin{frame}
 	\begin{center}
-		\include{graficos/burbuja-linux-O1}
+		\input{graficos/burbuja-linux-O0}
 	\end{center}
-	
 \end{frame}
 
 \begin{frame}
 	\begin{center}
-		\include{graficos/burbuja-linux-O0}
+		\input{graficos/floyd-linux-O0}
 	\end{center}
-	
 \end{frame}
 
+\begin{frame}
+	\begin{center}
+		\input{graficos/hanoi-linux-O0}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\input{graficos/heapsort-linux-O0}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\input{graficos/insercion-linux-O0}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\input{graficos/mergesort-linux-O0}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\input{graficos/quicksort-linux-O0}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\input{graficos/seleccion-linux-O0}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\resizebox*{!}{9cm}{
+		\pgfplotstabletypeset[font=\footnotesize, ]{datos/burbuja_datos/burbuja-linux-O0.dat}
+	}
+	burbuja-linux-O0
+	\end{center}
+\end{frame}
 
 \end{document}

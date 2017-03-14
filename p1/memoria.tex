@@ -14,6 +14,25 @@
 \usepackage{ wasysym }
 \usepackage{color}
 \usepackage{graphics}
+\usepackage{caption}
+
+\definecolor{text}{RGB}{78,78,78}
+\definecolor{accent}{RGB}{129, 26, 24}
+
+
+%%% PGFPLOTSTABLE
+
+\usepackage{pgfplotstable}
+
+
+\pgfplotstableset{
+columns/0/.style={
+     column name={Elementos},
+   },
+columns/1/.style={
+     column name={Tiempo en segundos},
+   },
+}
 
 \title{Algorítmica: práctica 1 \\ \large Análisis de la eficiencia de algoritmos}
 \author{Sofía Almeida Bruno \and Antonio Coín Castro \and María Victoria Granados Pozo \and Miguel Lentisco Ballesteros \and José María Martín Luque}
@@ -28,9 +47,68 @@
 
 \section*{Cálculo de la eficiencia empírica}
 
+
+	\begin{center}
+		\input{graficos/burbuja-linux-O0}
+	\end{center}
+
+
+
+	\begin{center}
+		\input{graficos/floyd-linux-O0}
+	\end{center}
+
+
+
+	\begin{center}
+		\input{graficos/hanoi-linux-O0}
+	\end{center}
+
+
+
+	\begin{center}
+		\input{graficos/heapsort-linux-O0}
+	\end{center}
+
+
+
+	\begin{center}
+		\input{graficos/insercion-linux-O0}
+	\end{center}
+
+
+
+	\begin{center}
+		\input{graficos/mergesort-linux-O0}
+	\end{center}
+
+
+
+	\begin{center}
+		\input{graficos/quicksort-linux-O0}
+	\end{center}
+
+
+	\begin{center}
+		\input{graficos/seleccion-linux-O0}
+	\end{center}
+	
+	\newpage
+
+Algunas tablas:
+
 \begin{center}
-	\include{graficos/burbuja-linux-O1}
+	\begin{figure*}[h]
+		\centering
+		\caption*{burbuja-linux-O0}
+		\pgfplotstabletypeset[font=\footnotesize]{datos/burbuja_datos/burbuja-linux-O0.dat}
+		
+	\end{figure*}
+	
+
 \end{center}
+
+
 	
 
 \section*{Cálculo de la eficiencia híbrida}
