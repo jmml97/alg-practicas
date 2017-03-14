@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  14 MAR 2017 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  14 MAR 2017 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1004,258 +1004,258 @@ LaTeX Font Info:    Font shape `OT1/FiraSans-OsF/b/n' will be
 \gptboxwidth=\skip47
 \gptboxtext=\box28
 LaTeX Font Info:    Font shape `OT1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 137.
+(Font)              scaled to size 6.80005pt on input line 135.
 LaTeX Font Info:    Font shape `OT1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 5.18503pt on input line 137.
+(Font)              scaled to size 5.18503pt on input line 135.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./graficos/burbuja-linux-O1.tex:137: LaTeX Error: Undefined color `text'.
+./graficos/burbuja-linux-O1.tex:135: LaTeX Error: Undefined color `text'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137     \gplbacktext
+l.135     \gplbacktext
                       
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1270,12 +1270,12 @@ LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/graficos/burbuja-linux-O1.aux)) ) 
 Here is how much of TeX's memory you used:
- 4931 strings out of 493015
- 65776 string characters out of 6133378
+ 4933 strings out of 493015
+ 65790 string characters out of 6133378
  108828 words of memory out of 5000000
- 8365 multiletter control sequences out of 15000+600000
+ 8367 multiletter control sequences out of 15000+600000
  41075 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,7n,34p,255b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.dvi (4 pages, 5320 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.dvi (4 pages, 5232 bytes).
