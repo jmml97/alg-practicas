@@ -157,13 +157,31 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
+%%% TABLAS ALGORITMOS O(n2) CON OPTIMIZACIÓN O0
+
+\pgfplotstableread{datos/burbuja_datos/burbuja-linux-O0.dat}\burbujalinuxOCero
+	\pgfplotstableread{datos/seleccion_datos/seleccion-linux-O0.dat}\seleccionlinuxOCero
+	\pgfplotstableread{datos/insercion_datos/insercion-linux-O0.dat}\insercionlinuxOCero
+	
+	\pgfplotstablecreatecol[copy column from table={\burbujalinuxOCero}{[index] 1}] {Burbuja} {\burbujalinuxOCero}
+	\pgfplotstablecreatecol[copy column from table={\seleccionlinuxOCero}{[index] 1}] {Selección} {\burbujalinuxOCero}
+	\pgfplotstablecreatecol[copy column from table={\insercionlinuxOCero}{[index] 1}] {Inserción} {\burbujalinuxOCero}
+
 \begin{frame}
-	\begin{center}
-		\resizebox*{!}{9cm}{
-		\pgfplotstabletypeset[font=\footnotesize, ]{datos/burbuja_datos/burbuja-linux-O0.dat}
-	}
-	burbuja-linux-O0
-	\end{center}
+	\begin{columns}[c] % align columns
+		\begin{column}{.6\textwidth}
+			\resizebox*{!}{9cm}{
+				\pgfplotstabletypeset[columns={0, Burbuja, Selección, Inserción}]{\burbujalinuxOCero}
+			}
+		\end{column}%
+		
+		\hfill%
+		
+		\begin{column}{.3\textwidth}
+			Algoritmos que son $O(n^2)$
+		\end{column}%
+		
+	\end{columns}
 \end{frame}
 
 \end{document}
