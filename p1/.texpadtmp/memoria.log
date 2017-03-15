@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  15 MAR 2017 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  15 MAR 2017 13:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1721,17 +1721,24 @@ File: ./graficos/seleccion-linux-O0.eps Graphic file (type eps)
 PGFPlots: reading {datos/burbuja_datos/burbuja-linux-O0.dat}
 PGFPlots: reading {datos/seleccion_datos/seleccion-linux-O0.dat}
 PGFPlots: reading {datos/insercion_datos/insercion-linux-O0.dat}
- [8] (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.aux
+PGFPlots: reading {datos/mergesort_datos/mergesort-linux-O0.dat}
+PGFPlots: reading {datos/quicksort_datos/quicksort-linux-O0.dat}
+PGFPlots: reading {datos/heapsort_datos/heapsort-linux-O0.dat}
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9] (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 26020 strings out of 493015
- 634115 string characters out of 6133378
- 890749 words of memory out of 5000000
- 29056 multiletter control sequences out of 15000+600000
+ 26051 strings out of 493015
+ 634932 string characters out of 6133378
+ 901749 words of memory out of 5000000
+ 29081 multiletter control sequences out of 15000+600000
  92854 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,10n,92p,704b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.dvi (8 pages, 47956 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.dvi (9 pages, 54052 bytes).

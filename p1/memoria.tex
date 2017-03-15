@@ -113,9 +113,24 @@ Algunas tablas:
 
 \begin{figure*}[h]
 	\centering
-	\caption*{Algoritmos que son $O(n^2)$}
+	\caption*{Algoritmos que son $O(n^2)$ (tiempos en segundos)}
 	\pgfplotstabletypeset[columns={0, Burbuja, Selección, Inserción}]{\burbujalinuxOCero}
 \end{figure*}
+
+\pgfplotstableread{datos/mergesort_datos/mergesort-linux-O0.dat}\mergesortlinuxOCero
+\pgfplotstableread{datos/quicksort_datos/quicksort-linux-O0.dat}\quicksortlinuxOCero
+\pgfplotstableread{datos/heapsort_datos/heapsort-linux-O0.dat}\heapsortlinuxOCero
+
+\pgfplotstablecreatecol[copy column from table={\mergesortlinuxOCero}{[index] 1}] {Mergesort} {\mergesortlinuxOCero}
+\pgfplotstablecreatecol[copy column from table={\quicksortlinuxOCero}{[index] 1}] {Quicksort} {\mergesortlinuxOCero}
+\pgfplotstablecreatecol[copy column from table={\heapsortlinuxOCero}{[index] 1}] {Heapsort} {\mergesortlinuxOCero}
+
+\begin{figure*}[h]
+	\centering
+	\caption*{Algoritmos que son $O(nlog(n))$ (tiempos en segundos)}
+	\pgfplotstabletypeset[columns={0, Mergesort, Quicksort, Heapsort}]{\mergesortlinuxOCero}
+\end{figure*}
+
 
 
 \section*{Cálculo de la eficiencia híbrida}
