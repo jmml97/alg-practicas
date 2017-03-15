@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  15 MAR 2017 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  15 MAR 2017 18:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1417,16 +1417,44 @@ File: ./graficos/ordenacion.eps Graphic file (type eps)
 File: ./graficos/ajuste-burbuja.eps Graphic file (type eps)
  <./graficos/ajuste-burbuja.eps>) [17
 
+] (./graficos/ajuste-insercion.tex
+File: ./graficos/ajuste-insercion.eps Graphic file (type eps)
+ <./graficos/ajuste-insercion.eps>) [18
+
+] (./graficos/ajuste-seleccion.tex
+File: ./graficos/ajuste-seleccion.eps Graphic file (type eps)
+ <./graficos/ajuste-seleccion.eps>) [19
+
+] (./graficos/ajuste-mergesort.tex
+File: ./graficos/ajuste-mergesort.eps Graphic file (type eps)
+ <./graficos/ajuste-mergesort.eps>) [20
+
+] (./graficos/ajuste-heapsort.tex
+File: ./graficos/ajuste-heapsort.eps Graphic file (type eps)
+ <./graficos/ajuste-heapsort.eps>) [21
+
+] (./graficos/ajuste-quicksort.tex
+File: ./graficos/ajuste-quicksort.eps Graphic file (type eps)
+ <./graficos/ajuste-quicksort.eps>) [22
+
+] (./graficos/ajuste-floyd.tex
+File: ./graficos/ajuste-floyd.eps Graphic file (type eps)
+ <./graficos/ajuste-floyd.eps>) [23
+
+] (./graficos/ajuste-hanoi.tex
+File: ./graficos/ajuste-hanoi.eps Graphic file (type eps)
+ <./graficos/ajuste-hanoi.eps>) [24
+
 ]
 PGFPlots: reading {datos/burbuja_datos/burbuja-linux-O0.dat}
 PGFPlots: reading {datos/seleccion_datos/seleccion-linux-O0.dat}
 PGFPlots: reading {datos/insercion_datos/insercion-linux-O0.dat}
 
-Overfull \hbox (11.60503pt too wide) in paragraph at lines 209--209
+Overfull \hbox (11.60503pt too wide) in paragraph at lines 252--252
 [][]  
  []
 
-[18
+[25
 
 ]
 \tf@nav=\write6
@@ -1438,29 +1466,29 @@ Overfull \hbox (11.60503pt too wide) in paragraph at lines 209--209
 \tf@snm=\write8
 \openout8 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
  (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 254.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
  ) 
 Here is how much of TeX's memory you used:
- 31459 strings out of 493015
- 750120 string characters out of 6133378
+ 31501 strings out of 493015
+ 750973 string characters out of 6133378
  953310 words of memory out of 5000000
- 34285 multiletter control sequences out of 15000+600000
+ 34306 multiletter control sequences out of 15000+600000
  96777 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,13n,83p,709b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (18 pages, 101648 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (25 pages, 141360 bytes).
