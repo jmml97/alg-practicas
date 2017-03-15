@@ -8,8 +8,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 
-
-
 %%% FUENTES
 
 \usepackage[T1]{fontenc}
@@ -24,12 +22,28 @@
 \definecolor{text}{RGB}{78,78,78}
 \definecolor{accent}{RGB}{129, 26, 24}
 
+
+%%% AJUSTES DE BEAMER
+
 % ¿Negrita en el título de diapositiva o no?
 %\setbeamertemplate{frametitle}{\color{accent}\vspace*{1cm}\bfseries\insertframetitle\par\vskip-6pt}
 
 \setbeamertemplate{frametitle}{\color{accent}\vspace*{1cm}\insertframetitle\par\vskip-6pt}
 
-\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{itemize items}[circle] % Viñetas de itemize
+
+%%% CONFIGURACIÓN DE COLORES DE BEAMER
+
+\setbeamercolor{background canvas}{bg=background}
+\setbeamercolor{normal text}{fg=text}
+\setbeamercolor{alerted text}{fg=accent}
+\setbeamercolor{block title}{fg=accent}
+\setbeamercolor{alerted text}{fg=accent}
+\setbeamercolor{itemize item}{fg=accent}
+\setbeamercolor{enumerate item}{fg=accent}
+\setbeamercolor*{title}{fg=accent}
+\setbeamercolor{qed symbol}{fg=accent}
+\usebeamercolor[fg]{normal text}
 
 %%% PGFPLOTSTABLE
 
@@ -52,18 +66,6 @@ columns/1/.style={
 \author{Sofía Almeida Bruno\\ Antonio Coín Castro\\ María Victoria Granados Pozo\\ Miguel Lentisco Ballesteros\\ José María Martín Luque}
 \begin{document}
 
-%%% CONFIGURACIÓN DE COLORES DE BEAMER
-
-\setbeamercolor{background canvas}{bg=background}
-\setbeamercolor{normal text}{fg=text}
-\setbeamercolor{alerted text}{fg=accent}
-\setbeamercolor{block title}{fg=accent}
-\setbeamercolor{alerted text}{fg=accent}
-\setbeamercolor{itemize item}{fg=accent}
-\setbeamercolor{enumerate item}{fg=accent}
-\setbeamercolor*{title}{fg=accent}
-\setbeamercolor{qed symbol}{fg=accent}
-\usebeamercolor[fg]{normal text}
 
 
 

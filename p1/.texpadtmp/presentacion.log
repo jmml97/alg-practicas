@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  14 MAR 2017 23:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  15 MAR 2017 12:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1118,19 +1118,19 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 ))
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 52.
+(hyperref)                removing `\\' on input line 66.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 52.
+(hyperref)                removing `\\' on input line 66.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 52.
+(hyperref)                removing `\\' on input line 66.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 52.
+(hyperref)                removing `\\' on input line 66.
 
 (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -1138,40 +1138,40 @@ LaTeX Info: Redefining \% on input line 25.
 )
 \openout1 = `presentacion.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxsfmi/m/it on input line 53.
-LaTeX Font Info:    Try loading font information for OML+ntxsfmi on input line 53.
+LaTeX Font Info:    Checking defaults for OML/ntxsfmi/m/it on input line 67.
+LaTeX Font Info:    Try loading font information for OML+ntxsfmi on input line 67.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtxsf/omlntxsfmi.fd
 File: omlntxsfmi.fd 2014/11/16 Fontinst v1.933 font definitions for OML/ntxsfmi.
 )
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 53.
-LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 53.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 67.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/omsntxsy.fd
 File: omsntxsy.fd 2012/11/14 Fontinst v1.933 font definitions for OMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 53.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 53.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 67.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Try loading font information for T1+Chivo-TLF on input line 53.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Try loading font information for T1+Chivo-TLF on input line 67.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/chivo/T1Chivo-TLF.fd
 File: T1Chivo-TLF.fd 2016/05/05 (autoinst) Font definitions for T1/Chivo-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 53.
+(Font)              scaled to size 10.95pt on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -1209,7 +1209,7 @@ LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 53.
+Package hyperref Info: Link coloring OFF on input line 67.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1217,59 +1217,59 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count175
 )
-LaTeX Info: Redefining \ref on input line 53.
-LaTeX Info: Redefining \pageref on input line 53.
-LaTeX Info: Redefining \nameref on input line 53.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
  (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.out) (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.out)
 \@outlinefile=\write5
 \openout5 = `presentacion.out'.
 
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 53.
+(Font)              `operators' in the math version `normal' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  T1/Chivo-TLF/m/n --> OT1/cmss/m/n on input line 53.
+(Font)                  T1/Chivo-TLF/m/n --> OT1/cmss/m/n on input line 67.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 53.
+(Font)              `operators' in the math version `bold' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/Chivo-TLF/b/n --> OT1/cmss/bx/n on input line 53.
+(Font)                  T1/Chivo-TLF/b/n --> OT1/cmss/bx/n on input line 67.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 53.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 53.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  T1/Chivo-TLF/b/n --> T1/Chivo-TLF/bx/n on input line 53.
+(Font)                  T1/Chivo-TLF/b/n --> T1/Chivo-TLF/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/Chivo-TLF/b/n --> T1/Chivo-TLF/bx/n on input line 53.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 53.
+(Font)                  T1/Chivo-TLF/b/n --> T1/Chivo-TLF/bx/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  T1/Chivo-TLF/m/n --> T1/Chivo-TLF/m/n on input line 53.
+(Font)                  T1/Chivo-TLF/m/n --> T1/Chivo-TLF/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/Chivo-TLF/b/n --> T1/Chivo-TLF/m/n on input line 53.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 53.
+(Font)                  T1/Chivo-TLF/b/n --> T1/Chivo-TLF/m/n on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  T1/Chivo-TLF/m/it --> T1/Chivo-TLF/m/it on input line 53.
+(Font)                  T1/Chivo-TLF/m/it --> T1/Chivo-TLF/m/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/Chivo-TLF/b/it --> T1/Chivo-TLF/m/it on input line 53.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 53.
+(Font)                  T1/Chivo-TLF/b/it --> T1/Chivo-TLF/m/it on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/m/n on input line 53.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/b/n --> T1/cmtt/m/n on input line 53.
+(Font)                  T1/cmtt/b/n --> T1/cmtt/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/Chivo-TLF/m/n --> T1/Chivo-TLF/bx/n on input line 53.
+(Font)                  T1/Chivo-TLF/m/n --> T1/Chivo-TLF/bx/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/Chivo-TLF/m/it --> T1/Chivo-TLF/bx/it on input line 53.
+(Font)                  T1/Chivo-TLF/m/it --> T1/Chivo-TLF/bx/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 53.
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/Chivo-TLF/bx/n --> T1/Chivo-TLF/bx/n on input line 53.
+(Font)                  T1/Chivo-TLF/bx/n --> T1/Chivo-TLF/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/Chivo-TLF/m/n --> T1/Chivo-TLF/bx/n on input line 53.
+(Font)                  T1/Chivo-TLF/m/n --> T1/Chivo-TLF/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/Chivo-TLF/m/it --> T1/Chivo-TLF/bx/it on input line 53.
+(Font)                  T1/Chivo-TLF/m/it --> T1/Chivo-TLF/bx/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 53.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 67.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dictionary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dictionary/translator-basic-dictionary-Spanish.dict
@@ -1296,66 +1296,66 @@ Dictionary: translator-theorem-dictionary, Language: English
 (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/translator/dicts/translator-theorem-dictionary/translator-theorem-dictionary-Spanish.dict
 Dictionary: translator-theorem-dictionary, Language: Spanish 
 )
-LaTeX Info: Redefining \includegraphics on input line 53.
-LaTeX Info: Redefining \. on input line 53.
-LaTeX Info: Redefining \% on input line 53.
+LaTeX Info: Redefining \includegraphics on input line 67.
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into your preamble.
- on input line 53.
+ on input line 67.
 
 (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.nav)
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 53.
+(Font)              scaled to size 6.0pt on input line 67.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 70.
+(Font)              scaled to size 14.4pt on input line 72.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 70.
+(Font)              scaled to size 8.0pt on input line 72.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 70.
+(Font)              scaled to size 4.0pt on input line 72.
  [1
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 82.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+LaTeX Font Info:    Try loading font information for U+msb on input line 82.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+ntxsfmia on input line 80.
+LaTeX Font Info:    Try loading font information for U+ntxsfmia on input line 82.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtxsf/untxsfmia.fd
 File: untxsfmia.fd 2014/11/16 Fontinst v1.933 font definitions for U/ntxsfmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 80.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 82.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 80.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 82.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 6.1pt on input line 80.
+(Font)              scaled to size 6.1pt on input line 82.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 80.
+(Font)              scaled to size 10.95pt on input line 82.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 80.
+(Font)              scaled to size 8.0pt on input line 82.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 6.1pt on input line 80.
+(Font)              scaled to size 6.1pt on input line 82.
  [2
 
 ]
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 88.
-LaTeX Font Info:    Try loading font information for OMS+Chivo-TLF on input line 88.
-LaTeX Font Info:    No file OMSChivo-TLF.fd. on input line 88.
+(Font)              scaled to size 10.0pt on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+Chivo-TLF on input line 90.
+LaTeX Font Info:    No file OMSChivo-TLF.fd. on input line 90.
 
 
 LaTeX Font Warning: Font shape `OMS/Chivo-TLF/m/n' undefined
 (Font)              using `OMS/ntxsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 88.
+(Font)              for symbol `textbullet' on input line 90.
 
 [3
 
@@ -1363,7 +1363,7 @@ LaTeX Font Warning: Font shape `OMS/Chivo-TLF/m/n' undefined
 
 ]
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 108.
+(Font)              scaled to size 12.0pt on input line 110.
  [5
 
 ] (./graficos/burbuja-linux-O0.tex
@@ -1404,22 +1404,22 @@ File: ./graficos/seleccion-linux-O0.eps Graphic file (type eps)
 ]
 PGFPlots: reading {datos/burbuja_datos/burbuja-linux-O0.dat}
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 165.
+(Font)              scaled to size 9.0pt on input line 167.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 165.
+(Font)              size <5> substituted on input line 167.
 
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 165.
+(Font)              scaled to size 7.3pt on input line 167.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 165.
+(Font)              scaled to size 5.5pt on input line 167.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 165.
+(Font)              scaled to size 9.0pt on input line 167.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 7.3pt on input line 165.
+(Font)              scaled to size 7.3pt on input line 167.
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 5.5pt on input line 165.
+(Font)              scaled to size 5.5pt on input line 167.
 [14
 
 ]
@@ -1432,14 +1432,14 @@ LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
 \tf@snm=\write8
 \openout8 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
  (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
@@ -1450,15 +1450,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
  31441 strings out of 493015
  749435 string characters out of 6133378
- 947129 words of memory out of 5000000
+ 947310 words of memory out of 5000000
  34280 multiletter control sequences out of 15000+600000
  151953 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,11n,83p,709b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (14 pages, 74892 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (14 pages, 74976 bytes).

@@ -3,6 +3,7 @@
 %\usepackage{palatino}
 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 % Chivo como en las diapositivas o Fira Sans?
 %\usepackage[familydefault,regular]{Chivo}
 \usepackage[sfdefault,scaled=.85]{FiraSans}
@@ -15,6 +16,7 @@
 \usepackage{color}
 \usepackage{graphics}
 \usepackage{caption}
+\usepackage{lipsum}
 
 \definecolor{text}{RGB}{78,78,78}
 \definecolor{accent}{RGB}{129, 26, 24}
@@ -45,71 +47,76 @@ columns/1/.style={
 
 \section*{Introducción}
 
+\lipsum
+
+
 \section*{Cálculo de la eficiencia empírica}
 
 
-	\begin{center}
-		\input{graficos/burbuja-linux-O0}
-	\end{center}
-
-
-
-	\begin{center}
-		\input{graficos/floyd-linux-O0}
-	\end{center}
-
-
-
-	\begin{center}
-		\input{graficos/hanoi-linux-O0}
-	\end{center}
-
-
-
-	\begin{center}
-		\input{graficos/heapsort-linux-O0}
-	\end{center}
-
-
-
-	\begin{center}
-		\input{graficos/insercion-linux-O0}
-	\end{center}
-
-
-
-	\begin{center}
-		\input{graficos/mergesort-linux-O0}
-	\end{center}
-
-
-
-	\begin{center}
-		\input{graficos/quicksort-linux-O0}
-	\end{center}
-
-
-	\begin{center}
-		\input{graficos/seleccion-linux-O0}
-	\end{center}
-	
-	\newpage
-
-Algunas tablas:
-
 \begin{center}
-	\begin{figure*}[h]
-		\centering
-		\caption*{burbuja-linux-O0}
-		\pgfplotstabletypeset[font=\footnotesize]{datos/burbuja_datos/burbuja-linux-O0.dat}
-		
-	\end{figure*}
-	
-
+	\input{graficos/burbuja-linux-O0}
 \end{center}
 
 
-	
+
+\begin{center}
+	\input{graficos/floyd-linux-O0}
+\end{center}
+
+
+
+\begin{center}
+	\input{graficos/hanoi-linux-O0}
+\end{center}
+
+
+
+\begin{center}
+	\input{graficos/heapsort-linux-O0}
+\end{center}
+
+
+
+\begin{center}
+	\input{graficos/insercion-linux-O0}
+\end{center}
+
+
+
+\begin{center}
+	\input{graficos/mergesort-linux-O0}
+\end{center}
+
+
+
+\begin{center}
+	\input{graficos/quicksort-linux-O0}
+\end{center}
+
+
+\begin{center}
+	\input{graficos/seleccion-linux-O0}
+\end{center}
+
+\newpage
+
+Algunas tablas:
+
+
+\pgfplotstableread{datos/burbuja_datos/burbuja-linux-O0.dat}\burbujalinuxOCero
+\pgfplotstableread{datos/seleccion_datos/seleccion-linux-O0.dat}\seleccionlinuxOCero
+\pgfplotstableread{datos/insercion_datos/insercion-linux-O0.dat}\insercionlinuxOCero
+
+\pgfplotstablecreatecol[copy column from table={\burbujalinuxOCero}{[index] 1}] {Burbuja} {\burbujalinuxOCero}
+\pgfplotstablecreatecol[copy column from table={\seleccionlinuxOCero}{[index] 1}] {Selección} {\burbujalinuxOCero}
+\pgfplotstablecreatecol[copy column from table={\insercionlinuxOCero}{[index] 1}] {Inserción} {\burbujalinuxOCero}
+
+\begin{figure*}[h]
+	\centering
+	\caption*{Algoritmos que son $O(n^2)$}
+	\pgfplotstabletypeset[columns={0, Burbuja, Selección, Inserción}]{\burbujalinuxOCero}
+\end{figure*}
+
 
 \section*{Cálculo de la eficiencia híbrida}
 
