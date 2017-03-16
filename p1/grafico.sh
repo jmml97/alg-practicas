@@ -24,7 +24,7 @@ set xtics rotate by 45 right font ", 8"
 set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 5
 #set tics scale 1.25
 
-set title "$filename" tc '#4D4D4D'
+set title "Eficiencia empírica $filename" tc '#4D4D4D'
 #set key left box
 #set samples 50
 set style data points

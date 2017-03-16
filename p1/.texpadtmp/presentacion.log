@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  16 MAR 2017 19:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  16 MAR 2017 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1316,145 +1316,146 @@ LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
  [1
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 82.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 82.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+ntxsfmia on input line 82.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/newtxsf/untxsfmia.fd
-File: untxsfmia.fd 2014/11/16 Fontinst v1.933 font definitions for U/ntxsfmia.
-)
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 82.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsym.fd
-File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
-)
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 82.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsyc.fd
-File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
-)
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 6.1pt on input line 82.
-LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 82.
-LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 82.
-LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
-(Font)              scaled to size 6.1pt on input line 82.
- [2
-
-]
-LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 90.
-LaTeX Font Info:    Try loading font information for OMS+Chivo-TLF on input line 90.
-LaTeX Font Info:    No file OMSChivo-TLF.fd. on input line 90.
+(Font)              scaled to size 10.0pt on input line 82.
+LaTeX Font Info:    Try loading font information for OMS+Chivo-TLF on input line 82.
+LaTeX Font Info:    No file OMSChivo-TLF.fd. on input line 82.
 
 
 LaTeX Font Warning: Font shape `OMS/Chivo-TLF/m/n' undefined
 (Font)              using `OMS/ntxsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 90.
+(Font)              for symbol `textbullet' on input line 82.
 
-[3
-
-] [4
+[2
 
 ]
+LaTeX Font Info:    Try loading font information for U+msa on input line 91.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 91.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+ntxsfmia on input line 91.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/newtxsf/untxsfmia.fd
+File: untxsfmia.fd 2014/11/16 Fontinst v1.933 font definitions for U/ntxsfmia.
+)
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 91.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 91.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 110.
- [5
+(Font)              scaled to size 6.1pt on input line 91.
+LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 91.
+LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 91.
+LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/it' will be
+(Font)              scaled to size 6.1pt on input line 91.
+ [3
 
 ] (./graficos/burbuja-linux-O0.tex
 \gptboxheight=\skip59
 \gptboxwidth=\skip60
 \gptboxtext=\box61
 File: ./graficos/burbuja-linux-O0.eps Graphic file (type eps)
- <./graficos/burbuja-linux-O0.eps>) [6
+ <./graficos/burbuja-linux-O0.eps>) [4
 
-] (./graficos/seleccion-linux-O0.tex
-File: ./graficos/seleccion-linux-O0.eps Graphic file (type eps)
- <./graficos/seleccion-linux-O0.eps>) [7
+] [5
 
 ] (./graficos/insercion-linux-O0.tex
 File: ./graficos/insercion-linux-O0.eps Graphic file (type eps)
- <./graficos/insercion-linux-O0.eps>) [8
+ <./graficos/insercion-linux-O0.eps>) [6
 
-] (./graficos/floyd-linux-O0.tex
-File: ./graficos/floyd-linux-O0.eps Graphic file (type eps)
- <./graficos/floyd-linux-O0.eps>) [9
+] [7
 
-] (./graficos/hanoi-linux-O0.tex
-File: ./graficos/hanoi-linux-O0.eps Graphic file (type eps)
- <./graficos/hanoi-linux-O0.eps>) [10
+] (./graficos/seleccion-linux-O0.tex
+File: ./graficos/seleccion-linux-O0.eps Graphic file (type eps)
+ <./graficos/seleccion-linux-O0.eps>) [8
 
-] (./graficos/heapsort-linux-O0.tex
-File: ./graficos/heapsort-linux-O0.eps Graphic file (type eps)
- <./graficos/heapsort-linux-O0.eps>) [11
+] [9
 
 ] (./graficos/mergesort-linux-O0.tex
 File: ./graficos/mergesort-linux-O0.eps Graphic file (type eps)
- <./graficos/mergesort-linux-O0.eps>) [12
+ <./graficos/mergesort-linux-O0.eps>) [10
+
+] [11
 
 ] (./graficos/quicksort-linux-O0.tex
 File: ./graficos/quicksort-linux-O0.eps Graphic file (type eps)
- <./graficos/quicksort-linux-O0.eps>) [13
+ <./graficos/quicksort-linux-O0.eps>) [12
+
+] (./graficos/floyd-linux-O0.tex
+File: ./graficos/floyd-linux-O0.eps Graphic file (type eps)
+ <./graficos/floyd-linux-O0.eps>) [13
+
+] (./graficos/hanoi-linux-O0.tex
+File: ./graficos/hanoi-linux-O0.eps Graphic file (type eps)
+ <./graficos/hanoi-linux-O0.eps>) [14
+
+] (./graficos/heapsort-linux-O0.tex
+File: ./graficos/heapsort-linux-O0.eps Graphic file (type eps)
+ <./graficos/heapsort-linux-O0.eps>) [15
 
 ] (./graficos/ncuadrado.tex
 File: ./graficos/ncuadrado.eps Graphic file (type eps)
- <./graficos/ncuadrado.eps>) [14
+ <./graficos/ncuadrado.eps>) [16
 
 ] (./graficos/nlogn.tex
 File: ./graficos/nlogn.eps Graphic file (type eps)
- <./graficos/nlogn.eps>) [15
+ <./graficos/nlogn.eps>) [17
 
 ] (./graficos/ordenacion.tex
 File: ./graficos/ordenacion.eps Graphic file (type eps)
- <./graficos/ordenacion.eps>) [16
+ <./graficos/ordenacion.eps>) [18
 
 ] (./graficos/ajuste-burbuja.tex
 File: ./graficos/ajuste-burbuja.eps Graphic file (type eps)
- <./graficos/ajuste-burbuja.eps>) [17
+ <./graficos/ajuste-burbuja.eps>) [19
 
 ] (./graficos/ajuste-insercion.tex
 File: ./graficos/ajuste-insercion.eps Graphic file (type eps)
- <./graficos/ajuste-insercion.eps>) [18
+ <./graficos/ajuste-insercion.eps>) [20
 
 ] (./graficos/ajuste-seleccion.tex
 File: ./graficos/ajuste-seleccion.eps Graphic file (type eps)
- <./graficos/ajuste-seleccion.eps>) [19
+ <./graficos/ajuste-seleccion.eps>) [21
 
 ] (./graficos/ajuste-mergesort.tex
 File: ./graficos/ajuste-mergesort.eps Graphic file (type eps)
- <./graficos/ajuste-mergesort.eps>) [20
+ <./graficos/ajuste-mergesort.eps>) [22
 
 ] (./graficos/ajuste-heapsort.tex
 File: ./graficos/ajuste-heapsort.eps Graphic file (type eps)
- <./graficos/ajuste-heapsort.eps>) [21
+ <./graficos/ajuste-heapsort.eps>) [23
 
 ] (./graficos/ajuste-quicksort.tex
 File: ./graficos/ajuste-quicksort.eps Graphic file (type eps)
- <./graficos/ajuste-quicksort.eps>) [22
+ <./graficos/ajuste-quicksort.eps>) [24
 
 ] (./graficos/ajuste-floyd.tex
 File: ./graficos/ajuste-floyd.eps Graphic file (type eps)
- <./graficos/ajuste-floyd.eps>) [23
+ <./graficos/ajuste-floyd.eps>) [25
 
 ] (./graficos/ajuste-hanoi.tex
 File: ./graficos/ajuste-hanoi.eps Graphic file (type eps)
- <./graficos/ajuste-hanoi.eps>) [24
+ <./graficos/ajuste-hanoi.eps>) [26
 
 ]
 PGFPlots: reading {datos/burbuja_datos/burbuja-linux-O0.dat}
 PGFPlots: reading {datos/seleccion_datos/seleccion-linux-O0.dat}
 PGFPlots: reading {datos/insercion_datos/insercion-linux-O0.dat}
 
-Overfull \hbox (11.60503pt too wide) in paragraph at lines 252--252
+Overfull \hbox (11.60503pt too wide) in paragraph at lines 285--285
 [][]  
  []
 
-[25
+[27
 
 ]
 \tf@nav=\write6
@@ -1466,29 +1467,29 @@ Overfull \hbox (11.60503pt too wide) in paragraph at lines 252--252
 \tf@snm=\write8
 \openout8 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
  (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 254.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 287.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
  ) 
 Here is how much of TeX's memory you used:
- 31501 strings out of 493015
- 750973 string characters out of 6133378
+ 31465 strings out of 493015
+ 749913 string characters out of 6133378
  953310 words of memory out of 5000000
- 34306 multiletter control sequences out of 15000+600000
- 96777 words of font info for 58 fonts, out of 8000000 for 9000
+ 34270 multiletter control sequences out of 15000+600000
+ 89470 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,13n,83p,709b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (25 pages, 139656 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (27 pages, 144516 bytes).
