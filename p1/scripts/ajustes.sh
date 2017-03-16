@@ -64,7 +64,7 @@ fit g(x) "./datos/mergesort_datos/mergesort-linux-O0.dat" via b0,b1,b2
 
 set output "./graficos/ajuste-mergesort.tex"
 set title "Ajuste Mergesort" tc '#4D4D4D'
-set logscale y
+
 
 plot g(x) with lines linestyle 3 title sprintf("%2.2e\$ \\\cdot x^{%2.2e}+x \\\cdot %2.2e\$", b0, b1, b2), "./datos/mergesort_datos/mergesort-linux-O0.dat" with points linestyle 1 pt 7 title "Mergesort"
 
@@ -86,7 +86,7 @@ fit h(x) "./datos/floyd_datos/floyd-linux-O0.dat" via c0,c1,c2,c3
 
 set output "./graficos/ajuste-floyd.tex"
 set title "Ajuste Floyd" tc '#4D4D4D'
-unset logscale y
+
 
 plot h(x) with lines linestyle 3 title sprintf("%2.2e\$x^3\$+%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", c0, c1, c2, c3), "./datos/floyd_datos/floyd-linux-O0.dat" with points linestyle 1 pt 7 title "Floyd"
 
