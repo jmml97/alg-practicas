@@ -58,22 +58,22 @@ Consideramos el elemento N-ésimo de la lista y lo ordenamos respecto de los ele
 \subsection*{Selección}
 Consiste en encontrar el menor de todos los elementos de la lista e intercambiarlo con el de la primera posición. Luego con el segundo, y así sucesivamente hasta ordenarlo todo.
 
-\subsection*{margesort}
+\subsection*{Mergesort}
 Se basa en la técnica de divide y vencerás. Consiste en dividir la lista en sublistas de la mitad de tamaño, cada sublista se ordenará de forma recursiva, si el tamaño de la lista es 0 o 1 la lista ya está ordenada. Por último vamos mezclando las sublistas en una sola.
 
 
-\subsection*{quicksort}
+\subsection*{Quicksort}
 Se basa en la técnica de divide y vencerás.
 En primer lugar elegimos un elemento de la lista, pivote. A continución los elementos de la lista se ordenarán de forma que la derecha del pivote queden los mayores y en el otro los menores. De esta forma dividimos la lista en dos sublistas la de la derecha y la de la izquierda, repetimos el proceso mientras las sublistas tengan más de un elemento.
 
-\subsection*{heapsort}
+\subsection*{Heapsort}
 Método de ordenación por selección.
 Heap es un árbol binario de altura mínima, en el que los nodos del nivel más bajo están lo más a la izquierda posible. Además los hijos de cada nodo son siempre menores que el padre. De está forma no hay que recorrer el árbol de forma desordenada para encontrar los elementos máximos.
 
-\subsection*{floyd}
+\subsection*{Floyd}
 Algoritmo de análisis sobre grados para encontrar el camino mínimo en grafos ponderados.
 
-\subsection*{hanoi}
+\subsection*{Hanoi}
 El número de pasos crece exponencialmente con el número de discos. Hay tres pilas de númeor origen (ordenada), auxiliar y destino. Se moverá un disco de la pila origen a la destino si hay un disco en la pila origen. En caso contrario se moverán los discos a la auxiliar menos la más grnade.
 Por último moveremos el disco mayor al destino y mover las n-1 encima de la más grande.
 

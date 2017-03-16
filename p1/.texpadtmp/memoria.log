@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  16 MAR 2017 08:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  16 MAR 2017 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1276,6 +1276,10 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
 (Font)              scaled to size 12.24008pt on input line 48.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' will be
 (Font)              scaled to size 12.24008pt on input line 48.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' will be
+(Font)              scaled to size 9.30756pt on input line 50.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' will be
+(Font)              scaled to size 10.20007pt on input line 53.
  [2] (./graficos/burbuja-linux-O0.tex
 \gptboxheight=\skip48
 \gptboxwidth=\skip49
@@ -1747,12 +1751,12 @@ LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 26055 strings out of 493015
- 635027 string characters out of 6133378
+ 26059 strings out of 493015
+ 635123 string characters out of 6133378
  901749 words of memory out of 5000000
- 29082 multiletter control sequences out of 15000+600000
- 92854 words of font info for 85 fonts, out of 8000000 for 9000
+ 29085 multiletter control sequences out of 15000+600000
+ 108548 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,10n,92p,704b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.dvi (9 pages, 55876 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.dvi (9 pages, 53028 bytes).
