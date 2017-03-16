@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  16 MAR 2017 20:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.1)  16 MAR 2017 21:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -905,11 +905,15 @@ Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
  (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: dvips.def on input line 144.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+Package color Info: Driver file: pdftex.def on input line 144.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
 )) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
@@ -917,7 +921,7 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
  (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
@@ -931,21 +935,28 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen118
 \caption@hangindent=\dimen119
 )
-\c@ContinuedFloat=\count103
+\c@ContinuedFloat=\count104
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count104
+\c@lips@count=\count105
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count106
+\float@exts=\toks24
+\float@box=\box28
+\@float@everytoks=\toks25
+\@floatcapt=\box29
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplotstable 2016/01/06 v1.13 Table typesetting and Pretty-printing (1.13)
  (/usr/local/texlive/2016/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
- (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks24
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks26
 \pgfutil@tempdima=\dimen120
 \pgfutil@tempdimb=\dimen121
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box28
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box30
  (/usr/local/texlive/2016/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
@@ -959,10 +970,10 @@ Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks25
-\pgfkeys@temptoks=\toks26
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks27
+\pgfkeys@tmptoks=\toks29
 ))
 \pgf@x=\dimen124
 \pgf@y=\dimen125
@@ -974,26 +985,25 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgf@yc=\dimen131
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count105
-\c@pgf@countb=\count106
-\c@pgf@countc=\count107
-\c@pgf@countd=\count108
-\t@pgf@toka=\toks28
-\t@pgf@tokb=\toks29
-\t@pgf@tokc=\toks30
+\c@pgf@counta=\count107
+\c@pgf@countb=\count108
+\c@pgf@countc=\count109
+\c@pgf@countd=\count110
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-dvips.def
- (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvips.def
-File: pgfsys-dvips.def 2014/07/09  (rcs-revision 1.25)
- (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-postscript.def
-File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
-\pgf@objectcount=\count109
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count110
-\pgfsyssoftpath@bigbuffer@items=\count111
+\pgfsyssoftpath@smallbuffer@items=\count111
+\pgfsyssoftpath@bigbuffer@items=\count112
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 )) (/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -1001,9 +1011,10 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -1015,14 +1026,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen132
-\pgfmath@count=\count112
-\pgfmath@box=\box29
-\pgfmath@toks=\toks31
-\pgfmath@stack@operand=\toks32
-\pgfmath@stack@operation=\toks33
-) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count113
+\pgfmath@count=\count113
+\pgfmath@box=\box31
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count114
 )) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen133
@@ -1049,10 +1060,10 @@ File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@start@additional=\dimen150
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box30
-\pgf@hbox=\box31
-\pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count114
+\pgfpic=\box32
+\pgf@hbox=\box33
+\pgf@layerbox@main=\box34
+\pgf@picture@serial@count=\count115
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen151
@@ -1073,22 +1084,22 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen156
-\pgf@sys@shading@range@num=\count115
+\pgf@sys@shading@range@num=\count116
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box33
-)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+\pgfexternal@startupbox=\box35
+))
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
-)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 ))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box34
+\pgfnodeparttextbox=\box36
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
@@ -1102,13 +1113,13 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen159
 \pgffor@skip=\dimen160
-\pgffor@stack=\toks34
-\pgffor@toks=\toks35
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
 )) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count116
+\pgf@plot@mark@count=\count117
 \pgfplotmarksize=\dimen161
 )
 \tikz@lastx=\dimen162
@@ -1117,55 +1128,55 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@lastysaved=\dimen165
 \tikzleveldistance=\dimen166
 \tikzsiblingdistance=\dimen167
-\tikz@figbox=\box35
-\tikz@figbox@bg=\box36
-\tikz@tempbox=\box37
-\tikz@tempbox@bg=\box38
-\tikztreelevel=\count117
-\tikznumberofchildren=\count118
-\tikznumberofcurrentchild=\count119
-\tikz@fig@count=\count120
+\tikz@figbox=\box37
+\tikz@figbox@bg=\box38
+\tikz@tempbox=\box39
+\tikz@tempbox@bg=\box40
+\tikztreelevel=\count118
+\tikznumberofchildren=\count119
+\tikznumberofcurrentchild=\count120
+\tikz@fig@count=\count121
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count121
-\pgfmatrixcurrentcolumn=\count122
-\pgf@matrix@numberofcolumns=\count123
+\pgfmatrixcurrentrow=\count122
+\pgfmatrixcurrentcolumn=\count123
+\pgf@matrix@numberofcolumns=\count124
 )
-\tikz@expandcount=\count124
+\tikz@expandcount=\count125
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 ))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks36
-\t@pgfplots@tokb=\toks37
-\t@pgfplots@tokc=\toks38
+\t@pgfplots@toka=\toks38
+\t@pgfplots@tokb=\toks39
+\t@pgfplots@tokc=\toks40
 \pgfplots@tmpa=\dimen168
-\c@pgfplots@coordindex=\count125
-\c@pgfplots@scanlineindex=\count126
+\c@pgfplots@coordindex=\count126
+\c@pgfplots@scanlineindex=\count127
  (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary arithmetics for your pgf version...
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgflibraryfpu.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count127
+\c@pgfmathroundto@lastzeros=\count128
 )) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count128
+\c@pgfplotsarray@tmp=\count129
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count129
-\t@pgfplotstable@a=\toks39
+\c@pgfplotstable@counta=\count130
+\t@pgfplotstable@a=\toks41
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count130
- (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvips.def))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+\c@pgfplotslibrarysurf@no=\count131
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen169
 \pgfdecoratedremainingdistance=\dimen170
 \pgfdecoratedinputsegmentcompleteddistance=\dimen171
 \pgfdecoratedinputsegmentremainingdistance=\dimen172
 \pgf@decorate@distancetomove=\dimen173
-\pgf@decorate@repeatstate=\count131
+\pgf@decorate@repeatstate=\count132
 \pgfdecorationsegmentamplitude=\dimen174
 \pgfdecorationsegmentlength=\dimen175
 )
-\tikz@lib@dec@box=\box39
+\tikz@lib@dec@box=\box41
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count132
+\pgfplots@numplots=\count133
 \pgfplots@xmin@reg=\dimen176
 \pgfplots@xmax@reg=\dimen177
 \pgfplots@ymin@reg=\dimen178
@@ -1180,7 +1191,7 @@ File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen182
 \extrarowheight=\dimen183
-\NC@list=\toks40
+\NC@list=\toks42
 \extratabsurround=\skip46
 \backup@length=\skip47
 )) (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.aux
@@ -1189,574 +1200,896 @@ LaTeX Info: Redefining \% on input line 6.
 )
 \openout1 = `memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxsfmi/m/it on input line 43.
-LaTeX Font Info:    Try loading font information for OML+ntxsfmi on input line 43.
+LaTeX Font Info:    Checking defaults for OML/ntxsfmi/m/it on input line 44.
+LaTeX Font Info:    Try loading font information for OML+ntxsfmi on input line 44.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtxsf/omlntxsfmi.fd
 File: omlntxsfmi.fd 2014/11/16 Fontinst v1.933 font definitions for OML/ntxsfmi.
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 43.
-LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 43.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 44.
+LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 44.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/omsntxsy.fd
 File: omsntxsy.fd 2012/11/14 Fontinst v1.933 font definitions for OMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 43.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 43.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 44.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 44.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 43.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 44.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Try loading font information for T1+FiraSans-OsF on input line 43.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Try loading font information for T1+FiraSans-OsF on input line 44.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/fira/T1FiraSans-OsF.fd
 File: T1FiraSans-OsF.fd 2015/05/23 (autoinst) Font definitions for T1/FiraSans-OsF.
 )
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 43.
-\c@mv@tabular=\count133
-\c@mv@boldtabular=\count134
-LaTeX Info: Redefining \. on input line 43.
-LaTeX Info: Redefining \% on input line 43.
+(Font)              scaled to size 9.30756pt on input line 44.
+\c@mv@tabular=\count134
+\c@mv@boldtabular=\count135
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count136
+\scratchdimen=\dimen184
+\scratchbox=\box42
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen185
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks44
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into your preamble.
- on input line 43.
+ on input line 44.
 
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 14.6881pt on input line 44.
+(Font)              scaled to size 14.6881pt on input line 45.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 10.20007pt on input line 44.
+(Font)              scaled to size 10.20007pt on input line 45.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 7.48004pt on input line 44.
+(Font)              scaled to size 7.48004pt on input line 45.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 5.61003pt on input line 44.
-LaTeX Font Info:    Try loading font information for U+ntxsfmia on input line 44.
+(Font)              scaled to size 5.61003pt on input line 45.
+LaTeX Font Info:    Try loading font information for U+ntxsfmia on input line 45.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/newtxsf/untxsfmia.fd
 File: untxsfmia.fd 2014/11/16 Fontinst v1.933 font definitions for U/ntxsfmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 44.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 45.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 44.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 45.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+LaTeX Font Info:    Try loading font information for U+msa on input line 45.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+LaTeX Font Info:    Try loading font information for U+msb on input line 45.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 44.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 45.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 ) [1
 
-]
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 12.24008pt on input line 48.
+(Font)              scaled to size 12.24008pt on input line 49.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' will be
-(Font)              scaled to size 12.24008pt on input line 48.
+(Font)              scaled to size 12.24008pt on input line 49.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
+(Font)              scaled to size 6.80005pt on input line 51.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
+(Font)              scaled to size 5.18503pt on input line 51.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' will be
-(Font)              scaled to size 9.30756pt on input line 50.
+(Font)              scaled to size 9.30756pt on input line 51.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' will be
-(Font)              scaled to size 10.20007pt on input line 53.
- [2] (./graficos/burbuja-linux-O0.tex
-\gptboxheight=\skip48
-\gptboxwidth=\skip49
-\gptboxtext=\box40
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 133.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 5.18503pt on input line 133.
+(Font)              scaled to size 10.20007pt on input line 54.
+ [2]
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' will be
+(Font)              scaled to size 9.30756pt on input line 76.
 
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
-Package xcolor Warning: Incompatible color definition on input line 133.
+ []
 
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-
-Package xcolor Warning: Incompatible color definition on input line 133.
-
-File: ./graficos/burbuja-linux-O0.eps Graphic file (type eps)
-<./graficos/burbuja-linux-O0.eps>) (./graficos/floyd-linux-O0.tex
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-File: ./graficos/floyd-linux-O0.eps Graphic file (type eps)
-<./graficos/floyd-linux-O0.eps>) [3] (./graficos/hanoi-linux-O0.tex
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-
-Package xcolor Warning: Incompatible color definition on input line 121.
-
-File: ./graficos/hanoi-linux-O0.eps Graphic file (type eps)
-<./graficos/hanoi-linux-O0.eps>) (./graficos/heapsort-linux-O0.tex
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-File: ./graficos/heapsort-linux-O0.eps Graphic file (type eps)
-<./graficos/heapsort-linux-O0.eps>) [4] (./graficos/insercion-linux-O0.tex
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-File: ./graficos/insercion-linux-O0.eps Graphic file (type eps)
-<./graficos/insercion-linux-O0.eps>) (./graficos/mergesort-linux-O0.tex
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-File: ./graficos/mergesort-linux-O0.eps Graphic file (type eps)
-<./graficos/mergesort-linux-O0.eps>) [5] (./graficos/quicksort-linux-O0.tex
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-
-Package xcolor Warning: Incompatible color definition on input line 119.
-
-File: ./graficos/quicksort-linux-O0.eps Graphic file (type eps)
-<./graficos/quicksort-linux-O0.eps>) (./graficos/seleccion-linux-O0.tex
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-
-Package xcolor Warning: Incompatible color definition on input line 131.
-
-File: ./graficos/seleccion-linux-O0.eps Graphic file (type eps)
-<./graficos/seleccion-linux-O0.eps>) [6] (./graficos/ajuste-hanoi.tex
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-
-Package xcolor Warning: Incompatible color definition on input line 125.
-
-File: ./graficos/ajuste-hanoi.eps Graphic file (type eps)
-<./graficos/ajuste-hanoi.eps>) [7]
+[3]
 PGFPlots: reading {datos/burbuja_datos/burbuja-linux-O0.dat}
 PGFPlots: reading {datos/seleccion_datos/seleccion-linux-O0.dat}
 PGFPlots: reading {datos/insercion_datos/insercion-linux-O0.dat}
 PGFPlots: reading {datos/mergesort_datos/mergesort-linux-O0.dat}
 PGFPlots: reading {datos/quicksort_datos/quicksort-linux-O0.dat}
 PGFPlots: reading {datos/heapsort_datos/heapsort-linux-O0.dat}
+PGFPlots: reading {datos/floyd_datos/floyd-linux-O0.dat}
+PGFPlots: reading {datos/hanoi_datos/hanoi-linux-O0.dat}
+ [4] [5] [6]
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' will be
+(Font)              scaled to size 6.80005pt on input line 146.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' will be
+(Font)              scaled to size 5.18503pt on input line 146.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 146.
 
-[8] [9] (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.aux
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6.1> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 146.
+
+(./graficos/burbuja-linux-O0.tex
+\gptboxheight=\skip48
+\gptboxwidth=\skip49
+\gptboxtext=\box43
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+Package epstopdf Info: Source file: <./graficos/burbuja-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:22:06
+(epstopdf)                    size: 19856 bytes
+(epstopdf)             Output file: <./graficos/burbuja-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3143 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/burbuja-linux-O0-eps-converted-to.pdf ./graficos/burbuja-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 134.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/burbuja-linux-O0-eps-converted-to.pdf, id=31, 289.08pt x 216.81pt>
+File: ./graficos/burbuja-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/burbuja-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/burbuja-linux-O0-eps-converted-to.pdf used on input line 134.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) [7] (./graficos/insercion-linux-O0.tex
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+Package epstopdf Info: Source file: <./graficos/insercion-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:22:06
+(epstopdf)                    size: 19671 bytes
+(epstopdf)             Output file: <./graficos/insercion-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3117 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/insercion-linux-O0-eps-converted-to.pdf ./graficos/insercion-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 130.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/insercion-linux-O0-eps-converted-to.pdf, id=36, 289.08pt x 216.81pt>
+File: ./graficos/insercion-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/insercion-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/insercion-linux-O0-eps-converted-to.pdf used on input line 130.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) (./graficos/seleccion-linux-O0.tex
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+Package epstopdf Info: Source file: <./graficos/seleccion-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:22:06
+(epstopdf)                    size: 19768 bytes
+(epstopdf)             Output file: <./graficos/seleccion-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3126 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/seleccion-linux-O0-eps-converted-to.pdf ./graficos/seleccion-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/seleccion-linux-O0-eps-converted-to.pdf, id=37, 289.08pt x 216.81pt>
+File: ./graficos/seleccion-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/seleccion-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/seleccion-linux-O0-eps-converted-to.pdf used on input line 132.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) [8 <./graficos/burbuja-linux-O0-eps-converted-to.pdf> <./graficos/insercion-linux-O0-eps-converted-to.pdf>] (./graficos/ncuadrado.tex
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+Package epstopdf Info: Source file: <./graficos/ncuadrado.eps>
+(epstopdf)                    date: 2017-03-16 08:54:21
+(epstopdf)                    size: 20607 bytes
+(epstopdf)             Output file: <./graficos/ncuadrado-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3358 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/ncuadrado-eps-converted-to.pdf ./graficos/ncuadrado.eps>
+(epstopdf)             \includegraphics on input line 140.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/ncuadrado-eps-converted-to.pdf, id=47, 289.08pt x 216.81pt>
+File: ./graficos/ncuadrado-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/ncuadrado-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/ncuadrado-eps-converted-to.pdf used on input line 140.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) (./graficos/heapsort-linux-O0.tex
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+Package epstopdf Info: Source file: <./graficos/heapsort-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:23:23
+(epstopdf)                    size: 20080 bytes
+(epstopdf)             Output file: <./graficos/heapsort-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3362 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/heapsort-linux-O0-eps-converted-to.pdf ./graficos/heapsort-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/heapsort-linux-O0-eps-converted-to.pdf, id=48, 289.08pt x 216.81pt>
+File: ./graficos/heapsort-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/heapsort-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/heapsort-linux-O0-eps-converted-to.pdf used on input line 120.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) [9 <./graficos/seleccion-linux-O0-eps-converted-to.pdf> <./graficos/ncuadrado-eps-converted-to.pdf>] (./graficos/mergesort-linux-O0.tex
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+Package epstopdf Info: Source file: <./graficos/mergesort-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:23:12
+(epstopdf)                    size: 20087 bytes
+(epstopdf)             Output file: <./graficos/mergesort-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3359 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/mergesort-linux-O0-eps-converted-to.pdf ./graficos/mergesort-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/mergesort-linux-O0-eps-converted-to.pdf, id=56, 289.08pt x 216.81pt>
+File: ./graficos/mergesort-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/mergesort-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/mergesort-linux-O0-eps-converted-to.pdf used on input line 120.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) (./graficos/quicksort-linux-O0.tex
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+Package epstopdf Info: Source file: <./graficos/quicksort-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:23:02
+(epstopdf)                    size: 20081 bytes
+(epstopdf)             Output file: <./graficos/quicksort-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3360 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/quicksort-linux-O0-eps-converted-to.pdf ./graficos/quicksort-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/quicksort-linux-O0-eps-converted-to.pdf, id=57, 289.08pt x 216.81pt>
+File: ./graficos/quicksort-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/quicksort-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/quicksort-linux-O0-eps-converted-to.pdf used on input line 120.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) [10 <./graficos/heapsort-linux-O0-eps-converted-to.pdf> <./graficos/mergesort-linux-O0-eps-converted-to.pdf>] (./graficos/nlogn.tex
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+Package epstopdf Info: Source file: <./graficos/nlogn.eps>
+(epstopdf)                    date: 2017-03-16 08:54:21
+(epstopdf)                    size: 20904 bytes
+(epstopdf)             Output file: <./graficos/nlogn-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3592 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/nlogn-eps-converted-to.pdf ./graficos/nlogn.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/nlogn-eps-converted-to.pdf, id=65, 289.08pt x 216.81pt>
+File: ./graficos/nlogn-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/nlogn-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/nlogn-eps-converted-to.pdf used on input line 126.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) (./graficos/floyd-linux-O0.tex
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+Package epstopdf Info: Source file: <./graficos/floyd-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:22:06
+(epstopdf)                    size: 19790 bytes
+(epstopdf)             Output file: <./graficos/floyd-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3139 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/floyd-linux-O0-eps-converted-to.pdf ./graficos/floyd-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/floyd-linux-O0-eps-converted-to.pdf, id=66, 289.08pt x 216.81pt>
+File: ./graficos/floyd-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/floyd-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/floyd-linux-O0-eps-converted-to.pdf used on input line 132.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) [11 <./graficos/quicksort-linux-O0-eps-converted-to.pdf> <./graficos/nlogn-eps-converted-to.pdf>] (./graficos/hanoi-linux-O0.tex
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+Package epstopdf Info: Source file: <./graficos/hanoi-linux-O0.eps>
+(epstopdf)                    date: 2017-03-16 20:22:06
+(epstopdf)                    size: 19272 bytes
+(epstopdf)             Output file: <./graficos/hanoi-linux-O0-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 2996 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/hanoi-linux-O0-eps-converted-to.pdf ./graficos/hanoi-linux-O0.eps>
+(epstopdf)             \includegraphics on input line 122.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/hanoi-linux-O0-eps-converted-to.pdf, id=74, 289.08pt x 216.81pt>
+File: ./graficos/hanoi-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/hanoi-linux-O0-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/hanoi-linux-O0-eps-converted-to.pdf used on input line 122.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) (./graficos/ordenacion.tex
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+Package epstopdf Info: Source file: <./graficos/ordenacion.eps>
+(epstopdf)                    date: 2017-03-16 08:54:21
+(epstopdf)                    size: 21747 bytes
+(epstopdf)             Output file: <./graficos/ordenacion-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-16 21:44:47
+(epstopdf)                    size: 3895 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graficos/ordenacion-eps-converted-to.pdf ./graficos/ordenacion.eps>
+(epstopdf)             \includegraphics on input line 136.
+Package epstopdf Info: Output file is already uptodate.
+<./graficos/ordenacion-eps-converted-to.pdf, id=75, 289.08pt x 216.81pt>
+File: ./graficos/ordenacion-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graficos/ordenacion-eps-converted-to.pdf>
+Package pdftex.def Info: ./graficos/ordenacion-eps-converted-to.pdf used on input line 136.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) [12 <./graficos/floyd-linux-O0-eps-converted-to.pdf> <./graficos/hanoi-linux-O0-eps-converted-to.pdf>] [13 <./graficos/ordenacion-eps-converted-to.pdf>] (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 26059 strings out of 493015
- 635123 string characters out of 6133378
- 901749 words of memory out of 5000000
- 29085 multiletter control sequences out of 15000+600000
- 108548 words of font info for 87 fonts, out of 8000000 for 9000
+ 27040 strings out of 493014
+ 651833 string characters out of 6133352
+ 908974 words of memory out of 5000000
+ 29958 multiletter control sequences out of 15000+600000
+ 149947 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,10n,92p,704b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/fira/fir_ekigrt.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-Book.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-BookItalic.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmi-bol.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmi-reg.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmia-bol.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmia-reg.pfb>
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.pdf (13 pages, 320236 bytes).
+PDF statistics:
+ 120 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.dvi (9 pages, 53384 bytes).
