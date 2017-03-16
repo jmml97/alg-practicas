@@ -201,7 +201,7 @@ columns/1/.style={
 	\vskip 0.5cm
 	
 	\begin{itemize}
-		\item ¿Explicación del algoritmo?
+		\item El algoritmo compara todos los posibles caminos a través del grafo entre cada par de vértices.
 	\end{itemize}
 	
 	\vskip 0.5cm
@@ -217,12 +217,16 @@ columns/1/.style={
 
 \begin{frame}{Hanoi}
 
-	¿Qué es?
+	Las torres de Hanoi son un puzzle matemático.
 
 	\vskip 0.5cm
 	
 	\begin{itemize}
-		\item ¿Explicación del algoritmo?
+		\item Tenemos 3 pilas: origen, auxiliar y destino.
+		\item Origen está ordenada por tamaño creciente de discos.
+		\item Se mueve un disco de la pila origen a la de destino si hay un único disco en la pila origen.
+		\item Si no, se mueven todos los discos a la auxiliar, excepto el más grande.
+		\item Por último, movemos el disco mayor al destino, y los $n-1$ restantes encima del mayor.
 	\end{itemize}
 	
 	\vskip 0.5cm
@@ -359,6 +363,10 @@ columns/1/.style={
 	\begin{center}
 		\input{graficos/ordenacion}
 	\end{center}
+\end{frame}
+
+\begin{frame}{Eficiencia híbrida}
+	A continuación se recogen los gráficos que muestran tanto la eficiencia empírica como la función ajustada o \textit{eficiencia híbrida} de cada algoritmo.	
 \end{frame}
 
 \begin{frame}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.1)  16 MAR 2017 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.1)  16 MAR 2017 22:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1508,11 +1508,11 @@ Package xcolor Warning: Incompatible color definition on input line 129.
 Package xcolor Warning: Incompatible color definition on input line 129.
 
 Package epstopdf Info: Source file: <./graficos/insercion-linux-O0.eps>
-(epstopdf)                    date: 2017-03-16 20:22:06
-(epstopdf)                    size: 19671 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 19709 bytes
 (epstopdf)             Output file: <./graficos/insercion-linux-O0-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3117 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 3121 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/insercion-linux-O0-eps-converted-to.pdf ./graficos/insercion-linux-O0.eps>
 (epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
@@ -1655,11 +1655,11 @@ Package xcolor Warning: Incompatible color definition on input line 139.
 Package xcolor Warning: Incompatible color definition on input line 139.
 
 Package epstopdf Info: Source file: <./graficos/ncuadrado.eps>
-(epstopdf)                    date: 2017-03-16 08:54:21
-(epstopdf)                    size: 20607 bytes
+(epstopdf)                    date: 2017-03-16 22:40:40
+(epstopdf)                    size: 20605 bytes
 (epstopdf)             Output file: <./graficos/ncuadrado-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3358 bytes
+(epstopdf)                    date: 2017-03-16 22:45:59
+(epstopdf)                    size: 3350 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/ncuadrado-eps-converted-to.pdf ./graficos/ncuadrado.eps>
 (epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
@@ -1670,165 +1670,195 @@ Package pdftex.def Info: ./graficos/ncuadrado-eps-converted-to.pdf used on input
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 ) (./graficos/heapsort-linux-O0.tex
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 Package epstopdf Info: Source file: <./graficos/heapsort-linux-O0.eps>
-(epstopdf)                    date: 2017-03-16 20:23:23
-(epstopdf)                    size: 20080 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 19643 bytes
 (epstopdf)             Output file: <./graficos/heapsort-linux-O0-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3362 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 3118 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/heapsort-linux-O0-eps-converted-to.pdf ./graficos/heapsort-linux-O0.eps>
-(epstopdf)             \includegraphics on input line 120.
+(epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
 <./graficos/heapsort-linux-O0-eps-converted-to.pdf, id=48, 289.08pt x 216.81pt>
 File: ./graficos/heapsort-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graficos/heapsort-linux-O0-eps-converted-to.pdf>
-Package pdftex.def Info: ./graficos/heapsort-linux-O0-eps-converted-to.pdf used on input line 120.
+Package pdftex.def Info: ./graficos/heapsort-linux-O0-eps-converted-to.pdf used on input line 128.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 ) [9 <./graficos/seleccion-linux-O0-eps-converted-to.pdf> <./graficos/ncuadrado-eps-converted-to.pdf>] (./graficos/mergesort-linux-O0.tex
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 Package epstopdf Info: Source file: <./graficos/mergesort-linux-O0.eps>
-(epstopdf)                    date: 2017-03-16 20:23:12
-(epstopdf)                    size: 20087 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 19653 bytes
 (epstopdf)             Output file: <./graficos/mergesort-linux-O0-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3359 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 3120 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/mergesort-linux-O0-eps-converted-to.pdf ./graficos/mergesort-linux-O0.eps>
-(epstopdf)             \includegraphics on input line 120.
+(epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
 <./graficos/mergesort-linux-O0-eps-converted-to.pdf, id=56, 289.08pt x 216.81pt>
 File: ./graficos/mergesort-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graficos/mergesort-linux-O0-eps-converted-to.pdf>
-Package pdftex.def Info: ./graficos/mergesort-linux-O0-eps-converted-to.pdf used on input line 120.
+Package pdftex.def Info: ./graficos/mergesort-linux-O0-eps-converted-to.pdf used on input line 128.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 ) (./graficos/quicksort-linux-O0.tex
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 119.
+Package xcolor Warning: Incompatible color definition on input line 123.
+
+
+Package xcolor Warning: Incompatible color definition on input line 123.
+
+
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 Package epstopdf Info: Source file: <./graficos/quicksort-linux-O0.eps>
-(epstopdf)                    date: 2017-03-16 20:23:02
-(epstopdf)                    size: 20081 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 19455 bytes
 (epstopdf)             Output file: <./graficos/quicksort-linux-O0-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3360 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 3100 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/quicksort-linux-O0-eps-converted-to.pdf ./graficos/quicksort-linux-O0.eps>
-(epstopdf)             \includegraphics on input line 120.
+(epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 <./graficos/quicksort-linux-O0-eps-converted-to.pdf, id=57, 289.08pt x 216.81pt>
 File: ./graficos/quicksort-linux-O0-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graficos/quicksort-linux-O0-eps-converted-to.pdf>
-Package pdftex.def Info: ./graficos/quicksort-linux-O0-eps-converted-to.pdf used on input line 120.
+Package pdftex.def Info: ./graficos/quicksort-linux-O0-eps-converted-to.pdf used on input line 124.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 ) [10 <./graficos/heapsort-linux-O0-eps-converted-to.pdf> <./graficos/mergesort-linux-O0-eps-converted-to.pdf>] (./graficos/nlogn.tex
 
@@ -1871,11 +1901,11 @@ Package xcolor Warning: Incompatible color definition on input line 125.
 Package xcolor Warning: Incompatible color definition on input line 125.
 
 Package epstopdf Info: Source file: <./graficos/nlogn.eps>
-(epstopdf)                    date: 2017-03-16 08:54:21
-(epstopdf)                    size: 20904 bytes
+(epstopdf)                    date: 2017-03-16 22:40:40
+(epstopdf)                    size: 20903 bytes
 (epstopdf)             Output file: <./graficos/nlogn-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3592 bytes
+(epstopdf)                    date: 2017-03-16 22:46:00
+(epstopdf)                    size: 3575 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/nlogn-eps-converted-to.pdf ./graficos/nlogn.eps>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
@@ -1943,11 +1973,11 @@ Package xcolor Warning: Incompatible color definition on input line 131.
 Package xcolor Warning: Incompatible color definition on input line 131.
 
 Package epstopdf Info: Source file: <./graficos/floyd-linux-O0.eps>
-(epstopdf)                    date: 2017-03-16 20:22:06
-(epstopdf)                    size: 19790 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 19825 bytes
 (epstopdf)             Output file: <./graficos/floyd-linux-O0-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3139 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 3141 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/floyd-linux-O0-eps-converted-to.pdf ./graficos/floyd-linux-O0.eps>
 (epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
@@ -2000,11 +2030,11 @@ Package xcolor Warning: Incompatible color definition on input line 121.
 Package xcolor Warning: Incompatible color definition on input line 121.
 
 Package epstopdf Info: Source file: <./graficos/hanoi-linux-O0.eps>
-(epstopdf)                    date: 2017-03-16 20:22:06
-(epstopdf)                    size: 19272 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 19307 bytes
 (epstopdf)             Output file: <./graficos/hanoi-linux-O0-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 2996 bytes
+(epstopdf)                    date: 2017-03-16 22:37:37
+(epstopdf)                    size: 2998 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/hanoi-linux-O0-eps-converted-to.pdf ./graficos/hanoi-linux-O0.eps>
 (epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
@@ -2060,11 +2090,11 @@ Package xcolor Warning: Incompatible color definition on input line 135.
 Package xcolor Warning: Incompatible color definition on input line 135.
 
 Package epstopdf Info: Source file: <./graficos/ordenacion.eps>
-(epstopdf)                    date: 2017-03-16 08:54:21
-(epstopdf)                    size: 21747 bytes
+(epstopdf)                    date: 2017-03-16 22:40:40
+(epstopdf)                    size: 21756 bytes
 (epstopdf)             Output file: <./graficos/ordenacion-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:44:47
-(epstopdf)                    size: 3895 bytes
+(epstopdf)                    date: 2017-03-16 22:46:00
+(epstopdf)                    size: 3892 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graficos/ordenacion-eps-converted-to.pdf ./graficos/ordenacion.eps>
 (epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
@@ -2080,13 +2110,13 @@ LaTeX Info: Redefining \% on input line 6.
 Here is how much of TeX's memory you used:
  27040 strings out of 493014
  651833 string characters out of 6133352
- 908974 words of memory out of 5000000
+ 907974 words of memory out of 5000000
  29958 multiletter control sequences out of 15000+600000
  149947 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,10n,92p,704b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/fira/fir_ekigrt.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-Book.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-BookItalic.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmi-bol.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmi-reg.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmia-bol.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmia-reg.pfb>
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.pdf (13 pages, 320236 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.pdf (13 pages, 319736 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
