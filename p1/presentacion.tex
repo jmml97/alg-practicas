@@ -170,10 +170,64 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
+\begin{frame}{Heapsort}
+
+	Es un método de ordenación por selección.
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item El \textit{heap} es un árbol binario de altura mínima, en el que los nodos del nivel más bajo están lo más a la izquierda posible.
+		\item Los hijos de cada nodo son siempre menores que el padre.
+		\item No es necesario recorrer el árbol de forma desordenada para encontrar los elementos máximos.
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(nlogn)$
+\end{frame}
+
+
+\begin{frame}
+	\begin{center}
+		\input{graficos/heapsort-linux-O0}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Floyd}
+
+	Algoritmo de análisis sobre grados para encontrar el camino mínimo en grafos ponderados.
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item ¿Explicación del algoritmo?
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(n^3)$
+\end{frame}
+
 \begin{frame}
 	\begin{center}
 		\input{graficos/floyd-linux-O0}
 	\end{center}
+\end{frame}
+
+\begin{frame}{Hanoi}
+
+	¿Qué es?
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item ¿Explicación del algoritmo?
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(2^n)$
 \end{frame}
 
 \begin{frame}
@@ -182,13 +236,45 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
-\begin{frame}
-	\begin{center}
-		\input{graficos/heapsort-linux-O0}
-	\end{center}
+\begin{frame}{Datos de la eficiencia empírica}
+	Hemos recopilado los datos de la eficiencia empírica de la ejecución de los distintos algoritmos en varias tablas comparativas.
+	
+	\vskip 0.5cm
+	
+	Hemos creado tablas para los distintos órdenes de eficiencia de los algoritmos y hemos puesto juntos aquellos que tienen el mismo.
+	
+	\vskip 0.5cm
+	
+	Finalmente, para cada tabla comparativa hemos creado una gráfica.
+	
 \end{frame}
 
+%%% TABLAS ALGORITMOS O(n2) CON OPTIMIZACIÓN O0
 
+\pgfplotstableread{datos/burbuja_datos/burbuja-linux-O0.dat}\burbujalinuxOCero
+	\pgfplotstableread{datos/seleccion_datos/seleccion-linux-O0.dat}\seleccionlinuxOCero
+	\pgfplotstableread{datos/insercion_datos/insercion-linux-O0.dat}\insercionlinuxOCero
+	
+	\pgfplotstablecreatecol[copy column from table={\burbujalinuxOCero}{[index] 1}] {Burbuja} {\burbujalinuxOCero}
+	\pgfplotstablecreatecol[copy column from table={\seleccionlinuxOCero}{[index] 1}] {Selección} {\burbujalinuxOCero}
+	\pgfplotstablecreatecol[copy column from table={\insercionlinuxOCero}{[index] 1}] {Inserción} {\burbujalinuxOCero}
+
+\begin{frame}
+	\begin{columns}[c] % align columns
+		\begin{column}{.6\textwidth}
+			\resizebox*{!}{9cm}{
+				\pgfplotstabletypeset[columns={0, Burbuja, Inserción, Selección}]{\burbujalinuxOCero}
+			}
+		\end{column}%
+		
+		\hfill%
+		
+		\begin{column}{.3\textwidth}
+			Algoritmos que son $O(n^2)$
+		\end{column}%
+		
+	\end{columns}
+\end{frame}
 
 \begin{frame}
 	\begin{center}
@@ -196,10 +282,77 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
+%%% TABLAS ALGORITMOS O(nlogn) CON OPTIMIZACIÓN O0
+
+\pgfplotstableread{datos/mergesort_datos/mergesort-linux-O0.dat}\mergesortlinuxOCero
+	\pgfplotstableread{datos/quicksort_datos/quicksort-linux-O0.dat}\quicksortlinuxOCero
+	\pgfplotstableread{datos/heapsort_datos/heapsort-linux-O0.dat}\heapsortlinuxOCero
+	
+	\pgfplotstablecreatecol[copy column from table={\mergesortlinuxOCero}{[index] 1}] {Mergesort} {\mergesortlinuxOCero}
+	\pgfplotstablecreatecol[copy column from table={\quicksortlinuxOCero}{[index] 1}] {Quicksort} {\mergesortlinuxOCero}
+	\pgfplotstablecreatecol[copy column from table={\heapsortlinuxOCero}{[index] 1}] {Heapsort} {\mergesortlinuxOCero}
+
+\begin{frame}
+	\begin{columns}[c] % align columns
+		\begin{column}{.6\textwidth}
+			\resizebox*{!}{9cm}{
+				\pgfplotstabletypeset[columns={0, Mergesort, Quicksort, Heapsort}]{\mergesortlinuxOCero}
+			}
+		\end{column}%
+		
+		\hfill%
+		
+		\begin{column}{.3\textwidth}
+			Algoritmos que son $O(nlogn)$
+		\end{column}%
+		
+	\end{columns}
+\end{frame}
+
 \begin{frame}
 	\begin{center}
 		\input{graficos/nlogn}
 	\end{center}
+\end{frame}
+
+%%% TABLA FLOYD
+\begin{frame}
+	\begin{columns}[c] % align columns
+		\begin{column}{.6\textwidth}
+			\resizebox*{!}{9cm}{
+				\pgfplotstabletypeset[]{./datos/floyd_datos/floyd-linux-O0.dat}
+			}
+		\end{column}%
+		
+		\hfill%
+		
+		\begin{column}{.3\textwidth}
+			Floyd
+		\end{column}%
+		
+	\end{columns}
+\end{frame}
+
+%%% TABLA HANOI
+\begin{frame}
+	\begin{columns}[c] % align columns
+		\begin{column}{.6\textwidth}
+			\resizebox*{!}{9cm}{
+				\pgfplotstabletypeset[]{./datos/hanoi_datos/hanoi-linux-O0.dat}
+			}
+		\end{column}%
+		
+		\hfill%
+		
+		\begin{column}{.3\textwidth}
+			Hanoi
+		\end{column}%
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Comparativa de los algoritmos de ordenación}
+	Recopilando los datos de todos los algoritmos de ordenación hemos realizado una tabla comparativa en la que se muestra qué algoritmo es el más eficiente.
 \end{frame}
 
 \begin{frame}
@@ -257,31 +410,5 @@ columns/1/.style={
 \end{frame}
 
 
-%%% TABLAS ALGORITMOS O(n2) CON OPTIMIZACIÓN O0
-
-\pgfplotstableread{datos/burbuja_datos/burbuja-linux-O0.dat}\burbujalinuxOCero
-	\pgfplotstableread{datos/seleccion_datos/seleccion-linux-O0.dat}\seleccionlinuxOCero
-	\pgfplotstableread{datos/insercion_datos/insercion-linux-O0.dat}\insercionlinuxOCero
-	
-	\pgfplotstablecreatecol[copy column from table={\burbujalinuxOCero}{[index] 1}] {Burbuja} {\burbujalinuxOCero}
-	\pgfplotstablecreatecol[copy column from table={\seleccionlinuxOCero}{[index] 1}] {Selección} {\burbujalinuxOCero}
-	\pgfplotstablecreatecol[copy column from table={\insercionlinuxOCero}{[index] 1}] {Inserción} {\burbujalinuxOCero}
-
-\begin{frame}
-	\begin{columns}[c] % align columns
-		\begin{column}{.6\textwidth}
-			\resizebox*{!}{9cm}{
-				\pgfplotstabletypeset[columns={0, Burbuja, Selección, Inserción}]{\burbujalinuxOCero}
-			}
-		\end{column}%
-		
-		\hfill%
-		
-		\begin{column}{.3\textwidth}
-			Algoritmos que son $O(n^2)$
-		\end{column}%
-		
-	\end{columns}
-\end{frame}
 
 \end{document}
