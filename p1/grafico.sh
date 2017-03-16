@@ -17,6 +17,7 @@ set format x '$\textcolor{text}{%g}$'
 set format y '$\textcolor{text}{%g}$'
 set xlabel "Tamaño del vector (elementos)" tc '#4D4D4D' offset 0,1.5
 set ylabel "Tiempo de ejecución (s)" tc '#4D4D4D' offset 2,0
+#set logscale y
 
 set xtics rotate by 45 right font ", 8"
 
