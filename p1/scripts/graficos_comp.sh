@@ -39,7 +39,7 @@ plot "./datos/burbuja_datos/burbuja-linux-O0.dat" with lines linestyle 1 title "
 
 set output "./graficos/nlogn.tex"
 set title "Algoritmos de ordenación \$O(nlogn)$" tc '#4D4D4D'
-set logscale y
+#set logscale y
 
 plot "./datos/mergesort_datos/mergesort-linux-O0.dat" with lines linestyle 1 title "Mergesort", \
 "./datos/heapsort_datos/heapsort-linux-O0.dat" with lines linestyle 2 title "Heapsort", \
@@ -54,9 +54,9 @@ set logscale y
 plot "./datos/mergesort_datos/mergesort-linux-O0.dat" with lines linestyle 1 title "Mergesort", \
 "./datos/heapsort_datos/heapsort-linux-O0.dat" with lines linestyle 2 title "Heapsort", \
 "./datos/quicksort_datos/quicksort-linux-O0.dat" with lines linestyle 3 title "Quicksort", \
-"./datos/burbuja_datos/burbuja-linux-O0.dat" with lines linestyle 4 title "Burbuja", \
-"./datos/insercion_datos/insercion-linux-O0.dat" with lines linestyle 5 title "Inserción", \
-"./datos/seleccion_datos/seleccion-linux-O0.dat" with lines linestyle 6 title "Selección"
+"./datos/burbuja_datos/burbuja-linux-O0-extended.dat" with lines linestyle 4 title "Burbuja", \
+"./datos/insercion_datos/insercion-linux-O0-extended.dat" with lines linestyle 5 title "Inserción", \
+"./datos/seleccion_datos/seleccion-linux-O0-extended.dat" with lines linestyle 6 title "Selección"
 
 
 EOF
