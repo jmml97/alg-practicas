@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.1)  16 MAR 2017 23:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.1)  16 MAR 2017 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2151,7 +2151,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  69i,10n,92p,704b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/fira/fir_ekigrt.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-Book.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fira/FiraSans-BookItalic.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmi-bol.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmi-reg.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmia-bol.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/newtxsf/zsfmia-reg.pfb>
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.pdf (13 pages, 319775 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/memoria.pdf (13 pages, 319771 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
