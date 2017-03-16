@@ -18,6 +18,7 @@
 \usepackage{caption}
 \usepackage{lipsum}
 \usepackage{float}
+\usepackage{adjustbox}
 
 \definecolor{text}{RGB}{78,78,78}
 \definecolor{accent}{RGB}{129, 26, 24}
@@ -202,10 +203,9 @@ A continuación se muestran los gráficos que corresponden a las tablas anterior
 
 \subsubsection*{Algoritmos de ordenación}
 
-
-\begin{center}
+\begin{adjustbox}{center}
 	\input{graficos/ordenacion}
-\end{center}
+\end{adjustbox}
 
 En este último gráfico, puede observarse claramente la tendencia de los algoritmos cuyo orden de eficiencia es $O(n\log n)$ a ser más rápidos que aquellos que son $O(n^2)$. Se ha utilizado una escala logarítmica para poder representar todos los algoritmos en un mismo gráfico.
 

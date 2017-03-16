@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  16 MAR 2017 22:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.7.1)  16 MAR 2017 23:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1447,7 +1447,12 @@ PGFPlots: reading {./datos/hanoi_datos/hanoi-linux-O0.dat}
 
 ] (./graficos/ordenacion.tex
 File: ./graficos/ordenacion.eps Graphic file (type eps)
- <./graficos/ordenacion.eps>) [27
+ <./graficos/ordenacion.eps>)
+Overfull \hbox (5.69516pt too wide) in paragraph at lines 369--369
+ [] 
+ []
+
+[27
 
 ] [28
 
@@ -1489,7 +1494,7 @@ File: ./graficos/ajuste-quicksort.eps Graphic file (type eps)
 
 ]
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 419.
+(Font)              scaled to size 7.0pt on input line 422.
  (./graficos/ajuste-floyd.tex
 LaTeX Font Info:    Font shape `T1/Chivo-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 135.
@@ -1512,14 +1517,14 @@ File: ./graficos/ajuste-hanoi.eps Graphic file (type eps)
 \tf@snm=\write8
 \openout8 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
  (/Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 430.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 430.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
@@ -1530,7 +1535,7 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 430.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 433.
  ) 
 Here is how much of TeX's memory you used:
  31561 strings out of 493015
@@ -1541,4 +1546,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  67i,13n,83p,709b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (36 pages, 180776 bytes).
+Output written on /Users/jmml/universidad/2/algo/practicas_algoritmica/p1/.texpadtmp/presentacion.dvi (36 pages, 181100 bytes).
