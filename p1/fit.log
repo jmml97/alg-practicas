@@ -21164,3 +21164,411 @@ correlation matrix of the fit parameters:
 b0              1.000 
 b1             -1.000  1.000 
 b2              0.891 -0.901  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:34:22 2017
+
+
+FIT:    data read from "./datos/burbuja_datos/burbuja-linux-O0.dat"
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 1.2908439602e+38   0.00e+00  1.02e+18    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  22 1.4358812089e-03  -1.41e-04  1.02e-04    2.254106e-20  -3.744490e-15   3.375538e-09  -8.472741e-06   1.452653e-02
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 0.00143588
+rel. change during last iteration : -1.40704e-09
+
+degrees of freedom    (FIT_NDF)                        : 20
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00847314
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.17941e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 2.25411e-20      +/- 5.834e-20    (258.8%)
+a1              = -3.74449e-15     +/- 6.11e-15     (163.2%)
+a2              = 3.37554e-09      +/- 2.134e-10    (6.322%)
+a3              = -8.47274e-06     +/- 2.805e-06    (33.1%)
+a4              = 0.0145265        +/- 0.01099      (75.65%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.993  1.000 
+a2              0.963 -0.988  1.000 
+a3             -0.887  0.931 -0.975  1.000 
+a4              0.692 -0.748  0.820 -0.913  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:34:22 2017
+
+
+FIT:    data read from "./datos/hanoi_datos/hanoi-linux-O0.dat"
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 5.6134201357e+01   0.00e+00  6.50e-03    2.254106e-20  -3.744490e-15   3.375538e-09  -8.472741e-06   1.452653e-02
+   7 1.8916497620e+01  -4.37e-01  6.50e-10    2.238169e-20   1.842671e-09   1.549396e-02  -4.399063e-01   2.582726e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 18.9165
+rel. change during last iteration : -4.36914e-06
+
+degrees of freedom    (FIT_NDF)                        : 21
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.949097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.900786
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 2.23817e-20      +/- 1.393e-08    (6.223e+13%)
+a1              = 1.84267e-09      +/- 0.0005836    (3.167e+07%)
+a2              = 0.015494         +/- 0.03058      (197.4%)
+a3              = -0.439906        +/- 0.488        (110.9%)
+a4              = 2.58273          +/- 2.303        (89.18%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.242  1.000 
+a2              0.200 -0.992  1.000 
+a3             -0.162  0.960 -0.987  1.000 
+a4              0.129 -0.888  0.933 -0.975  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:34:34 2017
+
+
+FIT:    data read from "./datos/burbuja_datos/burbuja-linux-O0.dat"
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 1.2908439602e+38   0.00e+00  1.02e+18    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  22 1.4358812089e-03  -1.41e-04  1.02e-04    2.254106e-20  -3.744490e-15   3.375538e-09  -8.472741e-06   1.452653e-02
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 0.00143588
+rel. change during last iteration : -1.40704e-09
+
+degrees of freedom    (FIT_NDF)                        : 20
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00847314
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.17941e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 2.25411e-20      +/- 5.834e-20    (258.8%)
+a1              = -3.74449e-15     +/- 6.11e-15     (163.2%)
+a2              = 3.37554e-09      +/- 2.134e-10    (6.322%)
+a3              = -8.47274e-06     +/- 2.805e-06    (33.1%)
+a4              = 0.0145265        +/- 0.01099      (75.65%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.993  1.000 
+a2              0.963 -0.988  1.000 
+a3             -0.887  0.931 -0.975  1.000 
+a4              0.692 -0.748  0.820 -0.913  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:34:34 2017
+
+
+FIT:    data read from "./datos/hanoi_datos/hanoi-linux-O0.dat"
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 5.6134201357e+01   0.00e+00  6.50e-03    2.254106e-20  -3.744490e-15   3.375538e-09  -8.472741e-06   1.452653e-02
+   7 1.8916497620e+01  -4.37e-01  6.50e-10    2.238169e-20   1.842671e-09   1.549396e-02  -4.399063e-01   2.582726e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 18.9165
+rel. change during last iteration : -4.36914e-06
+
+degrees of freedom    (FIT_NDF)                        : 21
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.949097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.900786
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 2.23817e-20      +/- 1.393e-08    (6.223e+13%)
+a1              = 1.84267e-09      +/- 0.0005836    (3.167e+07%)
+a2              = 0.015494         +/- 0.03058      (197.4%)
+a3              = -0.439906        +/- 0.488        (110.9%)
+a4              = 2.58273          +/- 2.303        (89.18%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.242  1.000 
+a2              0.200 -0.992  1.000 
+a3             -0.162  0.960 -0.987  1.000 
+a4              0.129 -0.888  0.933 -0.975  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:37:17 2017
+
+
+FIT:    data read from "./datos/burbuja_datos/burbuja-linux-O0.dat"
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 1.2908439602e+38   0.00e+00  1.02e+18    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  22 1.4358812089e-03  -1.41e-04  1.02e-04    2.254106e-20  -3.744490e-15   3.375538e-09  -8.472741e-06   1.452653e-02
+
+After 22 iterations the fit converged.
+final sum of squares of residuals : 0.00143588
+rel. change during last iteration : -1.40704e-09
+
+degrees of freedom    (FIT_NDF)                        : 20
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00847314
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.17941e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 2.25411e-20      +/- 5.834e-20    (258.8%)
+a1              = -3.74449e-15     +/- 6.11e-15     (163.2%)
+a2              = 3.37554e-09      +/- 2.134e-10    (6.322%)
+a3              = -8.47274e-06     +/- 2.805e-06    (33.1%)
+a4              = 0.0145265        +/- 0.01099      (75.65%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.993  1.000 
+a2              0.963 -0.988  1.000 
+a3             -0.887  0.931 -0.975  1.000 
+a4              0.692 -0.748  0.820 -0.913  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:37:17 2017
+
+
+FIT:    data read from "./datos/hanoi_datos/hanoi-linux-O0.dat"
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 5.6134201357e+01   0.00e+00  6.50e-03    2.254106e-20  -3.744490e-15   3.375538e-09  -8.472741e-06   1.452653e-02
+   7 1.8916497620e+01  -4.37e-01  6.50e-10    2.238169e-20   1.842671e-09   1.549396e-02  -4.399063e-01   2.582726e+00
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 18.9165
+rel. change during last iteration : -4.36914e-06
+
+degrees of freedom    (FIT_NDF)                        : 21
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.949097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.900786
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 2.23817e-20      +/- 1.393e-08    (6.223e+13%)
+a1              = 1.84267e-09      +/- 0.0005836    (3.167e+07%)
+a2              = 0.015494         +/- 0.03058      (197.4%)
+a3              = -0.439906        +/- 0.488        (110.9%)
+a4              = 2.58273          +/- 2.303        (89.18%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.242  1.000 
+a2              0.200 -0.992  1.000 
+a3             -0.162  0.960 -0.987  1.000 
+a4              0.129 -0.888  0.933 -0.975  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:39:36 2017
+
+
+FIT:    data read from "./datos/burbuja_datos/burbuja-linux-O0.dat"
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 1.7766627487e+03   0.00e+00  7.07e+00    1.000000e+00   1.000000e+00
+   5 4.8069959673e+01  -7.13e-06  7.07e-05    2.380627e+00  -2.093560e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 48.07
+rel. change during last iteration : -7.12818e-11
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.44568
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 2.38063          +/- 0.3537       (14.86%)
+b1              = -20.9356         +/- 3.521        (16.82%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.997  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:39:36 2017
+
+
+FIT:    data read from "./datos/hanoi_datos/hanoi-linux-O0.dat"
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 2.7274102436e+12   0.00e+00  1.40e+05    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   9 2.8391622888e+00  -2.34e-01  1.40e-04    2.132703e-04  -1.297529e-02   2.741168e-01  -2.340055e+00   6.683491e+00
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.83916
+rel. change during last iteration : -2.34455e-06
+
+degrees of freedom    (FIT_NDF)                        : 21
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.367693
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.135198
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 0.00021327       +/- 3.389e-05    (15.89%)
+a1              = -0.0129753       +/- 0.002382     (18.36%)
+a2              = 0.274117         +/- 0.05855      (21.36%)
+a3              = -2.34005         +/- 0.5862       (25.05%)
+a4              = 6.68349          +/- 1.976        (29.56%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.996  1.000 
+a2              0.980 -0.994  1.000 
+a3             -0.948  0.972 -0.992  1.000 
+a4              0.894 -0.927  0.959 -0.987  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:42:32 2017
+
+
+FIT:    data read from "./datos/burbuja_datos/burbuja-linux-O0.dat"
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 1.7766627487e+03   0.00e+00  7.07e+00    1.000000e+00   1.000000e+00
+   5 4.8069959673e+01  -7.13e-06  7.07e-05    2.380627e+00  -2.093560e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 48.07
+rel. change during last iteration : -7.12818e-11
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.44568
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 2.38063          +/- 0.3537       (14.86%)
+b1              = -20.9356         +/- 3.521        (16.82%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.997  1.000 
+
+
+*******************************************************************************
+Thu Mar 23 22:42:32 2017
+
+
+FIT:    data read from "./datos/hanoi_datos/hanoi-linux-O0.dat"
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x*x*x+a1*x*x*x+a2*x*x + a3*x + a4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2            a3            a4           
+   0 2.7274102436e+12   0.00e+00  1.40e+05    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   9 2.8391622888e+00  -2.34e-01  1.40e-04    2.132703e-04  -1.297529e-02   2.741168e-01  -2.340055e+00   6.683491e+00
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.83916
+rel. change during last iteration : -2.34455e-06
+
+degrees of freedom    (FIT_NDF)                        : 21
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.367693
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.135198
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 0.00021327       +/- 3.389e-05    (15.89%)
+a1              = -0.0129753       +/- 0.002382     (18.36%)
+a2              = 0.274117         +/- 0.05855      (21.36%)
+a3              = -2.34005         +/- 0.5862       (25.05%)
+a4              = 6.68349          +/- 1.976        (29.56%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     a3     a4     
+a0              1.000 
+a1             -0.996  1.000 
+a2              0.980 -0.994  1.000 
+a3             -0.948  0.972 -0.992  1.000 
+a4              0.894 -0.927  0.959 -0.987  1.000 

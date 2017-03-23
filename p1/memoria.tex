@@ -283,7 +283,6 @@ Hemos elegido un representante de cada orden de eficiencia, y hemos realizados u
 
 Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin optimización en los sistemas operativos macOS y Linux; y otra que compara la ejecución en Linux con los distintos tipos de ejecución.
 
-%%Grafica optimización
 \subsection*{Representante de $\boldsymbol{O(n^2)}$}
 	\begin{center}
 		\input{graficos/insercion-maclinux}
@@ -318,6 +317,20 @@ Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin opt
 
 	\begin{center}
 		\input{graficos/hanoi-linux-opt}
+	\end{center}
+	
+	
+\section*{Ajuste con otras funciones}
+
+	Veamos por último lo que ocurre si intentamos ajustar los datos recogidos experimentalmente a una función que no coincide con la eficiencia teórica del algoritmo.
+
+	\begin{center}
+		\input{graficos/ajuste-burbuja-malo}
+	\end{center}
+
+	\fontsize{10pt}{7.2}\selectfont
+	\begin{center}
+		\input{graficos/ajuste-hanoi-malo}
 	\end{center}
 
 
