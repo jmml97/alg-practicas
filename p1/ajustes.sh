@@ -29,7 +29,7 @@ set ylabel "Tiempo de ejecución (s)" tc '#4D4D4D' offset 2,0
 set xtics rotate by 45 right font ", 8"
 
 f(x) = a0*x*x+a1*x+a2
-g(x) = x*b0*x**b1+x*b2
+g(x) = x*b0+x*b1*log(x)
 h(x) = c0*x*x*x+c1*x*x+c2*x+c3
 i(x) = d0*2**(x*d1)+d2
 
@@ -60,7 +60,7 @@ plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", 
 
 # Algoritmos de ordenación nlogn
 
-fit g(x) "./datos/mergesort_datos/mergesort-linux-O0.dat" via b0,b1,b2
+fit g(x) "./datos/mergesort_datos/mergesort-linux-O0.dat" via b0,b1
 
 set output "./graficos/ajuste-mergesort.tex"
 set title "Ajuste Mergesort" tc '#4D4D4D'
