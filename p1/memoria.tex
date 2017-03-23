@@ -80,6 +80,8 @@ Se basa en la técnica de divide y vencerás. Consiste en dividir la lista en su
 	\input{graficos/mergesort-linux-O0}
 \end{center}
 
+Podemos observar algunos picos en la gráfica pero no sabemos a que puede ser debido.
+
 \subsubsection*{Quicksort}
 También se basa en la técnica de divide y vencerás.
 En primer lugar elegimos un elemento de la lista, que llamaremos \textit{pivote}. A continuación los elementos de la lista se ordenarán de forma que la derecha del pivote queden los mayores y a la izquierda los menores. De esta forma dividimos la lista en dos sublistas, la de la derecha y la de la izquierda. Repetiremos el proceso mientras las sublistas tengan más de un elemento. Su eficiencia teórica también es $O(n\log n)$.
@@ -266,19 +268,42 @@ Hemos elegido un representante de cada orden de eficiencia, y hemos realizados u
 Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin optimización en los sistemas operativos macOS y Linux; y otra que compara la ejecución en Linux con los distintos tipos de ejecución.
 
 %%Grafica optimización
-\subsection*{Representante $\boldsymbol{O(n^2)}$}
+\subsection*{Representante de $\boldsymbol{O(n^2)}$}
+	\begin{center}
+		\input{graficos/insercion-maclinux}
+	\end{center}
 
-\subsection*{Representante $\boldsymbol{O(n log n)}$}
+	\begin{center}
+		\input{graficos/insercion-linux-opt}
+	\end{center}
 
-\subsection*{Representante $\boldsymbol{O(n^3)}$}
+\subsection*{Representante de $\boldsymbol{O(n\log n)}$}
+	\begin{center}
+		\input{graficos/quicksort-maclinux}
+	\end{center}
 
-\subsection*{Representante $\boldsymbol{O(2^n)}$}
+	\begin{center}
+		\input{graficos/quicksort-linux-opt}
+	\end{center}
 
+\subsection*{Representante de $\boldsymbol{O(n^3)}$}
+	\begin{center}
+		\input{graficos/floyd-maclinux}
+	\end{center}
 
+	\begin{center}
+		\input{graficos/floyd-linux-opt}
+	\end{center}
 
+\subsection*{Representante de $\boldsymbol{O(2^n)}$}
+	\begin{center}
+		\input{graficos/hanoi-maclinux}
+	\end{center}
 
+	\begin{center}
+		\input{graficos/hanoi-linux-opt}
+	\end{center}
 
-%%Grafica optimización
 
 \section*{Anexo}
 \subsection*{Características de los ordenadores donde se ha compilado}
