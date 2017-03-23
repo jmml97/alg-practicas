@@ -120,7 +120,7 @@ plot "./datos/floyd_datos/floyd-linux-O0.dat" with lines linestyle 1 title "O0",
 # Hanoi linux optimización
 
 set output "./graficos/hanoi-linux-opt.tex"
-set title "Comparación floyd en Linux con distinta optimización" tc '#4D4D4D'
+set title "Comparación hanoi en Linux con distinta optimización" tc '#4D4D4D'
 
 plot "./datos/hanoi_datos/hanoi-linux-O0.dat" with lines linestyle 1 title "O0", \
 "./datos/hanoi_datos/hanoi-linux-O1.dat" with lines linestyle 2 title "O1", \
