@@ -35,11 +35,14 @@ plot "./datos/burbuja_datos/burbuja-linux-O0.dat" with lines linestyle 1 title "
 "./datos/insercion_datos/insercion-linux-O0.dat" with lines linestyle 2 title "Inserción", \
 "./datos/seleccion_datos/seleccion-linux-O0.dat" with lines linestyle 3 title "Selección" \
 
+set terminal epslatex size 6,4.5 color colortext
+
 # Algoritmos de ordenación nlogn
 
 set output "./graficos/nlogn.tex"
 set title "Algoritmos de ordenación \$O(nlogn)$" tc '#4D4D4D'
 #set logscale y
+set key outside
 
 plot "./datos/mergesort_datos/mergesort-linux-O0.dat" with lines linestyle 1 title "Mergesort", \
 "./datos/heapsort_datos/heapsort-linux-O0.dat" with lines linestyle 2 title "Heapsort", \
