@@ -19,7 +19,8 @@
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{adjustbox}
-\usepackage{geometry}  
+\usepackage{geometry}
+\usepackage[scaled=.85]{FiraMono}  
 
 \geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
 
@@ -61,7 +62,7 @@ Revisa cada elemento de la lista con el siguiente, intercambiándose de posició
 \begin{center}
 	\input{graficos/burbuja-linux-O0}
 \end{center}
-
+\newpage
 \subsubsection*{Inserción}
 Consideramos el elemento N-ésimo de la lista y lo ordenamos respecto de los elementos desde el primero hasta el N-1-ésimo. Su eficiencia teórica es $O(n^2)$.
 \begin{center}
@@ -83,7 +84,7 @@ Se basa en la técnica de divide y vencerás. Consiste en dividir la lista en su
 	\input{graficos/mergesort-linux-O0}
 \end{center}
 
-En este caso, podemos observar ciertas anomalías en la gráfica, pues presenta unos \textit{picos} para ciertos tamaños del vector. No sabemos bién a qué puede ser debido, pues hemos realizado cuidadosamente la ejecución en varias máquinas, así como en distintos sistemas operativos, obteniendo siempre el mismo resultado.
+En este caso, podemos observar ciertas anomalías en la gráfica, pues presenta unos \textit{picos} para ciertos tamaños del vector. No sabemos bien a qué puede ser debido, pues hemos realizado cuidadosamente la ejecución en varias máquinas, así como en distintos sistemas operativos, obteniendo siempre el mismo resultado.
 
 \subsubsection*{Quicksort}
 También se basa en la técnica de divide y vencerás.
@@ -175,7 +176,7 @@ Las gráficas anteriores han sido realizadas a partir de los datos recogidos en 
 \newpage
 \subsection*{Gráficos comparativos}
 
-A continuación se muestran una serie de gráficos que corresponden a la comparación de aquellos algoritmos que son de un mismo orden.
+A continuación se muestra una serie de gráficos que corresponden a la comparación de aquellos algoritmos que son de un mismo orden.
 
 \subsubsection*{Algoritmos que son $\boldsymbol{O(n^2}$)}
 
@@ -217,7 +218,7 @@ El valor de estas constantes ocultas puede verse reflejado también en las gráf
 
 \subsection*{Eficiencia $\boldsymbol{O(n^2)}$}
 
-Para ajustar las algoritmos de ordenación cuadráticos hemos usado una función $f(x)$ de la forma: $$f(x) = a_0x^2 + a_1x + a_2$$ Con ayuda de \verb|gnuplot| hemos calculado los valores de las constantes ocultas, así como la gráfica que muestra tanto el ajuste como los valores experimentales.
+Para ajustar los algoritmos de ordenación cuadráticos hemos usado una función $f(x)$ de la forma: $$f(x) = a_0x^2 + a_1x + a_2$$ Con ayuda de \verb|gnuplot| hemos calculado los valores de las constantes ocultas, así como la gráfica que muestra tanto el ajuste como los valores experimentales.
 
 \begin{center}
 	\input{graficos/ajuste-burbuja}
@@ -230,10 +231,10 @@ Para ajustar las algoritmos de ordenación cuadráticos hemos usado una función
 \begin{center}
 	\input{graficos/ajuste-seleccion}
 \end{center}
-
+\newpage
 \subsection*{Eficiencia $\boldsymbol{O(n log n)}$}
 
-La función utilizada para ajustar los valores en los algoritmos de ordenación de orden logarítmico es: $$f(x) = a_0xlog(x) + a1x + a2$$
+La función utilizada para ajustar los valores en los algoritmos de ordenación de orden superlineal es: $$f(x) = a_0xlog(x) + a1x + a2$$
 
 
 \begin{adjustbox}{center}
@@ -277,7 +278,7 @@ Por último, ajustamos el algoritmo de Hanoi mediante la función: $$f(x) = a_02
 	\input{graficos/ajuste-hanoi}
 \end{center}
 
-En general, las constantes ocultas tienen un valor muy pequeño, en algunos casos del orden de $10^{-9}$. Esto es porque el ordenador ejecuta los algoritmos en cuestión de segundos o milésimas de segundo, para los tamaños de entrada relativamente ``pequeños$"$ que hemos introducido.
+En general, las constantes ocultas tienen un valor muy pequeño, en algunos casos del orden de $10^{-9}$. Esto es porque el ordenador ejecuta los algoritmos en cuestión de segundos o milésimas de segundo, para los tamaños de entrada relativamente “pequeños” que hemos introducido.
 
 \newpage
 
