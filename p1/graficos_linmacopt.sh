@@ -28,7 +28,7 @@ set output "./graficos/burbuja-maclinux.tex"
 set title "Comparación burbuja en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/burbuja_datos/burbuja-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/burbuja_datos/burbuja-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/burbuja_datos/burbuja-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 # Inserción mac-linux
 
@@ -36,7 +36,7 @@ set output "./graficos/insercion-maclinux.tex"
 set title "Comparación inserción en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/insercion_datos/insercion-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/insercion_datos/insercion-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/insercion_datos/insercion-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 # Selección mac-linux
 
@@ -44,7 +44,7 @@ set output "./graficos/seleccion-maclinux.tex"
 set title "Comparación selección en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/seleccion_datos/seleccion-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/seleccion_datos/seleccion-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/seleccion_datos/seleccion-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 # Mergesort mac-linux
 
@@ -52,7 +52,7 @@ set output "./graficos/mergesort-maclinux.tex"
 set title "Comparación mergesort en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/mergesort_datos/mergesort-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/mergesort_datos/mergesort-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/mergesort_datos/mergesort-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 # Heapsort mac-linux
 
@@ -60,7 +60,7 @@ set output "./graficos/heapsort-maclinux.tex"
 set title "Comparación heapsort en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/heapsort_datos/heapsort-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/heapsort_datos/heapsort-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/heapsort_datos/heapsort-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 # Quicksort mac-linux
 
@@ -68,7 +68,7 @@ set output "./graficos/quicksort-maclinux.tex"
 set title "Comparación quicksort en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/quicksort_datos/quicksort-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/quicksort_datos/quicksort-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/quicksort_datos/quicksort-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 # Floyd mac-linux
 
@@ -76,7 +76,7 @@ set output "./graficos/floyd-maclinux.tex"
 set title "Comparación floyd en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/floyd_datos/floyd-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/floyd_datos/floyd-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/floyd_datos/floyd-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 # Hanoi mac-linux
 
@@ -84,7 +84,7 @@ set output "./graficos/hanoi-maclinux.tex"
 set title "Comparación hanoi en macOS y Linux" tc '#4D4D4D'
 
 plot "./datos/hanoi_datos/hanoi-linux-O0.dat" with lines linestyle 1 title "Linux", \
-"./datos/hanoi_datos/hanoi-mac-O0.dat" with lines linestyle 2 title "Mac" \
+"./datos/hanoi_datos/hanoi-mac-O0.dat" with lines linestyle 4 title "Mac" \
 
 
 # Inserción linux optimización
