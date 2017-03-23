@@ -19,6 +19,9 @@
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{adjustbox}
+\usepackage{geometry}  
+
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
 
 \definecolor{text}{RGB}{78,78,78}
 \definecolor{accent}{RGB}{129, 26, 24}
@@ -188,9 +191,9 @@ Observamos que el algoritmo burbuja es claramente más lento para estos valores.
 
 \subsubsection*{Algoritmos que son $\boldsymbol{O(n\log n}$)}
 
-\begin{center}
+\begin{adjustbox}{center}
 	\input{graficos/nlogn}
-\end{center}
+\end{adjustbox}
 
 Estos algoritmos se ejecutan en tiempos similares, aunque quicksort es ligeramente más rápido, manteniendo de forma uniforme la diferencia con los otros dos algoritmos a medida que aumenta el número de valores.
 
@@ -231,27 +234,40 @@ Para ajustar las algoritmos de ordenación hemos usado una función $f(x)$ de la
 
 La función utilizada para ajustar los valores en estos algoritmos de ordenación es: $f(x) = a_0x + a_1xlog(x)$
 
-\begin{center}
-	\input{graficos/ajuste-mergesort}
-\end{center}
 
-\begin{center}
-	\input{graficos/ajuste-heapsort}
-\end{center}
+\begin{adjustbox}{center}
+	\fontsize{6.8pt}{7.2}\selectfont
+	\resizebox*{12cm}{!}{
+				\input{graficos/ajuste-mergesort}
+			}
+\end{adjustbox}
 
-\begin{center}
-	\input{graficos/ajuste-quicksort}
-\end{center}
 
+
+\begin{adjustbox}{center}
+	\fontsize{6.8pt}{7.2}\selectfont
+	\resizebox*{12cm}{!}{
+				\input{graficos/ajuste-heapsort}
+			}
+\end{adjustbox}
+
+\begin{adjustbox}{center}
+	\fontsize{6.8pt}{7.2}\selectfont
+	\resizebox*{12cm}{!}{
+				\input{graficos/ajuste-quicksort}
+			}
+\end{adjustbox}
 
 \subsection*{Eficiencia $\boldsymbol{n^3}$}
 
 En el caso del algoritmo de Floyd la función $f(x)$ utilizada es: $f(x) = a_0x^3 + a_1x^2 + a_2x + a_3$.
 
-\begin{center}
-	\input{graficos/ajuste-floyd}
-\end{center}
-
+\begin{adjustbox}{center}
+	\fontsize{8pt}{7.2}\selectfont
+	\resizebox*{13cm}{!}{
+				\input{graficos/ajuste-floyd}
+			}
+\end{adjustbox}
 
 \subsection*{Eficiencia $\boldsymbol{2^n}$}
 
