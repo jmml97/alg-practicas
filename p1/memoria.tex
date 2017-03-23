@@ -52,17 +52,17 @@ columns/1/.style={
 
 \section*{Introducción}
 El objetivo de esta práctica es estudiar la eficiencia de los algoritmos que se nos proponen. Para ello realizaremos un estudio teórico, empírico e híbrido de cada uno de ellos. 
-El estudio teórico consiste en expresar el número de operaciones $T(n)$ requeridas para un problema concreto en función del tamaño $n$, siempre en el \textit{caso peor}. Para el estudio empírico hemos medido los tiempos de ejecución de cada algoritmo para cada uno de los tamaños de las entradas. Para el estudio híbrido, la idea es determinar las constantes ocultas en la expresión de la eficiencia teórica, y comprobar mediante un ajuste por mínimos cuadrados si coincide con la eficiencia empírica.
+El estudio teórico consiste en expresar el número de operaciones $T(n)$ requeridas para un problema concreto en función del tamaño $n$ de las entradas, siempre en el \textit{caso peor}. Para el estudio empírico hemos medido los tiempos de ejecución de cada algoritmo para cada uno de los tamaños de las entradas. Para el estudio híbrido, la idea es determinar las constantes ocultas en la expresión de la eficiencia teórica, y comprobar mediante un ajuste por mínimos cuadrados si coincide con la eficiencia empírica.
 
 \section*{Algoritmos de ordenación}
-\subsection*{Eficiencia $\boldsymbol{n^2}$}
+\subsection*{Eficiencia $\boldsymbol{O(n^2)}$}
 \subsubsection*{Burbuja}
 Revisa cada elemento de la lista con el siguiente, intercambiándose de posición si no están en el orden correcto. Su eficiencia teórica es $O(n^2)$.
 \begin{center}
 	\input{graficos/burbuja-linux-O0}
 \end{center}
 
-\subsubsection*{Insercción}
+\subsubsection*{Inserción}
 Consideramos el elemento N-ésimo de la lista y lo ordenamos respecto de los elementos desde el primero hasta el N-1-ésimo. Su eficiencia teórica es $O(n^2)$.
 \begin{center}
 	\input{graficos/insercion-linux-O0}
@@ -75,46 +75,43 @@ Consiste en encontrar el menor de todos los elementos de la lista e intercambiar
 	\input{graficos/seleccion-linux-O0}
 \end{center}
 
-\subsection*{Eficiencia $\boldsymbol{n log n}$}
+\subsection*{Eficiencia $\boldsymbol{O(n log n)}$}
 \subsubsection*{Mergesort}
-Se basa en la técnica de divide y vencerás. Consiste en dividir la lista en sublistas de la mitad de tamaño, ordenando cada una de ellas de forma recursiva. Si el tamaño de la lista es 0 ó 1 la lista ya está ordenada. Para acabar juntamos todas las sublistas en una sola. Su eficiencia teórica es $O(n\log n)$.
+Se basa en la técnica de divide y vencerás. Consiste en dividir la lista en sublistas de la mitad de tamaño, ordenando cada una de ellas de forma recursiva. Si el tamaño de la lista es $0$ ó $1$ la lista ya está ordenada. Para acabar juntamos todas las sublistas en una sola. Su eficiencia teórica es $O(n\log n)$.
 
 \begin{center}
 	\input{graficos/mergesort-linux-O0}
 \end{center}
 
-Podemos observar algunos picos en la gráfica pero no sabemos a que puede ser debido.
+En este caso, podemos observar ciertas anomalías en la gráfica, pues presenta unos \textit{picos} para ciertos tamaños del vector. No sabemos bién a qué puede ser debido, pues hemos realizado cuidadosamente la ejecución en varias máquinas, así como en distintos sistemas operativos, obteniendo siempre el mismo resultado.
 
 \subsubsection*{Quicksort}
 También se basa en la técnica de divide y vencerás.
-En primer lugar elegimos un elemento de la lista, que llamaremos \textit{pivote}. A continuación los elementos de la lista se ordenarán de forma que la derecha del pivote queden los mayores y a la izquierda los menores. De esta forma dividimos la lista en dos sublistas, la de la derecha y la de la izquierda. Repetiremos el proceso mientras las sublistas tengan más de un elemento. Su eficiencia teórica también es $O(n\log n)$.
+En primer lugar elegimos un elemento de la lista, que llamaremos \textit{pivote}. A continuación los elementos de la lista se ordenarán de forma que la derecha del pivote queden los mayores que él, y a la izquierda los menores. De esta forma dividimos la lista en dos sublistas, la de la derecha y la de la izquierda. Repetiremos el proceso mientras las sublistas tengan más de un elemento. Su eficiencia teórica también es $O(n\log n)$.
 
 \begin{center}
 	\input{graficos/quicksort-linux-O0}
 \end{center}
 
 \subsubsection*{Heapsort}
-Este algoritmo consiste en almacenar todos los elementos del vector a ordenar en una estructura de datos llamada montículo (\textit{heap}). Luego, se extrae el nodo que queda como nodo raíz del montículo (cima) en sucesivas iteraciones obteniendo el conjunto ordenado. Basa su funcionamiento en una propiedad de los montículos, por la cual, la cima contiene siempre el menor elemento (o el mayor, según se haya definido el montículo) de todos los almacenados en él. Su eficiencia teórica es $O(n\log n)$.
+Este algoritmo consiste en almacenar todos los elementos del vector a ordenar en una estructura de datos llamada montículo (\textit{heap}). Luego, se extrae el nodo que queda como nodo raíz del montículo (cima) en sucesivas iteraciones obteniendo el conjunto ordenado. Basa su funcionamiento en una propiedad de los montículos, por la cual, la cima contiene siempre el menor elemento (o el mayor, según se haya definido el montículo) de todos los almacenados en él. Su eficiencia teórica es $O(n\log n)$.\\
 \begin{center}
 	\input{graficos/heapsort-linux-O0}
 \end{center}
-
+\newpage
+\enlargethispage{7\baselineskip}
 \section*{Otros algoritmos}
-
 \subsection*{Floyd}
-Es un algoritmo de análisis sobre grados para encontrar el camino mínimo en grafos ponderados. El algoritmo compara todos los posibles caminos a través del grafo entre cada par de vértices. Es un ejemplo de \textbf{programación dinámica}, y su eficiencia teórica es $O(n^3)$.
-
+Es un algoritmo de análisis sobre grafos para encontrar el camino mínimo en grafos ponderados. El algoritmo compara todos los posibles caminos a través del grafo entre cada par de vértices. Es un ejemplo de \textbf{programación dinámica}, y su eficiencia teórica es $O(n^3)$.
 \begin{center}
 	\input{graficos/floyd-linux-O0}
 \end{center}
-
 \subsection*{Hanoi}
 Hay tres pilas de discos, llamadas origen, auxiliar y destino. La primera de ellas está ordenada según tamaño creciente de los discos, de arriba hacia abajo. Se moverá un disco de la pila origen a la destino si hay un único disco en la pila origen. En caso contrario, se moverán todos los discos a la auxiliar, excepto el más grande. Por último, moveremos el disco mayor al destino, y movemos los $n-1$ restantes encima del mayor. El número de pasos crece exponencialmente con el número de discos, y su eficiencia teórica es $O(2^n)$.
-
 \begin{center}
 	\input{graficos/hanoi-linux-O0}
 \end{center}
-
+\newpage
 \section*{Cálculo de la eficiencia empírica}
 
 Puesto que la eficiencia teórica de cada algoritmo es diferente, no podemos realizar las mediciones para los mismos valores de entrada en todos los algoritmos. Así, los agrupamos según su orden de eficiencia.\\
@@ -175,10 +172,10 @@ Las gráficas anteriores han sido realizadas a partir de los datos recogidos en 
 \end{figure}
 
 
-    
-\subsection*{Gráficos}
+\newpage
+\subsection*{Gráficos comparativos}
 
-A continuación se muestran los gráficos que corresponden a la comparación de aquellos algoritmos que son de un mismo orden.
+A continuación se muestran una serie de gráficos que corresponden a la comparación de aquellos algoritmos que son de un mismo orden.
 
 \subsubsection*{Algoritmos que son $\boldsymbol{O(n^2}$)}
 
@@ -186,7 +183,8 @@ A continuación se muestran los gráficos que corresponden a la comparación de 
 	\input{graficos/ncuadrado}
 \end{center}
 
-Observamos que el algoritmo burbuja es claramente más lento para estos valores. Esto se verá reflejado cuando calculemos los valores de las constantes ocultas.
+\vspace{1em}
+Observamos que el algoritmo \textbf{burbuja} es claramente más lento para estos valores. Esto se verá reflejado cuando calculemos los valores de las constantes ocultas en la eficiencia híbrida.
 
 
 \subsubsection*{Algoritmos que son $\boldsymbol{O(n\log n}$)}
@@ -194,29 +192,32 @@ Observamos que el algoritmo burbuja es claramente más lento para estos valores.
 \begin{adjustbox}{center}
 	\input{graficos/nlogn}
 \end{adjustbox}
+\vspace{1em}
 
-Estos algoritmos se ejecutan en tiempos similares, aunque quicksort es ligeramente más rápido, manteniendo de forma uniforme la diferencia con los otros dos algoritmos a medida que aumenta el número de valores.
+Estos algoritmos se ejecutan en tiempos similares, aunque \textbf{quicksort} es ligeramente más rápido, manteniendo de forma uniforme la diferencia con los otros dos algoritmos a medida que aumenta el número de valores.
 
 \subsubsection*{Algoritmos de ordenación}
 
 \begin{adjustbox}{center}
 	\input{graficos/ordenacion}
 \end{adjustbox}
+\vspace{1em}
 
 En este último gráfico, puede observarse claramente la tendencia de los algoritmos cuyo orden de eficiencia es $O(n\log n)$ a ser más rápidos que aquellos que son $O(n^2)$. Se ha utilizado una escala logarítmica para poder representar todos los algoritmos en un mismo gráfico.
 
 \newpage
 
 
-
 \section*{Cálculo de la eficiencia híbrida}
-A continuación se recogen los gráficos que muestran tanto la eficiencia empírica como la función ajustada o \textit{eficiencia híbrida} de cada algoritmo.
+A continuación se recogen los gráficos que muestran tanto la eficiencia empírica como la función ajustada o \textit{eficiencia híbrida} de cada algoritmo. Para el ajuste, se ha utilizado la función que corresponde en cada caso a la eficiencia teórica de cada algoritmo. Además, utilizamos el mayor número de constantes ocultas posibles, a fin de que el ajuste sea mejor.\\
+
+El valor de estas constantes ocultas puede verse reflejado también en las gráficas. Son precisamente estas constantes las que hacen que un algoritmo se ejecute más rápidamente que otro, aunque tengan el mismo orden de eficiencia teórica. 
 
 
 
-\subsection*{Eficiencia $\boldsymbol{n^2}$}
+\subsection*{Eficiencia $\boldsymbol{O(n^2)}$}
 
-Para ajustar las algoritmos de ordenación hemos usado una función $f(x)$ de la forma: $f(x) = a_0x^2 + a_1x + a_2$ y con ayuda de gnuplot hemos calculado los valores de las constantes ocultas. 
+Para ajustar las algoritmos de ordenación cuadráticos hemos usado una función $f(x)$ de la forma: $$f(x) = a_0x^2 + a_1x + a_2$$ Con ayuda de \verb|gnuplot| hemos calculado los valores de las constantes ocultas, así como la gráfica que muestra tanto el ajuste como los valores experimentales.
 
 \begin{center}
 	\input{graficos/ajuste-burbuja}
@@ -230,13 +231,13 @@ Para ajustar las algoritmos de ordenación hemos usado una función $f(x)$ de la
 	\input{graficos/ajuste-seleccion}
 \end{center}
 
-\subsection*{Eficiencia $\boldsymbol{n log n}$}
+\subsection*{Eficiencia $\boldsymbol{O(n log n)}$}
 
-La función utilizada para ajustar los valores en estos algoritmos de ordenación es: $f(x) = a_0x + a_1xlog(x)$
+La función utilizada para ajustar los valores en los algoritmos de ordenación de orden logarítmico es: $$f(x) = a_0xlog(x) + a1x + a2$$
 
 
 \begin{adjustbox}{center}
-	\fontsize{6.8pt}{7.2}\selectfont
+	\fontsize{6.7pt}{7.2}\selectfont
 	\resizebox*{12cm}{!}{
 				\input{graficos/ajuste-mergesort}
 			}
@@ -258,10 +259,9 @@ La función utilizada para ajustar los valores en estos algoritmos de ordenació
 			}
 \end{adjustbox}
 
-\subsection*{Eficiencia $\boldsymbol{n^3}$}
+\subsection*{Eficiencia $\boldsymbol{O(n^3)}$}
 
-En el caso del algoritmo de Floyd la función $f(x)$ utilizada es: $f(x) = a_0x^3 + a_1x^2 + a_2x + a_3$.
-
+En el caso del algoritmo de Floyd la función $f(x)$ utilizada es: $$f(x) = a_0x^3 + a_1x^2 + a_2x + a_3$$.
 \begin{adjustbox}{center}
 	\fontsize{8pt}{7.2}\selectfont
 	\resizebox*{13cm}{!}{
@@ -269,21 +269,24 @@ En el caso del algoritmo de Floyd la función $f(x)$ utilizada es: $f(x) = a_0x^
 			}
 \end{adjustbox}
 
-\subsection*{Eficiencia $\boldsymbol{2^n}$}
+\subsection*{Eficiencia $\boldsymbol{O(2^n)}$}
 
-Por último, ajustamos el algoritmo de Hanoi mediante la función: $f(x) = a_02^{a_{1}x + a_2}$ obteniendo el resultado mostrado a continuación.
+Por último, ajustamos el algoritmo de Hanoi mediante la función: $$f(x) = a_02^{a_{1}x + a_2}$$ obteniendo el resultado mostrado a continuación.
  
 \begin{center}
 	\input{graficos/ajuste-hanoi}
 \end{center}
 
+En general, las constantes ocultas tienen un valor muy pequeño, en algunos casos del orden de $10^{-9}$. Esto es porque el ordenador ejecuta los algoritmos en cuestión de segundos o milésimas de segundo, para los tamaños de entrada relativamente ``pequeños$"$ que hemos introducido.
+
+\newpage
 
 \section*{Comparativa según optimización y sistema operativo}
 Hemos elegido un representante de cada orden de eficiencia, y hemos realizados una comprativa para analizar cómo varían los tiempos de ejecución según el sistema operativo y el nivel de optimización.\\
 
-Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin optimización en los sistemas operativos macOS y Linux; y otra que compara la ejecución en Linux con los distintos tipos de ejecución.
+Para cada algoritmo seleccionado veremos dos gráficas: una que compara la ejecución sin optimización en los sistemas operativos \textit{macOS} y \textit{Linux}; y otra que compara la ejecución en \textit{Linux} con los distintos tipos de optimización del compilador.
 
-\subsection*{Representante de $\boldsymbol{O(n^2)}$}
+\subsection*{Representante de $\boldsymbol{O(n^2)}$ : Inserción}
 	\begin{center}
 		\input{graficos/insercion-maclinux}
 	\end{center}
@@ -292,7 +295,7 @@ Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin opt
 		\input{graficos/insercion-linux-opt}
 	\end{center}
 
-\subsection*{Representante de $\boldsymbol{O(n\log n)}$}
+\subsection*{Representante de $\boldsymbol{O(n\log n)}$ : Quicksort}
 	\begin{center}
 		\input{graficos/quicksort-maclinux}
 	\end{center}
@@ -301,7 +304,7 @@ Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin opt
 		\input{graficos/quicksort-linux-opt}
 	\end{center}
 
-\subsection*{Representante de $\boldsymbol{O(n^3)}$}
+\subsection*{Representante de $\boldsymbol{O(n^3)}$ : Floyd}
 	\begin{center}
 		\input{graficos/floyd-maclinux}
 	\end{center}
@@ -310,7 +313,7 @@ Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin opt
 		\input{graficos/floyd-linux-opt}
 	\end{center}
 
-\subsection*{Representante de $\boldsymbol{O(2^n)}$}
+\subsection*{Representante de $\boldsymbol{O(2^n)}$ : Hanoi}
 	\begin{center}
 		\input{graficos/hanoi-maclinux}
 	\end{center}
@@ -319,6 +322,10 @@ Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin opt
 		\input{graficos/hanoi-linux-opt}
 	\end{center}
 	
+	
+	Podemos observar en los cuatro casos que las variaciones entre ejecuciones en distintos sistemas operativos es prácticamente inapreciable, salvo alguna excepción. Del mismo modo, los tiempos de ejecución disminuyen significativamente, en general, de manera proporcional al nivel de optimización, tal y como cabía esperar.
+	
+	\newpage
 	
 \section*{Ajuste con otras funciones}
 
@@ -333,9 +340,23 @@ Para cada algoritmo veremos dos gráficas: una que compara la ejecución sin opt
 		\input{graficos/ajuste-hanoi-malo}
 	\end{center}
 
+\fontsize{11pt}{7.2}\selectfont
+Observamos que la curva ajustada y los datos experimentales no coinciden apenas que en unos cuantos puntos. Esto era de esperar, pues hemos ajustado los datos con funciones que difieren notablemente de su eficiencia teórica.
+
+\newpage
 
 \section*{Anexo}
-\subsection*{Características de los ordenadores donde se ha compilado}
+\subsection*{Características de los ordenadores donde se ha ejecutado}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item Apple MacBook Pro, Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz, 8GB RAM.\\  Compilador: clang-800.0.38 \\
+Sistema operativo: macOS Sierra
+\item Dell XPS 13, Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz, 8GB RAM.\\
+Compilador: g++ 6.3.1\\
+Sistema operativo: Arch Linux
+\end{enumerate}
 
 
 \end{document}
