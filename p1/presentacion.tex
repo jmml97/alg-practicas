@@ -1,12 +1,10 @@
-%%
-% Please see https://bitbucket.org/rivanvx/beamer/wiki/Home for obtaining beamer.
-%%
 \documentclass[spanish]{beamer}
 
 %%% CODIFICACIÓN
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{graphics,tikz}
 
 %%% FUENTES
 
@@ -21,6 +19,9 @@
 \definecolor{background}{RGB}{237,237,237}
 \definecolor{text}{RGB}{78,78,78}
 \definecolor{accent}{RGB}{129, 26, 24}
+
+\setbeamerfont{framesubtitle}{size=\normalfont\tiny}
+\setbeamercolor{framesubtitle}{fg=white}
 
 
 %%% AJUSTES DE BEAMER
@@ -72,12 +73,13 @@ columns/1/.style={
 \maketitle
 
 \begin{frame}{Objetivo}
-	Estudiar la eficiencia teórica, empírica e híbrida de estos 8 algoritmos:
+	Estudiar la eficiencia teórica, empírica e híbrida de 8 algoritmos. También, realizar comparaciones entre sus tiempos de ejecución, así como la influencia de otros factores, como S.O. utilizado o prestaciones del PC:
 	
 	\begin{itemize}
 		\item Burbuja, Inserción y Selección
 		\item Mergesort, Quicksort y Heapsort
-		\item Floyd y Hanoi
+		\item Floyd
+		\item Hanoi
 	\end{itemize}
 \end{frame}
 
@@ -241,7 +243,7 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}{Datos de la eficiencia empírica}
-	Hemos recopilado los datos de la eficiencia empírica de la ejecución de los distintos algoritmos en varias tablas comparativas.
+	Hemos recopilado los datos de la eficiencia empírica de la ejecución de los distintos algoritmos en varias tablas comparativas. Los datos han sido obtenidos ejecutandose en la misma máquina con Linux y sin optimización.
 	
 	\vskip 0.5cm
 	
@@ -368,11 +370,63 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
+
+\begin{frame}
+\frametitle{Comparativa según optimización y sistema operativo}
+\only<1>{
+ Hemos elegido un representante de cada orden de eficiencia, y hemos realizado una comparativa para analizar cómo varían los tiempos de ejecución según el sistema operativo y el nivel de optimización.	
+}
+	
+\only<2>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(n^2)}$}
+}
+
+\only<3>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(n^2)}$}
+}
+
+\only<4>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(n\log n)}$}
+}
+
+\only<5>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(n\log n)}$}
+}
+
+\only<6>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(n^3)}$}
+}
+
+\only<7>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(n^3)}$}
+}
+
+\only<8>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(2^n)}$}
+}
+
+\only<9>{
+\vspace{-9em}
+\textbf{Algoritmos que son $\boldsymbol{O(2^n)}$}
+}
+\end{frame}
+
 \begin{frame}{Eficiencia híbrida}
 	A continuación se recogen los gráficos que muestran tanto la eficiencia empírica como la función ajustada o \textit{eficiencia híbrida} de cada algoritmo.	
+	\vskip 0.5 cm
+	También se muestran, para cada algoritmo, las constantes ocultas en la expresión de la eficiencia teórica.
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Burbuja}
 	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-burbuja}
@@ -380,6 +434,8 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Inserción}
 	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-insercion}
@@ -387,6 +443,8 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Selección}
 	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-seleccion}
@@ -394,6 +452,8 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Mergesort}
 	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-mergesort}
@@ -401,6 +461,8 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Heapsort}
 	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-heapsort}
@@ -408,6 +470,8 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Quicksort}
 	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-quicksort}
@@ -415,6 +479,8 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Floyd}
 	\fontsize{7pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-floyd}
@@ -422,6 +488,8 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
+    \vspace{2.5em}
+    \textbf{Hanoi}
 	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 		\input{graficos/ajuste-hanoi}
@@ -429,5 +497,5 @@ columns/1/.style={
 \end{frame}
 
 
-
 \end{document}
+
