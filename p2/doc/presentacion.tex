@@ -1,0 +1,315 @@
+\documentclass[spanish]{beamer}
+
+%%% CODIFICACIÓN
+
+%\usepackage[x11names, rgb, html]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphics,tikz}
+
+%%% FUENTES
+
+\usepackage[T1]{fontenc}
+\usepackage[familydefault,regular]{Chivo}
+\usepackage{newtxsf} % Fuente de matemáticas
+
+\setbeamertemplate{navigation symbols}{}
+
+%%% COLORES
+
+%% Colores de Solarized
+
+\definecolor{sbase03}{HTML}{002B36}
+\definecolor{sbase02}{HTML}{073642}
+\definecolor{sbase01}{HTML}{586E75}
+\definecolor{sbase00}{HTML}{657B83}
+\definecolor{sbase0}{HTML}{839496}
+\definecolor{sbase1}{HTML}{93A1A1}
+\definecolor{sbase2}{HTML}{EEE8D5}
+\definecolor{sbase3}{HTML}{FDF6E3}
+\definecolor{syellow}{HTML}{B58900}
+\definecolor{sorange}{HTML}{CB4B16}
+\definecolor{sred}{HTML}{DC322F}
+\definecolor{smagenta}{HTML}{D33682}
+\definecolor{sviolet}{HTML}{6C71C4}
+\definecolor{sblue}{HTML}{268BD2}
+\definecolor{scyan}{HTML}{2AA198}
+\definecolor{sgreen}{HTML}{859900}
+
+%% Colores del documento
+
+\definecolor{background}{RGB}{237,237,237}
+\definecolor{text}{RGB}{78,78,78}
+\definecolor{accent}{RGB}{129, 26, 24}
+\definecolor{accent2}{HTML}{814918}
+\definecolor{accent3}{HTML}{136618}
+\definecolor{accent4}{HTML}{0F4B4E}
+\definecolor{accent5}{HTML}{681341}
+\definecolor{accent6}{HTML}{1F1B5A}
+
+%%% LISTINGS
+
+\usepackage{listings}
+
+%% Las tildes
+
+\lstset{
+  inputencoding=latin1
+}
+
+%% Colores de Solarized para listings
+
+\lstset{
+  % How/what to match
+  % sensitive=true,
+  language=C++,
+  % Border (above and below)
+  frame=lines,
+  % Line number
+  numbers=left,
+  % Extra margin on line (align with paragraph)
+  xleftmargin=\parindent,
+  % Put extra space under caption
+  belowcaptionskip=1\baselineskip,
+  % Colors
+  % backgroundcolor=\color{sbase3},
+  basicstyle=\footnotesize\ttfamily\color{text},
+  keywordstyle=\color{accent3},
+  commentstyle=\color{accent5},
+  stringstyle=\color{accent2},
+  numberstyle=\color{text},
+  identifierstyle=\color{accent4},
+  % Break long lines into multiple lines?
+  breaklines=true,
+  % Show a character for spaces?
+  showstringspaces=false,
+  tabsize=2
+}
+
+\setbeamerfont{framesubtitle}{size=\normalfont\tiny}
+\setbeamercolor{framesubtitle}{fg=white}
+
+
+%%% AJUSTES DE BEAMER
+
+% ¿Negrita en el título de diapositiva o no?
+%\setbeamertemplate{frametitle}{\color{accent}\vspace*{1cm}\bfseries\insertframetitle\par\vskip-6pt}
+
+\setbeamertemplate{frametitle}{\color{accent}\vspace*{1cm}\insertframetitle\par\vskip-6pt}
+
+\setbeamertemplate{itemize items}[circle] % Viñetas de itemize
+
+%%% CONFIGURACIÓN DE COLORES DE BEAMER
+
+\setbeamercolor{background canvas}{bg=background}
+\setbeamercolor{normal text}{fg=text}
+\setbeamercolor{alerted text}{fg=accent}
+\setbeamercolor{block title}{fg=accent}
+\setbeamercolor{alerted text}{fg=accent}
+\setbeamercolor{itemize item}{fg=accent}
+\setbeamercolor{enumerate item}{fg=accent}
+\setbeamercolor*{title}{fg=accent}
+\setbeamercolor{qed symbol}{fg=accent}
+\usebeamercolor[fg]{normal text}
+
+%%% PGFPLOTSTABLE
+
+\usepackage{pgfplotstable}
+
+
+\pgfplotstableset{
+columns/0/.style={
+     column name={Elementos},
+   },
+columns/1/.style={
+     column name={Tiempo en segundos},
+   },
+}
+
+%%% INFORMACIÓN DEL DOCUMENTO
+
+\title{Algorítmica: práctica 2}
+\subtitle{Mezclando $k$ vectores ordenados}
+\author{Sofía Almeida Bruno\\ Antonio Coín Castro\\ María Victoria Granados Pozo\\ Miguel Lentisco Ballesteros\\ José María Martín Luque\\ \vspace{1em}Grupo 2}
+\begin{document}
+
+
+
+
+\maketitle
+
+\begin{frame}{Objetivo}
+	Estudiar la eficiencia teórica, empírica e híbrida de 8 algoritmos. También, realizar comparaciones entre sus tiempos de ejecución, así como la influencia de otros factores, como S.O. utilizado o prestaciones del PC.
+	
+	\begin{itemize}
+		\item Burbuja, Inserción y Selección
+		\item Mergesort, Quicksort y Heapsort
+		\item Floyd
+		\item Hanoi
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Burbuja}
+  \lstinputlisting{./../src/genera-duplicados.cpp}
+\end{frame}
+
+\begin{frame}{Inserción}
+	Consideramos el elemento N-ésimo de la lista y lo ordenamos respecto de los elementos desde el primero hasta el N-1-ésimo.
+	
+	\vskip 0.5cm
+	
+	Es $O(n^2)$.
+\end{frame}
+
+
+\begin{frame}{Selección}
+	Consiste en encontrar el menor de todos los elementos de la lista e intercambiarlo con el de la primera posición. Luego con el segundo, y así sucesivamente hasta ordenarlo todo.
+	\vskip 0.5cm
+	
+	Es $O(n^2)$.
+\end{frame}
+
+
+\begin{frame}{Mergesort}
+
+	Se basa en la técnica de \textit{divide y vencerás}.
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item Se divide la lista a ordenar en dos sublistas de la mitad de tamaño.
+		\item Se ordena cada sublista de forma recursiva.
+		\item Si el tamaño de una sublista es 0 o 1 entonces ya está ordenada.
+		\item Se unen todas las sublistas en una sola.
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(nlogn)$.
+\end{frame}
+
+
+\begin{frame}{Quicksort}
+
+	Se basa en la técnica de \textit{divide y vencerás}.
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item Elegimos un elemento de la lista, el \textit{pivote}.
+		\item Se ordena la lista, dejando los elementos mayores a la derecha del pivote y los menores a la izquierda.
+		\item Realizamos el proceso recursivamente en las dos sublistas que nos quedan (derecha e izquierda) hasta que tengan 0 o 1 elemento.
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(nlogn)$.
+\end{frame}
+
+
+\begin{frame}{Heapsort}
+
+	Es un método de ordenación por selección.
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item El \textit{heap} es un árbol binario de altura mínima, en el que los nodos del nivel más bajo están lo más a la izquierda posible.
+		\item Los hijos de cada nodo son siempre menores que el padre.
+		\item No es necesario recorrer el árbol de forma desordenada para encontrar los elementos máximos.
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(nlogn)$.
+\end{frame}
+
+\begin{frame}{Floyd}
+
+	Algoritmo de análisis sobre grafos para encontrar el camino mínimo en grafos ponderados.
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item El algoritmo compara todos los posibles caminos a través del grafo entre cada par de vértices.
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(n^3)$.
+\end{frame}
+
+
+\begin{frame}{Hanoi}
+
+	Las torres de Hanoi son un puzzle matemático.
+
+	\vskip 0.5cm
+	
+	\begin{itemize}
+		\item Tenemos 3 pilas: origen, auxiliar y destino.
+		\item Origen está ordenada por tamaño creciente de discos.
+		\item Se mueve un disco de la pila origen a la de destino si hay un único disco en la pila origen.
+		\item Si no, se mueven todos los discos a la auxiliar, excepto el más grande.
+		\item Por último, movemos el disco mayor al destino, y los $n-1$ restantes encima del mayor.
+	\end{itemize}
+	
+	\vskip 0.5cm
+	
+	Es $O(2^n)$.
+\end{frame}
+
+\begin{frame}{Datos de la eficiencia empírica}
+	Hemos recopilado los datos de la eficiencia empírica de la ejecución de los distintos algoritmos en varias tablas comparativas. Los datos han sido obtenidos ejecutandose en la misma máquina con Linux y sin optimización.
+	
+	\vskip 0.5cm
+	
+	Hemos creado tablas para los distintos órdenes de eficiencia de los algoritmos y hemos puesto juntos aquellos que tienen el mismo.
+	
+	\vskip 0.5cm
+	
+	Finalmente, para cada tabla comparativa hemos creado una gráfica.
+	
+\end{frame}
+
+
+
+\begin{frame}{Comparativa de los algoritmos de ordenación}
+	Recopilando los datos de todos los algoritmos de ordenación hemos realizado una tabla comparativa en la que se muestra qué algoritmo es el más eficiente.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Comparativa según optimización y sistema operativo}
+
+ Hemos elegido un representante de cada orden de eficiencia, y hemos realizado una comparativa para analizar cómo varían los tiempos de ejecución según el sistema operativo y el nivel de optimización.	
+\end{frame}
+
+
+\begin{frame}{Eficiencia híbrida}
+	A continuación se recogen los gráficos que muestran tanto la eficiencia empírica como la función ajustada o \textit{eficiencia híbrida} de cada algoritmo.	
+	\vskip 0.5 cm
+	También se muestran, para cada algoritmo, las constantes ocultas en la expresión de la eficiencia teórica.
+\end{frame}
+
+
+\begin{frame}{Ajustes con otras funciones}
+	Veamos por último lo que ocurre si intentamos ajustar los datos recogidos experimentalmente a una función que no coincide con la eficiencia teórica del algoritmo.
+\end{frame}
+
+
+\begin{frame}{Características de los PC donde se ha ejecutado}
+\begin{itemize}
+\item Apple MacBook Pro, Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz, 8GB RAM.\\  Compilador: clang-800.0.38 \\
+Sistema operativo: macOS Sierra
+\vskip 0.5 cm
+\item Dell XPS 13, Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz, 8GB RAM.\\
+Compilador: g++ 6.3.1\\
+Sistema operativo: Arch Linux
+\end{itemize}
+	
+\end{frame}
+
+\end{document}
+
