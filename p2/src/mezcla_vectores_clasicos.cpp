@@ -78,9 +78,13 @@ void merge(int T1[], int T2[], int S[], int n1, int n2) {
 /**
  * Mezcla k vectores ordenados en un vector solución
  */
-void mezcla_vectores(int** T, int S[], int k, int n) {
+int* mezcla_vectores(int** T, int k, int n) {
+  int* S = new int[k*n];  // Vector mezcla
+  assert(S);
+
   if (k > 1) {
     int* aux = new int [k*n];
+    assert(aux);
 
     // Primera mezcla
     merge(T[0], T[1], S, n, n);
@@ -88,11 +92,7 @@ void mezcla_vectores(int** T, int S[], int k, int n) {
     // Resto de mezclas
     for (int i = 2; i < k; i++) {
       merge(S, T[i], aux, i*n, n);
-      //copy(S, aux, k*n);  CON ESTO SÍ FUNCIONA
-      int* temp = aux;
-      aux = S;
-      S = temp;
-      // No funciona. ¿Por qué?
+      swap(S, aux);   // Intercambiamos punteros
     }
   }
 
@@ -101,6 +101,8 @@ void mezcla_vectores(int** T, int S[], int k, int n) {
       S[i] = T[0][i];
     }
   }
+
+  return S;
 }
 
 int main(int argc, char * argv[]) {
@@ -142,8 +144,8 @@ int main(int argc, char * argv[]) {
 
       else {
         T[i][m] = aux[t];
-	t++;
-	m++;
+	      t++;
+	      m++;
       }
     }
   }
@@ -156,12 +158,8 @@ int main(int argc, char * argv[]) {
     imprimir_vector(T[i], n);
   }
 
-  // Mezcla de k vectores
-  int* S = new int [N];
-  assert(S);
-
   // Mezclamos los k vectores por el algoritmo clásico
-  mezcla_vectores(T, S, k, n);
+  int* S = mezcla_vectores(T, k, n);
 
   cout << endl << "Vector mezcla: ";
   imprimir_vector(S, k*n);
