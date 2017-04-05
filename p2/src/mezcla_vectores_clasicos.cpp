@@ -16,8 +16,6 @@
 #include <cstdlib>
 #include <climits>
 #include <cassert>
-//#include <algorithm>
-//#include <vector>
 
 using namespace std;
 
@@ -50,7 +48,7 @@ void copy(int* T1, int* T2, int n) {
 }
 
 /**
- * Mezcla dos vectores ordenados en un tercero.
+ * Mezcla dos vectores ordenados en un tercero
  */
 void merge(int T1[], int T2[], int S[], int n1, int n2) {
   int p1 = 0, p2 = 0, p3 = 0;
@@ -78,7 +76,7 @@ void merge(int T1[], int T2[], int S[], int n1, int n2) {
 }
 
 /**
- * Mezcla k vectores ordenados en un vector solución.
+ * Mezcla k vectores ordenados en un vector solución
  */
 void mezcla_vectores(int** T, int S[], int k, int n) {
   if (k > 1) {
@@ -90,7 +88,11 @@ void mezcla_vectores(int** T, int S[], int k, int n) {
     // Resto de mezclas
     for (int i = 2; i < k; i++) {
       merge(S, T[i], aux, i*n, n);
-      copy(S, aux, k*n);
+      //copy(S, aux, k*n);  CON ESTO SÍ FUNCIONA
+      int* temp = aux;
+      aux = S;
+      S = temp;
+      // No funciona. ¿Por qué?
     }
   }
 
