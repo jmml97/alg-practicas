@@ -94,6 +94,8 @@ int* mezcla_vectores(int** T, int k, int n) {
       merge(S, T[i], aux, i*n, n);
       swap(S, aux);   // Intercambiamos punteros
     }
+
+    delete [] aux;
   }
 
   else {
@@ -163,6 +165,13 @@ int main(int argc, char * argv[]) {
 
   cout << endl << "Vector mezcla: ";
   imprimir_vector(S, k*n);
+
+  delete [] S;
+
+  for (int i = 0; i < k; i++)
+    delete [] T[i];
+
+  delete [] T;
 
   return 0;
 }
