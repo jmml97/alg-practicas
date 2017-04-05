@@ -19,6 +19,8 @@
 
 using namespace std;
 
+#define PRINT_VECTOR 0
+
 /**
  * Genera un número uniformemente distribuido en el
  * intervalo [0,1)
@@ -154,17 +156,25 @@ int main(int argc, char * argv[]) {
 
   delete [] aux;
 
-  // Imprimir los k vectores
-  for (int i = 0; i < k; i++) {
-    cout << "Vector " << i + 1 << ": ";
-    imprimir_vector(T[i], n);
-  }
+  #if PRINT_VECTOR
+    // Imprimir los k vectores
+    for (int i = 0; i < k; i++) {
+      cout << "Vector " << i + 1 << ": ";
+      imprimir_vector(T[i], n);
+    }
+  #endif
 
+  int* S;
+  clock_t t_antes = clock();
   // Mezclamos los k vectores por el algoritmo clásico
-  int* S = mezcla_vectores(T, k, n);
+  S = mezcla_vectores(T, k, n);
+  clock_t t_despues = clock();
+  cout << k << " " << ((double)(t_despues - t_antes)) / CLOCKS_PER_SEC << endl;
 
-  cout << endl << "Vector mezcla: ";
-  imprimir_vector(S, k*n);
+  #if PRINT_VECTOR
+    cout << endl << "Vector mezcla: ";
+    imprimir_vector(S, k*n);
+  #endif
 
   delete [] S;
 

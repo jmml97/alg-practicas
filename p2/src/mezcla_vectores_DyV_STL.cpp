@@ -2,11 +2,11 @@
  * EJERCICIO 4: mezcla de k vectores ordenados
  *
  * Generador de ejemplo para el problema de mezcla de k vectores ordenados. Para obtener vectores
- * ordenados de forma creciente, cada uno con n elementos, se genera un vector de tamaño k*n
+ * ordenados de forma creciente, cada uno con n elementos, se genera un vector de tamaï¿½o k*n
  * con todos los enteros entre 0 y k*n-1 ordenados.
  *
  * Se lanzan entonces k iteraciones de un algoritmo
- * de muestreo aleatorio de tamaño n para obtener los k vectores. Están ordeados porque el
+ * de muestreo aleatorio de tamaï¿½o n para obtener los k vectores. Estï¿½n ordeados porque el
  * algoritmo de muestreo mantiene el orden.
  *
  */
@@ -19,11 +19,12 @@
 //#include <algorithm>
 #include <vector>
 
-
 using namespace std;
 
+#define PRINT_VECTOR 0
+
 /**
- * Genera un número uniformemente distribuido en el
+ * Genera un nï¿½mero uniformemente distribuido en el
  * intervalo [0,1)
  */
 double uniforme() {
@@ -118,25 +119,25 @@ vector<int> mezclaDV(vector<vector<int>> vectores) {
 }
 
 /**
- * @brief Mezclar k vectores mediante el algoritmo Divide y Vencerás
+ * @brief Mezclar k vectores mediante el algoritmo Divide y Vencerï¿½s
  * @param T matriz con los vectores
- * @param n tamaño de los vectores
- * @param p posición inicial del vector en la matriz T 
- * @param f posición final del vector en la matriz T
+ * @param n tamaï¿½o de los vectores
+ * @param p posiciï¿½n inicial del vector en la matriz T
+ * @param f posiciï¿½n final del vector en la matriz T
  */
 int* mezclaDV(int** T, int n, int p, int f) {
   //Caso general
-  int k = (f - p + 1) / n; //Número de vectores
+  int k = (f - p + 1) / n; //Nï¿½mero de vectores
   if(k > 2) {
-    //Dividivimos el número de vectores que tomamos
-    int p1 =  p;  
-    int f1 = (f - p) / 2; 
+    //Dividivimos el nï¿½mero de vectores que tomamos
+    int p1 =  p;
+    int f1 = (f - p) / 2;
     f1 += f1 % n; // Queremos coger vectores enteros
     int tam1 = f1 - p1 + 1;
     int p2 = f1 + 1;
     int f2 = f;
     int tam2 = (f2 - p2) * n;
-  
+
     //Mezclamos cada parte
     int* v1 = new int[tam1];
     int* v2 = new int[tam2];
@@ -163,8 +164,8 @@ int main(int argc, char * argv[]) {
     return -1;
   }
 
-  int n = atoi(argv[1]);  // número de elementos
-  int k = atoi(argv[2]);  // número de vectores
+  int n = atoi(argv[1]);  // nï¿½mero de elementos
+  int k = atoi(argv[2]);  // nï¿½mero de vectores
 
   vector<vector<int>> T (k);
 
@@ -175,7 +176,7 @@ int main(int argc, char * argv[]) {
   vector<int> aux (N);
 
   srand(time(0));
-  
+
   // Genero todos los enteros entre 0 y k*n-1
   for(int j = 0; j < N; j++)
     aux[j] = j;
@@ -184,10 +185,10 @@ int main(int argc, char * argv[]) {
   for(int i = 0; i < k; i++) {
     int t = 0;
     int m = 0;
-    
+
     while(m < n) {
       double u = uniforme();
-      
+
       if((N - t) * u >= (n - m))
 	t++;
       else {
@@ -197,26 +198,27 @@ int main(int argc, char * argv[]) {
       }
     }
   }
-  
-  cout << "Vectores sin ordenar:" << endl; 
-  
-  for(int i = 0; i < k; i++) {
-    for(int j = 0; j < n; j++)
-      cout << T[i][j] << " ";
-    cout << " " << endl;
-  }
 
-  // Mezcla de k vectores
+  #if PRINT_VECTOR
+    // Imprimir los k vectores
+    for (int i = 0; i < k; i++) {
+      cout << "Vector " << i + 1 << ": ";
+      imprimir_vector(T[i], n);
+    }
+  #endif
+
   vector<int> S (N);
-  
-  // Mezclamos los k vectores por el algoritmo divide y vencerás
+
+  clock_t t_antes = clock();
+  // Mezclamos los k vectores usando Divide y VencerÃ¡s
   S = mezclaDV(T);
+  clock_t t_despues = clock();
+  cout << k << " " << ((double)(t_despues - t_antes)) / CLOCKS_PER_SEC << endl;
 
-  cout << endl << "Vector mezcla: " << endl;
-  for(int i = 0; i < S.size(); i++) {
-      cout << S[i] << " ";
-  }
-
-  cout << endl;
+  #if PRINT_VECTOR
+    cout << endl << "Vector mezcla: ";
+    imprimir_vector(S, k*n);
+  #endif
+  
   return 0;
 }

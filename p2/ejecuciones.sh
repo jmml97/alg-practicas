@@ -1,12 +1,12 @@
-i=1
-MAX=500
+i=100
+MAX=5000
+N=10
 
 while [ $i -lt $MAX ];
 do
     echo Valor: $i
-    TIMEFORMAT='%R'
-    (time ./$1 50 $i > /dev/null) >> $1.dat  2>&1
-    ((i += 1))
+    (bin/"$1" ${N} ${i}) >> dat/$1.dat
+    ((i += 50))
 done
 
 echo ""
