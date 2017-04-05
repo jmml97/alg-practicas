@@ -2,8 +2,8 @@
  * EJERCICIO 4: mezcla de k vectores ordenados
  *
  * Generador de ejemplo para el problema de mezcla de k vectores ordenados. Para obtener vectores
- * ordenados de forma creciente, cada uno con n elementos, se genera un vector de tamaño k*n
- * con todos los enteros entre 0 y k*n-1 ordenados.
+ * ordenados de forma creciente, cada uno con n elementos, se genera un vector de tamaño $k*n$
+ * con todos los enteros entre 0 y $k*n-1$ ordenados.
  *
  * Se lanzan entonces k iteraciones de un algoritmo
  * de muestreo aleatorio de tamaño n para obtener los k vectores. Están ordeados porque el
@@ -123,7 +123,7 @@ int main(int argc, char * argv[]) {
   int* aux = new int [N];
   assert(aux);
 
-  // Genera todos los enteros entre 0 y k*n-1
+  // Genera todos los enteros entre 0 y $k*n-1$
   srand(time(0));
   for (int j = 0; j < N; j++)
     aux[j] = j;

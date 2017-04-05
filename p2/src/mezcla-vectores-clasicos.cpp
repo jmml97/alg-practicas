@@ -42,14 +42,6 @@ void imprimir_vector(int* T, int n) {
 }
 
 /**
- * Copia el contenido de un vector en otro del mismo tamaño
- */
-void copy(int* T1, int* T2, int n) {
-  for (int i = 0; i < n; i++)
-    T1[i] = T2[i];
-}
-
-/**
  * Mezcla dos vectores ordenados en un tercero
  */
 void merge(int T1[], int T2[], int S[], int n1, int n2) {
