@@ -34,8 +34,7 @@ double uniforme() {
 /**
  * Imprime el contenido de k vectores
  */
-void imprimir_vector(int* T, int n)
-{
+void imprimir_vector(int* T, int n) {
   for (int i = 0; i < n; i++) {
     cout << T[i] << " ";
   }
@@ -116,7 +115,7 @@ int main(int argc, char * argv[]) {
   assert(T);
 
   for (int i = 0; i < k; i++)
-      T[i]= new int [n];
+    T[i]= new int [n];
 
   int N = k*n;
   int* aux = new int [N];
@@ -141,8 +140,8 @@ int main(int argc, char * argv[]) {
 
       else {
         T[i][m] = aux[t];
-	      t++;
-	      m++;
+	t++;
+	m++;
       }
     }
   }
