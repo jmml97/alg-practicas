@@ -42,6 +42,17 @@ set title "Ajuste algoritmo clásico" tc '#4D4D4D'
 
 plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", a0, a1, a2), "./dat/mezcla-vectores-clasico.dat" with points linestyle 1 pt 7 title "Clásico"
 
+# Clásico - v2
+
+fit f(x) "./dat/mezcla-vectores-clasico-v2.dat" via a0,a1,a2
+print a0, a1, a2
+
+set output "./graficos/ajuste-clasico-v2.tex"
+#set title "".sprintf("%.2f\$\frac{n}{2}x^2\$+%.2f\$x\$+%.2f", a0, a1, a2) tc '#4D4D4D'
+set title "Ajuste algoritmo clásico - v2" tc '#4D4D4D'
+
+plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", a0, a1, a2), "./dat/mezcla-vectores-clasico-v2.dat" with points linestyle 1 pt 7 title "Clásico - v2"
+
 # DyV
 
 fit g(x) "./dat/mezcla-vectores-DyV.dat" via b0
