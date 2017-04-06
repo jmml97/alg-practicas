@@ -2,11 +2,11 @@
  * EJERCICIO 4: mezcla de k vectores ordenados
  *
  * Generador de ejemplo para el problema de mezcla de k vectores ordenados. Para obtener vectores
- * ordenados de forma creciente, cada uno con n elementos, se genera un vector de tamaÃ±o k*n
+ * ordenados de forma creciente, cada uno con n elementos, se genera un vector de tamaño k*n
  * con todos los enteros entre 0 y k*n-1 ordenados.
  *
  * Se lanzan entonces k iteraciones de un algoritmo
- * de muestreo aleatorio de tamaÃ±o n para obtener los k vectores. EstÃ¡n ordeados porque el
+ * de muestreo aleatorio de tamaño n para obtener los k vectores. Están ordeados porque el
  * algoritmo de muestreo mantiene el orden.
  *
  */
@@ -22,7 +22,7 @@ using namespace std;
 #define PRINT_VECTOR 0
 
 /**
- * Genera un nÃºmero uniformemente distribuido en el
+ * Genera un número uniformemente distribuido en el
  * intervalo [0,1)
  */
 double uniforme() {
@@ -70,7 +70,7 @@ void merge(int T1[], int T2[], int S[], int n1, int n2) {
 }
 
 /**
- * Mezcla k vectores ordenados en un vector soluciÃ³n
+ * Mezcla k vectores ordenados en un vector solución
  */
 int* mezcla_vectores(int** T, int k, int n) {
   int* S = new int[k*n];  // Vector mezcla
@@ -107,8 +107,8 @@ int main(int argc, char * argv[]) {
     return -1;
   }
 
-  int n = atoi(argv[1]);  // nÃºmero de elementos
-  int k = atoi(argv[2]);  // nÃºmero de vectores
+  int n = atoi(argv[1]);  // número de elementos
+  int k = atoi(argv[2]);  // número de vectores
 
   int** T;
   T = new int* [k];
@@ -158,7 +158,7 @@ int main(int argc, char * argv[]) {
 
   int* S;
   clock_t t_antes = clock();
-  // Mezclamos los k vectores por el algoritmo clÃ¡sico
+  // Mezclamos los k vectores por el algoritmo clásico
   S = mezcla_vectores(T, k, n);
   clock_t t_despues = clock();
   cout << k << " " << ((double)(t_despues - t_antes)) / CLOCKS_PER_SEC << endl;
