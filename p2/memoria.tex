@@ -115,7 +115,7 @@ que se encargue de combinar $k$ vectores ordenados. Además de implementarlo, an
 A continuación se proporciona el código de la función \texttt{mezcla\_vectores},
 que utiliza un algoritmo clásico para mezclar $k$ vectores en uno solo. El
 código del programa completo se puede encontrar en la carpeta \textit{src}.\\
-
+La idea principal del programa es ir mezclando cada vector con el siguiente, el vector resultante de esta mezcla se combina con el siguiente y así hasta haber mezclado todos los vectores en uno único. Para ello implementamos dos funciones: la primera, mezcla dos vectores y la segunda mezcla los \textit{k} vectores mediante un bucle en el que vamos llamando a la anterior función.\\
 \lstinputlisting[language=C++, linerange={47-70,75-102}]{./src/mezcla-vectores-clasico.cpp}
 
 \subsection*{Eficiencia teórica}
@@ -134,16 +134,20 @@ ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
 \end{center}
 
 \subsection*{Eficiencia \textit{híbrida}}
+En la gráfica a continuación se muestran representados mediante puntos los datos obtenidos como resultado de las distintas ejecuciones y la función que ajusta dichos datos con sus coeficientes correspondientes.
+\begin{center}
+	\input{./graficos/ajuste-clasico}
+\end{center}
 
 \section*{Algoritmo clásico - versión 2}
  
- Como alternativa al algoritmo clásico, hemos planteado una segunda version donde se crea un vector de tamaño $k$ que guarda las posiciones máximas de cada vector.\\
+ Como alternativa al algoritmo clásico, hemos planteado una segunda versión donde se crea un vector de tamaño $k$ que guarda las posiciones máximas de cada vector.\\
  
-Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectores ordenados) y pasamos en cada iteración del bucle cogiendo el índice que corresponda hasta obtener el índice del vector que contiene el máximo valor. Lo añadimos empezando por el final del vector y decrementamos el índice en el vector de índices. \\
+Inicializamos el vector de índices a $n - 1$ (ya que están todos los vectores ordenados) y en cada iteración del bucle comparamos el índice correspondiente hasta obtener el índice del vector que contiene el máximo valor. Lo añadimos empezando por el final del vector y decrementamos el índice en el vector de índices. \\
  
  El código del programa completo se puede encontrar en la carpeta \textit{src}.\\
  
- \lstinputlisting[language=C++, linerange={12-43}]{./src/mezcla-vectores-clasico-v2.cpp}
+ \lstinputlisting[language=C++, linerange={12-39}]{./src/mezcla-vectores-clasico-v2.cpp}
  
  \subsection*{Eficiencia teórica}
  
@@ -160,7 +164,7 @@ Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectore
  
  \subsection*{Eficiencia híbrida}
  
- Hacemos el ajuste para una paŕabola: $f(x) = a_{0}x^{2}+a_{1}*x + a_{2}$
+ Hacemos el ajuste para una parábola: $f(x) = a_{0}x^{2}+a_{1}*x + a_{2}$
  \begin{center}
  	\input{./graficos/ajuste-clasico-v2}
  \end{center}
@@ -170,6 +174,7 @@ Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectore
 A continuación se proporciona el código de la función \texttt{mezclaDV},
 que utiliza un algoritmo divide y vencerás (con vectores dinámicos) para mezclar $k$ vectores en uno solo. El
 código del programa completo se puede encontrar en la carpeta \textit{src}.\\
+Para seguir la filosofía \textit{divide y vencerás} en este problema, basta con dividir el número de vectores que mezclar en dos partes, cada una de las cuales se mezclará utilizando el mismo algoritmo. Como caso base tomamos $k=1$, en el que devolvemos el mismo vector.\\
 
 \lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
 
@@ -199,11 +204,11 @@ Obtenemos la solución:
 
 $$T(k) = \frac{k}{2}n\log k$$
 
-Concluimos por tanto que la eficiencia del algoritmo DyV es de $O(k\log k)$
+Concluimos por tanto que la eficiencia del algoritmo \textit{divide y vencerás} es de $O(k\log k)$
 
 \subsection*{Eficiencia empírica}
 
-En el gráfico que se muestra a continuación se muestran los resultados de la
+En el gráfico que se muestra a continuación se exponen los resultados de la
 ejecución del algoritmo \textit{divide y vencerás} con vectores dinámicos de 10 elementos.
 
 \begin{center}
@@ -211,6 +216,10 @@ ejecución del algoritmo \textit{divide y vencerás} con vectores dinámicos de 
 \end{center}
 
 \subsection*{Eficiencia \textit{híbrida}}
+Para la eficiencia híbrida realizamos un ajuste a la función: $f(x) = b_0*10*x*log(x) + b1$
+\begin{center}
+	\input{./graficos/ajuste-DyV}
+\end{center}
 
 \section*{Algoritmo \textit{divide y vencerás} con vectores de la STL}
 
@@ -218,6 +227,7 @@ ejecución del algoritmo \textit{divide y vencerás} con vectores dinámicos de 
 A continuación se proporciona el código de la función \texttt{mezclaDV},
 que utiliza un algoritmo divide y vencerás (con vectores de la STL) para mezclar $k$ vectores en uno solo. El
 código del programa completo se puede encontrar en la carpeta \textit{src}.\\
+En este caso utilizamos un planteamiento similar al anterior, únicamente cambiando la estructura de datos utilizada.
 
 \lstinputlisting[language=C++, linerange={75-96}]{./src/mezcla-vectores-DyV-STL.cpp}
 
@@ -227,7 +237,7 @@ Puesto que el programa es muy similar al anterior, la eficiencia de nuevo es $O(
 
 \subsection*{Eficiencia empírica}
 
-En el gráfico que se muestra a continuación se muestran los resultados de la
+En el gráfico que se muestra a continuación se presentan los resultados de la
 ejecución del algoritmo \textit{divide y vencerás} con vectores
 \texttt{std::vector} de 10 elementos.
 
@@ -236,6 +246,11 @@ ejecución del algoritmo \textit{divide y vencerás} con vectores
 \end{center}
 
 \subsection*{Eficiencia \textit{híbrida}}
+La función a la que ajustamos los datos en esta ocasión es similar al caso anterior.
+
+\begin{center}
+	\input{./graficos/ajuste-DyV-STL}
+\end{center}
 
 \section*{Comparación de la eficiencia}
 
