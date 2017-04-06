@@ -6,9 +6,9 @@
 \usepackage[T1]{fontenc}
 % Chivo como en las diapositivas o Fira Sans?
 %\usepackage[familydefault,regular]{Chivo}
-\usepackage[sfdefault,scaled=.85]{FiraSans}
-\usepackage{newtxsf}
-\usepackage[spanish]{babel}
+%\usepackage[sfdefault,scaled=.85]{FiraSans}
+%\usepackage{newtxsf}
+%\usepackage[spanish]{babel}
 \setlength{\parindent}{0pt}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -20,7 +20,7 @@
 \usepackage{float}
 \usepackage{adjustbox}
 \usepackage{geometry}
-\usepackage[scaled=.85]{FiraMono}  
+%\usepackage[scaled=.85]{FiraMono}  
 
 \geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
 
@@ -108,7 +108,7 @@
 \section*{Introducción}
 
 El objetivo de esta práctica es diseñar un algoritmo \textit{divide y vencerás}
-que se encargue de combinar $k$ vectores ordenados. Además de implementarlo, analizaremos su eficiencia y lo comparararemos con un algoritmo clásico, para poder apreciar las ventajas del diseño basado en la técnica \textit{divide y vencerás}.
+que se encargue de combinar $k$ vectores ordenados. Además de implementarlo, analizaremos su eficiencia y lo comparararemos con un algoritmo clásico, para poder apreciar las ventajas del diseño basado en la técnica \textit{divide y vencerás}. Para las eficiencias consideraremos que el tamaño de los vectores $n$ será una constante, ya que lo que nos importa en el estudio de este algoritmo es la variable $k$.
 
 \section*{Algoritmo clásico}
 
@@ -145,7 +145,7 @@ Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectore
  
  \lstinputlisting[language=C++, linerange={12-43}]{./src/mezcla-vectores-clasico-v2.cpp}
  
- \subsection*{Eficiencia teorica}
+ \subsection*{Eficiencia teórica}
  
  La eficiencia teórica es la misma que la del algoritmo anterior, es decir, $O(k^2)$.
  
@@ -159,6 +159,11 @@ Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectore
  \end{center}
  
  \subsection*{Eficiencia híbrida}
+ 
+ Hacemos el ajuste para una paŕabola: $f(x) = a_{0}x^{2}+a_{1}*x + a_{2}$
+ \begin{center}
+ 	\input{./graficos/ajuste-clasico-v2}
+ \end{center}
 
 \section*{Algoritmo \textit{divide y vencerás} con vectores dinámicos}
 
@@ -169,6 +174,32 @@ código del programa completo se puede encontrar en la carpeta \textit{src}.\\
 \lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
 
 \subsection*{Eficiencia teórica}
+
+Escribimos la ecuación general recursiva en función de $k$:
+
+$$ T(k) = 2T(\frac{k}{2}) + n\frac{k}{2} $$
+
+Tomando el cambio de variable: $ k = 2^m $
+
+$$ T(2^m) = 2T(k^{m-1}) + 2^{m-1}n $$
+
+Resolviendo esta ecuación en diferencias:
+
+$$ T(2^m) = 2^mc_1 + 2^{m-1}nm c_2 $$
+
+Teniendo ahora que: $k = 1 \iff 2^m = 1 \iff m = 0$ y $T(1) = 1$
+
+$$ T(1) = c1 = 1 $$
+
+Finalmente: $k = 2 \iff 2^m = 2 \iff m = 1$ y $T(2) = n$
+
+$$ T(2) = 2 + n c_2 = n \iff n c_2 = n - 2 \iff c_2 = \frac{n-2}{n}$$
+
+Obtenemos la solución:
+
+$$T(k) = \frac{k}{2}n\log k$$
+
+Concluimos por tanto que la eficiencia del algoritmo DyV es de $O(k\log k)$
 
 \subsection*{Eficiencia empírica}
 
