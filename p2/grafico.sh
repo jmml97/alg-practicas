@@ -29,7 +29,7 @@ set title "Eficiencia empírica $filename" tc '#4D4D4D'
 #set samples 50
 set style data points
 
-plot "$1" with lines linestyle 1 title "Algoritmo divide y vencerás n = 10"
+plot "$1" with lines linestyle 1 title "Algoritmo clásico n = 10"
 
 
 EOF
