@@ -10,9 +10,9 @@
 %%% FUENTES
 
 \usepackage[T1]{fontenc}
-\usepackage[familydefault,regular]{Chivo}
-\usepackage{newtxsf} % Fuente de matemáticas
-\usepackage[scaled=.85]{FiraMono}
+%\usepackage[familydefault,regular]{Chivo}
+%\usepackage{newtxsf} % Fuente de matemáticas
+%\usepackage[scaled=.85]{FiraMono}
 
 \setbeamertemplate{navigation symbols}{}
 
@@ -135,7 +135,6 @@ columns/1/.style={
 \begin{document}
 
 
-
 \maketitle
 
 \begin{frame}{Objetivo}
@@ -148,23 +147,28 @@ columns/1/.style={
 
 \end{frame}
 
+\begin{frame}{Fuerza Bruta}
 
+	Hemos realizado dos algoritmos mediante la fuerza bruta:
+	\begin{itemize}
+		\item Método clásico
+		\item Método alternativo
+	\end{itemize}
+\end{frame}
 
-\begin{frame}{Mezcla de 2 vectores}
+\begin{frame}{Eficiencia teórica}
+	Ecuación general: $$T(k) = \sum_{i=2}^{k-1} ni \thicksim \frac{n}{2}k^2$$
+	Orden de eficiencia: $$O(nk^2) \thicksim O(k^2) $$
+
+\end{frame}
+
+\begin{frame}{Método Clásico - Mezcla de 2 vectores}
 \lstinputlisting[language=C++, linerange={47-70}]{./src/mezcla-vectores-clasico.cpp}
 	
 \end{frame}
 
-
-\begin{frame}{Fuerza Bruta}
+\begin{frame}{Método Clásico}
 	\lstinputlisting[language=C++, linerange={75-102}]{./src/mezcla-vectores-clasico.cpp}
-\end{frame}
-
-
-
-\begin{frame}{Eficiencia teórica}
-
-
 \end{frame}
 
 \begin{frame}{Eficiencia empírica}
@@ -184,6 +188,25 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
+\begin{frame}{Método Alternativo}
+	\lstinputlisting[language=C++, linerange={12-39}]{./src/mezcla-vectores-clasico-v2.cpp}
+\end{frame}
+
+\begin{frame}{Eficiencia empírica}
+	\begin{center}
+		\resizebox*{11cm}{!}{
+			\input{./graficos/mezcla-vectores-clasico-v2}}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Eficiencia híbrida}
+  \fontsize{8pt}{7.2}\selectfont
+	\begin{center}
+	\resizebox*{11cm}{!}{
+		\input{./graficos/ajuste-clasico-v2}
+	}
+	\end{center}
+\end{frame}
 
 \begin{frame}{Divide y Vencerás}
 
@@ -194,18 +217,15 @@ columns/1/.style={
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Eficiencia teórica}
+	Ecuación general: $$ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} $$
+	Orden de eficiencia: $$ O(nk\log k) \thicksim O(k\log k) $$
+\end{frame}
 
 \begin{frame}{Vectores Dinámicos}
 
 	\lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
 \end{frame}
-
-
-\begin{frame}{Eficiencia teórica}
-
-
-\end{frame}
-
 
 \begin{frame}{Eficiencia empírica}
 
@@ -216,7 +236,6 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
-
 \begin{frame}{Eficiencia híbrida}
 
 	\begin{center}
@@ -226,18 +245,10 @@ columns/1/.style={
 	\end{center}
 \end{frame}
 
-
 \begin{frame}{Vectores de la STL}
 
 	\lstinputlisting[language=C++, linerange={75-96}]{./src/mezcla-vectores-DyV-STL.cpp}
 \end{frame}
-
-
-\begin{frame}{Eficiencia teórica}
-
-
-\end{frame}
-
 
 \begin{frame}{Eficiencia empírica}
 
@@ -247,7 +258,6 @@ columns/1/.style={
 	}
 	\end{center}
 \end{frame}
-
 
 \begin{frame}{Eficiencia híbrida}
   \fontsize{8pt}{7.2}\selectfont
