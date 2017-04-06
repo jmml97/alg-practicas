@@ -108,14 +108,14 @@
 \section*{Introducción}
 
 El objetivo de esta práctica es diseñar un algoritmo \textit{divide y vencerás}
-que se encargue de combinar $k$ vectores ordenados. Además de implementarlo, analizaremos su eficiencia y lo comparararemos con un algoritmo clásico, para poder apreciar las ventajas del diseño basado en la técnica \textit{divide y vencerás}. Para las eficiencias consideraremos que el tamaño de los vectores $n$ será una constante, ya que lo que nos importa en el estudio de este algoritmo es la variable $k$.
+que se encargue de combinar $k$ vectores ordenados. Además de implementarlo, analizaremos su eficiencia y lo comparararemos con un algoritmo clásico, para poder apreciar las ventajas del diseño basado en la técnica \textit{divide y vencerás}. Para el cálculo de la eficiencia consideraremos que el tamaño de los vectores $n$ será una constante, ya que lo que nos importa en el estudio de este algoritmo es la variable $k$ (número de vectores).
 
 \section*{Algoritmo clásico}
 
 A continuación se proporciona el código de la función \texttt{mezcla\_vectores},
 que utiliza un algoritmo clásico para mezclar $k$ vectores en uno solo. El
 código del programa completo se puede encontrar en la carpeta \textit{src}.\\
-La idea principal del programa es ir mezclando cada vector con el siguiente, el vector resultante de esta mezcla se combina con el siguiente y así hasta haber mezclado todos los vectores en uno único. Para ello implementamos dos funciones: la primera, mezcla dos vectores y la segunda mezcla los \textit{k} vectores mediante un bucle en el que vamos llamando a la anterior función.\\
+La idea principal del programa es ir mezclando cada vector con el siguiente, el vector resultante de esta mezcla se combina con el siguiente y así hasta haber mezclado todos los vectores en uno único. Para ello implementamos dos funciones: la primera mezcla dos vectores, y la segunda mezcla los \textit{k} vectores mediante un bucle en el que vamos llamando a la función anterior.\\
 \lstinputlisting[language=C++, linerange={47-70,75-102}]{./src/mezcla-vectores-clasico.cpp}
 
 \subsection*{Eficiencia teórica}
@@ -128,13 +128,13 @@ Es decir, el orden de eficiencia del algoritmo es $O(k^2)$, donde $k$ es el núm
 
 En el siguiente gráfico se muestran los resultados de la
 ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
-
+\enlargethispage{5\baselineskip}
 \begin{center}
 	\input{./graficos/mezcla-vectores-clasico}
 \end{center}
 
 \subsection*{Eficiencia \textit{híbrida}}
-En la gráfica a continuación se muestran representados mediante puntos los datos obtenidos como resultado de las distintas ejecuciones y la función que ajusta dichos datos con sus coeficientes correspondientes.
+En la gráfica a continuación se muestran representados mediante puntos los datos obtenidos como resultado de las distintas ejecuciones, y la función que ajusta dichos datos con sus coeficientes correspondientes. La función es $f(x) = a_{0}x^{2}+a_{1}*x + a_{2}$.
 \begin{center}
 	\input{./graficos/ajuste-clasico}
 \end{center}
@@ -174,7 +174,7 @@ Inicializamos el vector de índices a $n - 1$ (ya que están todos los vectores 
 A continuación se proporciona el código de la función \texttt{mezclaDV},
 que utiliza un algoritmo divide y vencerás (con vectores dinámicos) para mezclar $k$ vectores en uno solo. El
 código del programa completo se puede encontrar en la carpeta \textit{src}.\\
-Para seguir la filosofía \textit{divide y vencerás} en este problema, basta con dividir el número de vectores que mezclar en dos partes, cada una de las cuales se mezclará utilizando el mismo algoritmo. Como caso base tomamos $k=1$, en el que devolvemos el mismo vector.\\
+Para seguir la filosofía \textit{divide y vencerás} en este problema, basta con dividir el número de vectores que mezclar en dos partes (con la mitad de elementos), cada una de las cuales se mezclará utilizando el mismo algoritmo. Como caso base tomamos $k=1$, en el que devolvemos el mismo vector.\\
 
 \lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
 
@@ -182,13 +182,13 @@ Para seguir la filosofía \textit{divide y vencerás} en este problema, basta co
 
 Escribimos la ecuación general recursiva en función de $k$:
 
-$$ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} $$
+$$ \begin{cases} T(1) = 1\\ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} \end{cases} $$\\
 
-Tomando el cambio de variable: $ k = 2^m $
+Para resolverlo, tomamos el cambio de variable $ k = 2^m $:
 
 $$ T(2^m) = 2T(k^{m-1}) + 2^{m-1}n $$
 
-Resolviendo esta ecuación en diferencias:
+Resolviendo esta ecuación en diferencias, tenemos que:
 
 $$ T(2^m) = 2^mc_1 + 2^{m-1}nm c_2 $$
 
@@ -202,7 +202,7 @@ $$ T(2) = 2 + n c_2 = n \iff n c_2 = n - 2 \iff c_2 = \frac{n-2}{n}$$
 
 Obtenemos la solución:
 
-$$T(k) = \frac{k}{2}n\log k$$
+$$T(k) = \frac{k}{2}n\log k$$\\
 
 Concluimos por tanto que la eficiencia del algoritmo \textit{divide y vencerás} es de $O(k\log k)$
 
@@ -210,7 +210,7 @@ Concluimos por tanto que la eficiencia del algoritmo \textit{divide y vencerás}
 
 En el gráfico que se muestra a continuación se exponen los resultados de la
 ejecución del algoritmo \textit{divide y vencerás} con vectores dinámicos de 10 elementos.
-
+ \enlargethispage{5\baselineskip}
 \begin{center}
 	\input{./graficos/mezcla-vectores-DyV}
 \end{center}
