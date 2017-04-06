@@ -5,9 +5,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 % Chivo como en las diapositivas o Fira Sans?
-% \usepackage[familydefault,regular]{Chivo}
-%\usepackage[sfdefault,scaled=.85]{FiraSans}
-%\usepackage{newtxsf}
+%\usepackage[familydefault,regular]{Chivo}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
 \usepackage[spanish]{babel}
 \setlength{\parindent}{0pt}
 \usepackage{amssymb}
@@ -20,7 +20,7 @@
 \usepackage{float}
 \usepackage{adjustbox}
 \usepackage{geometry}
-%\usepackage[scaled=.85]{FiraMono}  
+\usepackage[scaled=.85]{FiraMono}  
 
 \geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
 
@@ -96,9 +96,6 @@
 }
 
 
-
-
-
 \title{Algorítmica: práctica 2 \\ \large Mezclando $k$ vectores ordenados\\ \vspace{0.2em}Grupo 2}
 \author{Sofía Almeida Bruno \and Antonio Coín Castro \and María Victoria Granados Pozo \and Miguel Lentisco Ballesteros \and José María Martín Luque}
 \date{\today}
@@ -138,17 +135,19 @@ ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
 
 \subsection*{Eficiencia \textit{híbrida}}
 
-\section*{Algoritmo clásico v2}
+\section*{Algoritmo clásico - versión 2}
  
- Como otra alternativa al algoritmo clásico, hemos planteado una segunda version donde se crea un vector de tamaño $k$ que guarda las posiciones máximas de cada vector. \\
+ Como alternativa al algoritmo clásico, hemos planteado una segunda version donde se crea un vector de tamaño $k$ que guarda las posiciones máximas de cada vector.\\
  
- Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectores ordenados) y pasamos en cada iteración del bucle cogiendo el índice que corresponda hasta obtener el índice del vector que contiene el máximo valor. Lo añadimos empezando por el final del vector y decrementamos el índice en el vector de índices. \\
+Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectores ordenados) y pasamos en cada iteración del bucle cogiendo el índice que corresponda hasta obtener el índice del vector que contiene el máximo valor. Lo añadimos empezando por el final del vector y decrementamos el índice en el vector de índices. \\
  
- El código del programa completo se puede encontrar en la carpeta \textit{src}.
+ El código del programa completo se puede encontrar en la carpeta \textit{src}.\\
  
  \lstinputlisting[language=C++, linerange={12-43}]{./src/mezcla-vectores-clasico-v2.cpp}
  
  \subsection*{Eficiencia teorica}
+ 
+ La eficiencia teórica es la misma que la del algoritmo anterior, es decir, $O(k^2)$.
  
  \subsection*{Eficiencia empírica}
  
@@ -158,6 +157,8 @@ ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
  \begin{center}
  	\input{./graficos/mezcla-vectores-clasico-v2}
  \end{center}
+ 
+ \subsection*{Eficiencia híbrida}
 
 \section*{Algoritmo \textit{divide y vencerás} con vectores dinámicos}
 
@@ -185,11 +186,13 @@ ejecución del algoritmo \textit{divide y vencerás} con vectores dinámicos de 
 
 A continuación se proporciona el código de la función \texttt{mezclaDV},
 que utiliza un algoritmo divide y vencerás (con vectores de la STL) para mezclar $k$ vectores en uno solo. El
-código del programa completo se puede encontrar en la carpeta \textit{src}.
+código del programa completo se puede encontrar en la carpeta \textit{src}.\\
 
 \lstinputlisting[language=C++, linerange={75-96}]{./src/mezcla-vectores-DyV-STL.cpp}
 
 \subsection*{Eficiencia teórica}
+
+Puesto que el programa es muy similar al anterior, la eficiencia de nuevo es $O(k\log k)$.
 
 \subsection*{Eficiencia empírica}
 
@@ -206,7 +209,7 @@ ejecución del algoritmo \textit{divide y vencerás} con vectores
 \section*{Comparación de la eficiencia}
 
 En el siguiente gráfico se puede observar de forma visual qué algoritmo es más
-eficiente. Como es de esperar, el algoritmo clásico es el más lento de
+eficiente. Como era de esperar, el algoritmo clásico es el más lento de
 todos. Algo más curioso quizás es que el algoritmo que utiliza vectores
 \textit{dinámicos} es más rápido que el que usa la clase \texttt{vector} de la STL.
 
@@ -214,8 +217,11 @@ todos. Algo más curioso quizás es que el algoritmo que utiliza vectores
 	\input{./graficos/compare}
 \end{center}
 
+Hemos utilizado una escala logarítmica para que se puedan ver bien las diferencias de tiempos.
 
+\section*{Conclusiones}
 
+Como hemos visto, el mismo algoritmo puede programarse de forma más eficiente (y en muchas ocasiones, más simple) empleando la técnica de \textit{divide y vencerás}. En el gráfico comparativo anterior se aprecia que el algoritmo clásico es casi 100 veces más lento que el algoritmo \textit{divide y vencerás}, para los tamaños que hemos ejecutado.
 
 \newpage
 
