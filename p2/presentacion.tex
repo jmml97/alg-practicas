@@ -10,7 +10,7 @@
 %%% FUENTES
 
 \usepackage[T1]{fontenc}
-\usepackage[familydefault,regular]{Chivo}
+%\usepackage[familydefault,regular]{Chivo}
 \usepackage{newtxsf} % Fuente de matemáticas
 
 \setbeamertemplate{navigation symbols}{}
@@ -168,19 +168,28 @@ columns/1/.style={
 
 \begin{frame}{Eficiencia empírica}
 	\begin{center}
-		\input{./graficos/mezcla-vectores-DyV}
+		\resizebox*{11cm}{!}{
+			\input{./graficos/mezcla-vectores-clasico}}
 	\end{center}
 
 \end{frame}
 
 \begin{frame}{Eficiencia híbrida}
-
+	\begin{center}
+	\resizebox*{11cm}{!}{
+		\input{./graficos/ajuste-clasico}
+	}
+	\end{center}
 \end{frame}
 
 
 \begin{frame}{Divide y Vencerás}
 
-	Hemos realizado dos algoritmos usando la técnica Divide y Vencerás el primero con vectores dinámicos y el segundo con vectores de la STL
+	Hemos realizado dos algoritmos usando la técnica Divide y Vencerás:
+	\begin{itemize}
+		\item Vectores dinámicos
+		\item Vectores de la STL
+	\end{itemize}
 \end{frame}
 
 
@@ -199,14 +208,20 @@ columns/1/.style={
 \begin{frame}{Eficiencia empírica}
 
 	\begin{center}
+	\resizebox*{11cm}{!}{
 		\input{./graficos/mezcla-vectores-DyV}
+	}
 	\end{center}
 \end{frame}
 
 
 \begin{frame}{Eficiencia híbrida}
 
-
+	\begin{center}
+	\resizebox*{11cm}{!}{
+		%\input{./graficos/ajuste-DyV}
+	}
+	\end{center}
 \end{frame}
 
 
@@ -225,21 +240,31 @@ columns/1/.style={
 \begin{frame}{Eficiencia empírica}
 
 	\begin{center}
+	\resizebox*{11cm}{!}{
 		\input{./graficos/mezcla-vectores-DyV-STL}
+	}
 	\end{center}
 \end{frame}
 
 
 \begin{frame}{Eficiencia híbrida}
 
+	\begin{center}
+	\resizebox*{11cm}{!}{
+		%\input{./graficos/ajuste-DyV-STL}
+	}
+	\end{center}
 
 \end{frame}
 
 \begin{frame}{Comparación eficiencias}
 	
 	\begin{center}
+	\resizebox*{11cm}{!}{
 		\input{./graficos/compare}
+	}
 	\end{center}
+	
 \end{frame}
 
 \end{document}

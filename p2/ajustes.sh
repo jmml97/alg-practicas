@@ -55,14 +55,14 @@ plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", 
 
 # DyV
 
-fit g(x) "./dat/mezcla-vectores-DyV.dat" via b0
+fit g(x) "./dat/mezcla-vectores-DyV.dat" via b0, b1
 print b0, b1
 
 set output "./graficos/ajuste-DyV.tex"
-#set title "".sprintf("\$ %2.2e \\\cdot k\\\log k + %2.2e k + %2.2e\$", b0, b1, b2) tc '#4D4D4D'
+#set title "".sprintf("\$ %2.2e \\\cdot k\\\log k + %2.2e k + %2.2e\$", b0, b1) tc '#4D4D4D'
 set title "Ajuste algoritmo divide y vencerás" tc '#4D4D4D'
 
-plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", b0, b1, b2), "./dat/mezcla-vectores-DyV.dat" with points linestyle 1 pt 7 title "Divide y vencerás"
+plot g(x) with lines linestyle 3 title sprintf("\$ %2.2e \\\cdot k\\\log k + %2.2e k + %2.2e\$", b0, b1), "./dat/mezcla-vectores-DyV.dat" with points linestyle 1 pt 7 title "Divide y vencerás"
 
 # DyV STL
 
@@ -73,7 +73,7 @@ set output "./graficos/ajuste-DyV-STL.tex"
 #set title "".sprintf("\$ %2.2e \\\cdot k\\\log k + %2.2e k + %2.2e\$", b0, b1, b2) tc '#4D4D4D'
 set title "Ajuste algoritmo divide y vencerás STL" tc '#4D4D4D'
 
-plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", b0, b1, b2), "./dat/mezcla-vectores-DyV-STL.dat" with points linestyle 1 pt 7 title "Divide y vencerás STL"
+plot g(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", b0, b1), "./dat/mezcla-vectores-DyV-STL.dat" with points linestyle 1 pt 7 title "Divide y vencerás STL"
 
 
 EOF
