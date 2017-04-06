@@ -10,8 +10,9 @@
 %%% FUENTES
 
 \usepackage[T1]{fontenc}
-%\usepackage[familydefault,regular]{Chivo}
+\usepackage[familydefault,regular]{Chivo}
 \usepackage{newtxsf} % Fuente de matemáticas
+\usepackage[scaled=.85]{FiraMono}
 
 \setbeamertemplate{navigation symbols}{}
 
@@ -49,12 +50,12 @@
 
 %%% LISTINGS
 
-\usepackage{listings}
+\usepackage{listingsutf8}
 
 %% Las tildes
 
 \lstset{
-  inputencoding=latin1
+  inputencoding=utf8/latin1
 }
 
 %% Colores de Solarized para listings
@@ -64,7 +65,7 @@
   % sensitive=true,
   language=C++,
   % Border (above and below)
-  frame=lines,
+  %frame=lines,
   % Line number
   numbers=left,
   % Extra margin on line (align with paragraph)
@@ -73,7 +74,7 @@
   belowcaptionskip=1\baselineskip,
   % Colors
   % backgroundcolor=\color{sbase3},
-  basicstyle=\footnotesize\ttfamily\color{text},
+  basicstyle=\tiny\ttfamily\color{text},
   keywordstyle=\color{accent3},
   commentstyle=\color{accent5},
   stringstyle=\color{accent2},
@@ -175,6 +176,7 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}{Eficiencia híbrida}
+  \fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 	\resizebox*{11cm}{!}{
 		\input{./graficos/ajuste-clasico}
@@ -248,10 +250,10 @@ columns/1/.style={
 
 
 \begin{frame}{Eficiencia híbrida}
-
+  \fontsize{8pt}{7.2}\selectfont
 	\begin{center}
-	\resizebox*{11cm}{!}{
-		%\input{./graficos/ajuste-DyV-STL}
+	\resizebox*{10cm}{!}{
+		\input{./graficos/ajuste-DyV-STL}
 	}
 	\end{center}
 

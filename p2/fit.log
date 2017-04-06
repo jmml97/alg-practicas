@@ -1057,3 +1057,2371 @@ correlation matrix of the fit parameters:
                b0     b1     
 b0              1.000 
 b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:15:59 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:15:59 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:15:59 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:15:59 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:18:11 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:18:11 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:18:11 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:18:11 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:24:51 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:24:51 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:24:51 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:24:51 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:26:00 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:26:00 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:26:00 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:26:00 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:27:43 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:27:43 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:27:43 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:27:43 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:28:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:28:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:28:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:28:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:29:14 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:29:14 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:29:14 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:29:14 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:30:19 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:30:19 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:30:19 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:30:19 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:32:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:32:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:32:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:32:02 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:01 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:01 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:01 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:01 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:35 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:35 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:35 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:35 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:52 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:52 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:52 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:43:52 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:44:13 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:44:13 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:44:13 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:44:13 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:45:54 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:45:54 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:45:54 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:45:54 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:47:57 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:47:57 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:47:57 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:47:57 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:48:25 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 3.0477021794e+17   0.00e+00  3.22e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.4941984547e-03  -4.40e-05  3.22e-04    3.218853e-09  -3.727909e-06   2.568993e-03
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 0.0074942
+rel. change during last iteration : -4.40428e-10
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0088818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.88863e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 3.21885e-09      +/- 1.003e-10    (3.116%)
+a1              = -3.72791e-06     +/- 2.611e-06    (70.03%)
+a2              = 0.00256899       +/- 0.002861     (111.4%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:48:25 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-clasico-v2.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*5*x*x + a1*x + a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.1070920136e+00   0.00e+00  1.04e-01    3.218853e-09  -3.727909e-06   2.568993e-03
+   5 6.9170138222e-02  -5.53e-08  1.04e-06    6.865012e-09  -2.881811e-05   1.693220e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0691701
+rel. change during last iteration : -5.53345e-13
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0269835
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000728107
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 6.86501e-09      +/- 3.047e-10    (4.438%)
+a1              = -2.88181e-05     +/- 7.931e-06    (27.52%)
+a2              = 0.0169322        +/- 0.008691     (51.33%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.970  1.000 
+a2              0.767 -0.880  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:48:25 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV.dat"
+        format = z
+        #datapoints = 98
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 5.5002513486e+12   0.00e+00  1.68e+05    1.000000e+00   1.000000e+00
+   9 2.8061315693e-07  -9.02e-06  1.68e-04    1.423794e-08   7.197037e-06
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 2.80613e-07
+rel. change during last iteration : -9.02339e-11
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.40653e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92305e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.42379e-08      +/- 4.432e-11    (0.3113%)
+b1              = 7.19704e-06      +/- 1.05e-05     (145.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
+
+
+*******************************************************************************
+Thu Apr  6 19:48:25 2017
+
+
+FIT:    data read from "./dat/mezcla-vectores-DyV-STL.dat"
+        format = z
+        #datapoints = 196
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*10*x*log(x) + b1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1           
+   0 4.1060653739e-02   0.00e+00  2.39e-03    1.423794e-08   7.197037e-06
+   5 2.0858392540e-05  -4.56e-04  2.39e-08    7.486513e-08   1.325833e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.08584e-05
+rel. change during last iteration : -4.56369e-09
+
+degrees of freedom    (FIT_NDF)                        : 194
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000327899
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.07517e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 7.48651e-08      +/- 1.901e-10    (0.2539%)
+b1              = 0.000132583      +/- 4.503e-05    (33.96%)
+
+correlation matrix of the fit parameters:
+                b0     b1     
+b0              1.000 
+b1             -0.854  1.000 
