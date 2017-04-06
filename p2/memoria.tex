@@ -6,8 +6,8 @@
 \usepackage[T1]{fontenc}
 % Chivo como en las diapositivas o Fira Sans?
 % \usepackage[familydefault,regular]{Chivo}
-\usepackage[sfdefault,scaled=.85]{FiraSans}
-\usepackage{newtxsf}
+%\usepackage[sfdefault,scaled=.85]{FiraSans}
+%\usepackage{newtxsf}
 \usepackage[spanish]{babel}
 \setlength{\parindent}{0pt}
 \usepackage{amssymb}
@@ -20,7 +20,7 @@
 \usepackage{float}
 \usepackage{adjustbox}
 \usepackage{geometry}
-\usepackage[scaled=.85]{FiraMono}  
+%\usepackage[scaled=.85]{FiraMono}  
 
 \geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
 
@@ -111,22 +111,25 @@
 \section*{Introducción}
 
 El objetivo de esta práctica es diseñar un algoritmo \textit{divide y vencerás}
-que se encargue de combinar $k$ vectores ordenados. Además tenemos que analizar
-su eficiencia, implementarlo y compararlo con un algoritmo clásico.
+que se encargue de combinar $k$ vectores ordenados. Además de implementarlo, analizaremos su eficiencia y lo comparararemos con un algoritmo clásico, para poder apreciar las ventajas del diseño basado en la técnica \textit{divide y vencerás}.
 
 \section*{Algoritmo clásico}
 
 A continuación se proporciona el código de la función \texttt{mezcla\_vectores},
 que utiliza un algoritmo clásico para mezclar $k$ vectores en uno solo. El
-código del programa completo se puede encontrar en la carpeta \textit{src}.
+código del programa completo se puede encontrar en la carpeta \textit{src}.\\
 
 \lstinputlisting[language=C++, linerange={47-70,75-102}]{./src/mezcla-vectores-clasico.cpp}
 
 \subsection*{Eficiencia teórica}
 
+Para calcular la eficiencia teórica de este algoritmo, notaremos primero que solo debemos fijarnos en el bucle \verb|for| de la función \verb|mezcla_vectores|. Además, la función \verb|swap| que intercambia dos punteros tiene eficiencia $O(1)$. Por otro lado, es fácil ver que la función \verb|merge| tiene eficiencia $O(m)$, donde $m = max\{n_1, n_2\}$. Por tanto, la eficiencia del algoritmo clásico es: $$T(k) = \sum_{i=2}^{k-1} ni = n \sum_{i=2}^{k-1} i = n \left( \frac{(k-2)(k+1)}{2} \right) = \frac{n}{2}(k^2 -k - 2) \thicksim \frac{n}{2}k^2$$
+
+Es decir, el orden de eficiencia del algoritmo es $O(k^2)$, donde $k$ es el número de vectores a mezclar.
+
 \subsection*{Eficiencia empírica}
 
-En el gráfico que se muestra a continuación se muestran los resultados de la
+En el siguiente gráfico se muestran los resultados de la
 ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
 
 \begin{center}
@@ -135,12 +138,33 @@ ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
 
 \subsection*{Eficiencia \textit{híbrida}}
 
+\section*{Algoritmo clásico v2}
+ 
+ Como otra alternativa al algoritmo clásico, hemos planteado una segunda version donde se crea un vector de tamaño $k$ que guarda las posiciones máximas de cada vector. \\
+ 
+ Inicializamos el vector de índices con $n - 1$ (ya que están todos los vectores ordenados) y pasamos en cada iteración del bucle cogiendo el índice que corresponda hasta obtener el índice del vector que contiene el máximo valor. Lo añadimos empezando por el final del vector y decrementamos el índice en el vector de índices. \\
+ 
+ El código del programa completo se puede encontrar en la carpeta \textit{src}.
+ 
+ \lstinputlisting[language=C++, linerange={12-43}]{./src/mezcla-vectores-clasico-v2.cpp}
+ 
+ \subsection*{Eficiencia teorica}
+ 
+ \subsection*{Eficiencia empírica}
+ 
+ En el gráfico que se muestra a continuación se muestran los resultados de la
+ ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
+ 
+ \begin{center}
+ 	\input{./graficos/mezcla-vectores-clasico-v2}
+ \end{center}
+    
 \section*{Algoritmo \textit{divide y vencerás} con vectores dinámicos}
 
 
 A continuación se proporciona el código de la función \texttt{mezclaDV},
 que utiliza un algoritmo divide y vencerás (con vectores dinámicos) para mezclar $k$ vectores en uno solo. El
-código del programa completo se puede encontrar en la carpeta \textit{src}.
+código del programa completo se puede encontrar en la carpeta \textit{src}.\\
 
 \lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
 
