@@ -1,0 +1,214 @@
+\documentclass[11pt]{article}
+
+%\usepackage{palatino}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% Chivo como en las diapositivas o Fira Sans?
+% \usepackage[familydefault,regular]{Chivo}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage[spanish]{babel}
+\setlength{\parindent}{0pt}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage[x11names, rgb, html]{xcolor}
+\usepackage{graphics}
+\usepackage{caption}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{adjustbox}
+\usepackage{geometry}
+\usepackage[scaled=.85]{FiraMono}  
+
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
+
+
+%%% PGFPLOTSTABLE
+
+\usepackage{pgfplotstable}
+
+%%% COLORES
+
+
+%% Colores de Solarized
+
+\definecolor{sbase03}{HTML}{002B36}
+\definecolor{sbase02}{HTML}{073642}
+\definecolor{sbase01}{HTML}{586E75}
+\definecolor{sbase00}{HTML}{657B83}
+\definecolor{sbase0}{HTML}{839496}
+\definecolor{sbase1}{HTML}{93A1A1}
+\definecolor{sbase2}{HTML}{EEE8D5}
+\definecolor{sbase3}{HTML}{FDF6E3}
+\definecolor{syellow}{HTML}{B58900}
+\definecolor{sorange}{HTML}{CB4B16}
+\definecolor{sred}{HTML}{DC322F}
+\definecolor{smagenta}{HTML}{D33682}
+\definecolor{sviolet}{HTML}{6C71C4}
+\definecolor{sblue}{HTML}{268BD2}
+\definecolor{scyan}{HTML}{2AA198}
+\definecolor{sgreen}{HTML}{859900}
+
+%% Colores del documento
+
+\definecolor{text}{RGB}{78,78,78}
+\definecolor{accent}{RGB}{129, 26, 24}
+
+%%% LISTINGS
+
+\usepackage{listingsutf8}
+
+%% Las tildes
+
+\lstset{
+  inputencoding=utf8/latin1
+}
+
+%% Colores de Solarized para listings
+
+\lstset{
+  % How/what to match
+  % sensitive=true,
+  language=C++,
+  % Border (above and below)
+  frame=lines,
+  % Line number
+  numbers=left,
+  % Extra margin on line (align with paragraph)
+  xleftmargin=\parindent,
+  % Put extra space under caption
+  belowcaptionskip=1\baselineskip,
+  % Colors
+  % backgroundcolor=\color{sbase3},
+  basicstyle=\footnotesize\ttfamily\color{sbase00},
+  keywordstyle=\color{scyan},
+  commentstyle=\color{sbase1},
+  stringstyle=\color{sblue},
+  numberstyle=\color{sbase01},
+  identifierstyle=\color{smagenta},
+  % Break long lines into multiple lines?
+  breaklines=true,
+  % Show a character for spaces?
+  showstringspaces=false,
+  tabsize=2
+}
+
+
+
+
+
+\title{Algorítmica: práctica 2 \\ \large Mezclando $k$ vectores ordenados\\ \vspace{0.2em}Grupo 2}
+\author{Sofía Almeida Bruno \and Antonio Coín Castro \and María Victoria Granados Pozo \and Miguel Lentisco Ballesteros \and José María Martín Luque}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+\section*{Introducción}
+
+El objetivo de esta práctica es diseñar un algoritmo \textit{divide y vencerás}
+que se encargue de combinar $k$ vectores ordenados. Además tenemos que analizar
+su eficiencia, implementarlo y compararlo con un algoritmo clásico.
+
+\section*{Algoritmo clásico}
+
+A continuación se proporciona el código de la función \texttt{mezcla\_vectores},
+que utiliza un algoritmo clásico para mezclar $k$ vectores en uno solo. El
+código del programa completo se puede encontrar en la carpeta \textit{src}.
+
+\lstinputlisting[language=C++, linerange={75-102}]{./src/mezcla-vectores-clasico.cpp}
+
+\subsection*{Eficiencia teórica}
+
+\subsection*{Eficiencia empírica}
+
+En el gráfico que se muestra a continuación se muestran los resultados de la
+ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
+
+\begin{center}
+	\input{./graficos/mezcla-vectores-clasico}
+\end{center}
+
+\subsection*{Eficiencia \textit{híbrida}}
+
+\section*{Algoritmo \textit{divide y vencerás} con vectores dinámicos}
+
+
+A continuación se proporciona el código de la función \texttt{mezclaDV},
+que utiliza un algoritmo divide y vencerás (con vectores dinámicos) para mezclar $k$ vectores en uno solo. El
+código del programa completo se puede encontrar en la carpeta \textit{src}.
+
+\lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
+
+\subsection*{Eficiencia teórica}
+
+\subsection*{Eficiencia empírica}
+
+En el gráfico que se muestra a continuación se muestran los resultados de la
+ejecución del algoritmo \textit{divide y vencerás} con vectores dinámicos de 10 elementos.
+
+\begin{center}
+	\input{./graficos/mezcla-vectores-DyV}
+\end{center}
+
+\subsection*{Eficiencia \textit{híbrida}}
+
+\section*{Algoritmo \textit{divide y vencerás} con vectores de la STL}
+
+
+A continuación se proporciona el código de la función \texttt{mezclaDV},
+que utiliza un algoritmo divide y vencerás (con vectores de la STL) para mezclar $k$ vectores en uno solo. El
+código del programa completo se puede encontrar en la carpeta \textit{src}.
+
+\lstinputlisting[language=C++, linerange={75-96}]{./src/mezcla-vectores-DyV-STL.cpp}
+
+\subsection*{Eficiencia teórica}
+
+\subsection*{Eficiencia empírica}
+
+En el gráfico que se muestra a continuación se muestran los resultados de la
+ejecución del algoritmo \textit{divide y vencerás} con vectores
+\texttt{std::vector} de 10 elementos.
+
+\begin{center}
+	\input{./graficos/mezcla-vectores-DyV-STL}
+\end{center}
+
+\subsection*{Eficiencia \textit{híbrida}}
+
+\section*{Comparación de la eficiencia}
+
+En el siguiente gráfico se puede observar de forma visual qué algoritmo es más
+eficiente. Como es de esperar, el algoritmo clásico es el más lento de
+todos. Algo más curioso quizás es que el algoritmo que utiliza vectores
+\textit{dinámicos} es más rápido que el que usa la clase \texttt{vector} de la STL.
+
+\begin{center}
+	\input{./graficos/compare}
+\end{center}
+
+
+
+
+\newpage
+
+\section*{Anexo}
+\subsection*{Características de los ordenadores donde se ha ejecutado}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item Apple MacBook Pro, Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz, 8GB RAM.\\  Compilador: clang-800.0.38 \\
+  Sistema operativo: macOS Sierra
+\item Dell XPS 13, Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz, 8GB RAM.\\
+  Compilador: g++ 6.3.1\\
+  Sistema operativo: Arch Linux
+\end{enumerate}
+
+
+\end{document}
+

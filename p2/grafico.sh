@@ -8,7 +8,7 @@ gnuplot << EOF
 
 #! /usr/bin/gnuplot
 
-set terminal epslatex size 4,3 color colortext
+set terminal epslatex size 5,3 color colortext
 set output "graficos/$filename.tex"
 
 set border linewidth 2 linecolor rgb '#4D4D4D'
@@ -29,7 +29,7 @@ set title "Eficiencia empírica $filename" tc '#4D4D4D'
 #set samples 50
 set style data points
 
-plot "$1" with lines linestyle 1 title "Algoritmo divide y vencerás STL n = 10"
+plot "$1" with lines linestyle 1 title "Algoritmo divide y vencerás n = 10"
 
 
 EOF

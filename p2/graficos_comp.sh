@@ -8,7 +8,7 @@ gnuplot << EOF
 
 #! /usr/bin/gnuplot
 
-set terminal epslatex size 4,3 color colortext
+set terminal epslatex size 5,3 color colortext
 
 set border linewidth 2 linecolor rgb '#4D4D4D'
 set style line 1 linecolor rgb '#811a18' linetype 1 linewidth 5
@@ -28,10 +28,11 @@ set logscale y
 set xtics rotate by 45 right font ", 8"
 
 set output "./graficos/compare.tex"
-set title "Algoritmos mezcla de $k$ vectores" tc '#4D4D4D'
+set title "Algoritmos mezcla de k vectores" tc '#4D4D4D'
+set key outside
 
-plot "./dat/mezcla_vectores_clasicos.dat" with lines linestyle 1 title "Clásico", \
-"./dat/mezcla_vectores_DyV.dat" with lines linestyle 2 title "DyV", \
-"./dat/mezcla_vectores_DyV_STL.dat" with lines linestyle 3 title "DyV STL" \
+plot "./dat/mezcla-vectores-clasico.dat" with lines linestyle 1 title "Clásico", \
+"./dat/mezcla-vectores-DyV.dat" with lines linestyle 2 title "DyV", \
+"./dat/mezcla-vectores-DyV-STL.dat" with lines linestyle 3 title "DyV STL" \
 
 EOF

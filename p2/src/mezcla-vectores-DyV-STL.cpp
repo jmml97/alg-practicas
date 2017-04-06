@@ -74,6 +74,7 @@ vector<int> merge(vector<int> v1, vector<int> v2) {
 
 vector<int> mezclaDV(vector<vector<int>> vectores) {
 
+    // Casos base
     if (vectores.size() < 1) {
         vector<int> sol;
         return sol;
@@ -86,9 +87,11 @@ vector<int> mezclaDV(vector<vector<int>> vectores) {
     vector<vector<int>>::iterator half = vectores.begin() + vectores.size() / 2;
     vector<vector<int>> firstHalf(vectores.begin(), half), secondHalf(half + 1, vectores.end());
 
+    // Divide
     vector<int> s1 = mezclaDV(firstHalf);
     vector<int> s2 = mezclaDV(secondHalf);
 
+    // Vencerás
     return merge(s1, s2);
 }
 
