@@ -40,7 +40,7 @@ set output "./graficos/ajuste-clasico.tex"
 #set title "".sprintf("%.2f\$\frac{n}{2}x^2\$+%.2f\$x\$+%.2f", a0, a1, a2) tc '#4D4D4D'
 set title "Ajuste algoritmo clásico" tc '#4D4D4D'
 
-plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", a0, a1, a2), "./dat/mezcla-vectores-clasico.dat" with points linestyle 1 pt 7 ps .5 title "Clásico"
+plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", a0, a1, a2), "./dat/mezcla-vectores-clasico.dat" with linespoints linestyle 1 pt 7 lw 0 pi 10 title "Clásico"
 
 # Clásico - v2
 
@@ -51,7 +51,7 @@ set output "./graficos/ajuste-clasico-v2.tex"
 #set title "".sprintf("%.2f\$\frac{n}{2}x^2\$+%.2f\$x\$+%.2f", a0, a1, a2) tc '#4D4D4D'
 set title "Ajuste algoritmo clásico - v2" tc '#4D4D4D'
 
-plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", a0, a1, a2), "./dat/mezcla-vectores-clasico-v2.dat" with points linestyle 1 pt 7 ps .5 title "Clásico - v2"
+plot f(x) with lines linestyle 3 title sprintf("%2.2e\$x^2\$+%2.2e\$x\$+%2.2e", a0, a1, a2), "./dat/mezcla-vectores-clasico-v2.dat" with linespoints linestyle 1 pt 7 lw 0 pi 10 title "Clásico - v2"
 
 # DyV
 
@@ -61,7 +61,7 @@ print b0, b1
 set output "./graficos/ajuste-DyV.tex"
 set title "Ajuste algoritmo divide y vencerás" tc '#4D4D4D'
 
-plot g(x) with lines linestyle 3 title sprintf("%2.2e \$ \\\cdot klog k +\$ %2.2e", b0, b1), "./dat/mezcla-vectores-DyV.dat" with points linestyle 1 pt 7 ps .5 title "Divide y vencerás"
+plot g(x) with lines linestyle 3 title sprintf("%2.2e \$ \\\cdot klog k +\$ %2.2e", b0, b1), "./dat/mezcla-vectores-DyV.dat" with linespoints linestyle 1 pt 7 lw 0 pi 10 title "Divide y vencerás"
 
 # DyV STL
 
@@ -72,7 +72,7 @@ set output "./graficos/ajuste-DyV-STL.tex"
 set title "Ajuste algoritmo divide y vencerás STL" tc '#4D4D4D'
 
 
-plot g(x) with lines linestyle 3 title sprintf("%2.2e \$ \\\cdot klog k +\$ %2.2e", b0, b1), "./dat/mezcla-vectores-DyV-STL.dat" with points linestyle 1 pt 7 ps .5 title "Divide y vencerás STL"
+plot g(x) with lines linestyle 3 title sprintf("%2.2e \$ \\\cdot klog k +\$ %2.2e", b0, b1), "./dat/mezcla-vectores-DyV-STL.dat" with linespoints linestyle 1 pt 7 lw -1 pointinterval 10 title "Divide y vencerás STL"
 
 
 EOF
