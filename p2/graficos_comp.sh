@@ -33,6 +33,7 @@ set key outside
 
 plot "./dat/mezcla-vectores-clasico.dat" with lines linestyle 1 title "Clásico", \
 "./dat/mezcla-vectores-DyV.dat" with lines linestyle 2 title "DyV", \
-"./dat/mezcla-vectores-DyV-STL.dat" with lines linestyle 3 title "DyV STL" \
+"./dat/mezcla-vectores-DyV-STL.dat" with lines linestyle 3 title "DyV STL", \
+"./dat/mezcla-vectores-clasico-v2.dat" with lines linestyle 4 title "Clásico v2" \
 
 EOF
