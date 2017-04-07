@@ -186,25 +186,21 @@ $$ \begin{cases} T(1) = 1\\ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} \en
 
 Para resolverlo, tomamos el cambio de variable $ k = 2^m $:
 
-$$ T(2^m) = 2T(k^{m-1}) + 2^{m-1}n $$
+$$ T(2^m) = 2T(2^{m-1}) + n2^{m-1} $$
 
 Resolviendo esta ecuación en diferencias, tenemos que:
 
-$$ T(2^m) = 2^mc_1 + 2^{m-1}nm c_2 $$
+$$ T(2^m) = c_12^m + \frac{n}{2}m2^{m} $$
 
-Teniendo ahora que: $k = 1 \iff 2^m = 1 \iff m = 0$ y $T(1) = 1$
+Como $T(1) = 1$, calculamos $c_1$:
 
-$$ T(1) = c1 = 1 $$
+$$ T(1) = c_12 + n = 1 \Rightarrow c_1 = \frac{1-n}{2}$$
 
-Finalmente: $k = 2 \iff 2^m = 2 \iff m = 1$ y $T(2) = n$
+Deshaciendo el cambio, $k = \log_2 k$, obtenemos la solución:
 
-$$ T(2) = 2 + n c_2 = n \iff n c_2 = n - 2 \iff c_2 = \frac{n-2}{n}$$
+$$T(k) = \frac{1-n}{2}k + \frac{n}{2}k\log_2 k$$\\
 
-Obtenemos la solución:
-
-$$T(k) = \frac{k}{2}n\log k$$\\
-
-Concluimos por tanto que la eficiencia del algoritmo \textit{divide y vencerás} es de $O(k\log k)$
+Concluimos por tanto que la eficiencia del algoritmo \textit{divide y vencerás} es $O(k\log k)$.
 
 \subsection*{Eficiencia empírica}
 
