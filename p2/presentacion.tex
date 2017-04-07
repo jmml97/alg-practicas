@@ -140,7 +140,7 @@ columns/1/.style={
 \begin{frame}{Objetivo}
 
 	\begin{itemize}
-		\item Diseño de un algoritmo \textit{divide y vencerás} que se encargue de combinar $k$ vectores ordenados. 
+		\item Diseño de un algoritmo \textit{divide y vencerás} que se encargue de combinar $k$ vectores ordenados, cada uno con $n$ elementos.
 		\item Análisis de su eficiencia teórica, empírica e híbrida.
 		\item Comparación con un algoritmo clásico.
 	\end{itemize}
@@ -149,7 +149,7 @@ columns/1/.style={
 
 \begin{frame}{Fuerza Bruta}
 
-	Hemos realizado dos algoritmos mediante la fuerza bruta:
+	Hemos realizado dos algoritmos mediante fuerza bruta:
 	\begin{itemize}
 		\item Método clásico
 		\item Método alternativo
@@ -157,8 +157,12 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}{Eficiencia teórica}
+    \vspace{-1em}
+    Consideramos que $n$ es una constante fija.
+    
+    \vskip 1cm 
 	Ecuación general: $$T(k) = \sum_{i=2}^{k-1} ni \thicksim \frac{n}{2}k^2$$
-	Orden de eficiencia: $$O(nk^2) \thicksim O(k^2) $$
+	Orden de eficiencia: $$O\left(\frac{n}{2}k^2\right) \thicksim O(k^2) $$
 
 \end{frame}
 
@@ -218,8 +222,12 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}{Eficiencia teórica}
-	Ecuación general: $$ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} $$
-	Orden de eficiencia: $$ O(nk\log k) \thicksim O(k\log k) $$
+    \vspace{-1em}
+    Consideramos que $n$ es una constante fija.
+    
+    \vskip 1cm 
+	Ecuación general: $$ \begin{cases} T(1) = 1\\ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} \end{cases} $$
+	Orden de eficiencia: $$ O\left(\frac{n}{2}k\log k \right) \thicksim O(k\log k) $$
 \end{frame}
 
 \begin{frame}{Vectores Dinámicos}
