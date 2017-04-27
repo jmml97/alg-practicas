@@ -156,6 +156,15 @@ columns/1/.style={
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Método Clásico - Mezcla de 2 vectores}
+\lstinputlisting[language=C++, linerange={47-70}]{./src/mezcla-vectores-clasico.cpp}
+	
+\end{frame}
+
+\begin{frame}{Método Clásico}
+	\lstinputlisting[language=C++, linerange={75-102}]{./src/mezcla-vectores-clasico.cpp}
+\end{frame}
+
 \begin{frame}{Eficiencia teórica}
     \vspace{-1em}
     Consideramos que $n$ es una constante fija.
@@ -164,15 +173,6 @@ columns/1/.style={
 	Ecuación general: $$T(k) = \sum_{i=2}^{k-1} ni \thicksim \frac{n}{2}k^2$$
 	Orden de eficiencia: $$O\left(\frac{n}{2}k^2\right) \thicksim O(k^2) $$
 
-\end{frame}
-
-\begin{frame}{Método Clásico - Mezcla de 2 vectores}
-\lstinputlisting[language=C++, linerange={47-70}]{./src/mezcla-vectores-clasico.cpp}
-	
-\end{frame}
-
-\begin{frame}{Método Clásico}
-	\lstinputlisting[language=C++, linerange={75-102}]{./src/mezcla-vectores-clasico.cpp}
 \end{frame}
 
 \begin{frame}{Eficiencia empírica}
@@ -221,6 +221,11 @@ columns/1/.style={
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Vectores Dinámicos}
+
+	\lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
+\end{frame}
+
 \begin{frame}{Eficiencia teórica}
     \vspace{-1em}
     Consideramos que $n$ es una constante fija.
@@ -230,10 +235,6 @@ columns/1/.style={
 	Orden de eficiencia: $$ O\left(\frac{n}{2}k\log k \right) \thicksim O(k\log k) $$
 \end{frame}
 
-\begin{frame}{Vectores Dinámicos}
-
-	\lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
-\end{frame}
 
 \begin{frame}{Eficiencia empírica}
 
