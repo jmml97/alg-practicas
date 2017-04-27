@@ -13,24 +13,24 @@ void mezclarK(int** T, int* res, int n, int k)
 {
   // Tamaño total del vector
   int N = n * k;
-  // Vector donde vamos a guardar el indice del valor que falta por meter de cada vector
+  // Vector donde vamos a guardar el índice del valor que falta por meter de cada vector
   int* v_indices = new int[k];
-  // Inicializamos al último indice de cada vector (los máximos)
+  // Inicializamos al último índice de cada vector (los máximos)
   for (int i = 0; i < k; ++i)
     v_indices[i] = n - 1;
   // El bucle dura hasta N = nk colocados; empezamos en N y acabamos en -1
   int indice_colocar = N - 1;
   while (indice_colocar >= 0)
   {
-    // Este indice indica que vector es el que contiene el valor max.
+    // Este índice indica que vector es el que contiene el valor max.
     int indice_max = 0;
-    // Recorremos buscando el indice que contenga el valor mayor
+    // Recorremos buscando el índice que contenga el valor mayor
     for (int i = 0; i < k; ++i)
       if (T[indice_max][v_indices[indice_max]] < T[i][v_indices[i]])
         indice_max = i;
     // Guardamos en res con el valor correspondiente
     res[indice_colocar] = T[indice_max][v_indices[indice_max]];
-    // Decrementamos el indice corresponiente al vector que acabamos de usar
+    // Decrementamos el índice corresponiente al vector que acabamos de usar
     --v_indices[indice_max];
     // Hemos colocado uno
     --indice_colocar;
