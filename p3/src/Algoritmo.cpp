@@ -9,7 +9,6 @@
 
 using namespace std;
 
-
 /**
  * Función de selección. Devuelve el nodo con mayor número
  * de incidencias de la lista de candidatos, cuyo tamaño es N.
@@ -26,33 +25,36 @@ int FSeleccion(int* LC, int N) {
 
 Solucion AlgoritmoGreedyAGM(Problema p) {
 
-    Solucion S; // Solución a devolver
-    int num_nodos = p.getNumNodos(); // Número de candidatos sin utilizar
-    int candidatos_restantes;
-    int incidencias[num_nodos]; // Vector de incidencias de cada nodo (LC)
+  Solucion S; // Solución a devolver
+  int num_nodos = p.getNumNodos();  // Número de candidatos sin utilizar
+  int incidencias[num_nodos];  // Vector de incidencias de cada nodo (LC)
+  int num_ceros;  // Número de ceros en el vector de incidencias
+  int pos_max;
 
-    // Inicializar la lista de candidatos (LC)
-    for (int i = 0; i < num_nodos; i++)
-      LC[i] = p.getNumIncidencias(i);
+  // Inicializar la lista de candidatos (LC)
+  for (int i = 0; i < num_nodos; ++i)
+    incidencias[i] = p.getNumIncidencias(i);
 
-    candidatos_restantes = num_nodos;
-    while (candidatos_restantes > 0) { // Mientras la lista de candidatos no esté vacía...
-      int max;
+  // Nodo con más incidencias
+  pos_max = FSeleccion(incidencias, num_nodos);
 
-      // Seleccionamos el nodo con más incidencias
-      max = max(incidencias, num_nodos);
+  while (incidencias[pos_max] > 0) { // Mientras el vector de incidencias no sea {0,0,...,0}
+    // Añadir el nodo con más incidencias a la solución (siempre es factible)
+    S.addNodo(pos_max);
 
-      // Quitar los nodos de la LC
-      if (!LC[origen])
-          LC[origen] = true;
-      else
-          LC[destino] = true;
-      --candidatos_restantes;
+    // Eliminar el nodo de la LC
+    incidencias[pos_max] = 0;
+
+    // Decrementar número de incidencias de nodos conectados con el seleccionado
+    for (int j = 0; j < num_nodos; ++j) {
+      if (p.estanConectados(pos_max,j))
+	--incidencias[j];
     }
 
-    // Añadir la arista (origen, destino) a la solución
-    S.addArista(origen, destino);
+    // Seleccionar nodo con más incidencias
+    pos_max = FSeleccion(incidencias, num_nodos);
+  }
 
-    delete[] LC;
-    return S;
+  delete[] incidencias;
+  return S;
 }
