@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Problema.h"
 #include "Solucion.h"
-#include "Algoritmos.h"
+#include "Algoritmo.h"
 
 using namespace std;
 

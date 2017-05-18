@@ -92,7 +92,7 @@ void Solucion::Evaluar(Problema p) {
             coste= -1;
             return;
         }
-        coste+= costeArista;
+        coste += costeArista;
     }
 }
 
@@ -140,4 +140,3 @@ int Solucion::getNumAristas() {
 
     return Num;
 }
-

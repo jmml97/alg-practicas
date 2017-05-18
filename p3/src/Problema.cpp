@@ -199,8 +199,13 @@ bool Problema::cargarDesdeFlujo(const char *nombreFichero) {
 
 
 int Problema::getNumPlazas() {
-
     return (int)N;
 }
 
-
+int Problema::getNumIncidencias(int i) {
+    incidencias = 0;
+    for (int j = 0; j < N; j++)
+      incidencias += L[i][j];
+      
+    return incidencias;
+}

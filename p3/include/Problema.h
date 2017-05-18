@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 class Problema
 {
     public:
@@ -29,21 +28,16 @@ class Problema
 
         int getNumPlazas(); // Devuelve el número de plazas del problema
 
+        int getNumIncidencias(int i); // Devuelve el número de incidencias del nodo i-ésimo
+
     protected:
 
-        unsigned int N; // Num. de plazas
-        string *nombresPlazas; // Vector con el num. de nombres de plazas
+        unsigned int N; // Número de nodos
 
         string **nombresCalles; // Nombres de las calles
                                 // nombresCalles[i][j] es el nombre de la calle
                                 // que une la plaza nombresPlazas[i] con la plaza
                                 // nombresPlazas[j], o el valor "" si no existe
-
-        double **precioCalles; // Precio de las calles
-                                // preciosCalles[i][j] es el precio de la calle
-                                // que une la plaza nombresPlazas[i] con la plaza
-                                // nombresPlazas[j], o el valor -1 si no existe la calle
-
 
     private:
 };

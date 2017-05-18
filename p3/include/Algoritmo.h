@@ -4,7 +4,6 @@
 #include "Problema.h"
 #include "Solucion.h"
 
-Solucion AlgoritmoGreedyAGM(Problema p);
-
+Solucion RecubrimientoGrafoGreedy(Problema p);
 
 #endif // ALGORITMOS_H_INCLUDED

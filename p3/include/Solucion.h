@@ -3,7 +3,12 @@
 
 #include "Problema.h"
 
-
+/**
+ * Una Solucion es una colección de nodos que forman
+ * el recubrimiento del grafo, justo con el coste de dicho
+ * recubrimiento (número de nodos)
+ *
+ */
 class Solucion
 {
     public:
