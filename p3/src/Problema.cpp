@@ -102,110 +102,81 @@ double Problema::getPrecioCalle(int i, int j) {
     return precioCalles[i][j];
 }
 
-bool Problema::cargarDesdeFlujo(const char *nombreFichero) {
+bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
 
     /*
-        Formato del fichero
-        Línea 1: N (número de plazas, > 0
-        Línea 2 hasta N+1: Nombres de las plazas
-        Las demás líneas tienen el siguiente formato:
-            i j p s
-        Donde "i" es el código de una plaza origen, "j" es el código de otra plaza destino,
-        "p" es el precio de la calle y "s" el nombre de la misma
-        Ver ejemplo: Problema.dat
+      Formato del fichero
+      Línea 1: N (tamaño de la matriz cuadrada)
+      Línea 2 hasta N+1: Matriz de adyacencia
+      En la matriz de adyacencia, la posición (i, j)
+      indica si el nodo i está conectado con el nodo j
     */
 
     // Liberar memoria si la hubiese
-    if (N!= 0) {
+    if (tam != 0) {
 
-        delete [] nombresPlazas;
         for (unsigned int i= 0; i<N; i++) {
-            delete [] nombresCalles[i];
-            delete [] precioCalles[i];
+            delete [] matriz_adyacencia[i];
         }
-        delete [] nombresCalles;
-        delete [] precioCalles;
+
+        delete [] matriz_adyacencia;
     }
 
     // Inicializar a problema vacío
-    N= 0;
+    N = 0;
 
+    // Intenemos abrir el archivo
     ifstream fichero;
+    fichero.exceptions (ifstream::failbit | ifstream::badbit);
 
-    fichero.open( nombreFichero );
-    if ( !fichero )
-        return false;
+    try {
+      fichero.open(nombreFichero);
+    }
 
+    catch (ifstream::failure &e) {
+      cout << "Error en la lectura del archivo: " << nombreFichero << endl
+      cerr << "Excepción: " << e << endl;
+    }
+
+    // Leemos el tamaño de la matriz (primera línea del fichero)
     fichero >> N;
-    if (N<=0) {
+
+    if (N <= 0) {
         fichero.close();
-        N= 0;
+        N = 0;
         return false;
     }
 
     // Reserva de la memoria para el "N" nuevo
-    nombresPlazas= new string[N];
-    nombresCalles= new string*[N];
-    precioCalles= new double *[N];
+    matriz_adyacencia = new bool*[N];
 
-    for (unsigned int i= 0; i<N; i++) {
-
-        nombresPlazas[i]= "";
-
-        nombresCalles[i]= new string[N];
-        precioCalles[i]= new double[N];
-
-        for (unsigned int j= 0; j<N; j++) {
-
-            nombresCalles[i][j]= "";
-            precioCalles[i][j]= -1;
-        }
+    for (unsigned int i = 0; i < N; i++) {
+        matriz_adyacencia[i] = new bool[N];
     }
 
-    // Leemos plazas
-    for (unsigned int i= 0; i<N; i++)
-        fichero >> nombresPlazas[i];
-
+    // Leemos la matriz
     while (!fichero.eof()) {
 
-        int i, j;
-        double p;
-        string s;
+      for (size_t i = 0; i < N; i++) {
+        fichero >> matriz_adyacencia[i];
+      }
 
-        fichero >> i >> j >> p >> s;
-        nombresCalles[i][j]= s;
-        precioCalles[i][j]= p;
-        nombresCalles[j][i]= s;
-        precioCalles[j][i]= p;
     }
 
     fichero.close();
-
-/*
-    cout << "N= " << N << endl;
-    for (unsigned int i= 0; i<N; i++)
-        cout << "Plaza " << nombresPlazas[i] << endl;
-
-    for (unsigned int i= 0; i<N; i++)
-        for (unsigned int j= 0; j<N; j++)
-            if (precioCalles[i][j] != -1) {
-                cout << "i=" << i<< " j=" << j << " p=" <<precioCalles[i][j] << " ";
-                cout << nombresCalles[i][j]<<endl;
-            }
-*/
 
     return true;
 }
 
 
-int Problema::getNumPlazas() {
-    return (int)N;
+int Problema::getNumNodos() {
+    return N;
 }
 
 int Problema::getNumIncidencias(int i) {
     incidencias = 0;
     for (int j = 0; j < N; j++)
       incidencias += L[i][j];
-      
+
     return incidencias;
 }
