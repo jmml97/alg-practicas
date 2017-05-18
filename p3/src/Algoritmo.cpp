@@ -48,7 +48,7 @@ Solucion AlgoritmoGreedyAGM(Problema p) {
     // Decrementar número de incidencias de nodos conectados con el seleccionado
     for (int j = 0; j < num_nodos; ++j) {
       if (p.estanConectados(pos_max,j))
-	--incidencias[j];
+	      --incidencias[j];
     }
 
     // Seleccionar nodo con más incidencias
