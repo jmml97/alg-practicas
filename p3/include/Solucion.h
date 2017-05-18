@@ -19,8 +19,9 @@ class Solucion
 
   Solucion & operator=(const Solucion & s); // Operador de asignación
 
+  int getNodo(int i); // Devuelve el nodo i-ésimo
   int getCoste(); // Devuelve el coste de la solución
-
+  
   /*
     Modifica la solución actual añadiendo un nodo
   */

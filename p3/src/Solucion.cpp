@@ -15,7 +15,8 @@ Solucion::Solucion(const Solucion & s) {
 
 
 Solucion::~Solucion() {
-  delete[] nodos;
+  if(coste != 0)
+    delete[] nodos;
 }
 
 Solucion & Solucion::operator=(const Solucion & s) {
@@ -23,14 +24,21 @@ Solucion & Solucion::operator=(const Solucion & s) {
   if (this == &s)
     return *this;
 
+  if(coste != 0)
+    delete[] nodos;	
   coste = s.coste;
-  delete[] nodos;
+
   nodos = new int[coste];
   
   for(int i = 0; i < coste; ++i)
     nodos[i] = s.nodos[i];
 
   return *this;
+}
+
+int Solucion::getNodo(int i) {
+  if(i < coste)
+    return nodos[i];
 }
 
 int Solucion::getCoste() {

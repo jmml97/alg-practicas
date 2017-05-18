@@ -7,7 +7,7 @@ using namespace std;
 
 class Problema
 {
-public:
+ public:
   Problema();
   Problema(const Problema & p);
   Problema & operator=(const Problema &p);
@@ -22,7 +22,7 @@ public:
   int getNumIncidencias(int i); // Devuelve el número de incidencias del nodo i-ésimo
   bool estanConectados(int i, int j);
 
-private:
+ private:
 
   int tam;  // Tamaño de la matriz
   bool **matriz_adyacencia;
