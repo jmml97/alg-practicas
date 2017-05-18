@@ -77,6 +77,10 @@
 
 \begin{tikzpicture}
     \GraphInit[vstyle=Normal]
+    \SetVertexNormal[
+    FillColor = 50,
+    LineColor = 700,%
+    ]
     \Vertex{3}
     \Vertex[x=2, y=2]{1}
     \Vertex[x=2, y=-2]{5}
@@ -91,7 +95,8 @@
     \Vertex[x=8, y=2]{15}
     \Vertex[x=10, y=2]{16}
     \SetVertexNormal[
-    FillColor = 300
+    FillColor = 300,
+    LineColor = 700,%
     ]
     \Vertex[x=0, y=2]{2}
     \Vertex[x=0, y=-2]{4}
@@ -100,6 +105,8 @@
     \Vertex[x=10, y=0]{11}
     \Vertex[x=6, y=2]{14}
 
+    \SetUpEdge[
+color=500]
     \Edge (1)(2)
     \Edge (2)(3)
     \Edge (3)(4)
