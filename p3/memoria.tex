@@ -127,11 +127,12 @@ En primer lugar, vamos a mostrar las componentes Greedy de este problema:
 	\item \textit{Función objetivo:} recubrimiento de coste mínimo
 \end{itemize}
 
-El algoritmo comienza considerando contando cuántas aristas inciden en cada nodo. Así, seleccionamos en primer lugar el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar.
+El algoritmo comienza considerando contando cuántas aristas inciden en cada nodo. Así, seleccionamos en primer lugar el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar. Cuando finalice el algoritmo tendremos como solución un vector con los nodos utilizados en el recubrimiento, el coste será el número de nodos que será mínimo.\\
 
-\begin{frame}{Algoritmo Greedy}
-	%\lstinputlisting[language=C++, linerange={}]{./src/Algoritmo.cpp}
-\end{frame}
+\lstinputlisting[language=C++, linerange={26-60}]{./src/Algoritmo.cpp}
+
+Esta solución S utilizada es una instacia de la clase Solucion que contiene un vector con los nodos y su tamaño.
+Esta función AlgoritmoGreedyAGM toma como parámetro un p de la clase Problema que encapsula la matriz de adyacencia donde se ven reflejadas las incidencias de cada nodo.
 
 \subsection*{Eficiencia teórica}
 
