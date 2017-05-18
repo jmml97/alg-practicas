@@ -169,8 +169,8 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
 }
 
 
-int Problema::getNumPlazas() {
-    return (int)N;
+int Problema::getNumNodos() {
+    return N;
 }
 
 int Problema::getNumIncidencias(int i) {

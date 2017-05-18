@@ -26,7 +26,7 @@ public:
   // Devuelve true si ok, y false
   // si error al cargarlo
 
-  int getNumPlazas(); // Devuelve el número de plazas del problema
+  int getNumNodos(); // Devuelve el número de plazas del problema
 
   int getNumIncidencias(int i); // Devuelve el número de incidencias del nodo i-ésimo
 
