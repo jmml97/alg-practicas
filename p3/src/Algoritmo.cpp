@@ -28,7 +28,6 @@ Solucion AlgoritmoGreedyAGM(Problema p) {
   Solucion S; // Solución a devolver
   int num_nodos = p.getNumNodos();  // Número de candidatos sin utilizar
   int incidencias[num_nodos];  // Vector de incidencias de cada nodo (LC)
-  int num_ceros;  // Número de ceros en el vector de incidencias
   int pos_max;
 
   // Inicializar la lista de candidatos (LC)

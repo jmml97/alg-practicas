@@ -8,10 +8,15 @@ using namespace std;
 int main()
 {
     Problema prob;
-    Solucion sol;
+    //Solucion sol;
 
     if (!prob.cargarDesdeFlujo("Problema.dat"))
       cout << "El fichero no se puede abrir" << endl;
+
+    cout << "num nodos:" << prob.getNumNodos() << endl;
+    cout << "0,0:" << prob.estanConectados(0,0)  << endl;
+    cout << "0,1:" << prob.estanConectados(0,1)  << endl;
+    cout << "0,2:" << prob.estanConectados(0,2)  << endl;
 
     // Resolvemos con algoritmo greedy
     // sol= AlgoritmoGreedyAGM(prob);

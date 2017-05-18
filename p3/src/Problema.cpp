@@ -4,19 +4,14 @@
 
 using namespace std;
 
-
 Problema::Problema() {
-
-    N= 0;
+    tam = 0;
 }
-
 
 Problema::Problema(const Problema & p) {
-
-    N= 0;
+    tam = 0;
     *this= p;
 }
-
 
 Problema & Problema::operator=(const Problema &p) {
 
@@ -24,90 +19,44 @@ Problema & Problema::operator=(const Problema &p) {
         return *this;
 
 
-    if (N > 0) { // Liberar la memoria previa
-
-        delete [] nombresPlazas;
-        for (unsigned int i= 0; i<N; i++) {
-            delete [] nombresCalles[i];
-            delete [] precioCalles[i];
+    if (tam > 0) { // Liberar la memoria previa
+        for (unsigned int i= 0; i < tam; i++) {
+            delete [] matriz_adyacencia[i];
         }
-        delete [] nombresCalles;
-        delete [] precioCalles;
+        delete [] matriz_adyacencia;
     }
 
-    N= p.N; // Reserva de memoria nueva si es necesario y copia
-    if (N>0) {
+    tam = p.tam; // Reserva de memoria nueva si es necesario y copia
+    if (tam > 0) {
+      matriz_adyacencia= new bool *[tam];
 
-        nombresPlazas= new string[N];
-        nombresCalles= new string*[N];
-        precioCalles= new double *[N];
+      for (unsigned int i= 0; i < tam; i++) {
+        matriz_adyacencia[i] = new bool[tam];
 
-        for (unsigned int i= 0; i<N; i++) {
-
-            nombresPlazas[i]= p.nombresPlazas[i];
-
-            nombresCalles[i]= new string[N];
-            precioCalles[i]= new double[N];
-
-            for (unsigned int j= 0; j<N; j++) {
-
-                nombresCalles[i][j]= p.nombresCalles[i][j];
-                precioCalles[i][j]= p.precioCalles[i][j];
-            }
+        for (unsigned int j= 0; j < tam; j++) {
+          matriz_adyacencia[i][j]= p.matriz_adyacencia[i][j];
         }
-
+      }
     }
-
 
     return *this;
 }
 
-
 Problema::~Problema() {
-
-    if (N!= 0) {
-
-        delete [] nombresPlazas;
-        for (unsigned int i= 0; i<N; i++) {
-            delete [] nombresCalles[i];
-            delete [] precioCalles[i];
+    if (tam != 0) {
+        for (unsigned int i= 0; i < tam; i++) {
+            delete [] matriz_adyacencia[i];
         }
-        delete [] nombresCalles;
-        delete [] precioCalles;
+        delete [] matriz_adyacencia;
     }
-}
-
-string Problema::getNombrePlaza(int i) {
-
-    if (i<0 || i>=(int)N)
-        return "";
-
-    return nombresPlazas[i];
-}
-
-string Problema::getNombreCalle(int i, int j) {
-
-    if (i<0 || i>=(int)N || j<0 || j>=(int)N)
-        return "";
-
-    return nombresCalles[i][j];
-}
-
-
-double Problema::getPrecioCalle(int i, int j) {
-
-    if (i<0 || i>=(int)N || j<0 || j>=(int)N)
-        return -1;
-
-    return precioCalles[i][j];
 }
 
 bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
 
     /*
       Formato del fichero
-      Línea 1: N (tamaño de la matriz cuadrada)
-      Línea 2 hasta N+1: Matriz de adyacencia
+      Línea 1: tam (tamaño de la matriz cuadrada)
+      Línea 2 hasta tam+1: Matriz de adyacencia
       En la matriz de adyacencia, la posición (i, j)
       indica si el nodo i está conectado con el nodo j
     */
@@ -115,7 +64,7 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
     // Liberar memoria si la hubiese
     if (tam != 0) {
 
-        for (unsigned int i= 0; i<N; i++) {
+        for (unsigned int i = 0; i < tam; i++) {
             delete [] matriz_adyacencia[i];
         }
 
@@ -123,42 +72,45 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
     }
 
     // Inicializar a problema vacío
-    N = 0;
+    tam = 0;
 
     // Intenemos abrir el archivo
     ifstream fichero;
-    fichero.exceptions (ifstream::failbit | ifstream::badbit);
+    //fichero.exceptions ( ifstream::failbit | ifstream::badbit );
+
+    //fichero.open(nombre_fichero);
 
     try {
-      fichero.open(nombreFichero);
+      fichero.open(nombre_fichero);
     }
 
-    catch (ifstream::failure &e) {
-      cout << "Error en la lectura del archivo: " << nombreFichero << endl
-      cerr << "Excepción: " << e << endl;
+    catch (const ifstream::failure &e) {
+      cerr << "Error en la lectura del archivo: " << nombre_fichero << endl;
     }
 
     // Leemos el tamaño de la matriz (primera línea del fichero)
-    fichero >> N;
+    fichero >> tam;
 
-    if (N <= 0) {
+    if (tam <= 0) {
         fichero.close();
-        N = 0;
+        tam = 0;
         return false;
     }
 
-    // Reserva de la memoria para el "N" nuevo
-    matriz_adyacencia = new bool*[N];
+    // Reserva de la memoria para el "tam" nuevo
+    matriz_adyacencia = new bool*[tam];
 
-    for (unsigned int i = 0; i < N; i++) {
-        matriz_adyacencia[i] = new bool[N];
+    for (unsigned int i = 0; i < tam; i++) {
+        matriz_adyacencia[i] = new bool[tam];
     }
 
     // Leemos la matriz
     while (!fichero.eof()) {
 
-      for (size_t i = 0; i < N; i++) {
-        fichero >> matriz_adyacencia[i];
+      for (size_t i = 0; i < tam; i++) {
+        for (size_t j = 0; j < tam; j++) {
+          fichero >> matriz_adyacencia[i][j];
+        }
       }
 
     }
@@ -168,15 +120,18 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
     return true;
 }
 
-
 int Problema::getNumNodos() {
-    return N;
+    return tam;
 }
 
 int Problema::getNumIncidencias(int i) {
-    incidencias = 0;
-    for (int j = 0; j < N; j++)
-      incidencias += L[i][j];
+    int incidencias = 0;
+    for (int j = 0; j < tam; j++)
+      incidencias += matriz_adyacencia[i][j];
 
     return incidencias;
+}
+
+bool Problema::estanConectados(int i, int j) {
+  return matriz_adyacencia[i][j];
 }
