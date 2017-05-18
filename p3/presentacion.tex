@@ -10,7 +10,7 @@
 %%% FUENTES
 
 \usepackage[T1]{fontenc}
-\usepackage[familydefault,regular]{Chivo}
+%\usepackage[familydefault,regular]{Chivo}
 \usepackage{newtxsf} % Fuente de matemáticas
 \usepackage[scaled=.85]{FiraMono}
 
@@ -129,8 +129,8 @@ columns/1/.style={
 
 %%% INFORMACIÓN DEL DOCUMENTO
 
-\title{Algorítmica: práctica 2}
-\subtitle{Mezclando $k$ vectores ordenados}
+\title{Algorítmica: práctica 3}
+\subtitle{Encontrar un recubrimiento minimal de un grafo}
 \author{Sofía Almeida Bruno\\ Antonio Coín Castro\\ María Victoria Granados Pozo\\ Miguel Lentisco Ballesteros\\ José María Martín Luque\\ \vspace{1em}Grupo 2}
 \begin{document}
 
@@ -138,68 +138,54 @@ columns/1/.style={
 \maketitle
 
 \begin{frame}{Objetivo}
-
-	\begin{itemize}
-		\item Diseño de un algoritmo \textit{divide y vencerás} que se encargue de combinar $k$ vectores ordenados, cada uno con $n$ elementos.
-		\item Análisis de su eficiencia teórica, empírica e híbrida.
-		\item Comparación con un algoritmo clásico.
-	\end{itemize}
-
-\end{frame}
-
-\begin{frame}{Fuerza Bruta}
-
-	Hemos realizado dos algoritmos mediante fuerza bruta:
-	\begin{itemize}
-		\item Método clásico
-		\item Método alternativo
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Método Clásico - Mezcla de 2 vectores}
-\lstinputlisting[language=C++, linerange={47-70}]{./src/mezcla-vectores-clasico.cpp}
 	
+	Encontrar un recubrimiento minimal del grafo no dirigido G=(V,E).
+	Un conjunto U $\subseteq$ V es un recubrimiento de G si cada arista en E incide en, al menos, un vértice o nodo de U.
+	
+	La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos). 
 \end{frame}
 
-\begin{frame}{Método Clásico}
-	\lstinputlisting[language=C++, linerange={75-102}]{./src/mezcla-vectores-clasico.cpp}
+\begin{frame}{Ejemplo}
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Componentes Greedy}
+	\begin{itemize}
+		\item \textit{Lista de candidatos:} nodos
+		\item \textit{Lista de candidatos utilizados:} nodos considerados
+		\item \textit{Función solución:} no haya ninguna arista sin considerar %%o que el vector de incidencias sea 0
+		\item \textit{Criterio de factibilidad:} el nodo no está en la lista de candidatos utilizados
+		\item \textit{Función objetivo:} recubrimiento de coste mínimo
+		\item \textit{Función de selección:} nodo en el que inciden más aristas
+		\lstinputlisting[language=C++, linerange={13-25}]{./src/Algoritmo.cpp}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Algoritmo}
+	\lstinputlisting[language=C++, linerange={26-40}]{./src/Algoritmo.cpp}
+\end{frame}
+
+\begin{frame}{Algoritmo}
+	\lstinputlisting[language=C++, linerange={40-60}]{./src/Algoritmo.cpp}
 \end{frame}
 
 \begin{frame}{Eficiencia teórica}
-    \vspace{-1em}
-    Consideramos que $n$ es una constante fija.
-    
-    \vskip 1cm 
-	Ecuación general: $$T(k) = \sum_{i=2}^{k-1} ni \thicksim \frac{n}{2}k^2$$
-	Orden de eficiencia: $$O\left(\frac{n}{2}k^2\right) \thicksim O(k^2) $$
-
-\end{frame}
-
-\begin{frame}{Eficiencia empírica}
-	\begin{center}
-		\resizebox*{11cm}{!}{
-			\input{./graficos/mezcla-vectores-clasico}}
-	\end{center}
-
-\end{frame}
-
-\begin{frame}{Eficiencia híbrida}
-  \fontsize{8pt}{7.2}\selectfont
+    \fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 	\resizebox*{11cm}{!}{
-		\input{./graficos/ajuste-clasico}
+		%\input{./graficos/ajuste-clasico}
 	}
-	\end{center}
-\end{frame}
-
-\begin{frame}{Método Alternativo}
-	\lstinputlisting[language=C++, linerange={12-39}]{./src/mezcla-vectores-clasico-v2.cpp}
+	\end{center}    
 \end{frame}
 
 \begin{frame}{Eficiencia empírica}
+	\fontsize{8pt}{7.2}\selectfont
 	\begin{center}
-		\resizebox*{11cm}{!}{
-			\input{./graficos/mezcla-vectores-clasico-v2}}
+	\resizebox*{11cm}{!}{
+		%\input{./graficos/ajuste-clasico}
+	}
 	\end{center}
 \end{frame}
 
@@ -207,86 +193,11 @@ columns/1/.style={
   \fontsize{8pt}{7.2}\selectfont
 	\begin{center}
 	\resizebox*{11cm}{!}{
-		\input{./graficos/ajuste-clasico-v2}
+		%\input{./graficos/ajuste-clasico}
 	}
 	\end{center}
 \end{frame}
 
-\begin{frame}{Divide y Vencerás}
-
-	Hemos realizado dos algoritmos usando la técnica Divide y Vencerás:
-	\begin{itemize}
-		\item Vectores dinámicos
-		\item Vectores de la STL
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Vectores Dinámicos}
-
-	\lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
-\end{frame}
-
-\begin{frame}{Eficiencia teórica}
-    \vspace{-1em}
-    Consideramos que $n$ es una constante fija.
-    
-    \vskip 1cm 
-	Ecuación general: $$ \begin{cases} T(1) = 1\\ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} \end{cases} $$
-	Orden de eficiencia: $$ O\left(\frac{n}{2}k\log k \right) \thicksim O(k\log k) $$
-\end{frame}
-
-
-\begin{frame}{Eficiencia empírica}
-
-	\begin{center}
-	\resizebox*{11cm}{!}{
-		\input{./graficos/mezcla-vectores-DyV}
-	}
-	\end{center}
-\end{frame}
-
-\begin{frame}{Eficiencia híbrida}
-
-	\begin{center}
-	\resizebox*{10cm}{!}{
-		\input{./graficos/ajuste-DyV}
-	}
-	\end{center}
-\end{frame}
-
-\begin{frame}{Vectores de la STL}
-
-	\lstinputlisting[language=C++, linerange={75-96}]{./src/mezcla-vectores-DyV-STL.cpp}
-\end{frame}
-
-\begin{frame}{Eficiencia empírica}
-
-	\begin{center}
-	\resizebox*{11cm}{!}{
-		\input{./graficos/mezcla-vectores-DyV-STL}
-	}
-	\end{center}
-\end{frame}
-
-\begin{frame}{Eficiencia híbrida}
-  \fontsize{8pt}{7.2}\selectfont
-	\begin{center}
-	\resizebox*{10cm}{!}{
-		\input{./graficos/ajuste-DyV-STL}
-	}
-	\end{center}
-
-\end{frame}
-
-\begin{frame}{Comparación eficiencias}
-	
-	\begin{center}
-	\resizebox*{11cm}{!}{
-		\input{./graficos/compare}
-	}
-	\end{center}
-	
-\end{frame}
 
 \end{document}
 
