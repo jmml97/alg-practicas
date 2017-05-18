@@ -55,6 +55,5 @@ Solucion AlgoritmoGreedyAGM(Problema p) {
     pos_max = FSeleccion(incidencias, num_nodos);
   }
 
-  delete[] incidencias;
   return S;
 }
