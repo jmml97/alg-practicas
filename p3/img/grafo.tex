@@ -1,0 +1,142 @@
+\documentclass[preview]{standalone}
+
+% ---------------------------------------------------------------------------
+% PAQUETES
+% ---------------------------------------------------------------------------
+
+% Idioma y codificación para Español.
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla, es-lcroman, es-noquoting]{babel}
+\selectlanguage{spanish}
+% \usepackage[T1]{fontenc}
+
+% Símbolos y matemáticas.
+\usepackage{amssymb, amsmath, amsthm, amsfonts, amscd}
+\usepackage{upgreek}
+
+\usepackage{pgfplots}
+\usepackage{graphicx}   % Gráficos.
+
+% Dibujos Tikz
+\usepackage{pgf,tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows, calc,intersections,through,backgrounds}
+
+\usepackage{tkz-graph}
+
+% Fuentes personalizadas
+%\usepackage[scaled=.85]{newpxtext,newpxmath}
+\usepackage[sfdefault, scaled=.85]{FiraSans}
+\usepackage[T1]{fontenc}
+
+% Código para ajustar las fuentes matemáticas al estilo del texto
+% que le rodea
+
+\DeclareMathVersion{sans}
+\SetSymbolFont{operators}{sans}{OT1}{cmbr}{m}{n}
+\SetSymbolFont{letters}{sans}{OML}{cmbr}{m}{it}
+\SetSymbolFont{symbols}{sans}{OMS}{cmbrs}{m}{n}
+\SetMathAlphabet{\mathit}{sans}{OT1}{cmbr}{m}{sl}
+\SetMathAlphabet{\mathbf}{sans}{OT1}{cmbr}{bx}{n}
+\SetMathAlphabet{\mathtt}{sans}{OT1}{cmtl}{m}{n}
+\SetSymbolFont{largesymbols}{sans}{OMX}{iwona}{m}{n}
+
+\DeclareMathVersion{boldsans}
+\SetSymbolFont{operators}{boldsans}{OT1}{cmbr}{b}{n}
+\SetSymbolFont{letters}{boldsans}{OML}{cmbrm}{b}{it}
+\SetSymbolFont{symbols}{boldsans}{OMS}{cmbrs}{b}{n}
+\SetMathAlphabet{\mathit}{boldsans}{OT1}{cmbr}{b}{sl}
+\SetMathAlphabet{\mathbf}{boldsans}{OT1}{cmbr}{bx}{n}
+\SetMathAlphabet{\mathtt}{boldsans}{OT1}{cmtl}{b}{n}
+\SetSymbolFont{largesymbols}{boldsans}{OMX}{iwona}{bx}{n}
+
+\newif\IfInSansMode
+\let\oldsf\sffamily
+\renewcommand*{\sffamily}{\oldsf\mathversion{sans}\InSansModetrue}
+\let\oldmd\mdseries
+\renewcommand*{\mdseries}{\oldmd\IfInSansMode\mathversion{sans}\fi\relax}
+\let\oldbf\bfseries
+\renewcommand*{\bfseries}{\oldbf\IfInSansMode\mathversion{boldsans}\else%
+\mathversion{bold}\fi\relax}
+\let\oldnorm\normalfont
+\renewcommand*{\normalfont}{\oldnorm\InSansModefalse\mathversion{normal}}
+\let\oldrm\rmfamily
+\renewcommand*{\rmfamily}{\oldrm\InSansModefalse\mathversion{normal}}
+
+% Colores
+
+\definecolor{50}{HTML}{E0F7FA}
+\definecolor{300}{HTML}{4DD0E1}
+\definecolor{500}{HTML}{00BCD4}
+\definecolor{700}{HTML}{0097A7}
+
+\begin{document}
+% Cilindro elíptico
+
+\begin{tikzpicture}
+    \GraphInit[vstyle=Normal]
+    \SetVertexNormal[
+    FillColor = 300,
+    LineColor = 700,%
+    ]
+    \Vertex{3}
+    \Vertex[x=2, y=2]{1}
+    \Vertex[x=2, y=-2]{5}
+    \Vertex[x=4, y=-2]{7}
+    \Vertex[x=6, y=-2]{8}
+    \Vertex[x=10, y=-2]{10}
+    \Vertex[x=6, y=0]{13}
+    \Vertex[x=8, y=0]{12}
+    \Vertex[x=6, y=0]{13}
+    \Vertex[x=8, y=0]{12}
+    \Vertex[x=10, y=0]{11}
+    \Vertex[x=8, y=2]{15}
+    \Vertex[x=10, y=2]{16}
+    \SetVertexNormal[
+    FillColor = 50,
+    LineColor = 700,%
+    ]
+    \Vertex[x=0, y=2]{2}
+    \Vertex[x=0, y=-2]{4}
+    \Vertex[x=2, y=-4]{6}
+    \Vertex[x=8, y=-2]{9}
+    \Vertex[x=10, y=0]{11}
+    \Vertex[x=6, y=2]{14}
+
+    \SetUpEdge[
+color=500]
+    \Edge (1)(2)
+    \Edge (2)(3)
+    \Edge (3)(4)
+    \Edge (4)(5)
+    \Edge (5)(6)
+    \Edge (6)(7)
+    \Edge (5)(7)
+    \Edge (7)(8)
+    \Edge (8)(9)
+    \Edge (9)(10)
+    \Edge (10)(11)
+    \Edge (11)(12)
+    \Edge (12)(13)
+    \Edge(13)(14)
+    \Edge (14)(15)
+    \Edge (15)(16)
+
+    \Edge (8)(13)
+    \Edge (9)(12)
+    \Edge (11)(16)
+    \Edge (12)(15)
+
+    \Edge (7)(13)
+    \Edge (5)(3)
+    \Edge (3)(13)
+    \Edge (3)(1)
+    \Edge (1)(13)
+    \Edge (12)(10)
+
+
+\end{tikzpicture}
+\end{document}
+
