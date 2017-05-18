@@ -96,7 +96,7 @@
 }
 
 
-\title{Algorítmica: práctica 2 \\ \large Mezclando $k$ vectores ordenados\\ \vspace{0.2em}Grupo 2}
+\title{Algorítmica: práctica 3 \\ \large Recubrimiento de un grafo no dirigido\\ \vspace{0.2em}Grupo 2}
 \author{Sofía Almeida Bruno \and Antonio Coín Castro \and María Victoria Granados Pozo \and Miguel Lentisco Ballesteros \and José María Martín Luque}
 \date{\today}
 
@@ -107,163 +107,43 @@
 
 \section*{Introducción}
 
-El objetivo de esta práctica es diseñar un algoritmo \textit{divide y vencerás}
-que se encargue de combinar $k$ vectores ordenados. Además de implementarlo, analizaremos su eficiencia y lo comparararemos con un algoritmo clásico, para poder apreciar las ventajas del diseño basado en la técnica \textit{divide y vencerás}. Para el cálculo de la eficiencia consideraremos que el tamaño de los vectores $n$ será una constante, ya que lo que nos importa en el estudio de este algoritmo es la variable $k$ (número de vectores).
+Dado un grafo no dirigido G=(V,E), un conjunto U $\subseteq$ V es un recubrimiento de G si cada arista en E incide en, al menos, un vértice o nodo de U. Nuestro problema consiste en encontrar un recubrimiento minimal del grafo G, esto es, un recubrimiento con el menor número posible de nodos. La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos). 
 
-\section*{Algoritmo clásico}
+\begin{figure}[H]
+	\caption{Ejemplo de grafo. Los nodos más oscuros forman el recubrimiento}
+	\centering \includegraphics{./img/grafo.pdf}
+\end{figure}
 
-A continuación se proporciona el código de la función \texttt{mezcla\_vectores},
-que utiliza un algoritmo clásico para mezclar $k$ vectores en uno solo. El
-código del programa completo se puede encontrar en la carpeta \textit{src}.\\
-La idea principal del programa es ir mezclando cada vector con el siguiente, el vector resultante de esta mezcla se combina con el siguiente y así hasta haber mezclado todos los vectores en uno único. Para ello implementamos dos funciones: la primera mezcla dos vectores, y la segunda mezcla los \textit{k} vectores mediante un bucle en el que vamos llamando a la función anterior.\\
-\lstinputlisting[language=C++, linerange={47-70,75-102}]{./src/mezcla-vectores-clasico.cpp}
+\section*{Algoritmo Greedy}
 
-\subsection*{Eficiencia teórica}
+En primer lugar, vamos a mostrar las componentes Greedy de este problema:
 
-Para calcular la eficiencia teórica de este algoritmo, notaremos primero que solo debemos fijarnos en el bucle \verb|for| de la función \verb|mezcla_vectores|. Además, la función \verb|swap| que intercambia dos punteros tiene eficiencia $O(1)$. Por otro lado, es fácil ver que la función \verb|merge| tiene eficiencia $O(m)$, donde $m = max\{n_1, n_2\}$. Por tanto, la eficiencia del algoritmo clásico es: $$T(k) = \sum_{i=2}^{k-1} ni = n \sum_{i=2}^{k-1} i = n \left( \frac{(k-2)(k+1)}{2} \right) = \frac{n}{2}(k^2 -k - 2) \thicksim \frac{n}{2}k^2$$
+\begin{itemize}
+	\item \textit{Lista de candidatos:} nodos
+	\item \textit{Lista de candidatos utilizados:} nodos considerados
+	\item \textit{Función solución:} no haya ninguna arista sin considerar
+	\item \textit{Criterio de factibilidad:} el nodo no está en la lista de candidatos utilizados
+	\item \textit{Función de selección:} nodo en el que inciden más aristas
+	\item \textit{Función objetivo:} recubrimiento de coste mínimo
+\end{itemize}
 
-Es decir, el orden de eficiencia del algoritmo es $O(k^2)$, donde $k$ es el número de vectores a mezclar.
+El algoritmo comienza considerando contando cuántas aristas inciden en cada nodo. Así, seleccionamos en primer lugar el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar.
 
-\subsection*{Eficiencia empírica}
-
-En el siguiente gráfico se muestran los resultados de la
-ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
-\enlargethispage{5\baselineskip}
-\begin{center}
-	\input{./graficos/mezcla-vectores-clasico}
-\end{center}
-
-\subsection*{Eficiencia \textit{híbrida}}
-En la gráfica a continuación se muestran representados mediante puntos los datos obtenidos como resultado de las distintas ejecuciones, y la función que ajusta dichos datos con sus coeficientes correspondientes. La función es $f(x) = a_{0}x^{2}+a_{1}*x + a_{2}$.
-\begin{center}
-	\input{./graficos/ajuste-clasico}
-\end{center}
-
-\section*{Algoritmo clásico - versión 2}
- 
- Como alternativa al algoritmo clásico, hemos planteado una segunda versión donde se crea un vector de tamaño $k$ que guarda las posiciones máximas de cada vector.\\
- 
-Inicializamos el vector de índices a $n - 1$ (ya que están todos los vectores ordenados) y en cada iteración del bucle comparamos el índice correspondiente hasta obtener el índice del vector que contiene el máximo valor. Lo añadimos empezando por el final del vector y decrementamos el índice en el vector de índices. \\
- 
- El código del programa completo se puede encontrar en la carpeta \textit{src}.\\
- 
- \lstinputlisting[language=C++, linerange={12-39}]{./src/mezcla-vectores-clasico-v2.cpp}
- 
- \subsection*{Eficiencia teórica}
- 
- La eficiencia teórica es la misma que la del algoritmo anterior, es decir, $O(k^2)$.
- 
- \subsection*{Eficiencia empírica}
- 
- En el gráfico que se muestra a continuación se muestran los resultados de la
- ejecución del algoritmo \textit{clásico} con vectores de 10 elementos.
- 
- \begin{center}
- 	\input{./graficos/mezcla-vectores-clasico-v2}
- \end{center}
- 
- \subsection*{Eficiencia híbrida}
- 
- Hacemos el ajuste para una parábola: $f(x) = a_{0}x^{2}+a_{1}*x + a_{2}$
- \begin{center}
- 	\input{./graficos/ajuste-clasico-v2}
- \end{center}
-
-\section*{Algoritmo \textit{divide y vencerás} con vectores dinámicos}
-
-A continuación se proporciona el código de la función \texttt{mezclaDV},
-que utiliza un algoritmo divide y vencerás (con vectores dinámicos) para mezclar $k$ vectores en uno solo. El
-código del programa completo se puede encontrar en la carpeta \textit{src}.\\
-Para seguir la filosofía \textit{divide y vencerás} en este problema, basta con dividir el número de vectores que mezclar en dos partes (con la mitad de elementos), cada una de las cuales se mezclará utilizando el mismo algoritmo. Como caso base tomamos $k=1$, en el que devolvemos el mismo vector.\\
-
-\lstinputlisting[language=C++, linerange={83-104}]{./src/mezcla-vectores-DyV.cpp}
+\begin{frame}{Algoritmo Greedy}
+	%\lstinputlisting[language=C++, linerange={}]{./src/Algoritmo.cpp}
+\end{frame}
 
 \subsection*{Eficiencia teórica}
 
-Escribimos la ecuación general recursiva en función de $k$:
-
-$$ \begin{cases} T(1) = 1\\ T(k) = 2T\left(\frac{k}{2}\right) + n\frac{k}{2} \end{cases} $$\\
-
-Para resolverlo, tomamos el cambio de variable $ k = 2^m $:
-
-$$ T(2^m) = 2T(2^{m-1}) + n2^{m-1} $$
-
-Resolviendo esta ecuación en diferencias, tenemos que:
-
-$$ T(2^m) = c_12^m + \frac{n}{2}m2^{m} $$
-
-Como $T(1) = 1$, calculamos $c_1$:
-
-$$ T(1) = c_12 + n = 1 \Rightarrow c_1 = \frac{1-n}{2}$$
-
-Deshaciendo el cambio, $k = \log_2 k$, obtenemos la solución:
-
-$$T(k) = \frac{1-n}{2}k + \frac{n}{2}k\log_2 k$$\\
-
-Concluimos por tanto que la eficiencia del algoritmo \textit{divide y vencerás} es $O(k\log k)$.
 
 \subsection*{Eficiencia empírica}
 
-En el gráfico que se muestra a continuación se exponen los resultados de la
-ejecución del algoritmo \textit{divide y vencerás} con vectores dinámicos de 10 elementos.
- \enlargethispage{5\baselineskip}
-\begin{center}
-	\input{./graficos/mezcla-vectores-DyV}
-\end{center}
-
-\subsection*{Eficiencia \textit{híbrida}}
-Para la eficiencia híbrida realizamos un ajuste a la función: $f(x) = b_0*10*x*log(x) + b1$
-\begin{center}
-	\input{./graficos/ajuste-DyV}
-\end{center}
-
-\section*{Algoritmo \textit{divide y vencerás} con vectores de la STL}
-
-
-A continuación se proporciona el código de la función \texttt{mezclaDV},
-que utiliza un algoritmo divide y vencerás (con vectores de la STL) para mezclar $k$ vectores en uno solo. El
-código del programa completo se puede encontrar en la carpeta \textit{src}.\\
-En este caso utilizamos un planteamiento similar al anterior, únicamente cambiando la estructura de datos utilizada.
-
-\lstinputlisting[language=C++, linerange={75-96}]{./src/mezcla-vectores-DyV-STL.cpp}
-
-\subsection*{Eficiencia teórica}
-
-Puesto que el programa es muy similar al anterior, la eficiencia de nuevo es $O(k\log k)$.
-
-\subsection*{Eficiencia empírica}
-
-En el gráfico que se muestra a continuación se presentan los resultados de la
-ejecución del algoritmo \textit{divide y vencerás} con vectores
-\texttt{std::vector} de 10 elementos.
-
-\begin{center}
-	\input{./graficos/mezcla-vectores-DyV-STL}
-\end{center}
-
-\subsection*{Eficiencia \textit{híbrida}}
-La función a la que ajustamos los datos en esta ocasión es similar al caso anterior.
-
-\begin{center}
-	\input{./graficos/ajuste-DyV-STL}
-\end{center}
 
 \section*{Comparación de la eficiencia}
 
-En el siguiente gráfico se puede observar de forma visual qué algoritmo es más
-eficiente. Como era de esperar, el algoritmo clásico es el más lento de
-todos. Algo más curioso quizás es que el algoritmo que utiliza vectores
-\textit{dinámicos} es más rápido que el que usa la clase \texttt{vector} de la STL.
-
-\begin{center}
-	\input{./graficos/compare}
-\end{center}
-
-Hemos utilizado una escala logarítmica para que se puedan ver bien las diferencias de tiempos.
 
 \section*{Conclusiones}
 
-Como hemos visto, el mismo algoritmo puede programarse de forma más eficiente (y en muchas ocasiones, más simple) empleando la técnica de \textit{divide y vencerás}. En el gráfico comparativo anterior se aprecia que el algoritmo clásico es casi 100 veces más lento que el algoritmo \textit{divide y vencerás}, para los tamaños que hemos ejecutado.
 
 \newpage
 
