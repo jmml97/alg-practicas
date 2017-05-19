@@ -6,35 +6,48 @@
 /**
  * Una Solucion es una colección de nodos que forman
  * el recubrimiento del grafo, junto con el coste de dicho
- * recubrimiento (número de nodos)
- *
+ * recubrimiento (número de nodos).
  */
 class Solucion
 {
- public:
-  Solucion(); // Construye una solución vacía, con coste 0 y sin nodos
-  Solucion(const Solucion & s); // Constructor de copia
+  public:
 
-  ~Solucion(); // Destructor
+    /**
+     * Construye una solución vacía, con coste 0 y sin nodos.
+     */
+    Solucion();
 
-  Solucion & operator=(const Solucion & s); // Operador de asignación
+    Solucion(const Solucion& s);
 
-  int getNodo(int i); // Devuelve el nodo i-ésimo
-  int getCoste(); // Devuelve el coste de la solución
-  
-  /*
-    Modifica la solución actual añadiendo un nodo
-  */
-  void addNodo(int nodo);
-  
- private:
+    ~Solucion();
+
+    Solucion & operator=(const Solucion& s);
+
+    /**
+     * Devuelve el nodo i-ésimo de la solución.
+     * @pre 0 <= i < coste
+     */
+    int getNodo(int i);
+
+    /**
+     * Devuelve el coste de la solución
+     */
+    int getCoste();
+
+    /*
+      Modifica la solución actual añadiendo un nodo
+    */
+    void addNodo(int nodo);
+
+  private:
 
   /*
     La solución es un vector de nodos y su coste (número de nodos). Los nodos se representarán mediante un número entre 1 y el número total de nodos. El tamaño del recubrimiento será menor o igual que el número total de nodos.
 
-    El número total de nodos es p.getNumNodos(), donde "p" es un objeto de la clase "Problema". 
+    El número total de nodos es p.getNumNodos(), donde "p" es un objeto de la clase "Problema".
   */
-  int coste; // Coste de la solución, número de nodos
+
+  int coste;
   int *nodos;
 };
 

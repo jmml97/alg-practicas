@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
   Solucion sol;
 
   if (argc < 2) {
-    cout << "Número de argumentos inválido" << endl;
+    cout << "Número de argumentos inválido: falta el nombre del fichero con el problema" << endl;
     return 0;
   }
 
@@ -21,10 +21,11 @@ int main(int argc, char* argv[]) {
   sol = RecubrimientoGrafoGreedy(prob);
 
   // Mostramos la solución final
-  cout << "Nodos:\n" << endl;
+  cout << "Recubrimiento: ";
   for (int i = 0; i < sol.getCoste(); i++)
     cout << sol.getNodo(i) << " ";
-  cout << "\nNúmero de nodos utilizados: " << sol.getCoste();
+
+  cout << "\nNúmero de nodos utilizados (coste): " << sol.getCoste();
   cout << endl;
 
   return 0;
