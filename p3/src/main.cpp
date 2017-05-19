@@ -18,7 +18,7 @@ int main()
 
   // Mostramos la solución final
   cout << "Nodos:\n" << endl;
-  for (int i= 0; i<sol.getCoste(); i++)
+  for (int i = 0; i < sol.getCoste(); i++)
     cout << sol.getNodo(i) << " ";
   cout << "\nNúmero de nodos utilizados: " << sol.getCoste();
   cout << endl;
