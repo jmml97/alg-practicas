@@ -14,7 +14,7 @@ TEST      = $(SRC)/test
 # ****** Opciones de compilación ********
 AR        = ar
 CXX       = g++
-CXXFLAGS  = -Wall -g -std=c++11 -I./$(INCLUDE) -DNDEBUG
+CXXFLAGS  = -Wall -g -std=c++11 -c -I./$(INCLUDE) -DNDEBUG
 LDFLAGS   = -L./$(LIB)
 LDLIBS    = -l$(LIBNAME)
 RM				= rm -f
@@ -22,6 +22,7 @@ RM				= rm -f
 # ****** Fuentes y cabeceras *************
 
 SOURCES = $(addprefix $(SRC)/, Algoritmo.cpp Solucion.cpp Problema.cpp)
+OBJECTS = $(addprefix $(OBJ)/, main.o Algoritmo.o Solucion.o Problema.o)
 
 # ****** Compilación de módulos **********
 
@@ -31,15 +32,11 @@ all: $(BIN)/main
 
 # --- Ejecutables ---
 
-$(BIN)/main :
-	$(CXX) $(CXXFLAGS) $(SRC)/main.cpp $(SRC)/Algoritmo.cpp $(SRC)/Problema.cpp $(SRC)/Solucion.cpp -o $@
+$(BIN)/main : $(OBJECTS)
+	$(CXX) -o $@ $^
 
-#$(BIN)/main : $(OBJ)/main.o
-#	$(CXX) -o $@ $^
-
-#$(OBJ)/main.o : $(SRC)/main.cpp $(SOURCES) $(H_FILES)
-#	$(CXX) $(CXXFLAGS) -o $@ $^
-
+$(OBJ)/%.o: $(SRC)/%.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 # ************ Generación de documentación **************
 docs:

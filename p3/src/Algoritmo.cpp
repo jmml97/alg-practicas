@@ -23,7 +23,7 @@ int FSeleccion(int* LC, int N) {
   return pos_max;
 }
 
-Solucion AlgoritmoGreedyAGM(Problema p) {
+Solucion RecubrimientoGrafoGreedy(Problema p) {
 
   Solucion S; // Solución a devolver
   int num_nodos = p.getNumNodos();  // Número de candidatos sin utilizar
