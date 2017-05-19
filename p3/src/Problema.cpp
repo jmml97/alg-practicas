@@ -124,5 +124,5 @@ int Problema::getNumIncidencias(int i) {
 }
 
 bool Problema::estanConectados(int i, int j) {
-  return (bool) matriz_adyacencia[i][j];
+  return matriz_adyacencia[i][j];
 }

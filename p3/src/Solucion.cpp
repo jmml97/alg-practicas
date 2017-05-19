@@ -35,8 +35,7 @@ Solucion & Solucion::operator=(const Solucion & s) {
 }
 
 int Solucion::getNodo(int i) {
-  if (i < coste)
-    return nodos[i];
+  return nodos[i];
 }
 
 int Solucion::getCoste() {

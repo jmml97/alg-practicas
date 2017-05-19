@@ -12,7 +12,7 @@ using namespace std;
 class Problema
 {
   public:
-    
+
     Problema();
     Problema(const Problema& p);
     Problema & operator=(const Problema& p);
@@ -34,6 +34,8 @@ class Problema
     /**
      * Devuelve true si hay un camino entre el nodo i y el nodo j,
      * o false si no lo hay.
+     * @pre 0 <= i < tam
+     * @pre 0 <= j < tam
      */
     bool estanConectados(int i, int j);
 

@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
   sol = RecubrimientoGrafoGreedy(prob);
 
   // Mostramos la solución final
-  cout << "Nodos:\n" << endl;
+  cout << "Recubrimiento: ";
   for (int i = 0; i < sol.getCoste(); i++)
     cout << sol.getNodo(i) << " ";
 

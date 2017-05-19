@@ -24,7 +24,8 @@ class Solucion
     Solucion & operator=(const Solucion& s);
 
     /**
-     * Devuelve el nodo i-ésimo de la solución
+     * Devuelve el nodo i-ésimo de la solución.
+     * @pre 0 <= i < coste
      */
     int getNodo(int i);
 
