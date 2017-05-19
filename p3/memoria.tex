@@ -107,8 +107,11 @@
 
 \section*{Introducción}
 
-Dado un grafo no dirigido G=(V,E), un conjunto U $\subseteq$ V es un recubrimiento de G si cada arista en E incide en, al menos, un vértice o nodo de U. Nuestro problema consiste en encontrar un recubrimiento minimal del grafo G, esto es, un recubrimiento con el menor número posible de nodos. La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos). 
+Dado un grafo no dirigido $G=(V,E)$, un conjunto $U\subseteq V$ es un recubrimiento de $G$ si cada arista de $E$ incide en, al menos, un vértice o nodo de $U$. Nuestro problema consiste en encontrar un recubrimiento minimal del grafo $G$, esto es, un recubrimiento con el menor número posible de nodos. \\
 
+Para resolver el problema, empleamos un algoritmo \textit{greedy} (voraz). La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos). \\
+
+Para representar nuestro problema, hemos usado una clase \verb|Problema| y una clase \verb|Solucion|. En \verb|Problema| se encapsula la matriz de adyacencia del grafo (simétrica) junto con su tamaño, mientras que en \verb|Solucion| se encapsula un vector de nodos que forman el recubrimiento, junto a su tamaño.
 \begin{figure}[H]
 	\caption{Ejemplo de grafo. Los nodos más oscuros forman el recubrimiento}
 	\centering \includegraphics{./img/grafo.pdf}
@@ -119,15 +122,18 @@ Dado un grafo no dirigido G=(V,E), un conjunto U $\subseteq$ V es un recubrimien
 En primer lugar, vamos a mostrar las componentes Greedy de este problema:
 
 \begin{itemize}
-	\item \textit{Lista de candidatos:} nodos
-	\item \textit{Lista de candidatos utilizados:} nodos considerados
-	\item \textit{Función solución:} no haya ninguna arista sin considerar
-	\item \textit{Criterio de factibilidad:} el nodo no está en la lista de candidatos utilizados
-	\item \textit{Función objetivo:} recubrimiento de coste mínimo
-	\item \textit{Función de selección:} nodo en el que inciden más aristas
-	\lstinputlisting[language=C++, linerange={12-25}]{./src/Algoritmo.cpp}
+	\item \textit{Lista de candidatos:} los nodos del grafo.
+	\item \textit{Lista de candidatos utilizados:} los nodos ya considerados.
+	\item \textit{Función solución:} que no haya ninguna arista sin considerar.
+	\item \textit{Criterio de factibilidad:} que el nodo no esté en la lista de candidatos utilizados (no es necesario ningún criterio adicional).
+	\item \textit{Función objetivo:} recubrimiento de coste mínimo.
+	\item \textit{Función de selección:} nodo en el que inciden más aristas.
 \end{itemize}
 
+Veamos ahora el algoritmo:
+
+	\lstinputlisting[language=C++, linerange={12-25}]{./src/Algoritmo.cpp}
+\vspace{1em}
 
 El algoritmo comienza considerando contando cuántas aristas inciden en cada nodo. Así, seleccionamos en primer lugar el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar. Cuando finalice el algoritmo tendremos como solución un vector con los nodos utilizados en el recubrimiento, el coste será el número de nodos que no será mínimo en todos los casos ya que el algoritmo no es óptimo.\\
 
