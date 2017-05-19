@@ -6,6 +6,7 @@ using namespace std;
 
 Problema::Problema() {
   tam = 0;
+  matriz_adyacencia = 0;
 }
 
 Problema::Problema(const Problema& p) {
@@ -104,25 +105,24 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
 	       fichero >> matriz_adyacencia[i][j];
       }
     }
-
   }
 
   fichero.close();
   return true;
 }
 
-int Problema::getNumNodos() {
+int Problema::getNumNodos() const {
   return tam;
 }
 
-int Problema::getNumIncidencias(int i) {
+int Problema::getNumIncidencias(int i) const {
   int incidencias = 0;
   for (int j = 0; j < tam; j++)
-    incidencias += matriz_adyacencia[i][j];
+    incidencias += matriz_adyacencia[i][j] ? 1 : 0;
 
   return incidencias;
 }
 
-bool Problema::estanConectados(int i, int j) {
+bool Problema::estanConectados(int i, int j) const {
   return matriz_adyacencia[i][j];
 }

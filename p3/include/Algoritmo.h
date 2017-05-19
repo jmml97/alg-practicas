@@ -6,6 +6,6 @@
 
 int FSeleccion(int* LC, int N);
 
-Solucion RecubrimientoGrafoGreedy(Problema p);
+Solucion RecubrimientoGrafoGreedy(const Problema& p);
 
 #endif // ALGORITMOS_H_INCLUDED

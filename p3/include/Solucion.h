@@ -48,7 +48,7 @@ class Solucion
   */
 
   int coste;
-  int *nodos;
+  int* nodos;
 };
 
 #endif // SOLUCION_H

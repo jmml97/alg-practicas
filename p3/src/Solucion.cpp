@@ -2,6 +2,7 @@
 
 Solucion::Solucion() {
   coste = 0;
+  nodos = 0;
 }
 
 Solucion::Solucion(const Solucion& s) {
@@ -9,20 +10,21 @@ Solucion::Solucion(const Solucion& s) {
   delete[] nodos;
   nodos = new int[coste];
 
-  for(int i = 0; i < coste; ++i)
+  for (int i = 0; i < coste; ++i)
     nodos[i] = s.nodos[i];
 }
 
 Solucion::~Solucion() {
-  if(coste != 0)
+  if (coste != 0)
     delete[] nodos;
+  coste = 0;
 }
 
-Solucion & Solucion::operator=(const Solucion & s) {
+Solucion & Solucion::operator=(const Solucion& s) {
   if (this == &s)
     return *this;
 
-  if(coste != 0)
+  if (coste != 0)
     delete[] nodos;
 
   coste = s.coste;
@@ -43,10 +45,14 @@ int Solucion::getCoste() {
 }
 
 void Solucion::addNodo(int nodo) {
+  int* aux = new int[coste+1];
+  for (int i = 0; i < coste; i++)
+    aux[i] = nodos[i];
+
   if(coste != 0)
     delete[] nodos;
 
-  coste++;
-  nodos = new int[coste];
-  nodos[coste-1] = nodo;
+  aux[coste++] = nodo;
+
+  nodos = aux;
 }

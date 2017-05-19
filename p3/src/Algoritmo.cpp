@@ -23,7 +23,7 @@ int FSeleccion(int* LC, int N) {
   return pos_max;
 }
 
-Solucion RecubrimientoGrafoGreedy(Problema p) {
+Solucion RecubrimientoGrafoGreedy(const Problema& p) {
 
   Solucion sol; // Solución a devolver
   int num_nodos = p.getNumNodos();  // Número de candidatos sin utilizar
@@ -46,7 +46,7 @@ Solucion RecubrimientoGrafoGreedy(Problema p) {
 
     // Decrementar número de incidencias de nodos conectados con el seleccionado
     for (int j = 0; j < num_nodos; ++j) {
-      if (p.estanConectados(pos_max,j))
+      if (p.estanConectados(pos_max,j) && incidencias[j] > 0)
 	      --incidencias[j];
     }
 

@@ -24,12 +24,12 @@ class Problema
      */
     bool cargarDesdeFlujo(const char *nombre_fichero);
 
-    int getNumNodos();
+    int getNumNodos() const;
 
     /**
      * Devuelve el número de incidencias del i-ésimo nodo
      */
-    int getNumIncidencias(int i);
+    int getNumIncidencias(int i) const;
 
     /**
      * Devuelve true si hay un camino entre el nodo i y el nodo j,
@@ -37,12 +37,12 @@ class Problema
      * @pre 0 <= i < tam
      * @pre 0 <= j < tam
      */
-    bool estanConectados(int i, int j);
+    bool estanConectados(int i, int j) const;
 
   private:
 
     int tam;  // Tamaño de la matriz
-    bool **matriz_adyacencia;
+    bool** matriz_adyacencia;
 
 };
 
