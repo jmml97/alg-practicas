@@ -31,6 +31,13 @@
 
 %%% COLORES
 
+\definecolor{50}{HTML}{E0F7FA}
+\definecolor{300}{HTML}{4DD0E1}
+\definecolor{500}{HTML}{00BCD4}
+\definecolor{700}{HTML}{0097A7}
+\definecolor{900}{HTML}{006064}
+
+
 
 %% Colores de Solarized
 
@@ -71,9 +78,11 @@
 \lstset{
   % How/what to match
   % sensitive=true,
-  language=C++,
+  % language=pseudo,
   % Border (above and below)
-  frame=lines,
+  frame=leftline,
+  rulecolor=\color{300},
+  framerule=2pt,
   % Line number
   numbers=left,
   % Extra margin on line (align with paragraph)
@@ -83,17 +92,20 @@
   % Colors
   % backgroundcolor=\color{sbase3},
   basicstyle=\footnotesize\ttfamily\color{sbase00},
-  keywordstyle=\color{scyan},
-  commentstyle=\color{sbase1},
-  stringstyle=\color{sblue},
-  numberstyle=\color{sbase01},
-  identifierstyle=\color{smagenta},
+  keywordstyle=\color{700},
+  commentstyle=\color{300},
+  stringstyle=\color{500},
+  numberstyle=\color{500},
+  %identifierstyle=\color{500},
   % Break long lines into multiple lines?
   breaklines=true,
   % Show a character for spaces?
   showstringspaces=false,
-  tabsize=2
+  tabsize=2,
+  xleftmargin=0.7em,
 }
+
+\renewcommand{\lstlistingname}{Código fuente}% Listing -> Algorithm
 
 
 \title{Algorítmica: práctica 3 \\ \large Recubrimiento de un grafo no dirigido\\ \vspace{0.2em}Grupo 2}
@@ -125,13 +137,15 @@ En primer lugar, vamos a mostrar las componentes Greedy de este problema:
 	\item \textit{Criterio de factibilidad:} el nodo no está en la lista de candidatos utilizados
 	\item \textit{Función objetivo:} recubrimiento de coste mínimo
 	\item \textit{Función de selección:} nodo en el que inciden más aristas
-	\lstinputlisting[language=C++, linerange={12-25}]{./src/Algoritmo.cpp}
 \end{itemize}
+
+\lstinputlisting[language=C++, linerange={12-25}, caption=Función de selección]{./src/Algoritmo.cpp}
+
 
 
 El algoritmo comienza considerando contando cuántas aristas inciden en cada nodo. Así, seleccionamos en primer lugar el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar. Cuando finalice el algoritmo tendremos como solución un vector con los nodos utilizados en el recubrimiento, el coste será el número de nodos que no será mínimo en todos los casos ya que el algoritmo no es óptimo.\\
 
-\lstinputlisting[language=C++, linerange={26-60}]{./src/Algoritmo.cpp}
+\lstinputlisting[language=C++, linerange={26-60}, caption=Algoritmo Greedy]{./src/Algoritmo.cpp}
 
 Esta solución S utilizada es una instacia de la clase Solucion que contiene un vector con los nodos y su tamaño.
 Esta función AlgoritmoGreedyAGM toma como parámetro un p de la clase Problema que encapsula la matriz de adyacencia donde se ven reflejadas las incidencias de cada nodo.
