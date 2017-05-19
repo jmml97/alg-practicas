@@ -8,19 +8,18 @@ Problema::Problema() {
   tam = 0;
 }
 
-Problema::Problema(const Problema & p) {
+Problema::Problema(const Problema& p) {
   tam = 0;
-  *this= p;
+  *this = p;
 }
 
-Problema & Problema::operator=(const Problema &p) {
+Problema& Problema::operator=(const Problema& p) {
 
-  if (&p == this) // Para evitar cosas como mivariables= mivariables
+  if (&p == this)
     return *this;
 
-
   if (tam > 0) { // Liberar la memoria previa
-    for (unsigned int i= 0; i < tam; i++) {
+    for (unsigned int i = 0; i < tam; i++) {
       delete [] matriz_adyacencia[i];
     }
     delete [] matriz_adyacencia;
@@ -28,13 +27,13 @@ Problema & Problema::operator=(const Problema &p) {
 
   tam = p.tam; // Reserva de memoria nueva si es necesario y copia
   if (tam > 0) {
-    matriz_adyacencia= new bool *[tam];
+    matriz_adyacencia = new bool*[tam];
 
-    for (unsigned int i= 0; i < tam; i++) {
+    for (unsigned int i = 0; i < tam; i++) {
       matriz_adyacencia[i] = new bool[tam];
 
-      for (unsigned int j= 0; j < tam; j++) {
-	matriz_adyacencia[i][j]= p.matriz_adyacencia[i][j];
+      for (unsigned int j = 0; j < tam; j++) {
+	       matriz_adyacencia[i][j] = p.matriz_adyacencia[i][j];
       }
     }
   }
@@ -44,7 +43,7 @@ Problema & Problema::operator=(const Problema &p) {
 
 Problema::~Problema() {
   if (tam != 0) {
-    for (unsigned int i= 0; i < tam; i++) {
+    for (unsigned int i = 0; i < tam; i++) {
       delete [] matriz_adyacencia[i];
     }
     delete [] matriz_adyacencia;
@@ -63,11 +62,9 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
 
   // Liberar memoria si la hubiese
   if (tam != 0) {
-
     for (unsigned int i = 0; i < tam; i++) {
       delete [] matriz_adyacencia[i];
     }
-
     delete [] matriz_adyacencia;
   }
 
@@ -76,15 +73,11 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
 
   // Intenemos abrir el archivo
   ifstream fichero;
-  //fichero.exceptions ( ifstream::failbit | ifstream::badbit );
-
-  //fichero.open(nombre_fichero);
 
   try {
     fichero.open(nombre_fichero);
   }
-
-  catch (const ifstream::failure &e) {
+  catch (const ifstream::failure& e) {
     cerr << "Error en la lectura del archivo: " << nombre_fichero << endl;
   }
 
@@ -106,17 +99,15 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
 
   // Leemos la matriz
   while (!fichero.eof()) {
-
     for (size_t i = 0; i < tam; i++) {
       for (size_t j = 0; j < tam; j++) {
-	fichero >> matriz_adyacencia[i][j];
+	       fichero >> matriz_adyacencia[i][j];
       }
     }
 
   }
 
   fichero.close();
-
   return true;
 }
 
@@ -133,5 +124,5 @@ int Problema::getNumIncidencias(int i) {
 }
 
 bool Problema::estanConectados(int i, int j) {
-  return matriz_adyacencia[i][j];
+  return (bool) matriz_adyacencia[i][j];
 }

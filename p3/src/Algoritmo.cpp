@@ -25,7 +25,7 @@ int FSeleccion(int* LC, int N) {
 
 Solucion RecubrimientoGrafoGreedy(Problema p) {
 
-  Solucion S; // Solución a devolver
+  Solucion sol; // Solución a devolver
   int num_nodos = p.getNumNodos();  // Número de candidatos sin utilizar
   int incidencias[num_nodos];  // Vector de incidencias de cada nodo (LC)
   int pos_max;
@@ -39,7 +39,7 @@ Solucion RecubrimientoGrafoGreedy(Problema p) {
 
   while (incidencias[pos_max] > 0) { // Mientras el vector de incidencias no sea {0,0,...,0}
     // Añadir el nodo con más incidencias a la solución (siempre es factible)
-    S.addNodo(pos_max);
+    sol.addNodo(pos_max);
 
     // Eliminar el nodo de la LC
     incidencias[pos_max] = 0;
@@ -54,5 +54,5 @@ Solucion RecubrimientoGrafoGreedy(Problema p) {
     pos_max = FSeleccion(incidencias, num_nodos);
   }
 
-  return S;
+  return sol;
 }
