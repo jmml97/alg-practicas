@@ -171,6 +171,144 @@ columns/1/.style={
 	\lstinputlisting[language=C++, linerange={40-60}]{./src/Algoritmo.cpp}
 \end{frame}
 
+\begin{frame}{Pseudocódigo}
+
+
+\end{frame}
+
+\begin{frame}{Ejemplo paso a paso}
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo-sin-recubrir.pdf}
+	\end{figure}
+
+\end{frame}
+
+%% FIXME Poner bien la presentación
+\begin{frame}{Inicialización}
+	N = num\_nodos = 6
+	
+	M = sol.coste = 0
+	
+	$$  L = p.matriz\_adyacencia = 
+\begin{pmatrix}
+  0 & 0 & 1 & 0 & 1 & 1 \\
+  0 & 0 & 0 & 1 & 0 & 1 \\
+  1 & 0 & 0 & 1 & 1 & 0 \\
+  0 & 1 & 1 & 0 & 0 & 0 \\
+  1 & 0 & 1 & 0 & 0 & 0 \\
+  1 & 1 & 0 & 0 & 0 & 0
+\end{pmatrix}$$
+
+	$$  VI = incidencias = 
+\begin{pmatrix}
+  3 \\
+  2 \\
+  3 \\
+  2 \\
+  2 \\
+  2
+\end{pmatrix}$$
+
+	p = pos\_max = 0
+	
+\end{frame}
+
+\begin{frame}{Bucle while}
+	incidencias[0] = 3 > 0\\
+	T = \{0\}
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo-1.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{}
+	$$  VI = incidencias = 
+	\begin{pmatrix}
+	  3 \\
+	  2 \\
+	  3 \\
+	  2 \\
+	  2 \\
+	  2
+	\end{pmatrix} \implies  VI = incidencias = 
+	\begin{pmatrix}	
+	  0 \\
+	  2 \\
+	  2 \\
+	  2 \\
+	  1 \\
+	  1
+	\end{pmatrix}$$
+
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo-1.pdf}
+	\end{figure}
+	p = pos\_max = 1
+
+\end{frame}
+
+\begin{frame}{bucle while}
+	incidencias[1] = 2 > 0\\
+	T = \{0, 1\}
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}{}
+	$$  VI = incidencias = 
+	\begin{pmatrix}
+	  0 \\
+	  2 \\
+	  2 \\
+	  2 \\
+	  1 \\
+	  1
+	\end{pmatrix} \implies  VI = incidencias = 
+	\begin{pmatrix}	
+	  0 \\
+	  0 \\
+	  2 \\
+	  1 \\
+	  1 \\
+	  0
+	\end{pmatrix}$$
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Bucle while}
+	incidencias[2] = 2 > 0\\
+	T = \{0, 1, 2\}
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{}
+	$$  VI = incidencias = 
+	\begin{pmatrix}
+	  0 \\
+	  0 \\
+	  2 \\
+	  1 \\
+	  1 \\
+	  0
+	\end{pmatrix} \implies  VI = incidencias = 
+	\begin{pmatrix}	
+	  0 \\
+	  0 \\
+	  0 \\
+	  0 \\
+	  0 \\
+	  0
+	\end{pmatrix}$$
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo.pdf}
+	\end{figure}
+\end{frame}
+
 \begin{frame}{Eficiencia teórica}
     \fontsize{8pt}{7.2}\selectfont
 	\begin{center}
@@ -180,23 +318,6 @@ columns/1/.style={
 	\end{center}    
 \end{frame}
 
-\begin{frame}{Eficiencia empírica}
-	\fontsize{8pt}{7.2}\selectfont
-	\begin{center}
-	\resizebox*{11cm}{!}{
-		%\input{./graficos/ajuste-clasico}
-	}
-	\end{center}
-\end{frame}
-
-\begin{frame}{Eficiencia híbrida}
-  \fontsize{8pt}{7.2}\selectfont
-	\begin{center}
-	\resizebox*{11cm}{!}{
-		%\input{./graficos/ajuste-clasico}
-	}
-	\end{center}
-\end{frame}
 
 
 \end{document}
