@@ -154,18 +154,135 @@ El algoritmo comienza considerando contando cuántas aristas inciden en cada nod
 Esta solución S utilizada es una instacia de la clase Solucion que contiene un vector con los nodos y su tamaño.
 Esta función AlgoritmoGreedyAGM toma como parámetro un p de la clase Problema que encapsula la matriz de adyacencia donde se ven reflejadas las incidencias de cada nodo.
 
+\section*{Pseudocódigo}
+
+\section*{Ejemplo paso a paso}
+%% FIXME ARREGLAR FORMATO
+Vamos a ver con un grafo concreto como funciona el algoritmo.
+
+\begin{figure}[H]
+	\caption{Ejemplo de grafo sin recubrir}
+	\centering \includegraphics{./img/grafo-ejemplo-sin-recubrir.pdf}
+\end{figure}
+
+Inicialización:\\
+%% FIXME centrar o poner esto de una forma adecuada
+N = \verb|num_nodos| = 6
+
+M = \verb|sol.coste| = 0
+
+$$  L = \verb|p.matriz_adyacencia| = 
+\begin{pmatrix}
+	0 & 0 & 1 & 0 & 1 & 1 \\
+	0 & 0 & 0 & 1 & 0 & 1 \\
+	1 & 0 & 0 & 1 & 1 & 0 \\
+	0 & 1 & 1 & 0 & 0 & 0 \\
+	1 & 0 & 1 & 0 & 0 & 0 \\
+	1 & 1 & 0 & 0 & 0 & 0
+\end{pmatrix}$$
+
+$$ VI = \verb|incidencias| = 
+\begin{pmatrix}
+	3 \\
+	2 \\
+	3 \\
+	2 \\
+	2 \\
+	2 
+\end{pmatrix}$$
+
+p = \verb|pos_max| = 0\\
+
+Bucle while:
+
+\verb|incidencias[0]| = 3 > 0, entra en el bucle\\
+Añadimos el nodo 0 al vector solución. T = \verb|sol.nodos| = \{0\}. 
+M = \verb|sol.coste| = 1\\
+
+\begin{figure}[H]
+	\centering \includegraphics{./img/grafo-ejemplo-1.pdf}
+\end{figure}
+
+Actualizamos el vector de incidencias, eliminando a este nodo y las incidencias correspondientes. Como las aristas adyacentes al nodo 0 inciden también en los nodos 2, 4 y 5, restamos uno en dichas posiciones del vector de incidencias: \\
+$$ VI = \verb|incidencias| = 
+\begin{pmatrix}
+	3 \\
+	2 \\
+	3 \\
+	2 \\
+	2 \\
+	2 
+\end{pmatrix} \implies VI = \verb|incidencias| = 
+\begin{pmatrix}
+	0 \\
+	2 \\
+	2 \\
+	2 \\
+	1 \\
+	1 
+\end{pmatrix}$$
+Restablecemos el valor de p = \verb|pos_max| = 1
+
+Como \verb|incidencias[1]| = 2 > 0, realiza otra iteración de forma similar:\\
+ 
+ T = \verb|sol.nodos| = \{0, 1\}, M = \verb|sol.coste| = 2, las aristas que inciden en el nodo 1 lo hacen también en los nodos 3 y 5.\\
+ 
+\begin{figure}[H]
+	\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
+\end{figure}
+ 
+$$ VI = \verb|incidencias| = 
+\begin{pmatrix}
+	0 \\
+	2 \\
+	2 \\
+	2 \\
+	1 \\
+	1 
+\end{pmatrix} \implies VI = \verb|incidencias| = 
+\begin{pmatrix}
+	0 \\
+	0 \\
+	2 \\
+	1 \\
+	1 \\
+	0 
+\end{pmatrix}$$
+
+Volvemos a actualizar el valor de p = \verb|pos_max| = 2.\\
+\verb|incidencias[1]| = 2 > 0, por tanto, repetimos el proceso una vez más: T  = \verb|sol.nodos| = \{0, 1, 2\}. 
+M = \verb|sol.coste| = 3.
+
+\begin{figure}[H]
+	\centering \includegraphics{./img/grafo-ejemplo.pdf}
+\end{figure}
+
+Eliminando las incidencias de las aristas adyacentes a este nodo el vector de incidencias sufre el siguiente cambio:
+
+ $$ VI = \verb|incidencias| = 
+\begin{pmatrix}
+	0 \\
+	0 \\
+	2 \\
+	1 \\
+	1 \\
+	0  
+\end{pmatrix} \implies VI = \verb|incidencias| = 
+\begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+	0 \\
+	0 \\
+	0 
+\end{pmatrix}$$
+
+ p = \verb|pos_max| = 0, por tanto, \verb|incidencias[1]| = 0 == 0, no entra en bucle while. Como último paso devolvemos la solución:  T  = \verb|sol.nodos| = \{0, 1, 2\}, M = \verb|sol.coste| = 3.
+ 
 \subsection*{Eficiencia teórica}
 La eficiencia del algoritmo viene dada por el bucle while. Este bucle se ejecutará hasta que todos los valores del vector de incidencias sean 0, que en el peor de los casos es el número total de nodos menos 1 (num\_nodos - 1).
 
 En el interior de este bucle lo que nos determina la eficiencia es la función de selección de orden num\_nodos. Por tanto la eficiencia de este algoritmo es num\_nodos².
-
-
-\section*{Ejemplo}
-
-
-
-\section*{Conclusiones}
-
 
 
 \section*{Compilar y ejecutar}
