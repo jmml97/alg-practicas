@@ -8,6 +8,7 @@
 %\usepackage[familydefault,regular]{Chivo}
 \usepackage[sfdefault,scaled=.85]{FiraSans}
 \usepackage{newtxsf}
+\usepackage{mathastext}
 \usepackage[spanish]{babel}
 \setlength{\parindent}{0pt}
 \usepackage{amssymb}
@@ -20,11 +21,11 @@
 \usepackage{float}
 \usepackage{adjustbox}
 \usepackage{geometry}
-\usepackage[scaled=.85]{FiraMono}  
+\usepackage[scaled=.85]{FiraMono}
 \usepackage{algpseudocode}
 \usepackage{algorithm}
 
-\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm}
 
 
 %%% PGFPLOTSTABLE
@@ -157,7 +158,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 
 \Function{RecubrimientoGrafoGreedy }{$L[1,\dots,N][1,\dots,N]\ $}
     \State $T = \emptyset$ \Comment Recubrimiento
-    \For{$i=1,\dots,N$} 
+    \For{$i=1,\dots,N$}
         \State $\displaystyle V[i] \gets \sum_{j=1}^N L[i][j]$ \Comment Número de incidencias del nodo $i$
     \EndFor
 
@@ -222,7 +223,7 @@ N = \verb|num_nodos| = 6
 
 M = \verb|sol.coste| = 0
 
-$$  L = \verb|p.matriz_adyacencia| = 
+$$  L = \verb|p.matriz_adyacencia| =
 \begin{pmatrix}
 	0 & 0 & 1 & 0 & 1 & 1 \\
 	0 & 0 & 0 & 1 & 0 & 1 \\
@@ -232,14 +233,14 @@ $$  L = \verb|p.matriz_adyacencia| =
 	1 & 1 & 0 & 0 & 0 & 0
 \end{pmatrix}$$
 
-$$ V = \verb|incidencias| = 
+$$ V = \verb|incidencias| =
 \begin{pmatrix}
 	3 \\
 	2 \\
 	3 \\
 	2 \\
 	2 \\
-	2 
+	2
 \end{pmatrix}$$
 
 p = \verb|pos_max| = 0\\
@@ -247,7 +248,7 @@ p = \verb|pos_max| = 0\\
 Bucle \verb|while|:
 
 \verb|incidencias[0]| = 3 > 0, entra en el bucle\\
-Añadimos el nodo 0 al vector solución. T = \verb|sol.nodos| = \{0\}. 
+Añadimos el nodo 0 al vector solución. T = \verb|sol.nodos| = \{0\}.
 M = \verb|sol.coste| = 1\\
 
 \begin{figure}[H]
@@ -255,53 +256,53 @@ M = \verb|sol.coste| = 1\\
 \end{figure}
 
 Actualizamos el vector de incidencias, eliminando a este nodo y las incidencias correspondientes. Como las aristas adyacentes al nodo 0 inciden también en los nodos 2, 4 y 5, restamos uno en dichas posiciones del vector de incidencias: \\
-$$ V = \verb|incidencias| = 
+$$ V = \verb|incidencias| =
 \begin{pmatrix}
 	3 \\
 	2 \\
 	3 \\
 	2 \\
 	2 \\
-	2 
-\end{pmatrix} \implies V = \verb|incidencias| = 
+	2
+\end{pmatrix} \implies V = \verb|incidencias| =
 \begin{pmatrix}
 	0 \\
 	2 \\
 	2 \\
 	2 \\
 	1 \\
-	1 
+	1
 \end{pmatrix}$$
 Restablecemos el valor de p = \verb|pos_max| = 1
 
 Como \verb|incidencias[1]| = 2 > 0, realiza otra iteración de forma similar:\\
- 
+
  T = \verb|sol.nodos| = \{0, 1\}, M = \verb|sol.coste| = 2, las aristas que inciden en el nodo 1 lo hacen también en los nodos 3 y 5.\\
- 
+
 \begin{figure}[H]
 	\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
 \end{figure}
- 
-$$ V = \verb|incidencias| = 
+
+$$ V = \verb|incidencias| =
 \begin{pmatrix}
 	0 \\
 	2 \\
 	2 \\
 	2 \\
 	1 \\
-	1 
-\end{pmatrix} \implies V = \verb|incidencias| = 
+	1
+\end{pmatrix} \implies V = \verb|incidencias| =
 \begin{pmatrix}
 	0 \\
 	0 \\
 	2 \\
 	1 \\
 	1 \\
-	0 
+	0
 \end{pmatrix}$$
 
 Volvemos a actualizar el valor de p = \verb|pos_max| = 2.\\
-\verb|incidencias[1]| = 2 > 0, por tanto, repetimos el proceso una vez más: T  = \verb|sol.nodos| = \{0, 1, 2\}. 
+\verb|incidencias[1]| = 2 > 0, por tanto, repetimos el proceso una vez más: T  = \verb|sol.nodos| = \{0, 1, 2\}.
 M = \verb|sol.coste| = 3.
 
 \begin{figure}[H]
@@ -310,26 +311,26 @@ M = \verb|sol.coste| = 3.
 
 Eliminando las incidencias de las aristas adyacentes a este nodo el vector de incidencias sufre el siguiente cambio:
 
- $$ V = \verb|incidencias| = 
+ $$ V = \verb|incidencias| =
 \begin{pmatrix}
 	0 \\
 	0 \\
 	2 \\
 	1 \\
 	1 \\
-	0  
-\end{pmatrix} \implies V = \verb|incidencias| = 
+	0
+\end{pmatrix} \implies V = \verb|incidencias| =
 \begin{pmatrix}
 	0 \\
 	0 \\
 	0 \\
 	0 \\
 	0 \\
-	0 
+	0
 \end{pmatrix}$$
 
  p = \verb|pos_max| = 0, por tanto, \verb|incidencias[1]| = 0 == 0, no entra en bucle while. Como último paso devolvemos la solución:  T  = \verb|sol.nodos| = \{0, 1, 2\}, M = \verb|sol.coste| = 3.
- 
+
 \section*{Eficiencia teórica}
 La eficiencia del algoritmo viene dada por el bucle \textit{while}. Este bucle se ejecutará hasta que todos los valores del vector de incidencias sean $0$, que en el peor de los casos es el número total de nodos menos 1 $(N - 1)$.\\
 
@@ -376,4 +377,3 @@ Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bi
 
 
 \end{document}
-
