@@ -16,11 +16,8 @@ class Solucion
      * Construye una solución vacía, con coste 0 y sin nodos.
      */
     Solucion();
-
     Solucion(const Solucion& s);
-
     ~Solucion();
-
     Solucion & operator=(const Solucion& s);
 
     /**
@@ -47,8 +44,9 @@ class Solucion
     El número total de nodos es p.getNumNodos(), donde "p" es un objeto de la clase "Problema".
   */
 
-  int coste;
-  int* nodos;
+    int coste;
+    int* nodos;
+
 };
 
 #endif // SOLUCION_H

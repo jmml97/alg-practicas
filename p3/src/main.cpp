@@ -14,8 +14,10 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  if (!prob.cargarDesdeFlujo(argv[1]))
+  if (!prob.cargarDesdeFlujo(argv[1])) {
     cout << "El fichero no se puede abrir" << endl;
+    return 1;
+  }
 
   // Resolvemos con algoritmo greedy
   sol = RecubrimientoGrafoGreedy(prob);

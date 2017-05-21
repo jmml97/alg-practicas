@@ -1,23 +1,18 @@
 # ***** Variables *****
-LIBNAME   = cronologia
 H_FILES = $(wildcard $(INCLUDE)/*.h)
 
 # ****** Directorios ********
 INCLUDE   = include
-LIB       = lib
 OBJ       = obj
 SRC       = src
 BIN       = bin
-DOC       = doc
 TEST      = $(SRC)/test
 
 # ****** Opciones de compilación ********
 AR        = ar
 CXX       = g++
 CXXFLAGS  = -Wall -g -std=c++11 -c -I./$(INCLUDE) -DNDEBUG
-LDFLAGS   = -L./$(LIB)
-LDLIBS    = -l$(LIBNAME)
-RM				= rm -f
+RM	  = rm -f
 
 # ****** Fuentes y cabeceras *************
 
@@ -38,11 +33,6 @@ $(BIN)/main : $(OBJECTS)
 $(OBJ)/%.o: $(SRC)/%.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
-# ************ Generación de documentación **************
-docs:
-	@doxygen $(DOC)/doxys/Doxyfile
-	@echo "Documentación disponible en $(DOC)/html"
-
 # ************ Limpieza ************
 
 clean:
@@ -50,5 +40,5 @@ clean:
 	@echo "Limpiando..."
 
 mrproper: clean
-	-@rm -f $(BIN)/* $(LIB)/* $(DOC)/html/*
+	-@rm -f $(BIN)/*
 	@echo "Limpieza completada."

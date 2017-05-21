@@ -56,7 +56,8 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
   /*
     Formato del fichero
     Línea 1: tam (tamaño de la matriz cuadrada)
-    Línea 2 hasta tam+1: Matriz de adyacencia
+    Línea 2 hasta tam+1: Matriz de adyacencia (simétrica)
+
     En la matriz de adyacencia, la posición (i, j)
     indica si el nodo i está conectado con el nodo j
   */
@@ -72,7 +73,7 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
   // Inicializar a problema vacío
   tam = 0;
 
-  // Intenemos abrir el archivo
+  // Intentamos abrir el archivo
   ifstream fichero;
 
   try {

@@ -19,7 +19,6 @@ int FSeleccion(int* LC, int N) {
     if (LC[i] > LC[pos_max])
       pos_max = i;
   }
-
   return pos_max;
 }
 
