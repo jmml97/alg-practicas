@@ -142,7 +142,7 @@ En primer lugar, vamos a mostrar las componentes Greedy de este problema:
 	\item \textit{Lista de candidatos:} los nodos del grafo.
 	\item \textit{Lista de candidatos utilizados:} los nodos ya considerados para el recubrimiento.
 	\item \textit{Función solución:} que no haya ninguna arista sin considerar.
-	\item \textit{Criterio de factibilidad:} que el nodo no esté en la lista de candidatos utilizados (no es necesario ningún criterio adicional).
+	\item \textit{Criterio de factibilidad:} que el nodo esté en la lista de candidatos (no es necesario ningún criterio adicional).
 	\item \textit{Función objetivo:} recubrimiento de coste mínimo.
 	\item \textit{Función de selección:} nodo en el que inciden más aristas.
 \end{itemize}
@@ -183,8 +183,8 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 Como se puede observar, algunas de las componentes \textit{greedy} listadas anteriormente se han omitido o modificado en la implementación, pues o bien no son necesarias, o bien es más sencillo implementarlas de otra manera.
 
 \begin{itemize}
-	\item La \textit{lista de candidatos} y la \textit{lista de candidatos utilizados} están representadas como un vector de incidencias $V$, donde si el nodo $i$ está utilizado $V[i] = 0$.
-	\item El \textit{criterio de factibilidad}, como ya dijimos, no es necesario, pues todos los nodos de la \textit{lista de candidatos} son factibles.
+	\item La \textit{lista de candidatos} y la \textit{lista de candidatos utilizados} están representadas como un vector de incidencias $V$, donde si el nodo $i$ está utilizado, entonces $V[i] = 0$.
+	\item El \textit{criterio de factibilidad}, como ya dijimos, no es necesario, pues todos los nodos de la \textit{lista de candidatos} son factibles. Implícitamente, estamos considerando como factibles los nodos $i$ tales que $V[i] > 0$.
 	\item La \textit{función solución} es que el vector de incidencias $V$ sea distinto del vector $0$, o lo que es lo mismo, que el máximo de las componentes de $V$ no sea $0$. Esto significaría que ya se han considerado todas las aristas que inciden en cada uno de los nodos.
 	\item La \textit{función de selección} consiste en seleccionar, en cada paso, la componente máxima del vector $V$, es decir, el nodo con mayor grado.
 \end{itemize}
@@ -339,7 +339,7 @@ Es decir, si llamamos $V$ al conjunto de nodos del grafo, la eficiencia del algo
 
 \section*{Optimalidad}
 
-Ya dijimos que el algoritmo no es óptimo, es decir, no siempre nos proporciona un recubrimiento minimal. Sin embargo, siempre es posible encontrar una solución, aunque sea la trivial (a saber, un recubrimiento formado por $N-1$ nodos).\\
+Hemos notado que nuestro algoritmo no es óptimo, es decir, no siempre nos proporciona un recubrimiento minimal. Sin embargo, siempre es posible encontrar una solución, aunque sea la trivial (a saber, un recubrimiento formado por $N-1$ nodos).\\
 
 Veamos con un contraejemplo que nuestro algoritmo puede proporcionarnos un recubrimiento que no es óptimo. Consideremos el siguiente grafo:
 
@@ -362,8 +362,11 @@ Sin embargo, como nuestro algoritmo selecciona en primer lugar los nodos de mayo
 \section*{Problema real de recubrimiento}
 
 \textbf{Idea 1}: los nodos son ciudades, los nodos del recubrimiento son ciudades que tienen un hospital, y los nodos que no están en el recubrimiento son ciudades sin hospital. De esta forma, para ir a un hospital habría que desplazarse, como máximo, una ciudad.
+%%% TODO: explicar
 
 \textbf{Idea 2}: los nodos forman una especie de red de comunicación. Cada nodo es capaz de detectar fallos en sus nodos adyacentes. Con un recubrimiento minimal, podemos detectar fallos en todos los nodos con el mínimo coste.
+
+%%% TODO: explicar
 
 \section*{Compilación y ejecución del proyecto}
 Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|practica_greedy| y ejecutar el comando make.\\
