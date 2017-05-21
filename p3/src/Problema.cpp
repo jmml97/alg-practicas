@@ -34,7 +34,7 @@ Problema& Problema::operator=(const Problema& p) {
       matriz_adyacencia[i] = new bool[tam];
 
       for (unsigned int j = 0; j < tam; j++) {
-	       matriz_adyacencia[i][j] = p.matriz_adyacencia[i][j];
+	matriz_adyacencia[i][j] = p.matriz_adyacencia[i][j];
       }
     }
   }
@@ -103,7 +103,7 @@ bool Problema::cargarDesdeFlujo(const char *nombre_fichero) {
   while (!fichero.eof()) {
     for (size_t i = 0; i < tam; i++) {
       for (size_t j = 0; j < tam; j++) {
-	       fichero >> matriz_adyacencia[i][j];
+	fichero >> matriz_adyacencia[i][j];
       }
     }
   }

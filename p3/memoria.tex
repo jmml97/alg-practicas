@@ -155,13 +155,13 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \begin{algorithmic}
 
 
-\Function{RecubrimientoGrafoGreedy}{$\ L[1,\dots,N][1,\dots,N]\ $}
+\Function{RecubrimientoGrafoGreedy }{$L[1,\dots,N][1,\dots,N]\ $}
     \State $T = \emptyset$ \Comment Recubrimiento
     \For{$i=1,\dots,N$} 
         \State $\displaystyle V[i] \gets \sum_{j=1}^N L[i][j]$ \Comment Número de incidencias del nodo $i$
     \EndFor
 
-    \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge VI[i] \ \ \forall i \right)$ \Comment Función de selección \\
+    \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección \\
 
     \While{$V[p] > 0$} \Comment Función solución
 
@@ -172,7 +172,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
                 \State $V[j] \gets V[j]-1$
             \EndIf
         \EndFor
-        \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge VI[i] \ \ \forall i \right)$ \Comment Función de selección
+        \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección
 
     \EndWhile \\
     \State \Return $T$
@@ -183,7 +183,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 Como se puede observar, algunas de las componentes \textit{greedy} listadas anteriormente se han omitido o modificado en la implementación, pues o bien no son necesarias, o bien es más sencillo implementarlas de otra manera.
 
 \begin{itemize}
-	\item La \textit{lista de candidatos} y la \textit{lista de candidatos utilizados} están representadas como un vector de incidencias $V$, donde cada nodo $i$ estará utilizado si, y solo si, $V[i] = 0$.
+	\item La \textit{lista de candidatos} y la \textit{lista de candidatos utilizados} están representadas como un vector de incidencias $V$, donde si el nodo $i$ está utilizado $V[i] = 0$.
 	\item El \textit{criterio de factibilidad}, como ya dijimos, no es necesario, pues todos los nodos de la \textit{lista de candidatos} son factibles.
 	\item La \textit{función solución} es que el vector de incidencias $V$ sea distinto del vector $0$, o lo que es lo mismo, que el máximo de las componentes de $V$ no sea $0$. Esto significaría que ya se han considerado todas las aristas que inciden en cada uno de los nodos.
 	\item La \textit{función de selección} consiste en seleccionar, en cada paso, la componente máxima del vector $V$, es decir, el nodo con mayor grado.
@@ -198,7 +198,7 @@ Veamos ahora el algoritmo implementado en el lenguaje \verb|C++|. En primer luga
 	\lstinputlisting[language=C++, linerange={12-24}, caption=Función de selección]{./src/Algoritmo.cpp}
 \vspace{1em}
 
-Ahora pasemos a la función principal. El algoritmo comienza construyendo un vector de incidencias, que contiene en cada posición $i$ el número de aristas que inciden en el nodo $i-$ésimo. Después, seleccionamos en el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. A efectos prácticos, esto consiste en poner a $0$ el número de incidencias del nodo en $V$, y en decrementar en $1$ el número de incidencias de los nodos conectados con él.\\
+Ahora pasemos a la función principal. El algoritmo comienza construyendo un vector de incidencias, que contiene en cada posición $i$ el número de aristas que inciden en el nodo $i-$ésimo. Después, seleccionamos el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. A efectos prácticos, esto consiste en poner a $0$ el número de incidencias del nodo en $V$, y en decrementar en $1$ el número de incidencias de los nodos conectados con él.\\
 
 
 El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar (notemos que no volverá a seleccionar nunca un nodo ya considerado). Cuando finalice el algoritmo, tendremos como solución un vector con los nodos utilizados en el recubrimiento, y el coste será el número de nodos del mismo.\\
@@ -244,7 +244,7 @@ $$ V = \verb|incidencias| =
 
 p = \verb|pos_max| = 0\\
 
-Bucle while:
+Bucle \verb|while|:
 
 \verb|incidencias[0]| = 3 > 0, entra en el bucle\\
 Añadimos el nodo 0 al vector solución. T = \verb|sol.nodos| = \{0\}. 
@@ -255,7 +255,7 @@ M = \verb|sol.coste| = 1\\
 \end{figure}
 
 Actualizamos el vector de incidencias, eliminando a este nodo y las incidencias correspondientes. Como las aristas adyacentes al nodo 0 inciden también en los nodos 2, 4 y 5, restamos uno en dichas posiciones del vector de incidencias: \\
-$$ VI = \verb|incidencias| = 
+$$ V = \verb|incidencias| = 
 \begin{pmatrix}
 	3 \\
 	2 \\
@@ -263,7 +263,7 @@ $$ VI = \verb|incidencias| =
 	2 \\
 	2 \\
 	2 
-\end{pmatrix} \implies VI = \verb|incidencias| = 
+\end{pmatrix} \implies V = \verb|incidencias| = 
 \begin{pmatrix}
 	0 \\
 	2 \\
@@ -282,7 +282,7 @@ Como \verb|incidencias[1]| = 2 > 0, realiza otra iteración de forma similar:\\
 	\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
 \end{figure}
  
-$$ VI = \verb|incidencias| = 
+$$ V = \verb|incidencias| = 
 \begin{pmatrix}
 	0 \\
 	2 \\
@@ -290,7 +290,7 @@ $$ VI = \verb|incidencias| =
 	2 \\
 	1 \\
 	1 
-\end{pmatrix} \implies VI = \verb|incidencias| = 
+\end{pmatrix} \implies V = \verb|incidencias| = 
 \begin{pmatrix}
 	0 \\
 	0 \\
@@ -310,7 +310,7 @@ M = \verb|sol.coste| = 3.
 
 Eliminando las incidencias de las aristas adyacentes a este nodo el vector de incidencias sufre el siguiente cambio:
 
- $$ VI = \verb|incidencias| = 
+ $$ V = \verb|incidencias| = 
 \begin{pmatrix}
 	0 \\
 	0 \\
@@ -318,7 +318,7 @@ Eliminando las incidencias de las aristas adyacentes a este nodo el vector de in
 	1 \\
 	1 \\
 	0  
-\end{pmatrix} \implies VI = \verb|incidencias| = 
+\end{pmatrix} \implies V = \verb|incidencias| = 
 \begin{pmatrix}
 	0 \\
 	0 \\
