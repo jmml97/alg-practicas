@@ -12,13 +12,22 @@
 %%% FUENTES
 
 \usepackage[T1]{fontenc}
-%\usepackage[familydefault,regular]{Chivo}
+\usepackage[familydefault,regular]{Chivo}
 \usepackage{newtxsf} % Fuente de matemáticas
+\usepackage{mathastext}
 \usepackage[scaled=.85]{FiraMono}
 
 \setbeamertemplate{navigation symbols}{}
 
 %%% COLORES
+
+\definecolor{50}{HTML}{E0F7FA}
+\definecolor{300}{HTML}{4DD0E1}
+\definecolor{500}{HTML}{00BCD4}
+\definecolor{600}{HTML}{00ACC1}
+\definecolor{700}{HTML}{0097A7}
+\definecolor{800}{HTML}{00838F}
+\definecolor{900}{HTML}{006064}
 
 %% Colores de Solarized
 
@@ -98,7 +107,7 @@
 % ¿Negrita en el título de diapositiva o no?
 %\setbeamertemplate{frametitle}{\color{accent}\vspace*{1cm}\bfseries\insertframetitle\par\vskip-6pt}
 
-\setbeamertemplate{frametitle}{\color{accent}\vspace*{1cm}\insertframetitle\par\vskip-6pt}
+\setbeamertemplate{frametitle}{\color{900}\vspace*{1cm}\insertframetitle\par\vskip-6pt}
 
 \setbeamertemplate{itemize items}[circle] % Viñetas de itemize
 
@@ -106,13 +115,13 @@
 
 \setbeamercolor{background canvas}{bg=background}
 \setbeamercolor{normal text}{fg=text}
-\setbeamercolor{alerted text}{fg=accent}
-\setbeamercolor{block title}{fg=accent}
-\setbeamercolor{alerted text}{fg=accent}
-\setbeamercolor{itemize item}{fg=accent}
-\setbeamercolor{enumerate item}{fg=accent}
-\setbeamercolor*{title}{fg=accent}
-\setbeamercolor{qed symbol}{fg=accent}
+\setbeamercolor{alerted text}{fg=900}
+\setbeamercolor{block title}{fg=900}
+\setbeamercolor{alerted text}{fg=900}
+\setbeamercolor{itemize item}{fg=900}
+\setbeamercolor{enumerate item}{fg=900}
+\setbeamercolor*{title}{fg=900}
+\setbeamercolor{qed symbol}{fg=900}
 \usebeamercolor[fg]{normal text}
 
 %%% PGFPLOTSTABLE
@@ -140,16 +149,16 @@ columns/1/.style={
 \maketitle
 
 \begin{frame}{Objetivo}
-	
+
 	Encontrar un recubrimiento minimal del grafo no dirigido G=(V,E).
 	Un conjunto U $\subseteq$ V es un recubrimiento de G si cada arista en E incide en, al menos, un vértice o nodo de U.
-	
-	La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos). 
+
+	La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos).
 \end{frame}
 
 \begin{frame}{Ejemplo}
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo.pdf}
+		\centering \includegraphics{./img/grafo-pres.pdf}
 	\end{figure}
 \end{frame}
 
@@ -175,8 +184,11 @@ columns/1/.style={
 
 \begin{frame}{Pseudocódigo}
 $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos del recubrimiento}\\ L \equiv \text{ matriz de adyacencia}\\ T[1,\dots,M] \equiv \text{ vector de nodos del recubrimiento}\\ V[1,\dots,N] \equiv \text{ vector de incidencias}$\\
+\end{frame}
 
-\begin{algorithm}
+\begin{frame}
+\scalebox{0.68}{\begin{minipage}{1.45\linewidth}
+\begin{algorithm}[H]
 \begin{algorithmic}
 
 
@@ -205,6 +217,8 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \end{algorithmic}
 \end{algorithm}
 
+\end{minipage}}
+
 \end{frame}
 
 \begin{frame}{Ejemplo paso a paso}
@@ -217,10 +231,10 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 %% FIXME Poner bien la presentación
 \begin{frame}{Inicialización}
 	N = num\_nodos = 6
-	
+
 	M = sol.coste = 0
-	
-	$$  L = p.matriz\_adyacencia = 
+
+	$$  L = p.matriz\_adyacencia =
 \begin{pmatrix}
   0 & 0 & 1 & 0 & 1 & 1 \\
   0 & 0 & 0 & 1 & 0 & 1 \\
@@ -230,7 +244,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
   1 & 1 & 0 & 0 & 0 & 0
 \end{pmatrix}$$
 
-	$$  VI = incidencias = 
+	$$  VI = incidencias =
 \begin{pmatrix}
   3 \\
   2 \\
@@ -241,7 +255,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \end{pmatrix}$$
 
 	p = pos\_max = 0
-	
+
 \end{frame}
 
 \begin{frame}{Bucle while}
@@ -254,7 +268,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \end{frame}
 
 \begin{frame}{}
-	$$  VI = incidencias = 
+	$$  VI = incidencias =
 	\begin{pmatrix}
 	  3 \\
 	  2 \\
@@ -262,8 +276,8 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	  2 \\
 	  2 \\
 	  2
-	\end{pmatrix} \implies  VI = incidencias = 
-	\begin{pmatrix}	
+	\end{pmatrix} \implies  VI = incidencias =
+	\begin{pmatrix}
 	  0 \\
 	  2 \\
 	  2 \\
@@ -285,11 +299,11 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	M = sol.coste = 2
 	\begin{figure}[H]
 		\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
-	\end{figure}	
+	\end{figure}
 \end{frame}
 
 \begin{frame}{}
-	$$  VI = incidencias = 
+	$$  VI = incidencias =
 	\begin{pmatrix}
 	  0 \\
 	  2 \\
@@ -297,8 +311,8 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	  2 \\
 	  1 \\
 	  1
-	\end{pmatrix} \implies  VI = incidencias = 
-	\begin{pmatrix}	
+	\end{pmatrix} \implies  VI = incidencias =
+	\begin{pmatrix}
 	  0 \\
 	  0 \\
 	  2 \\
@@ -321,7 +335,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \end{frame}
 
 \begin{frame}{}
-	$$  VI = incidencias = 
+	$$  VI = incidencias =
 	\begin{pmatrix}
 	  0 \\
 	  0 \\
@@ -329,8 +343,8 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	  1 \\
 	  1 \\
 	  0
-	\end{pmatrix} \implies  VI = incidencias = 
-	\begin{pmatrix}	
+	\end{pmatrix} \implies  VI = incidencias =
+	\begin{pmatrix}
 	  0 \\
 	  0 \\
 	  0 \\
@@ -346,7 +360,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \begin{frame}{Eficiencia teórica}
 	Algoritmo de orden cuadrático: $O(|V|^2)$
 	\lstinputlisting[language=C++, linerange={39-54}]{./src/Algoritmo.cpp}
-	
+
 \end{frame}
 
 \begin{frame}{Contraejemplo}
@@ -360,7 +374,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 
 	\begin{figure}[H]
 		\centering \includegraphics{./img/grafo2-no-minimal.pdf}
-	\end{figure}	
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Ejemplo vida real}
@@ -371,4 +385,3 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \end{frame}
 
 \end{document}
-
