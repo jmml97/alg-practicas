@@ -21,6 +21,8 @@
 \usepackage{adjustbox}
 \usepackage{geometry}
 \usepackage[scaled=.85]{FiraMono}  
+\usepackage{algpseudocode}
+\usepackage{algorithm}
 
 \geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} 
 
@@ -117,48 +119,97 @@
 
 \newpage
 
-\section*{Introducción}
+\section*{Análisis del problema}
 
 Dado un grafo no dirigido $G=(V,E)$, un conjunto $U\subseteq V$ es un recubrimiento de $G$ si cada arista de $E$ incide en, al menos, un vértice o nodo de $U$. Nuestro problema consiste en encontrar un recubrimiento minimal del grafo $G$, esto es, un recubrimiento con el menor número posible de nodos. \\
 
 Para resolver el problema, empleamos un algoritmo \textit{greedy} (voraz). La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos). \\
 
-Para representar nuestro problema, hemos usado una clase \verb|Problema| y una clase \verb|Solucion|. En \verb|Problema| se encapsula la matriz de adyacencia del grafo (simétrica) junto con su tamaño, mientras que en \verb|Solucion| se encapsula un vector de nodos que forman el recubrimiento, junto a su tamaño.
+Para representar nuestro problema, hemos usado una clase \verb|Problema| y una clase \verb|Solucion|. En \verb|Problema| se encapsula la matriz de adyacencia del grafo (simétrica) junto con su tamaño, mientras que en \verb|Solucion| se encapsula un vector de nodos que forman el recubrimiento, junto a su tamaño. Se adjunta el código fuente de ambas clases.\\
+
 \begin{figure}[H]
-	\caption{Ejemplo de grafo. Los nodos más oscuros forman el recubrimiento}
+	\caption{Ejemplo de grafo. Los nodos más oscuros forman un recubrimiento}
 	\centering \includegraphics{./img/grafo.pdf}
 \end{figure}
 
-\section*{Algoritmo Greedy}
+\section*{Diseño de la solución}
+
+Empleando un enfoque \textit{greedy} para la resolución del problema, la idea es ir seleccionando para el recubrimiento los nodos del grafo que tienen el mayor número de incidencias. El número de incidencias de un nodo (número de aristas que tienen a ese nodo como extremo) se conoce también como \textit{grado del nodo}. \\
 
 En primer lugar, vamos a mostrar las componentes Greedy de este problema:
 
 \begin{itemize}
 	\item \textit{Lista de candidatos:} los nodos del grafo.
-	\item \textit{Lista de candidatos utilizados:} los nodos ya considerados.
+	\item \textit{Lista de candidatos utilizados:} los nodos ya considerados para el recubrimiento.
 	\item \textit{Función solución:} que no haya ninguna arista sin considerar.
 	\item \textit{Criterio de factibilidad:} que el nodo no esté en la lista de candidatos utilizados (no es necesario ningún criterio adicional).
 	\item \textit{Función objetivo:} recubrimiento de coste mínimo.
 	\item \textit{Función de selección:} nodo en el que inciden más aristas.
 \end{itemize}
 
-Veamos ahora el algoritmo:
+Una vez que hemos visto las componentes, pasemos a ver un esqueleto o \textit{pseudocódigo} del algoritmo: \\
 
-	\lstinputlisting[language=C++, linerange={11-25}, caption=Función de selección]{./src/Algoritmo.cpp}
+$N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos del recubrimiento}\\ L \equiv \text{ matriz de adyacencia}\\ T[1,\dots,M] \equiv \text{ vector de nodos del recubrimiento}\\ V[1,\dots,N] \equiv \text{ vector de incidencias}$\\
+
+\begin{algorithm}
+\begin{algorithmic}
+
+
+\Function{RecubrimientoGrafoGreedy}{$\ L[1,\dots,N][1,\dots,N]\ $}
+    \State $T = \emptyset$ \Comment Recubrimiento
+    \For{$i=1,\dots,N$} 
+        \State $\displaystyle V[i] \gets \sum_{j=1}^N L[i][j]$ \Comment Número de incidencias del nodo $i$
+    \EndFor
+
+    \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge VI[i] \ \ \forall i \right)$ \Comment Función de selección \\
+
+    \While{$V[p] > 0$} \Comment Función solución
+
+        \State $T \gets T \cup \{p\}$
+        \State $V[p] \gets 0$
+        \For{$j=1,\dots,N$}
+            \If{Están conectados $p$ y $j$ \textbf{and} $V[j] > 0$ }
+                \State $V[j] \gets V[j]-1$
+            \EndIf
+        \EndFor
+        \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge VI[i] \ \ \forall i \right)$ \Comment Función de selección
+
+    \EndWhile \\
+    \State \Return $T$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+Como se puede observar, algunas de las componentes \textit{greedy} listadas anteriormente se han omitido o modificado en la implementación, pues o bien no son necesarias, o bien es más sencillo implementarlas de otra manera.
+
+\begin{itemize}
+	\item La \textit{lista de candidatos} y la \textit{lista de candidatos utilizados} están representadas como un vector de incidencias $V$, donde cada nodo $i$ estará utilizado si, y solo si, $V[i] = 0$.
+	\item El \textit{criterio de factibilidad}, como ya dijimos, no es necesario, pues todos los nodos de la \textit{lista de candidatos} son factibles.
+	\item La \textit{función solución} es que el vector de incidencias $V$ sea distinto del vector $0$, o lo que es lo mismo, que el máximo de las componentes de $V$ no sea $0$. Esto significaría que ya se han considerado todas las aristas que inciden en cada uno de los nodos.
+	\item La \textit{función de selección} consiste en seleccionar, en cada paso, la componente máxima del vector $V$, es decir, el nodo con mayor grado.
+\end{itemize}
+
+En el diseño del algoritmo nos aprovechamos del vector $V$ para identificar \textbf{cada nodo del grafo con cada posición de $V$}. Es decir, $V[i]$ representa el número de incidencias del nodo $i$.
+
+\section*{Algoritmo Greedy}
+
+Veamos ahora el algoritmo implementado en el lenguaje \verb|C++|. En primer lugar, hemos separado la implementación de la \textit{función de selección}, para que se aprecie con claridad:
+
+	\lstinputlisting[language=C++, linerange={12-24}, caption=Función de selección]{./src/Algoritmo.cpp}
 \vspace{1em}
 
-El algoritmo comienza considerando contando cuántas aristas inciden en cada nodo. Así, seleccionamos en primer lugar el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar. Cuando finalice el algoritmo tendremos como solución un vector con los nodos utilizados en el recubrimiento, el coste será el número de nodos que no será mínimo en todos los casos ya que el algoritmo no es óptimo.\\
+Ahora pasemos a la función principal. El algoritmo comienza construyendo un vector de incidencias, que contiene en cada posición $i$ el número de aristas que inciden en el nodo $i-$ésimo. Después, seleccionamos en el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. A efectos prácticos, esto consiste en poner a $0$ el número de incidencias del nodo en $V$, y en decrementar en $1$ el número de incidencias de los nodos conectados con él.\\
+
+
+El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar (notemos que no volverá a seleccionar nunca un nodo ya considerado). Cuando finalice el algoritmo, tendremos como solución un vector con los nodos utilizados en el recubrimiento, y el coste será el número de nodos del mismo.\\
 
 \lstinputlisting[language=C++, linerange={25-59}, caption=Algoritmo Greedy]{./src/Algoritmo.cpp}
 
-Esta solución S utilizada es una instacia de la clase Solucion que contiene un vector con los nodos y su tamaño.
-Esta función AlgoritmoGreedyAGM toma como parámetro un p de la clase Problema que encapsula la matriz de adyacencia donde se ven reflejadas las incidencias de cada nodo.
-
-\section*{Pseudocódigo}
+La solución \verb|sol| utilizada es una instacia de la clase \verb|Solucion|, que contiene un vector con los nodos y su tamaño. Esta función \verb|RecubrimientoGrafoGreedy| recibe como parámetro un objeto $p$ de la clase \verb|Problema| que encapsula la matriz de adyacencia del grafo en cuestión, donde se ven reflejadas indirectamente las incidencias de cada nodo.
 
 \section*{Ejemplo paso a paso}
 %% FIXME ARREGLAR FORMATO
-Vamos a ver con un grafo concreto como funciona el algoritmo.
+Vamos a ver con un grafo concreto cómo funciona el algoritmo. Consideremos el siguiente grafo.
 
 \begin{figure}[H]
 	\caption{Ejemplo de grafo sin recubrir}
@@ -181,7 +232,7 @@ $$  L = \verb|p.matriz_adyacencia| =
 	1 & 1 & 0 & 0 & 0 & 0
 \end{pmatrix}$$
 
-$$ VI = \verb|incidencias| = 
+$$ V = \verb|incidencias| = 
 \begin{pmatrix}
 	3 \\
 	2 \\
@@ -279,16 +330,45 @@ Eliminando las incidencias de las aristas adyacentes a este nodo el vector de in
 
  p = \verb|pos_max| = 0, por tanto, \verb|incidencias[1]| = 0 == 0, no entra en bucle while. Como último paso devolvemos la solución:  T  = \verb|sol.nodos| = \{0, 1, 2\}, M = \verb|sol.coste| = 3.
  
-\subsection*{Eficiencia teórica}
-La eficiencia del algoritmo viene dada por el bucle while. Este bucle se ejecutará hasta que todos los valores del vector de incidencias sean 0, que en el peor de los casos es el número total de nodos menos 1 (num\_nodos - 1).
+\section*{Eficiencia teórica}
+La eficiencia del algoritmo viene dada por el bucle \textit{while}. Este bucle se ejecutará hasta que todos los valores del vector de incidencias sean $0$, que en el peor de los casos es el número total de nodos menos 1 $(N - 1)$.\\
 
-En el interior de este bucle lo que nos determina la eficiencia es la función de selección de orden num\_nodos. Por tanto la eficiencia de este algoritmo es num\_nodos².
+En el interior de este bucle, lo que determina la eficiencia es la \textit{función de selección}, que como tiene que recorrer el vector $V$ es de orden $N$. Por tanto la eficiencia de este algoritmo es $N(N-1) = N^2 - N$. Notemos que el bucle \textit{for} dentro del \textit{while} tiene el mismo orden de eficiencia que la función de selección.\\
 
+Es decir, si llamamos $V$ al conjunto de nodos del grafo, la eficiencia del algoritmo es $O(|V|^2)$.
 
-\section*{Compilar y ejecutar}
-Para compilar este proyecto simplemente hay que situarse en la carpeta practica\_greedy y ejecutar el comando make.
+\section*{Optimalidad}
 
-Una vez compilado, si estamos situados en la misma carpeta ejecutamos ./bin/main pasando como parámetro cualquiera de los archivos .dat de la carpeta "datos".
+Ya dijimos que el algoritmo no es óptimo, es decir, no siempre nos proporciona un recubrimiento minimal. Sin embargo, siempre es posible encontrar una solución, aunque sea la trivial (a saber, un recubrimiento formado por $N-1$ nodos).\\
+
+Veamos con un contraejemplo que nuestro algoritmo puede proporcionarnos un recubrimiento que no es óptimo. Consideremos el siguiente grafo:
+
+\begin{figure}[H]
+	\centering \includegraphics{./img/grafo2.pdf}
+\end{figure}
+
+Es obvio que el recubrimiento minimal de este grafo sería el siguiente:
+
+\begin{figure}[H]
+	\centering \includegraphics{./img/grafo2-minimal.pdf}
+\end{figure}
+
+Sin embargo, como nuestro algoritmo selecciona en primer lugar los nodos de mayor grado, seleccionaría al comienzo el nodo $0$, lo que ya condiciona a que el recubrimiento obtenido sea el siguiente, que no es minimal:
+
+\begin{figure}[H]
+	\centering \includegraphics{./img/grafo2-no-minimal.pdf}
+\end{figure}
+
+\section*{Problema real de recubrimiento}
+
+\textbf{Idea 1}: los nodos son ciudades, los nodos del recubrimiento son ciudades que tienen un hospital, y los nodos que no están en el recubrimiento son ciudades sin hospital. De esta forma, para ir a un hospital habría que desplazarse, como máximo, una ciudad.
+
+\textbf{Idea 2}: los nodos forman una especie de red de comunicación. Cada nodo es capaz de detectar fallos en sus nodos adyacentes. Con un recubrimiento minimal, podemos detectar fallos en todos los nodos con el mínimo coste.
+
+\section*{Compilación y ejecución del proyecto}
+Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|practica_greedy| y ejecutar el comando make.\\
+
+Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro cualquiera de los archivos \verb|.dat| de la carpeta \textit{datos}.
 %%REVIEW nombre de las carpetas y archivos
 
 
