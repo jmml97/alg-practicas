@@ -6,6 +6,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphics,tikz}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
 
 %%% FUENTES
 
@@ -153,9 +155,9 @@ columns/1/.style={
 
 \begin{frame}{Componentes Greedy}
 	\begin{itemize}
-		\item \textit{Lista de candidatos:} nodos
+		\item \textit{Lista de candidatos:} nodos del grafo
 		\item \textit{Lista de candidatos utilizados:} nodos considerados
-		\item \textit{Función solución:} no haya ninguna arista sin considerar %%o que el vector de incidencias sea 0
+		\item \textit{Función solución:} no haya ninguna arista sin considerar
 		\item \textit{Criterio de factibilidad:} el nodo no está en la lista de candidatos utilizados
 		\item \textit{Función objetivo:} recubrimiento de coste mínimo
 		\item \textit{Función de selección:} nodo en el que inciden más aristas
@@ -172,7 +174,36 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}{Pseudocódigo}
+$N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos del recubrimiento}\\ L \equiv \text{ matriz de adyacencia}\\ T[1,\dots,M] \equiv \text{ vector de nodos del recubrimiento}\\ V[1,\dots,N] \equiv \text{ vector de incidencias}$\\
 
+\begin{algorithm}
+\begin{algorithmic}
+
+
+\Function{RecubrimientoGrafoGreedy }{$L[1,\dots,N][1,\dots,N]\ $}
+    \State $T = \emptyset$ \Comment Recubrimiento
+    \For{$i=1,\dots,N$}
+        \State $\displaystyle V[i] \gets \sum_{j=1}^N L[i][j]$ \Comment Número de incidencias del nodo $i$
+    \EndFor
+
+    \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección \\
+
+    \While{$V[p] > 0$} \Comment Función solución
+
+        \State $T \gets T \cup \{p\}$
+        \State $V[p] \gets 0$
+        \For{$j=1,\dots,N$}
+            \If{Están conectados $p$ y $j$ \textbf{and} $V[j] > 0$ }
+                \State $V[j] \gets V[j]-1$
+            \EndIf
+        \EndFor
+        \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección
+
+    \EndWhile \\
+    \State \Return $T$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
 
 \end{frame}
 
@@ -313,15 +344,31 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}{Eficiencia teórica}
-    \fontsize{8pt}{7.2}\selectfont
-	\begin{center}
-	\resizebox*{11cm}{!}{
-		%\input{./graficos/ajuste-clasico}
-	}
-	\end{center}    
+	Algoritmo de orden cuadrático: $O(|V|^2)$
+	\lstinputlisting[language=C++, linerange={39-54}]{./src/Algoritmo.cpp}
+	
 \end{frame}
 
+\begin{frame}{Contraejemplo}
 
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo2.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Contraejemplo}
+
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo2-no-minimal.pdf}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}{Ejemplo vida real}
+	\begin{itemize}
+		\item Hospitales y ciudades
+		\item Red de comunicación
+	\end{itemize}
+\end{frame}
 
 \end{document}
 
