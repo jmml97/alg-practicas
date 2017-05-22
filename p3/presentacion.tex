@@ -7,7 +7,7 @@
 \usepackage[spanish]{babel}
 \usepackage{graphics,tikz}
 \usepackage{algpseudocode}
-\usepackage{algorithm}
+\usepackage[plain]{algorithm}
 
 %%% FUENTES
 
@@ -85,17 +85,18 @@
   belowcaptionskip=1\baselineskip,
   % Colors
   % backgroundcolor=\color{sbase3},
-  basicstyle=\tiny\ttfamily\color{text},
-  keywordstyle=\color{accent3},
-  commentstyle=\color{accent5},
-  stringstyle=\color{accent2},
+  basicstyle=\scriptsize\ttfamily\color{text},
+  keywordstyle=\color{900},
+  commentstyle=\color{text},
+  stringstyle=\color{700},
   numberstyle=\color{text},
   identifierstyle=\color{accent4},
   % Break long lines into multiple lines?
   breaklines=true,
   % Show a character for spaces?
   showstringspaces=false,
-  tabsize=2
+  tabsize=2,
+  xleftmargin=1.5em,
 }
 
 \setbeamerfont{framesubtitle}{size=\normalfont\tiny}
@@ -138,6 +139,11 @@ columns/1/.style={
    },
 }
 
+
+%%% LISTINGS
+
+\renewcommand{\lstlistingname}{Código fuente}
+
 %%% INFORMACIÓN DEL DOCUMENTO
 
 \title{Algorítmica: práctica 3}
@@ -150,7 +156,7 @@ columns/1/.style={
 
 \begin{frame}{Objetivo}
 
-	Encontrar un recubrimiento minimal del grafo no dirigido G=(V,E).
+	Encontrar un recubrimiento minimal del grafo no dirigido G = (V, E).
 	Un conjunto U $\subseteq$ V es un recubrimiento de G si cada arista en E incide en, al menos, un vértice o nodo de U.
 
 	La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos).
@@ -170,12 +176,15 @@ columns/1/.style={
 		\item \textit{Criterio de factibilidad:} el nodo no está en la lista de candidatos utilizados
 		\item \textit{Función objetivo:} recubrimiento de coste mínimo
 		\item \textit{Función de selección:} nodo en el que inciden más aristas
-		\lstinputlisting[language=C++, linerange={13-25}]{./src/Algoritmo.cpp}
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+    \lstinputlisting[language=C++, linerange={12-25}, caption=Función de selección]{./src/Algoritmo.cpp}
+\end{frame}
+
 \begin{frame}{Algoritmo}
-	\lstinputlisting[language=C++, linerange={26-40}]{./src/Algoritmo.cpp}
+	\lstinputlisting[language=C++, linerange={27-40}]{./src/Algoritmo.cpp}
 \end{frame}
 
 \begin{frame}{Algoritmo}
@@ -183,7 +192,11 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}{Pseudocódigo}
-$N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos del recubrimiento}\\ L \equiv \text{ matriz de adyacencia}\\ T[1,\dots,M] \equiv \text{ vector de nodos del recubrimiento}\\ V[1,\dots,N] \equiv \text{ vector de incidencias}$\\
+$N \equiv$ número de nodos del grafo\\ 
+$M \equiv$ número de nodos del recubrimiento\\ 
+$L \equiv$ matriz de adyacencia\\
+$T[1,\dots, M] \equiv$ vector de nodos del recubrimiento\\
+$V[1,\dots, N] \equiv$ vector de incidencias
 \end{frame}
 
 \begin{frame}
@@ -223,7 +236,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 
 \begin{frame}{Ejemplo paso a paso}
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-sin-recubrir.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-sin-recubrir-pres.pdf}
 	\end{figure}
 
 \end{frame}
@@ -234,7 +247,8 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 
 	M = sol.coste = 0
 
-	$$  L = p.matriz\_adyacencia =
+
+	$\displaystyle  L = p.matriz\_adyacencia =
 \begin{pmatrix}
   0 & 0 & 1 & 0 & 1 & 1 \\
   0 & 0 & 0 & 1 & 0 & 1 \\
@@ -242,9 +256,9 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
   0 & 1 & 1 & 0 & 0 & 0 \\
   1 & 0 & 1 & 0 & 0 & 0 \\
   1 & 1 & 0 & 0 & 0 & 0
-\end{pmatrix}$$
+\end{pmatrix}$
 
-	$$  VI = incidencias =
+	$\displaystyle  VI = incidencias =
 \begin{pmatrix}
   3 \\
   2 \\
@@ -252,10 +266,8 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
   2 \\
   2 \\
   2
-\end{pmatrix}$$
-
-	p = pos\_max = 0
-
+\end{pmatrix} \hspace{2em} p = pos\_max = 0$
+	
 \end{frame}
 
 \begin{frame}{Bucle while}
@@ -263,12 +275,12 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	T = \{0\}\\
 	M = sol.coste = 1
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-1.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-1-pres.pdf}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{}
-	$$  VI = incidencias =
+	$\displaystyle  VI = incidencias =
 	\begin{pmatrix}
 	  3 \\
 	  2 \\
@@ -284,10 +296,10 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	  2 \\
 	  1 \\
 	  1
-	\end{pmatrix}$$
+	\end{pmatrix}$
 
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-1.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-1-pres.pdf}
 	\end{figure}
 	p = pos\_max = 1
 
@@ -298,7 +310,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	T = \{0, 1\}\\
 	M = sol.coste = 2
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-2-pres.pdf}
 	\end{figure}
 \end{frame}
 
@@ -321,7 +333,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	  0
 	\end{pmatrix}$$
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-2-pres.pdf}
 	\end{figure}
 \end{frame}
 
@@ -330,7 +342,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	T = \{0, 1, 2\}\\
 	M = sol.coste = 3
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-pres.pdf}
 	\end{figure}
 \end{frame}
 
@@ -353,7 +365,7 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 	  0
 	\end{pmatrix}$$
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-pres.pdf}
 	\end{figure}
 \end{frame}
 
@@ -366,14 +378,14 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \begin{frame}{Contraejemplo}
 
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo2.pdf}
+		\centering \includegraphics{./img/grafo2-pres.pdf}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{Contraejemplo}
 
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo2-no-minimal.pdf}
+		\centering \includegraphics{./img/grafo2-no-minimal-pres.pdf}
 	\end{figure}
 \end{frame}
 

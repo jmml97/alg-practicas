@@ -67,10 +67,17 @@
 
 % Colores
 
+\definecolor{background}{RGB}{237,237,237}
 \definecolor{50}{HTML}{E0F7FA}
+\definecolor{100}{HTML}{B2EBF2}
+\definecolor{200}{HTML}{80DEEA}
 \definecolor{300}{HTML}{4DD0E1}
+\definecolor{400}{HTML}{26C6DA}
 \definecolor{500}{HTML}{00BCD4}
+\definecolor{600}{HTML}{00ACC1}
 \definecolor{700}{HTML}{0097A7}
+\definecolor{800}{HTML}{00838F}
+\definecolor{900}{HTML}{006064}
 
 \begin{document}
 % Cilindro elíptico
@@ -78,32 +85,28 @@
 \begin{tikzpicture}
     \GraphInit[vstyle=Normal]
     \SetVertexNormal[
-    FillColor = 50,
+    FillColor = 700,
     LineColor = 700,%
+    TextColor = background,
     ]
-    \Vertex[x=-2, y=-2]{1}
+    \Vertex[x=2, y=-2]{0}
     \Vertex[x=0, y=-2]{2}
-    \Vertex[x=2, y=-2]{3}
-    \SetVertexNormal[
-    FillColor = 50,
-    LineColor = 700,%
-    ]
-    \Vertex{0}
-    \Vertex[x=-2, y=-4]{4}
-    \Vertex[x=0, y=-4]{5}
-    \Vertex[x=2, y=-4]{6}
+    \Vertex[x=2, y=-4]{1}
+    \Vertex[x=0, y=-4]{3}
+    \Vertex{4}
+    \Vertex[x=4, y=-2]{5}
 
     \SetUpEdge[
-color=500]
-    \Edge (0)(1)
+color=900]
     \Edge (0)(2)
-    \Edge (0)(3)
-    \Edge (1)(4)
-    \Edge (2)(5)
-    \Edge (3)(6)
-    
+    \Edge (0)(5)
+    \Edge (0)(4)
+    \Edge (2)(3)
+    \Edge (2)(4)
+    \Edge (3)(1)
+    \Edge (1)(5)
+
 
 
 \end{tikzpicture}
 \end{document}
-

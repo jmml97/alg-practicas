@@ -28,7 +28,7 @@
 
 % Fuentes personalizadas
 %\usepackage[scaled=.85]{newpxtext,newpxmath}
-\usepackage[familydefault]{Chivo}
+\usepackage[sfdefault, scaled=.85]{FiraSans}
 \usepackage[T1]{fontenc}
 
 % Código para ajustar las fuentes matemáticas al estilo del texto
@@ -87,63 +87,30 @@
     \SetVertexNormal[
     FillColor = 900,
     LineColor = 900,%
-    TextColor = background,
+    TextColor = background
     ]
-    \Vertex{3}
-    \Vertex[x=2, y=2]{1}
-    \Vertex[x=2, y=-2]{5}
-    \Vertex[x=4, y=-2]{7}
-    \Vertex[x=6, y=-2]{8}
-    \Vertex[x=10, y=-2]{10}
-    \Vertex[x=6, y=0]{13}
-    \Vertex[x=8, y=0]{12}
-    \Vertex[x=6, y=0]{13}
-    \Vertex[x=8, y=0]{12}
-    \Vertex[x=10, y=0]{11}
-    \Vertex[x=8, y=2]{15}
-    \Vertex[x=10, y=2]{16}
+    \Vertex[x=2, y=-2]{0}
+    \Vertex[x=0, y=-2]{2}
+    \Vertex[x=2, y=-4]{1}
     \SetVertexNormal[
     FillColor = 700,
     LineColor = 700,%
     TextColor = background,
     ]
-    \Vertex[x=0, y=2]{2}
-    \Vertex[x=0, y=-2]{4}
-    \Vertex[x=2, y=-4]{6}
-    \Vertex[x=8, y=-2]{9}
-    \Vertex[x=10, y=0]{11}
-    \Vertex[x=6, y=2]{14}
+    \Vertex[x=0, y=-4]{3}
+    \Vertex{4}
+    \Vertex[x=4, y=-2]{5}
 
     \SetUpEdge[
 color=900]
-    \Edge (1)(2)
+    \Edge (0)(2)
+    \Edge (0)(5)
+    \Edge (0)(4)
     \Edge (2)(3)
-    \Edge (3)(4)
-    \Edge (4)(5)
-    \Edge (5)(6)
-    \Edge (6)(7)
-    \Edge (5)(7)
-    \Edge (7)(8)
-    \Edge (8)(9)
-    \Edge (9)(10)
-    \Edge (10)(11)
-    \Edge (11)(12)
-    \Edge (12)(13)
-    \Edge(13)(14)
-    \Edge (14)(15)
-    \Edge (15)(16)
-
-    \Edge (8)(13)
-    \Edge (9)(12)
-    \Edge (11)(16)
-    \Edge (12)(15)
-
-    \Edge (7)(13)
-    \Edge (5)(3)
-    \Edge (3)(13)
+    \Edge (2)(4)
     \Edge (3)(1)
-    \Edge (1)(13)
-    \Edge (12)(10)
+    \Edge (1)(5)
+
 
 
 \end{tikzpicture}
