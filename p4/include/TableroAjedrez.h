@@ -1,7 +1,7 @@
 /**
  * Tablero.h
  *
- * Representa un tablero de ajedrez de tamaño arbitrario hasta un N fijo.
+ * Representa un tablero de ajedrez de tamaño arbitrario, hasta un máximo fijado.
  *
  */
 

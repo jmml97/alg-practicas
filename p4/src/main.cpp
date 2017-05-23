@@ -19,37 +19,60 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
+  srand(time(0));
+
   if (argc <= 1) {
     cerr << "Error. Sintaxis: Tam [i] [j]" << endl;
     return 1;
   }
 
-  srand(time(0));
-
   int N = stoi(argv[1]);
   TableroAjedrez tablero(N);
   Posicion pos_inicial;
-  bool tiene_solucion;
+  bool tiene_solucion = false;
+  bool sol_particular;
 
   if (argc >= 4) {
     pos_inicial.i = stoi(argv[2]);
     pos_inicial.j = stoi(argv[3]);
-  }
-  else {
-    pos_inicial.i = rand() % N;
-    pos_inicial.j = rand() % N;
+    sol_particular = true;
   }
 
-  // Encontrar recorrido del caballo
-  tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
+  /*
+      Encontrar recorrido del caballo.
+      Sabemos que no hay solución si n < 5 (excepto la solución trivial para n = 1)
+   */
 
-  if (tiene_solucion) {
-    // Mostrar el tablero con la solución
-    for (int i = 0; i < N; ++i) {
-      for (int j = 0; j < N; ++j) {
-        cout << tablero.get(i,j) << "  ";
+  if (N == 1) {
+    cout << 1 << endl;
+    return 0;
+  }
+
+  if (N >= 5) {
+    if (sol_particular) {
+      tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
+    }
+    else {
+      while (!tiene_solucion) {
+        pos_inicial.i = rand() % N;
+        pos_inicial.j = rand() % N;
+        tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
       }
-    cout << endl;
+    }
+
+    if (tiene_solucion) {
+      // Mostrar el tablero con la solución
+      for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < N; ++j) {
+          cout << tablero.get(i,j) << "  ";
+        }
+      cout << endl;
+      }
+    }
+
+    else {
+      cout << "No hay solución en un tablero de " << N << "x" << N << " para la "
+           << "casilla inicial (" << pos_inicial.i << "," << pos_inicial.j << ").\n";
     }
   }
 
