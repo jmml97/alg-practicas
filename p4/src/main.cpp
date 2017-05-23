@@ -29,6 +29,7 @@ int main(int argc, char* argv[]) {
   int N = stoi(argv[1]);
   TableroAjedrez tablero(N);
   Posicion pos_inicial;
+  bool tiene_solucion;
 
   if (argc >= 4) {
     pos_inicial.i = stoi(argv[2]);
@@ -40,15 +41,21 @@ int main(int argc, char* argv[]) {
   }
 
   // Encontrar recorrido del caballo
-  MovimientosCaballoBT(tablero, pos_inicial, 1);
+  tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
 
-  // Mostrar el tablero con la solución
-  for (int i = 0; i < N; ++i) {
-    for (int j = 0; j < N; ++j) {
-      cout << tablero.get(i,j) << "  ";
+  if (tiene_solucion) {
+    // Mostrar el tablero con la solución
+    for (int i = 0; i < N; ++i) {
+      for (int j = 0; j < N; ++j) {
+        cout << tablero.get(i,j) << "  ";
+      }
+    cout << endl;
     }
-  cout << endl;
-}
+  }
+
+  else {
+    cout << "No hay solución en un tablero de " << N << "x" << N << ".\n";
+  }
 
   return 0;
 }

@@ -12,7 +12,7 @@ TEST      = $(SRC)/test
 AR        = ar
 CXX       = g++
 CXXFLAGS  = -Wall -g -std=c++11 -c -I./$(INCLUDE) -DNDEBUG
-RM	  = rm -f
+RM	  		= rm -f
 
 # ****** Fuentes y cabeceras *************
 
@@ -30,8 +30,12 @@ all: $(BIN)/main
 $(BIN)/main : $(OBJECTS)
 	$(CXX) -o $@ $^
 
-$(OBJ)/%.o: $(SRC)/%.cpp
+$(OBJ)/%.o: $(SRC)/%.cpp $(INCLUDE)/%.h
 	$(CXX) $(CXXFLAGS) -o $@ $<
+
+$(OBJ)/Algoritmo.o: $(INCLUDE)/TableroAjedrez.h
+
+$(OBJ)/main.o: $(SRC)/*.cpp
 
 # ************ Limpieza ************
 
