@@ -41,7 +41,7 @@ bool MovimientosCaballoBT(TableroAjedrez& tablero, const Posicion& pos_actual, i
       Si sale del bucle, es que no puede colocar en ninguna casilla.
    */
 
-  if (paso < tablero.getTam())  // Si no estamos en el último paso
+  if (paso < tablero.getTam()*tablero.getTam())  // Si no estamos en el último paso
     return false;
   else
     return true;
