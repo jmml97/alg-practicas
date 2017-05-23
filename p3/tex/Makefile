@@ -10,16 +10,15 @@ IMG_PDF_FILES := $(IMG_TEX_FILES:.tex=.pdf)
 .PHONY: all clean mrproper
 
 all: $(PDF_FILES) $(IMG_PDF_FILES) clean
-	@echo $(IMG_PDF_FILES)
 
 img: $(IMG_PDF_FILES)
 
-%.pdf: %.tex
-	@echo $@ $<
+img/%.pdf: img/%.tex
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $< -jobname=$(basename $<)
+
+./%.pdf: ./%.tex
 	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
 
-img/%.pdf: img/%.tex
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
 
 # ************ Limpieza ************
 
@@ -31,5 +30,5 @@ clean-img:
 	-@rm -f ./img/*.aux ./img/*.synctex.gz ./img/*.log ./img/*.fls ./img/*.fdb_latexmk ./img/*.dvi ./img/*.nav ./img/*.out ./img/*.snm ./img/*.toc
 
 mrproper: clean
-	-@rm -f ./*.pdf
+	-@rm -f ./*.pdf ./img/*.pdf
 	@echo "Limpieza completada."
