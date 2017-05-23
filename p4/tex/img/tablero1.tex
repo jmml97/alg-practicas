@@ -1,0 +1,30 @@
+\documentclass[]{standalone}
+\usepackage{chessboard}
+\usepackage[sfdefault]{FiraSans}
+\usepackage{color}
+
+\definecolor{background}{RGB}{237,237,237}
+\definecolor{50}{HTML}{FFEBEE}
+\definecolor{100}{HTML}{FFCDD2}
+\definecolor{200}{HTML}{EF9A9A}
+\definecolor{300}{HTML}{E57373}
+\definecolor{400}{HTML}{EF5350}
+\definecolor{500}{HTML}{F44336}
+\definecolor{600}{HTML}{E53935}
+\definecolor{700}{HTML}{D32F2F}
+\definecolor{800}{HTML}{C62828}
+\definecolor{900}{HTML}{B71C1C}
+\begin{document}
+\chessboard[
+%pgfstyle=straightmove,
+%markmoves={a1-a3, c3-e5, g1-f3},
+showmover=false,
+whitepiececolor=500,
+pgfstyle=knightmove,
+shortenstart=0.2ex,
+markmoves={f4-g1, f4-g6, f4-e1, f4-e6, f4-h5, f4-h3, f4-d5, f4-d3},
+%arrow=to, linewidth=0.2em,
+%markmove= \mymove,
+setwhite={Nf4},
+]
+\end{document}
