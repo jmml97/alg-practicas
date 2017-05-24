@@ -1,7 +1,7 @@
 /**
  * Tablero.h
  *
- * Representa un tablero de ajedrez de tamaño arbitrario hasta un N fijo.
+ * Representa un tablero de ajedrez de tamaño arbitrario, hasta un máximo fijado.
  *
  */
 
@@ -45,14 +45,16 @@ class TableroAjedrez {
      * @param v Nuevo valor de la casilla
      * @pre 0 <= i < tam, 0 <= j < tam
      */
-    int set(int i, int j, int v) {
+    void set(int i, int j, int v) {
       tablero[i][j] = v;
     }
 
+    /**
+     * Devuelve el número de elementos de la matriz
+     */
     int getTam() const {
       return tam;
     }
-
     /**
      * Devuelve el contenido de la casilla correspondiente
      * a la Posicion pos
