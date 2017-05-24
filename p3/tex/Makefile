@@ -9,16 +9,21 @@ IMG_PDF_FILES := $(IMG_TEX_FILES:.tex=.pdf)
 
 .PHONY: all clean mrproper
 
-all: $(PDF_FILES) $(IMG_PDF_FILES) clean
+all: memoria presentacion clean
 
 img: $(IMG_PDF_FILES)
+
+memoria: img
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $@.tex
+
+presentacion: img
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $@.tex
 
 img/%.pdf: img/%.tex
 	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $< -jobname=$(basename $<)
 
 ./%.pdf: ./%.tex
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
-
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $< -jobname=$(basename $<)
 
 # ************ Limpieza ************
 
