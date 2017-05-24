@@ -27,15 +27,17 @@ all: $(BIN)/main
 
 # --- Ejecutables ---
 
-$(BIN)/main : $(OBJECTS)
+$(BIN)/main: $(OBJECTS)
 	$(CXX) -o $@ $^
 
-$(OBJ)/%.o: $(SRC)/%.cpp $(INCLUDE)/%.h
+$(OBJ)/%.o: $(SRC)/%.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
-$(OBJ)/Algoritmo.o: $(INCLUDE)/TableroAjedrez.h
+$(OBJ)/Algoritmo.o: $(INCLUDE)/TableroAjedrez.h $(INCLUDE)/Algoritmo.h
 
-$(OBJ)/main.o: $(SRC)/*.cpp
+$(OBJ)/main.o: $(SRC)/*.cpp $(INCLUDE)/TableroAjedrez.h $(INCLUDE)/Algoritmo.h
+
+$(OBJ)/TableroAjedrez.o: $(INCLUDE)/TableroAjedrez.h
 
 # ************ Limpieza ************
 
