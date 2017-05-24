@@ -12,6 +12,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 #include "TableroAjedrez.h"
 #include "Algoritmo.h"
 
@@ -37,6 +38,11 @@ int main(int argc, char* argv[]) {
     pos_inicial.j = stoi(argv[3]);
     sol_particular = true;
   }
+  else {
+    // Empezamos en (0,0)
+    pos_inicial.i = 0;
+    pos_inicial.j = 0;
+  }
 
   /*
       Encontrar recorrido del caballo.
@@ -54,9 +60,9 @@ int main(int argc, char* argv[]) {
     }
     else {
       while (!tiene_solucion) {
+        tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
         pos_inicial.i = rand() % N;
         pos_inicial.j = rand() % N;
-        tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
       }
     }
 
@@ -64,7 +70,7 @@ int main(int argc, char* argv[]) {
       // Mostrar el tablero con la solución
       for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
-          cout << tablero.get(i,j) << "  ";
+          cout << right << setw(5) << tablero.get(i,j);
         }
       cout << endl;
       }
