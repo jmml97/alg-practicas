@@ -28,7 +28,7 @@
 
 % Fuentes personalizadas
 %\usepackage[scaled=.85]{newpxtext,newpxmath}
-\usepackage[sfdefault, scaled=.85]{FiraSans}
+\usepackage[familydefault]{Chivo}
 \usepackage[T1]{fontenc}
 
 % Código para ajustar las fuentes matemáticas al estilo del texto
@@ -67,6 +67,7 @@
 
 % Colores
 
+\definecolor{background}{RGB}{237,237,237}
 \definecolor{50}{HTML}{FFEBEE}
 \definecolor{100}{HTML}{FFCDD2}
 \definecolor{200}{HTML}{EF9A9A}
@@ -84,17 +85,19 @@
 \begin{tikzpicture}
     \GraphInit[vstyle=Normal]
     \SetVertexNormal[
-    FillColor = 300,
-    LineColor = 400,%
+    FillColor = 900,
+    LineColor = 900,%
+    TextColor = background,
     ]
     \Vertex[x=-2, y=-2]{1}
     \Vertex[x=0, y=-2]{2}
     \Vertex[x=2, y=-2]{3}
-    \Vertex{0}
     \SetVertexNormal[
-    FillColor = 50,
-    LineColor = 400,%
+    FillColor = background,
+    LineColor = 900,%
+    TextColor = 900,
     ]
+    \Vertex{0}
     \Vertex[x=-2, y=-4]{4}
     \Vertex[x=0, y=-4]{5}
     \Vertex[x=2, y=-4]{6}
