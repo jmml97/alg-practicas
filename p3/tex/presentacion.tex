@@ -159,15 +159,15 @@ columns/1/.style={
 
 \begin{frame}{Objetivo}
 
-	Encontrar un recubrimiento minimal del grafo no dirigido G = (V, E).
-	Un conjunto U $\subseteq$ V es un recubrimiento de G si cada arista en E incide en, al menos, un vértice o nodo de U.
+	Encontrar un recubrimiento minimal del grafo no dirigido $G = (V, E)$.
+	Un conjunto $U \subseteq V$ es un recubrimiento de G si cada arista en E incide en, al menos, un vértice o nodo de U.
 
 	La solución que proporcionamos es el conjunto de nodos que forman el recubrimiento junto con el coste (número de nodos).
 \end{frame}
 
 \begin{frame}{Ejemplo}
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-pres.pdf}
+		\centering \includegraphics{./img/grafo.pdf}
 	\end{figure}
 \end{frame}
 
@@ -183,16 +183,9 @@ columns/1/.style={
 \end{frame}
 
 \begin{frame}
-    \lstinputlisting[language=C++, linerange={12-25}, caption=Función de selección]{./../src/Algoritmo.cpp}
+    \lstinputlisting[language=C++, linerange={12-23}, caption=Función de selección]{./../src/Algoritmo.cpp}
 \end{frame}
 
-\begin{frame}{Algoritmo}
-	\lstinputlisting[language=C++, linerange={27-40}]{./../src/Algoritmo.cpp}
-\end{frame}
-
-\begin{frame}{Algoritmo}
-	\lstinputlisting[language=C++, linerange={40-60}]{./../src/Algoritmo.cpp}
-\end{frame}
 
 \begin{frame}{Pseudocódigo}
 $N \equiv$ número de nodos del grafo\\
@@ -237,14 +230,22 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 
 \end{frame}
 
+
+\begin{frame}{Algoritmo}
+	\lstinputlisting[language=C++, linerange={27-40}]{./../src/Algoritmo.cpp}
+\end{frame}
+
+\begin{frame}{Algoritmo}
+	\lstinputlisting[language=C++, linerange={40-60}]{./../src/Algoritmo.cpp}
+\end{frame}
+
 \begin{frame}{Ejemplo paso a paso}
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-sin-recubrir-pres.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-sin-recubrir.pdf}
 	\end{figure}
 
 \end{frame}
 
-%% FIXME Poner bien la presentación
 \begin{frame}{Inicialización}
 	N = num\_nodos = 6
 
@@ -261,7 +262,7 @@ $V[1,\dots, N] \equiv$ vector de incidencias
   1 & 1 & 0 & 0 & 0 & 0
 \end{pmatrix}$
 
-	$\displaystyle  VI = incidencias =
+	$\displaystyle  V = incidencias =
 \begin{pmatrix}
   3 \\
   2 \\
@@ -278,12 +279,12 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	T = \{0\}\\
 	M = sol.coste = 1
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-1-pres.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-1.pdf}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{}
-	$\displaystyle  VI = incidencias =
+	$\displaystyle  V = incidencias =
 	\begin{pmatrix}
 	  3 \\
 	  2 \\
@@ -291,7 +292,7 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	  2 \\
 	  2 \\
 	  2
-	\end{pmatrix} \implies  VI = incidencias =
+	\end{pmatrix} \implies  V = incidencias =
 	\begin{pmatrix}
 	  0 \\
 	  2 \\
@@ -302,7 +303,7 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	\end{pmatrix}$
 
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-1-pres.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-1.pdf}
 	\end{figure}
 	p = pos\_max = 1
 
@@ -313,12 +314,12 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	T = \{0, 1\}\\
 	M = sol.coste = 2
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-2-pres.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{}
-	$$  VI = incidencias =
+	$$  V = incidencias =
 	\begin{pmatrix}
 	  0 \\
 	  2 \\
@@ -326,7 +327,7 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	  2 \\
 	  1 \\
 	  1
-	\end{pmatrix} \implies  VI = incidencias =
+	\end{pmatrix} \implies  V = incidencias =
 	\begin{pmatrix}
 	  0 \\
 	  0 \\
@@ -336,7 +337,7 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	  0
 	\end{pmatrix}$$
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-2-pres.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
 	\end{figure}
 \end{frame}
 
@@ -345,12 +346,12 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	T = \{0, 1, 2\}\\
 	M = sol.coste = 3
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-pres.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo.pdf}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{}
-	$$  VI = incidencias =
+	$$  V = incidencias =
 	\begin{pmatrix}
 	  0 \\
 	  0 \\
@@ -358,7 +359,7 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	  1 \\
 	  1 \\
 	  0
-	\end{pmatrix} \implies  VI = incidencias =
+	\end{pmatrix} \implies  V = incidencias =
 	\begin{pmatrix}
 	  0 \\
 	  0 \\
@@ -368,7 +369,7 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 	  0
 	\end{pmatrix}$$
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo-ejemplo-pres.pdf}
+		\centering \includegraphics{./img/grafo-ejemplo.pdf}
 	\end{figure}
 \end{frame}
 
@@ -381,22 +382,22 @@ $V[1,\dots, N] \equiv$ vector de incidencias
 \begin{frame}{Contraejemplo}
 
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo2-pres.pdf}
+		\centering \includegraphics{./img/grafo2-minimal.pdf}
 	\end{figure}
 \end{frame}
 
 \begin{frame}{Contraejemplo}
 
 	\begin{figure}[H]
-		\centering \includegraphics{./img/grafo2-no-minimal-pres.pdf}
+		\centering \includegraphics{./img/grafo2-no-minimal.pdf}
 	\end{figure}
 \end{frame}
 
-\begin{frame}{Ejemplo vida real}
-	\begin{itemize}
-		\item Hospitales y ciudades
-		\item Red de comunicación
-	\end{itemize}
+\begin{frame}{Caso real}
+	Pueblos y hospitales
+	\begin{figure}[H]
+		\centering \includegraphics{./img/grafo-ejemplo.pdf}
+	\end{figure}
 \end{frame}
 
 \end{document}
