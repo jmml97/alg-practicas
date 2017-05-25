@@ -133,7 +133,7 @@ Para resolver el problema, empleamos un algoritmo \textit{greedy} (voraz). La so
 Para representar nuestro problema, hemos usado una clase \verb|Problema| y una clase \verb|Solucion|. En \verb|Problema| se encapsula la matriz de adyacencia del grafo (simétrica) junto con su tamaño, mientras que en \verb|Solucion| se encapsula un vector de nodos que forman el recubrimiento, junto a su tamaño. Se adjunta el código fuente de ambas clases.\\
 
 \begin{figure}[H]
-	\caption{Ejemplo de grafo. Los nodos más oscuros forman un recubrimiento}
+	\caption{Ejemplo de grafo. Los nodos coloreados forman un recubrimiento}
 	\centering \includegraphics{./img/grafo.pdf}
 \end{figure}
 
@@ -227,7 +227,7 @@ N = \verb|num_nodos| = 6
 
 M = \verb|sol.coste| = 0
 
-$$  L = \verb|p.matriz_adyacencia| =
+$\displaystyle  L = \verb|p.matriz_adyacencia| =
 \begin{pmatrix}
 	0 & 0 & 1 & 0 & 1 & 1 \\
 	0 & 0 & 0 & 1 & 0 & 1 \\
@@ -235,9 +235,9 @@ $$  L = \verb|p.matriz_adyacencia| =
 	0 & 1 & 1 & 0 & 0 & 0 \\
 	1 & 0 & 1 & 0 & 0 & 0 \\
 	1 & 1 & 0 & 0 & 0 & 0
-\end{pmatrix}$$
+\end{pmatrix}$
 
-$$ V = \verb|incidencias| =
+$\displaystyle V = \verb|incidencias| =
 \begin{pmatrix}
 	3 \\
 	2 \\
@@ -245,7 +245,7 @@ $$ V = \verb|incidencias| =
 	2 \\
 	2 \\
 	2
-\end{pmatrix}$$
+\end{pmatrix}$
 
 p = \verb|pos_max| = 0\\
 
@@ -260,7 +260,10 @@ M = \verb|sol.coste| = 1\\
 \end{figure}
 
 Actualizamos el vector de incidencias, eliminando a este nodo y las incidencias correspondientes. Como las aristas adyacentes al nodo 0 inciden también en los nodos 2, 4 y 5, restamos uno en dichas posiciones del vector de incidencias: \\
-$$ V = \verb|incidencias| =
+
+\vspace{1em}
+
+$\displaystyle V = \verb|incidencias| =
 \begin{pmatrix}
 	3 \\
 	2 \\
@@ -276,7 +279,10 @@ $$ V = \verb|incidencias| =
 	2 \\
 	1 \\
 	1
-\end{pmatrix}$$
+\end{pmatrix}$
+
+\vspace{1em}
+
 Restablecemos el valor de p = \verb|pos_max| = 1
 
 Como \verb|incidencias[1]| = 2 > 0, realiza otra iteración de forma similar:\\
@@ -287,7 +293,9 @@ Como \verb|incidencias[1]| = 2 > 0, realiza otra iteración de forma similar:\\
 	\centering \includegraphics{./img/grafo-ejemplo-2.pdf}
 \end{figure}
 
-$$ V = \verb|incidencias| =
+\vspace{1em}
+
+$\displaystyle V = \verb|incidencias| =
 \begin{pmatrix}
 	0 \\
 	2 \\
@@ -303,7 +311,9 @@ $$ V = \verb|incidencias| =
 	1 \\
 	1 \\
 	0
-\end{pmatrix}$$
+\end{pmatrix}$
+
+\vspace{1em}
 
 Volvemos a actualizar el valor de p = \verb|pos_max| = 2.\\
 \verb|incidencias[1]| = 2 > 0, por tanto, repetimos el proceso una vez más: T  = \verb|sol.nodos| = \{0, 1, 2\}.
@@ -315,7 +325,9 @@ M = \verb|sol.coste| = 3.
 
 Eliminando las incidencias de las aristas adyacentes a este nodo el vector de incidencias sufre el siguiente cambio:
 
- $$ V = \verb|incidencias| =
+\vspace{1em}
+
+ $\displaystyle V = \verb|incidencias| =
 \begin{pmatrix}
 	0 \\
 	0 \\
@@ -331,7 +343,9 @@ Eliminando las incidencias de las aristas adyacentes a este nodo el vector de in
 	0 \\
 	0 \\
 	0
-\end{pmatrix}$$
+\end{pmatrix}$
+
+\vspace{1em}
 
  p = \verb|pos_max| = 0, por tanto, \verb|incidencias[1]| = 0 == 0, no entra en bucle while. Como último paso devolvemos la solución:  T  = \verb|sol.nodos| = \{0, 1, 2\}, M = \verb|sol.coste| = 3.
 
