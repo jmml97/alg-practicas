@@ -366,18 +366,22 @@ Sin embargo, como nuestro algoritmo selecciona en primer lugar los nodos de mayo
 
 \section*{Problema real de recubrimiento}
 
-\textbf{Idea 1}: los nodos son ciudades, los nodos del recubrimiento son ciudades que tienen un hospital, y los nodos que no están en el recubrimiento son ciudades sin hospital. De esta forma, para ir a un hospital habría que desplazarse, como máximo, una ciudad.
-%%% TODO: explicar
+Supongamos un grafo no dirigido en el que los nodos representan diversas ciudades, y las aristas las carreteras que las unen. Además, entre una ciudad y otra hay varios pueblos.\\
 
-\textbf{Idea 2}: los nodos forman una especie de red de comunicación. Cada nodo es capaz de detectar fallos en sus nodos adyacentes. Con un recubrimiento minimal, podemos detectar fallos en todos los nodos con el mínimo coste.
+El dueño de una conocida empresa de fabricación de marcapáginas quiere extender su red de tiendas en esta región, de tal forma que se cumplan los siguientes requisitos:
 
-%%% TODO: explicar
+\begin{itemize}
+    \item Solo se pueden abrir tiendas de marcapáginas en las ciudades.
+	\item Los habitantes de las ciudades deben poder adquirir un marcapáginas (porque leen mucho) sin tener que desplazarse más de una ciudad por carretera.
+	 \item Los habitantes de los pueblos deben poder comprar un marcapáginas (también leen mucho) en una de las dos ciudades entre las que se encuentran.
+\end{itemize}
+
+Bajo estas condiciones, el problema se reduce a encontrar un recubrimiento minimal del grafo en cuestión.
 
 \section*{Compilación y ejecución del proyecto}
-Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|practica_greedy| y ejecutar el comando make.\\
+Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|p3_greedy| y ejecutar el comando make.\\
 
-Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro cualquiera de los archivos \verb|.dat| de la carpeta \textit{datos}.
-%%REVIEW nombre de las carpetas y archivos
+Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro cualquiera de los archivos \verb|.dat| de la carpeta \verb|datos|.
 
 
 \end{document}

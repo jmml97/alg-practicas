@@ -11,7 +11,7 @@ TEST      = $(SRC)/test
 # ****** Opciones de compilación ********
 AR        = ar
 CXX       = g++
-CXXFLAGS  = -Wall -g -std=c++11 -c -I./$(INCLUDE) -DNDEBUG
+CXXFLAGS  = -Wall -O2 -g -std=c++11 -c -I./$(INCLUDE) -DNDEBUG
 RM	  		= rm -f
 
 # ****** Fuentes y cabeceras *************
