@@ -24,6 +24,15 @@
 \usepackage[scaled=.85]{FiraMono}
 \usepackage{algpseudocode}
 \usepackage{algorithm}
+\usepackage{hyperref}
+
+\hypersetup{
+  % hidelinks = true,   % Oculta todos los enlaces.
+  colorlinks = true,   % Muestra todos los enlaces, sin bordes alrededor.
+  linkcolor=black,     % Color de enlaces genéricos
+  citecolor={black},   % Color de enlaces de referencias
+  urlcolor={blue!70!black}     % Color de enlaces de URL
+}
 
 \geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm}
 
@@ -126,27 +135,31 @@
 
 \section*{Análisis del problema}
 
-Dado un tablero de ajedrez y un caballo colocado en una posición inicial, nuestro problema consiste en pasar por todas las casillas del tablero una sola vez realizando los movimientos permitidos por el caballo.\\
+Dado un tablero de ajedrez de tamaño $N\times N$ y un caballo colocado en una posición inicial, nuestro problema consiste en pasar por todas las casillas del tablero una sola vez realizando los movimientos permitidos para el caballo. Coloquialmente, se conoce como el \textbf{problema del recorrido del caballo.}\\
 
-Para resolver el problema, empleamos un algoritmo \textit{BackTracking}.
-La solución es una secuencia de pasos que reflejan el movimiento en el que pasa el caballo por el tablero.
-A la hora de representarlo pondremos dicho movimiento como una matriz de enteros donde el contenido de la posición \verb|(i,j)| es el paso en el que el caballo se situó en la casilla que representa.\\
+Antes de comenzar con el diseño de un algoritmo que resuelva el problema, hemos consultado algunos artículos donde se discute el mismo. Por ejemplo, \textit{Cull et al.} \cite{cull} probaron el siguiente lema:\\
 
-Para implementar nuestro problema, hemos usado una clase \verb|TableroAjedrez|. En \verb|TableroAjedrez| se encapsula la matriz que representa el tablero de ajedrez, además de \verb|struct Posicion| para poder gestionar los (posibles) desplazamientos del caballo. Se adjunta el código fuente de la clase.\\
+\textbf{Lema 1.} \textit{Todo tablero de tamaño $5\times M$ con $M\ge5$ tiene un recorrido válido del caballo.} Además, es conocido que dicho recorrido comienza en la posición más baja y más a la izquierda del tablero.\\
 
+Además, consultando la secuencia \cite{sequence}, observamos que el problema no tiene solución si $N=2,3,4$. El caso $N=1$ se considera trivial, por lo que pondremos especial hincapié en el caso $N\ge5$.\\
+
+Para representar nuestro problema, hemos usado una clase \verb|TableroAjedrez|. En \verb|TableroAjedrez| se encapsula la matriz que representa un tablero de ajedrez de tamaño $N\times N$, hasta un máximo fijado. Además, disponemos de un \verb|struct Posicion| que representa una casilla del tablero, para poder gestionar los (posibles) desplazamientos del caballo. Se adjunta el código fuente de la clase.\\
+
+La solución es una secuencia de pasos que reflejan el movimiento del caballo a lo largo del tablero. A la hora de representarlo, modificaremos directamente el tablero, considerando que el contenido de la posición \verb|(i,j)| es el paso en el que el caballo se situó en la casilla que representa dicha posición.
 
 \section*{Técnica utilizada}
 
-De las dos técnicas conocidas para exploración de grafos hemos utilizado \textit{BackTracking} porque consideramos que se adapta mejor al problema que nos enfrentamos.\\
+Es obvio que podemos representar nuestro problema utilizando un grafo, donde los nodos serían las casillas del tablero, y las aristas conectarían casillas adyacentes. De las dos técnicas estudiadas para exploración de grafos hemos utilizado \textit{BackTracking} porque consideramos que se adapta mejor al problema que nos enfrentamos.\\
 
-\textit{Branch\&Bound} es un procedimiento enfocado a resolver problemas de optimización ya que se aprovecha del uso de cotas. En este caso como simplemente queremos llegar a una solución sin minimizar ni maximizar nada, no necesitamos este tipo de algoritmo.
+\textit{Branch\&Bound} es un procedimiento enfocado a resolver problemas de optimización, ya que se aprovecha del uso de cotas. En este caso, como simplemente queremos llegar a una solución sin minimizar ni maximizar ninguna función objetivo, no necesitamos este tipo de algoritmo.
 
 
 \section*{Diseño de la solución}
 
-Empleando un enfoque \textit{greedy} para la resolución del problema, la idea es ir seleccionando para el recubrimiento los nodos del grafo que tienen el mayor número de incidencias. El número de incidencias de un nodo (número de aristas que tienen a ese nodo como extremo) se conoce también como \textit{grado del nodo}. \\
+Empleando un enfoque basado en la técnica \textit{BackTracking} para la resolución del problema, la idea es la siguiente. %%%TODO: completar explicación\\
 
-En primer lugar, vamos a mostrar las componentes Greedy de este problema:
+En primer lugar, vamos a mostrar las componentes \textit{BackTracking} de este problema:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% YA NO ESTÁ REVISADO A PARTIR DE AQUÍ %%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
 	\item \textit{Lista de candidatos:} los nodos del grafo.
@@ -163,7 +176,6 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 
 \begin{algorithm}
 \begin{algorithmic}
-
 
 \Function{RecubrimientoGrafoGreedy }{$L[1,\dots,N][1,\dots,N]\ $}
     \State $T = \emptyset$ \Comment Recubrimiento
@@ -201,7 +213,7 @@ Como se puede observar, algunas de las componentes \textit{greedy} listadas ante
 
 En el diseño del algoritmo nos aprovechamos del vector $V$ para identificar \textbf{cada nodo del grafo con cada posición de $V$}. Es decir, $V[i]$ representa el número de incidencias del nodo $i$.
 
-\section*{Algoritmo Greedy}
+\section*{Algoritmo BackTracking}
 
 Veamos ahora el algoritmo implementado en el lenguaje \verb|C++|. En primer lugar, hemos separado la implementación de la \textit{función de selección}, para que se aprecie con claridad:
 
@@ -217,172 +229,51 @@ El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas s
 
 La solución \verb|sol| utilizada es una instacia de la clase \verb|Solucion|, que contiene un vector con los nodos y su tamaño. Esta función \verb|RecubrimientoGrafoGreedy| recibe como parámetro un objeto $p$ de la clase \verb|Problema| que encapsula la matriz de adyacencia del grafo en cuestión, donde se ven reflejadas indirectamente las incidencias de cada nodo.
 
+%%TODO: explicar el main, y por qué diferenciamos varios casos: sol_particular, N>=5, bucle while(!tiene_sol)...
+
 \section*{Ejemplo paso a paso}
-%% FIXME ARREGLAR FORMATO
-Vamos a ver con un grafo concreto cómo funciona el algoritmo. Consideremos el siguiente grafo.
 
-\begin{figure}[H]
-	\caption{Ejemplo de grafo sin recubrir}
-	%%centering \includegraphics{./img/grafo-ejemplo-sin-recubrir.pdf}
-\end{figure}
-
-Inicialización:\\
-%% FIXME centrar o poner esto de una forma adecuada
-N = \verb|num_nodos| = 6
-
-M = \verb|sol.coste| = 0
-
-$$  L = \verb|p.matriz_adyacencia| =
-\begin{pmatrix}
-	0 & 0 & 1 & 0 & 1 & 1 \\
-	0 & 0 & 0 & 1 & 0 & 1 \\
-	1 & 0 & 0 & 1 & 1 & 0 \\
-	0 & 1 & 1 & 0 & 0 & 0 \\
-	1 & 0 & 1 & 0 & 0 & 0 \\
-	1 & 1 & 0 & 0 & 0 & 0
-\end{pmatrix}$$
-
-$$ V = \verb|incidencias| =
-\begin{pmatrix}
-	3 \\
-	2 \\
-	3 \\
-	2 \\
-	2 \\
-	2
-\end{pmatrix}$$
-
-p = \verb|pos_max| = 0\\
-
-Bucle \verb|while|:
-
-\verb|incidencias[0]| = 3 > 0, entra en el bucle\\
-Añadimos el nodo 0 al vector solución. T = \verb|sol.nodos| = \{0\}.
-M = \verb|sol.coste| = 1\\
-
-\begin{figure}[H]
-	%%centering \includegraphics{./img/grafo-ejemplo-1.pdf}
-\end{figure}
-
-Actualizamos el vector de incidencias, eliminando a este nodo y las incidencias correspondientes. Como las aristas adyacentes al nodo 0 inciden también en los nodos 2, 4 y 5, restamos uno en dichas posiciones del vector de incidencias: \\
-$$ V = \verb|incidencias| =
-\begin{pmatrix}
-	3 \\
-	2 \\
-	3 \\
-	2 \\
-	2 \\
-	2
-\end{pmatrix} \implies V = \verb|incidencias| =
-\begin{pmatrix}
-	0 \\
-	2 \\
-	2 \\
-	2 \\
-	1 \\
-	1
-\end{pmatrix}$$
-Restablecemos el valor de p = \verb|pos_max| = 1
-
-Como \verb|incidencias[1]| = 2 > 0, realiza otra iteración de forma similar:\\
-
- T = \verb|sol.nodos| = \{0, 1\}, M = \verb|sol.coste| = 2, las aristas que inciden en el nodo 1 lo hacen también en los nodos 3 y 5.\\
-
-\begin{figure}[H]
-	%%centering \includegraphics{./img/grafo-ejemplo-2.pdf}
-\end{figure}
-
-$$ V = \verb|incidencias| =
-\begin{pmatrix}
-	0 \\
-	2 \\
-	2 \\
-	2 \\
-	1 \\
-	1
-\end{pmatrix} \implies V = \verb|incidencias| =
-\begin{pmatrix}
-	0 \\
-	0 \\
-	2 \\
-	1 \\
-	1 \\
-	0
-\end{pmatrix}$$
-
-Volvemos a actualizar el valor de p = \verb|pos_max| = 2.\\
-\verb|incidencias[1]| = 2 > 0, por tanto, repetimos el proceso una vez más: T  = \verb|sol.nodos| = \{0, 1, 2\}.
-M = \verb|sol.coste| = 3.
-
-\begin{figure}[H]
-	%%centering \includegraphics{./img/grafo-ejemplo.pdf}
-\end{figure}
-
-Eliminando las incidencias de las aristas adyacentes a este nodo el vector de incidencias sufre el siguiente cambio:
-
- $$ V = \verb|incidencias| =
-\begin{pmatrix}
-	0 \\
-	0 \\
-	2 \\
-	1 \\
-	1 \\
-	0
-\end{pmatrix} \implies V = \verb|incidencias| =
-\begin{pmatrix}
-	0 \\
-	0 \\
-	0 \\
-	0 \\
-	0 \\
-	0
-\end{pmatrix}$$
-
- p = \verb|pos_max| = 0, por tanto, \verb|incidencias[1]| = 0 == 0, no entra en bucle while. Como último paso devolvemos la solución:  T  = \verb|sol.nodos| = \{0, 1, 2\}, M = \verb|sol.coste| = 3.
-
-\section*{Eficiencia teórica}
-La eficiencia del algoritmo viene dada por el bucle \textit{while}. Este bucle se ejecutará hasta que todos los valores del vector de incidencias sean $0$, que en el peor de los casos es el número total de nodos menos 1 $(N - 1)$.\\
-
-En el interior de este bucle, lo que determina la eficiencia es la \textit{función de selección}, que como tiene que recorrer el vector $V$ es de orden $N$. Por tanto la eficiencia de este algoritmo es $N(N-1) = N^2 - N$. Notemos que el bucle \textit{for} dentro del \textit{while} tiene el mismo orden de eficiencia que la función de selección.\\
-
-Es decir, si llamamos $V$ al conjunto de nodos del grafo, la eficiencia del algoritmo es $O(|V|^2)$.
+%%% TODO: completar
 
 \section*{Optimalidad}
 
-Hemos notado que nuestro algoritmo no es óptimo, es decir, no siempre nos proporciona un recubrimiento minimal. Sin embargo, siempre es posible encontrar una solución, aunque sea la trivial (a saber, un recubrimiento formado por $N-1$ nodos).\\
 
-Veamos con un contraejemplo que nuestro algoritmo puede proporcionarnos un recubrimiento que no es óptimo. Consideremos el siguiente grafo:
+%%TODO: comentar algo sobre esto en otro sitio? No merece la pena una sección. Quizás en la parte de eficiencia teórica (siempre encuentra una solución, pero en tiempos inviables).
 
-\begin{figure}[H]
-	%%centering \includegraphics{./img/grafo2.pdf}
-\end{figure}
 
-Es obvio que el recubrimiento minimal de este grafo sería el siguiente:
+%%%%%%%%%%%%%% DE AQUÍ EN ADELANTE ESTÁ REVISADO. FALTA RE-REVISAR %%%%%%%%%%
 
-\begin{figure}[H]
-	%%centering \includegraphics{./img/grafo2-minimal.pdf}
-\end{figure}
+\section*{Problema real}
 
-Sin embargo, como nuestro algoritmo selecciona en primer lugar los nodos de mayor grado, seleccionaría al comienzo el nodo $0$, lo que ya condiciona a que el recubrimiento obtenido sea el siguiente, que no es minimal:
+El problema del recorrido del caballo es un caso particular de un problema más general: hallar, si existe, un camino hamiltoniano \cite{wiki} en un grafo. Si además imponemos que desde la casilla donde finaliza el caballo se pueda volver a la casilla de origen mediante un movimiento válido, el problema se transforma en hallar un camino cerrado o ciclo hamiltoniano \cite{wiki}.\\
 
-\begin{figure}[H]
-	%centering \includegraphics{./img/grafo2-no-minimal.pdf}
-\end{figure}
-
-\section*{Problema real de recubrimiento}
-
-\textbf{Idea 1}: los nodos son ciudades, los nodos del recubrimiento son ciudades que tienen un hospital, y los nodos que no están en el recubrimiento son ciudades sin hospital. De esta forma, para ir a un hospital habría que desplazarse, como máximo, una ciudad.
-%%% TODO: explicar
-
-\textbf{Idea 2}: los nodos forman una especie de red de comunicación. Cada nodo es capaz de detectar fallos en sus nodos adyacentes. Con un recubrimiento minimal, podemos detectar fallos en todos los nodos con el mínimo coste.
-
-%%% TODO: explicar
+No se nos ocurre ninguna situación real de aplicación del problema del recorrido del caballo, tal y como lo hemos enunciado. Sin embargo, si consideramos el problema de hallar un camino cerrado, existe una similitud con el problema del \textit{viajante de comercio}, que consiste en hallar un ciclo hamiltoniano \textbf{minimal} para un grafo completo, no dirigido y ponderado.\\
 
 \section*{Compilación y ejecución del proyecto}
-Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|practica_greedy| y ejecutar el comando make.\\
+Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|p4_backtracking| y ejecutar el comando \verb|make|.\\
 
-Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro cualquiera de los archivos \verb|.dat| de la carpeta \textit{datos}.
-%%REVIEW nombre de las carpetas y archivos
+Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro el tamaño del tablero, y opcionalmente la posición inicial del caballo. Un ejemplo del formato completo sería el siguiente: \verb|./bin/main 8 1 1|.\\
+
+Si $N$ es el tamaño del tablero, las posiciones del caballo comienzan en $0$ y acaban en $N-1$, tanto para las filas como para las columnas.
+
+% --------------------------------------------------------------------------------
+% Bibliografía.
+% --------------------------------------------------------------------------------
+\begin{thebibliography}{9}
+
+\bibitem{cull}
+  Paul Cull, Jeffery De Curtins. 
+  \emph{Knight's tour revisited}.
+   \href{http://www.fq.math.ca/Scanned/16-3/cull.pdf}{PDF}.
+
+\bibitem{sequence}
+  Sequence
+  \href{https://oeis.org/A165134}{A165134} in the OEIS.
+  
+\bibitem{wiki}
+  \href{https://en.wikipedia.org/wiki/Hamiltonian_path_problem}{Hamiltonian path problem} on Wikipedia.
+
+\end{thebibliography}
 
 
 \end{document}

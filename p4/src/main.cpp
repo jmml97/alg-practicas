@@ -40,8 +40,8 @@ int main(int argc, char* argv[]) {
     sol_particular = true;
   }
   else {
-    // Empezamos en (0,0)
-    pos_inicial.i = 0;
+    // Empezamos en (N-1,0)
+    pos_inicial.i = N-1;
     pos_inicial.j = 0;
   }
 
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
       tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
     }
     else {
-      while (!tiene_solucion) { // Siempre existe 
+      while (!tiene_solucion) { // Siempre existe
         tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
         pos_inicial.i = rand() % N;
         pos_inicial.j = rand() % N;
