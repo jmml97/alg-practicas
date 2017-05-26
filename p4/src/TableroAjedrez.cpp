@@ -1,7 +1,7 @@
 /**
  * Tablero.cpp
  *
- * Implementación de métodos de la clase Tablero
+ * Implementación de métodos de la clase TableroAjedrez.
  *
  */
 

@@ -18,7 +18,7 @@ namespace {
 
 bool esFactible(const TableroAjedrez& tablero, const Posicion& pos) {
   bool en_tablero = pos.i < tablero.getTam() && pos.i >= 0
-               && pos.j < tablero.getTam() && pos.j >= 0;
+                  && pos.j < tablero.getTam() && pos.j >= 0;
 
   return en_tablero && tablero[pos] == 0;
 }

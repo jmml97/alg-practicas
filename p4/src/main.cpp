@@ -7,8 +7,9 @@
  *    - Posición inicial del caballo (opcional). El formato es: `i j`, donde i y j son enteros
  *      que representan la fila y la columna en el tablero, respectivamente.
  *
- * Si no se pasa la posición inicial como parámetro, se comienza en una casilla aleatoria.
- * s
+ * Si no se pasa la posición inicial como parámetro, se generan posiciones aleatorias
+ * hasta encontrar una solución.
+ *
  */
 
 #include <iostream>
@@ -33,7 +34,7 @@ int main(int argc, char* argv[]) {
   bool tiene_solucion = false;
   bool sol_particular;
 
-  if (argc >= 4) {
+  if (argc >= 4) { // Si nos dan la posición inicial
     pos_inicial.i = stoi(argv[2]);
     pos_inicial.j = stoi(argv[3]);
     sol_particular = true;
@@ -46,7 +47,7 @@ int main(int argc, char* argv[]) {
 
   /*
       Encontrar recorrido del caballo.
-      Sabemos que no hay solución si n < 5 (excepto la solución trivial para n = 1)
+      Sabemos que no hay solución si N < 5 (excepto la solución trivial para N = 1)
    */
 
   if (N == 1) {
@@ -59,7 +60,7 @@ int main(int argc, char* argv[]) {
       tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
     }
     else {
-      while (!tiene_solucion) {
+      while (!tiene_solucion) { // Siempre existe 
         tiene_solucion = MovimientosCaballoBT(tablero, pos_inicial, 1);
         pos_inicial.i = rand() % N;
         pos_inicial.j = rand() % N;

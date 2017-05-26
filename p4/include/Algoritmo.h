@@ -19,7 +19,7 @@ bool esFactible(const TableroAjedrez& tablero, const Posicion& pos);
  * Algoritmo Backtracking para resolver el problema de los movimientos del caballo
  * @param  tablero Tablero de ajedrez (cuadrado)
  * @param  pos_actual Posición del caballo en el paso actual
- * @param  paso Paso actual del recorrido del caballo; 1 <= paso < n^2
+ * @param  paso Paso actual del recorrido del caballo; 1 <= paso <= n^2
  * @return true si se puede continuar explorando el árbol de movimientos en el
  * paso actual.
  */

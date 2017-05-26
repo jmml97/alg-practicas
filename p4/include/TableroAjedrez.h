@@ -10,6 +10,9 @@
 
 const int MAX = 10;
 
+/**
+ * Representa una casilla en el tablero.
+ */
 struct Posicion {
   int i;
   int j;
@@ -55,6 +58,7 @@ class TableroAjedrez {
     int getTam() const {
       return tam;
     }
+    
     /**
      * Devuelve el contenido de la casilla correspondiente
      * a la Posicion pos
