@@ -143,12 +143,13 @@ Antes de comenzar con el diseño de un algoritmo que resuelva el problema, hemos
 
 Además, consultando la secuencia \cite{sequence}, observamos que el problema no tiene solución si $N=2,3,4$. El caso $N=1$ se considera trivial, por lo que pondremos especial hincapié en el caso $N\ge5$.\\
 
-Para representar nuestro problema, hemos usado una clase \verb|TableroAjedrez|. En \verb|TableroAjedrez| se encapsula la matriz que representa un tablero de ajedrez de tamaño $N\times N$, hasta un máximo fijado. Además, disponemos de un \verb|struct Posicion| que representa una casilla del tablero, para poder gestionar los (posibles) desplazamientos del caballo. Se adjunta el código fuente de la clase.\\
+Para representar nuestro problema, hemos usado una clase \verb|TableroAjedrez|. En \verb|TableroAjedrez| se encapsula la matriz que simboliza un tablero de ajedrez de tamaño $N\times N$, hasta un máximo fijado. Además, disponemos de un \verb|struct Posicion| que representa una casilla del tablero, para poder gestionar los (posibles) desplazamientos del caballo. Se adjunta el código fuente de la clase.\\
 
 La solución es una secuencia de pasos que reflejan el movimiento del caballo a lo largo del tablero. A la hora de representarlo, modificaremos directamente el tablero, considerando que el contenido de la posición \verb|(i,j)| es el paso en el que el caballo se situó en la casilla que representa dicha posición.
 
 \section*{Técnica utilizada}
 
+%% Es obvio que podemos representar nuestro problema utilizando un grafo, en particular, un árbol, donde los nodos serían las diferentes posiciones a las que podría ir el caballo. La raíz sería un tablero con la posición inicial que en cada nivel se va ramificando para permitirnos considerar todas las opciones de desplazamiento disponibles. (???)
 Es obvio que podemos representar nuestro problema utilizando un grafo, donde los nodos serían las casillas del tablero, y las aristas conectarían casillas adyacentes. De las dos técnicas estudiadas para exploración de grafos hemos utilizado \textit{BackTracking} porque consideramos que se adapta mejor al problema que nos enfrentamos.\\
 
 \textit{Branch\&Bound} es un procedimiento enfocado a resolver problemas de optimización, ya que se aprovecha del uso de cotas. En este caso, como simplemente queremos llegar a una solución sin minimizar ni maximizar ninguna función objetivo, no necesitamos este tipo de algoritmo.
@@ -156,22 +157,21 @@ Es obvio que podemos representar nuestro problema utilizando un grafo, donde los
 
 \section*{Diseño de la solución}
 
-Empleando un enfoque basado en la técnica \textit{BackTracking} para la resolución del problema, la idea es la siguiente. %%%TODO: completar explicación\\
+Empleando un enfoque basado en la técnica \textit{BackTracking} para la resolución del problema, la idea es la siguiente. Partiendo del tablero inicial exploraremos todos los tableros de movimientos posibles, cada una de ellos en profundidad, finalizando cuando en alguno nos devuelva una solución.
 
-En primer lugar, vamos a mostrar las componentes \textit{BackTracking} de este problema:
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% YA NO ESTÁ REVISADO A PARTIR DE AQUÍ %%%%%%%%%%%%%%%%%%
+Vamos a mostrar las componentes \textit{BackTracking} de este problema:
 
 \begin{itemize}
-	\item \textit{Lista de candidatos:} los nodos del grafo.
-	\item \textit{Lista de candidatos utilizados:} los nodos ya considerados para el recubrimiento.
-	\item \textit{Función solución:} que no haya ninguna arista sin considerar.
-	\item \textit{Criterio de factibilidad:} que el nodo esté en la lista de candidatos (no es necesario ningún criterio adicional).
-	\item \textit{Función objetivo:} recubrimiento de coste mínimo.
-	\item \textit{Función de selección:} nodo en el que inciden más aristas.
+	\item \textit{Representación:} una matriz de enteros donde cada entrada representa el paso en el que el caballo se situó en la posición (i,j).
+	\item \textit{Restricciones implícitas:} el número de paso añadido tiene que ser menor o igual que $N \times N$.
+	\item \textit{Restricciones explícitas:} el caballo no puede salirse del tablero ni situarse en una casilla por la que ya se ha pasado.
+	\item \textit{Representación del árbol implícito:} en cada nivel i del árbol asignamos la posición del caballo en el paso i-ésimo.
+	\item \textit{Función objetivo:} encontrar un tablero en el que el caballo se ha desplazado por todas las casillas.
+	\item \textit{Función de poda:} al añadir un movimiento a la solución debe cumplir: el caballo no se sale del tablero (la posición no supera el tamaño de la matriz para ninguna de sus componentes), no ocupa una casilla por la que se ha pasado (el valor de dicha casilla es diferente de 0, valor al que se inicializan todas las casillas del tablero).
 \end{itemize}
 
 Una vez que hemos visto las componentes, pasemos a ver un esqueleto o \textit{pseudocódigo} del algoritmo: \\
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% YA NO ESTÁ REVISADO A PARTIR DE AQUÍ %%%%%%%%%%%%%%%%%%
 $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos del recubrimiento}\\ L \equiv \text{ matriz de adyacencia}\\ T[1,\dots,M] \equiv \text{ vector de nodos del recubrimiento}\\ V[1,\dots,N] \equiv \text{ vector de incidencias}$\\
 
 \begin{algorithm}
@@ -235,10 +235,10 @@ La solución \verb|sol| utilizada es una instacia de la clase \verb|Solucion|, q
 
 %%% TODO: completar
 
-\section*{Optimalidad}
+\section*{Eficiencia teórica}
 
 
-%%TODO: comentar algo sobre esto en otro sitio? No merece la pena una sección. Quizás en la parte de eficiencia teórica (siempre encuentra una solución, pero en tiempos inviables).
+%%TODO: completar. Comentar que siempre encuentra una solución, pero en tiempos inviables).
 
 
 %%%%%%%%%%%%%% DE AQUÍ EN ADELANTE ESTÁ REVISADO. FALTA RE-REVISAR %%%%%%%%%%
