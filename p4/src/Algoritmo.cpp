@@ -12,8 +12,8 @@ using namespace std;
 
 namespace {
   // Posibles movimientos del caballo relativos a la casilla donde está
-  Posicion movimientos[8] = { {2,1}, {2,-1}, {-2,1}, {-2,-1},
-                              {1,2}, {1,-2}, {-1,2}, {-1,-2} };
+  Posicion movimientos[8] = { {2,1}, {1,2}, {-1,2}, {-2,1},
+                              {-2,-1}, {-1,-2}, {1,-2}, {2,-1} };
 }
 
 bool esFactible(const TableroAjedrez& tablero, const Posicion& pos) {
