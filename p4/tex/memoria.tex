@@ -237,9 +237,15 @@ La solución \verb|sol| utilizada es una instacia de la clase \verb|Solucion|, q
 
 \section*{Eficiencia teórica}
 
+%%% TODO: Revisar.
 
-%%TODO: completar. Comentar que siempre encuentra una solución, pero en tiempos inviables).
+Queremos hallar la eficiencia de nuestro algoritmo en el peor de los casos. Esto ocurrirá en el caso de que para llegar a la solución tengamos que recorrer el árbol implícito por completo. Dado que hay 8 movimientos del caballo posibles, en cada nivel se multiplica por 8 el número de nodos del nivel anterior. Seguiremos añadiendo niveles hasta que el tablero esté completo, es decir, hayamos recorrido las $N \times N$ casillas.
 
+Por tanto, el número total de nodos que habría que recorrer sería la suma de los nodos de cada nivel, que podemos expresar como:
+
+$$1 + 8 + 8^2 + \hdots + 8^{N\times N} = \sum_{i=0}^{N^2} 8^i = \frac{1 - 8^{N^2}}{1 - 8}$$
+
+La eficiencia es, por tanto, $O\left( 8^{N^2} \right)$. Esta eficiencia exponencial la hemos comprobado en múltiples ocasiones a la hora de ejecutar el algoritmo, ya que aunque el algoritmo funciona correctamente, no da una solución en un tiempo razonable para todas las posiciones iniciales.
 
 %%%%%%%%%%%%%% DE AQUÍ EN ADELANTE ESTÁ REVISADO. FALTA RE-REVISAR %%%%%%%%%%
 
@@ -262,14 +268,14 @@ Si $N$ es el tamaño del tablero, las posiciones del caballo comienzan en $0$ y 
 \begin{thebibliography}{9}
 
 \bibitem{cull}
-  Paul Cull, Jeffery De Curtins. 
+  Paul Cull, Jeffery De Curtins.
   \emph{Knight's tour revisited}.
    \href{http://www.fq.math.ca/Scanned/16-3/cull.pdf}{PDF}.
 
 \bibitem{sequence}
   Sequence
   \href{https://oeis.org/A165134}{A165134} in the OEIS.
-  
+
 \bibitem{wiki}
   \href{https://en.wikipedia.org/wiki/Hamiltonian_path_problem}{Hamiltonian path problem} on Wikipedia.
 
