@@ -177,27 +177,25 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \begin{algorithm}
 \begin{algorithmic}
 
-\Function{RecubrimientoGrafoGreedy }{$L[1,\dots,N][1,\dots,N]\ $}
-    \State $T = \emptyset$ \Comment Recubrimiento
-    \For{$i=1,\dots,N$}
-        \State $\displaystyle V[i] \gets \sum_{j=1}^N L[i][j]$ \Comment Número de incidencias del nodo $i$
+\Function{MovimientosCaballoBT}{Tablero$[1,...,n][1,...,n]$, pos$(i,j)$, $k$}
+    \State $Tablero[pos] \gets k$ \Comment Casilla elegida
+    
+    \If{$k == n * n$} \Comment Hay solución
+    	\State \Return true
+   	\EndIf
+    \For{mov $=$ Movimiento de Caballo}
+        \State $pos \gets pos + mov$
+        \State correcto $\gets$ true
+        \If{mov valido}
+        	\State correcto $\gets$ MovimientosCaballoBT(Tablero, pos, $k+1$) \Comment 						Llamada recursiva
+        	\If{correcto}
+        		\State \Return true
+        	\Else
+        		\State $Tablero[pos] \gets 0$ \Comment Movimiento sin solución
+        	\EndIf
+        \EndIf
     \EndFor
-
-    \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección \\
-
-    \While{$V[p] > 0$} \Comment Función solución
-
-        \State $T \gets T \cup \{p\}$
-        \State $V[p] \gets 0$
-        \For{$j=1,\dots,N$}
-            \If{Están conectados $p$ y $j$ \textbf{and} $V[j] > 0$ }
-                \State $V[j] \gets V[j]-1$
-            \EndIf
-        \EndFor
-        \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección
-
-    \EndWhile \\
-    \State \Return $T$
+    \State \Return false
 \EndFunction
 \end{algorithmic}
 \end{algorithm}
