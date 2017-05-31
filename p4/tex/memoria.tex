@@ -177,25 +177,27 @@ $N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos 
 \begin{algorithm}
 \begin{algorithmic}
 
-\Function{MovimientosCaballoBT}{Tablero$[1,...,n][1,...,n]$, pos$(i,j)$, $k$}
-    \State $Tablero[pos] \gets k$ \Comment Casilla elegida
-    
-    \If{$k == n * n$} \Comment Hay solución
-    	\State \Return true
-   	\EndIf
-    \For{mov $=$ Movimiento de Caballo}
-        \State $pos \gets pos + mov$
-        \State correcto $\gets$ true
-        \If{mov valido}
-        	\State correcto $\gets$ MovimientosCaballoBT(Tablero, pos, $k+1$) \Comment 						Llamada recursiva
-        	\If{correcto}
-        		\State \Return true
-        	\Else
-        		\State $Tablero[pos] \gets 0$ \Comment Movimiento sin solución
-        	\EndIf
-        \EndIf
+\Function{RecubrimientoGrafoGreedy }{$L[1,\dots,N][1,\dots,N]\ $}
+    \State $T = \emptyset$ \Comment Recubrimiento
+    \For{$i=1,\dots,N$}
+        \State $\displaystyle V[i] \gets \sum_{j=1}^N L[i][j]$ \Comment Número de incidencias del nodo $i$
     \EndFor
-    \State \Return false
+
+    \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección \\
+
+    \While{$V[p] > 0$} \Comment Función solución
+
+        \State $T \gets T \cup \{p\}$
+        \State $V[p] \gets 0$
+        \For{$j=1,\dots,N$}
+            \If{Están conectados $p$ y $j$ \textbf{and} $V[j] > 0$ }
+                \State $V[j] \gets V[j]-1$
+            \EndIf
+        \EndFor
+        \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección
+
+    \EndWhile \\
+    \State \Return $T$
 \EndFunction
 \end{algorithmic}
 \end{algorithm}
@@ -213,21 +215,29 @@ En el diseño del algoritmo nos aprovechamos del vector $V$ para identificar \te
 
 \section*{Algoritmo BackTracking}
 
-Veamos ahora el algoritmo implementado en el lenguaje \verb|C++|. En primer lugar, hemos separado la implementación de la \textit{función de selección}, para que se aprecie con claridad:
+Veamos ahora el algoritmo implementado en el lenguaje \verb|C++|. En primer lugar, hemos separado la implementación del \textit{criterio de factibilidad}, para que se aprecie con claridad:
 
-	%\lstinputlisting[language=C++, linerange={12-24}, caption=Función de selección]{./../src/Algoritmo.cpp}
+	\lstinputlisting[language=C++, linerange={19-24}, caption=Criterio de Factibilidad]{./../src/Algoritmo.cpp}
 \vspace{1em}
 
-Ahora pasemos a la función principal. El algoritmo comienza construyendo un vector de incidencias, que contiene en cada posición $i$ el número de aristas que inciden en el nodo $i-$ésimo. Después, seleccionamos el nodo con un número mayor de incidencias, lo añadimos a la solución y eliminamos las aristas que inciden en dicho nodo. A efectos prácticos, esto consiste en poner a $0$ el número de incidencias del nodo en $V$, y en decrementar en $1$ el número de incidencias de los nodos conectados con él.\\
+Ahora pasemos a la función principal. El algoritmo comienza comprobado si está en el último paso del algoritmo, de ser así habrá encontrado solución y terminará.
+
+El algoritmo se repetirá con cada una de las casillas a las que puede moverse el caballo desde la posición en la que se encuentra. Dichas posiciones se encuentran en un vector que se irán sumando a la posición actual para ir calculando las nuevas. Para cada posición se comprobará si es factible la posición con la función anteriormente mostrada.
+
+Si no encontramos una solución por algún camino se podrá un $0$ en las casillas por las que se haya pasado, en caso contrario, es decir, que se encuentre solución se irá devolviendo \verb|true|.
 
 
-El algoritmo continúa repitiendo el paso anterior hasta que no quedan aristas sin considerar (notemos que no volverá a seleccionar nunca un nodo ya considerado). Cuando finalice el algoritmo, tendremos como solución un vector con los nodos utilizados en el recubrimiento, y el coste será el número de nodos del mismo.\\
+El algoritmo continúa repitiendo el paso anterior hasta que se haya pasado por todas las posiciones del tablero (notemos que no volverá a seleccionar nunca una casilla ya considerada). Cuando finalice el algoritmo, tendremos como solución una matriz donde cada casilla contiene el número de paso del caballo.\\
 
-%\lstinputlisting[language=C++, linerange={25-59}, caption=Algoritmo Greedy]{./../src/Algoritmo.cpp}
 
-La solución \verb|sol| utilizada es una instacia de la clase \verb|Solucion|, que contiene un vector con los nodos y su tamaño. Esta función \verb|RecubrimientoGrafoGreedy| recibe como parámetro un objeto $p$ de la clase \verb|Problema| que encapsula la matriz de adyacencia del grafo en cuestión, donde se ven reflejadas indirectamente las incidencias de cada nodo.
+\lstinputlisting[language=C++, linerange={26-49}, caption=Algoritmo BackTraking]{./../src/Algoritmo.cpp}
 
-%%TODO: explicar el main, y por qué diferenciamos varios casos: sol_particular, N>=5, bucle while(!tiene_sol)...
+Por último veamos el \verb|main| diferenciamos varios casos:
+\begin{itemize}
+	\item Si no se pasa como parámetro la posición inicial generaremos una posición aleatoria hasta que encontremos una solución al problema
+	\item El tamaño del tablero si es menor que 5x5 nunca se obtendrá una solución, por tanto solo se ejecutará el algoritmo si es mayor o igual a 5. Si el tamaño es uno la solución será la única casilla
+\end{itemize}
+
 
 \section*{Ejemplo paso a paso}
 
@@ -235,15 +245,9 @@ La solución \verb|sol| utilizada es una instacia de la clase \verb|Solucion|, q
 
 \section*{Eficiencia teórica}
 
-%%% TODO: Revisar.
 
-Queremos hallar la eficiencia de nuestro algoritmo en el peor de los casos. Esto ocurrirá en el caso de que para llegar a la solución tengamos que recorrer el árbol implícito por completo. Dado que hay 8 movimientos del caballo posibles, en cada nivel se multiplica por 8 el número de nodos del nivel anterior. Seguiremos añadiendo niveles hasta que el tablero esté completo, es decir, hayamos recorrido las $N \times N$ casillas.
+%%TODO: completar. Comentar que siempre encuentra una solución, pero en tiempos inviables).
 
-Por tanto, el número total de nodos que habría que recorrer sería la suma de los nodos de cada nivel, que podemos expresar como:
-
-$$1 + 8 + 8^2 + \hdots + 8^{N\times N} = \sum_{i=0}^{N^2} 8^i = \frac{1 - 8^{N^2}}{1 - 8}$$
-
-La eficiencia es, por tanto, $O\left( 8^{N^2} \right)$. Esta eficiencia exponencial la hemos comprobado en múltiples ocasiones a la hora de ejecutar el algoritmo, ya que aunque el algoritmo funciona correctamente, no da una solución en un tiempo razonable para todas las posiciones iniciales.
 
 %%%%%%%%%%%%%% DE AQUÍ EN ADELANTE ESTÁ REVISADO. FALTA RE-REVISAR %%%%%%%%%%
 
@@ -256,7 +260,7 @@ No se nos ocurre ninguna situación real de aplicación del problema del recorri
 \section*{Compilación y ejecución del proyecto}
 Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|p4_backtracking| y ejecutar el comando \verb|make|.\\
 
-Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro el tamaño del tablero, y opcionalmente la posición inicial del caballo. Un ejemplo del formato completo sería el siguiente: \verb|./bin/main 8 0 0|.\\
+Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro el tamaño del tablero, y opcionalmente la posición inicial del caballo. Un ejemplo del formato completo sería el siguiente: \verb|./bin/main 8 1 1|.\\
 
 Si $N$ es el tamaño del tablero, las posiciones del caballo comienzan en $0$ y acaban en $N-1$, tanto para las filas como para las columnas.
 
@@ -266,14 +270,14 @@ Si $N$ es el tamaño del tablero, las posiciones del caballo comienzan en $0$ y 
 \begin{thebibliography}{9}
 
 \bibitem{cull}
-  Paul Cull, Jeffery De Curtins.
+  Paul Cull, Jeffery De Curtins. 
   \emph{Knight's tour revisited}.
    \href{http://www.fq.math.ca/Scanned/16-3/cull.pdf}{PDF}.
 
 \bibitem{sequence}
   Sequence
   \href{https://oeis.org/A165134}{A165134} in the OEIS.
-
+  
 \bibitem{wiki}
   \href{https://en.wikipedia.org/wiki/Hamiltonian_path_problem}{Hamiltonian path problem} on Wikipedia.
 
