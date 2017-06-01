@@ -135,7 +135,14 @@
 
 \section*{Análisis del problema}
 
-Dado un tablero de ajedrez de tamaño $N\times N$ y un caballo colocado en una posición inicial, nuestro problema consiste en pasar por todas las casillas del tablero una sola vez realizando los movimientos permitidos para el caballo. Coloquialmente, se conoce como el \textbf{problema del recorrido del caballo.}\\
+Dado un tablero de ajedrez de tamaño $N\times N$ y un caballo colocado en una posición inicial, nuestro problema consiste en pasar por todas las casillas del tablero una sola vez realizando los movimientos permitidos para el caballo. Coloquialmente, se conoce como el \textbf{problema del recorrido del caballo.}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{./img/tablero1.pdf}
+  \caption{Movimientos posibles del caballo}
+  \label{}
+\end{figure}
 
 Antes de comenzar con el diseño de un algoritmo que resuelva el problema, hemos consultado algunos artículos donde se discute el mismo. Por ejemplo, \textit{Cull et al.} \cite{cull} probaron el siguiente resultado:\\
 
@@ -185,7 +192,7 @@ $Tablero[1,\dots,N][1,\dots,N] \equiv \text{ Representa el tablero. Tras finaliz
 
 \Function{MovimientosCaballoBT }{$Tablero[1,\dots,N][1,\dots,N]$, pos, $k$}
      \State $Tablero[pos] \gets k$ \Comment Casilla elegida
-     
+
      \If{$k == n^2$} \Comment Hay solución
      	\State \Return true
     	\EndIf
@@ -234,7 +241,7 @@ El algoritmo continúa repitiendo el paso anterior hasta que se haya pasado por 
 Por último, comentaremos el programa principal \verb|main|, donde diferenciamos varios casos:
 \begin{itemize}
 	\item Si no se pasa como parámetro la posición inicial generaremos una posición aleatoria hasta que encontremos una solución al problema. Este proceso, en general, puede ser muy costoso, pues como veremos la eficiencia del algoritmo para una posición dada es ya exponencial. La primera posición a comprobar será la $(0,0)$, pues es más probable que empezando en una esquina encontremos una solución.
-	\item Si el tamaño del tablero menor que $5x5$ nunca se obtendrá una solución, por tanto solo se ejecutará el algoritmo si $N\ge5$. Sin embargo, si ejecutásemos el algoritmo, nos devolvería correctamente que no hay solución. Si el tamaño es $1$, la solución (trivial) será la única casilla del tablero. 
+	\item Si el tamaño del tablero menor que $5x5$ nunca se obtendrá una solución, por tanto solo se ejecutará el algoritmo si $N\ge5$. Sin embargo, si ejecutásemos el algoritmo, nos devolvería correctamente que no hay solución. Si el tamaño es $1$, la solución (trivial) será la única casilla del tablero.
 \end{itemize}
 
 
@@ -280,14 +287,14 @@ Si $N$ es el tamaño del tablero, las posiciones del caballo comienzan en $0$ y 
 \begin{thebibliography}{9}
 
 \bibitem{cull}
-  Paul Cull, Jeffery De Curtins. 
+  Paul Cull, Jeffery De Curtins.
   \emph{Knight's tour revisited}.
    \href{http://www.fq.math.ca/Scanned/16-3/cull.pdf}{PDF}.
 
 \bibitem{sequence}
   Sequence
   \href{https://oeis.org/A165134}{A165134} in the OEIS.
-  
+
 \bibitem{wiki}
   \href{https://en.wikipedia.org/wiki/Hamiltonian_path_problem}{Hamiltonian path problem} on Wikipedia.
 
