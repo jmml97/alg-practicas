@@ -86,8 +86,8 @@
 \begin{tikzpicture}[remember picture,
   inner/.style={circle,draw=blue!50,fill=blue!20,thick,inner sep=3pt},
   outer/.style={draw=white,fill=white,thick,inner sep=0pt},
-  level 1/.style={sibling distance=6cm},
-  level 2/.style={sibling distance=2cm},
+  level 1/.style={sibling distance=2cm},
+  level 2/.style={sibling distance=1cm},
   level distance=2cm,
   ]
   \centering
@@ -152,6 +152,9 @@
         ]
       }
     }
+  }
+  child {
+    node[outer] {$\hdots$} edge from parent[draw=none]
   }
   child {
     node[outer] {
