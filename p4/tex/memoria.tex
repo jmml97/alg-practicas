@@ -180,7 +180,7 @@ Vamos a mostrar las componentes \textit{BackTracking} de este problema:
 	\item \textit{Restricciones explícitas:} el caballo no puede salirse del tablero ni situarse en una casilla por la que ya se ha pasado. Además, solo puede realizar movimientos válidos según las reglas del ajedrez.
 	\item \textit{Función objetivo:} encontrar un tablero en el que el caballo se ha desplazado por todas las casillas una única vez.
 	\item \textit{Función de poda:} un nodo será explorado si cumple: el caballo no se sale del tablero (la posición no supera el tamaño de la matriz para ninguna de sus componentes), y además no ocupa una casilla por la que se ha pasado (el valor de dicha casilla es diferente de $0$, valor al que se inicializan todas las casillas del tablero).
-	\item \textit{Representación del árbol implícito:} en cada nivel $i$ del árbol asignamos cada una de las posibles posiciones del caballo en el paso $i$-ésimo. Este árbol es el que muestra la Figura \ref{fig:arbol}.
+	\item \textit{Representación del árbol implícito:} en cada nivel $i$ del árbol asignamos cada una de las posibles posiciones del caballo en el paso $i$-ésimo. Este árbol es el que muestra la Figura \ref{fig:árbol}.
 \end{itemize}
 
 Una vez que hemos visto las componentes, pasemos a ver un esqueleto o \textit{pseudocódigo} del algoritmo: \\
@@ -231,9 +231,9 @@ En caso contrario, el algoritmo se repetirá con cada una de las casillas a las 
 	\vspace{1em}
 
 
-Al realizar la llamada recursiva, esta puede devolver \textit{true} o \textit{false}. En el primer caso, significaría que en el nivel siguiente se  ha permitido seguir avanzando (o se ha llegado al final), por lo que el algoritmo finaliza devolviendo \textbf{true}. En el segundo caso, la razón sería que en el siguiente nivel no se ha encontrado ninguna posición válida para colocar el caballo. Entonces, tenemos que volver a poner a $0$ la casilla por la que hemos intentado pasar, y continuar con el siguiente movimiento. En caso de que ningún movimiento sea factible, devolveremos \textbf{false}.\\
+Al realizar la llamada recursiva, esta puede devolver \textit{true} o \textit{false}. En el primer caso, significaría que en el nivel siguiente se  ha permitido seguir avanzando (o se ha llegado al final), por lo que el algoritmo finaliza devolviendo \textbf{true}. En el segundo caso, la razón sería que en el siguiente nivel no se ha encontrado ninguna posición válida para colocar el caballo. Entonces, tenemos que volver a poner a $0$ la casilla por la que hemos intentado pasar, y continuar con el siguiente movimiento. En caso de que ningún movimiento sea válido, devolveremos \textbf{false}.\\
 
-El algoritmo continúa repitiendo el paso anterior hasta que se haya pasado por todas las posiciones del tablero (notemos que no volverá a seleccionar nunca una casilla ya considerada). Cuando finalice el algoritmo, tendremos como solución una matriz donde cada casilla contiene el número de paso del caballo.\\
+El algoritmo continúa repitiendo el paso anterior hasta que se haya pasado por todas las posiciones del tablero (notemos que no volverá a seleccionar nunca una casilla ya considerada). Cuando finalice, tendremos como solución una matriz donde cada casilla contiene el número de paso del caballo.\\
 
 
 \lstinputlisting[language=C++, linerange={26-49}, caption=Algoritmo BackTracking]{./../src/Algoritmo.cpp}
@@ -241,7 +241,7 @@ El algoritmo continúa repitiendo el paso anterior hasta que se haya pasado por 
 Por último, comentaremos el programa principal \verb|main|, donde diferenciamos varios casos:
 \begin{itemize}
 	\item Si no se pasa como parámetro la posición inicial generaremos una posición aleatoria hasta que encontremos una solución al problema. Este proceso, en general, puede ser muy costoso, pues como veremos la eficiencia del algoritmo para una posición dada es ya exponencial. La primera posición a comprobar será la $(0,0)$, pues es más probable que empezando en una esquina encontremos una solución.
-	\item Si el tamaño del tablero menor que $5x5$ nunca se obtendrá una solución, por tanto solo se ejecutará el algoritmo si $N\ge5$. Sin embargo, si ejecutásemos el algoritmo, nos devolvería correctamente que no hay solución. Si el tamaño es $1$, la solución (trivial) será la única casilla del tablero.
+	\item Si el tamaño del tablero menor que $5x5$ nunca se obtendrá una solución, por tanto solo se ejecutará el algoritmo si $N\ge5$. Sin embargo, si lo ejecutásemos nos devolvería correctamente que no hay solución. Si el tamaño es $1$, la solución (trivial) será la única casilla del tablero.
 \end{itemize}
 
 
@@ -276,7 +276,7 @@ Esta eficiencia exponencial la hemos comprobado en múltiples ocasiones a la hor
 
 Otra forma de analizar la eficiencia teórica sería resolver la ecuación en recurrencia: $$\begin{cases} T(1) = 8\\
                              T(N) = 8T(N-1)
-\end{cases}$$ pues en cada paso se realizan, como mucho, $8$ llamadas recursivas, donde habría una casilla menos por rellenar. Esta ecuación en recurrencia no es sino otra forma de expresar la progresión geométrica \eqref{geo}, ya que en cada paso se multiplica por un término constante, concretamente $8$, que es la razón de la progresión.
+\end{cases}$$ pues en cada paso se realizan como mucho, $8$ llamadas recursivas, donde habría una casilla menos por rellenar. Esta ecuación en recurrencia no es sino otra forma de expresar la progresión geométrica \eqref{geo}, ya que en cada paso se multiplica por un término constante, concretamente $8$, que es la razón de la progresión.
 
 %%% TODO: revisar ecuación en recurrencia
 
