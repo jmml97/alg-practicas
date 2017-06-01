@@ -29,7 +29,7 @@
 \hypersetup{
   % hidelinks = true,   % Oculta todos los enlaces.
   colorlinks = true,   % Muestra todos los enlaces, sin bordes alrededor.
-  linkcolor=black,     % Color de enlaces genéricos
+  linkcolor={black},     % Color de enlaces genéricos
   citecolor={black},   % Color de enlaces de referencias
   urlcolor={blue!70!black}     % Color de enlaces de URL
 }
@@ -137,119 +137,129 @@
 
 Dado un tablero de ajedrez de tamaño $N\times N$ y un caballo colocado en una posición inicial, nuestro problema consiste en pasar por todas las casillas del tablero una sola vez realizando los movimientos permitidos para el caballo. Coloquialmente, se conoce como el \textbf{problema del recorrido del caballo.}\\
 
-Antes de comenzar con el diseño de un algoritmo que resuelva el problema, hemos consultado algunos artículos donde se discute el mismo. Por ejemplo, \textit{Cull et al.} \cite{cull} probaron el siguiente lema:\\
+Antes de comenzar con el diseño de un algoritmo que resuelva el problema, hemos consultado algunos artículos donde se discute el mismo. Por ejemplo, \textit{Cull et al.} \cite{cull} probaron el siguiente resultado:\\
 
-\textbf{Lema 1.} \textit{Todo tablero de tamaño $5\times M$ con $M\ge5$ tiene un recorrido válido del caballo.} Además, es conocido que dicho recorrido comienza en la posición más baja y más a la izquierda del tablero.\\
+\textbf{Teorema.} \textit{Todo tablero de tamaño $N\times M$ con $	min(N,M)\ge5$ tiene un recorrido válido del caballo.}\\
 
-Además, consultando la secuencia \cite{sequence}, observamos que el problema no tiene solución si $N=2,3,4$. El caso $N=1$ se considera trivial, por lo que pondremos especial hincapié en el caso $N\ge5$.\\
+Además, consultando la secuencia \cite{sequence}, observamos que el problema no tiene solución en un tablero $N\times N$ si $N=2,3,4$. El caso $N=1$ se considera trivial, por lo que pondremos especial hincapié en el caso $N\ge5$.\\
 
-Para representar nuestro problema, hemos usado una clase \verb|TableroAjedrez|. En \verb|TableroAjedrez| se encapsula la matriz que simboliza un tablero de ajedrez de tamaño $N\times N$, hasta un máximo fijado. Además, disponemos de un \verb|struct Posicion| que representa una casilla del tablero, para poder gestionar los (posibles) desplazamientos del caballo. Se adjunta el código fuente de la clase.\\
+Para representar nuestro problema, hemos usado una clase \verb|TableroAjedrez|. En \verb|TableroAjedrez| se encapsula la matriz que simboliza un tablero de ajedrez de tamaño $N\times N$, hasta un máximo fijado. Además, disponemos de un \verb|struct Posicion| que representa una casilla del tablero, para poder gestionar los posibles desplazamientos del caballo. Se adjunta el código fuente de la clase.\\
 
-La solución es una secuencia de pasos que reflejan el movimiento del caballo a lo largo del tablero. A la hora de representarlo, modificaremos directamente el tablero, considerando que el contenido de la posición \verb|(i,j)| es el paso en el que el caballo se situó en la casilla que representa dicha posición.
+La solución es una secuencia de pasos que reflejan el movimiento del caballo a lo largo del tablero. A la hora de representarlo, modificaremos directamente el tablero, considerando que el contenido de la posición \verb|(i,j)| es el paso en el que el caballo se situó en la casilla que representa dicha posición. Inicialmente, todas las casillas del tablero contienen un $0$.
 
 \section*{Técnica utilizada}
 
-%% Es obvio que podemos representar nuestro problema utilizando un grafo, en particular, un árbol, donde los nodos serían las diferentes posiciones a las que podría ir el caballo. La raíz sería un tablero con la posición inicial que en cada nivel se va ramificando para permitirnos considerar todas las opciones de desplazamiento disponibles. (???)
-Es obvio que podemos representar nuestro problema utilizando un grafo, donde los nodos serían las casillas del tablero, y las aristas conectarían casillas adyacentes. De las dos técnicas estudiadas para exploración de grafos hemos utilizado \textit{BackTracking} porque consideramos que se adapta mejor al problema que nos enfrentamos.\\
+Es obvio que podemos representar nuestro problema utilizando un grafo, en particular un árbol de estados, donde los nodos serían los tableros con las posibles posiciones del caballo en cada paso. La raíz sería un tablero con la posición inicial, que en cada nivel se va ramificando para permitirnos considerar todas las opciones de desplazamiento disponibles. De las dos técnicas estudiadas para exploración de grafos hemos utilizado \textit{BackTracking} porque consideramos que se adapta mejor al problema que nos enfrentamos.\\
 
-\textit{Branch\&Bound} es un procedimiento enfocado a resolver problemas de optimización, ya que se aprovecha del uso de cotas. En este caso, como simplemente queremos llegar a una solución sin minimizar ni maximizar ninguna función objetivo, no necesitamos este tipo de algoritmo.
+\textit{Branch\&Bound} es un procedimiento enfocado a resolver problemas de optimización, ya que se aprovecha del uso de cotas. En este caso, como simplemente queremos llegar a una solución sin minimizar ni maximizar ninguna función objetivo, no necesitamos esta técnica.
+
+%%%TODO: dibujar árbol de estados.
+
+\begin{figure}[h]
+%\includegraphics{img/arbol_estados}
+\caption{Representación del árbol de estados} \label{fig:árbol}
+\end{figure}
 
 
 \section*{Diseño de la solución}
 
-Empleando un enfoque basado en la técnica \textit{BackTracking} para la resolución del problema, la idea es la siguiente. Partiendo del tablero inicial exploraremos todos los tableros de movimientos posibles, cada una de ellos en profundidad, finalizando cuando en alguno nos devuelva una solución.
+Empleando un enfoque basado en la técnica \textit{BackTracking} para la resolución del problema, la idea es la siguiente: partiendo del tablero inicial exploraremos todos los tableros de movimientos posibles, y cada uno de ellos en profundidad. Finalizaremos cuando en alguno nos devuelva una solución.\\
 
 Vamos a mostrar las componentes \textit{BackTracking} de este problema:
 
 \begin{itemize}
-	\item \textit{Representación:} una matriz de enteros donde cada entrada representa el paso en el que el caballo se situó en la posición (i,j).
-	\item \textit{Restricciones implícitas:} el número de paso añadido tiene que ser menor o igual que $N \times N$.
-	\item \textit{Restricciones explícitas:} el caballo no puede salirse del tablero ni situarse en una casilla por la que ya se ha pasado.
-	\item \textit{Representación del árbol implícito:} en cada nivel i del árbol asignamos la posición del caballo en el paso i-ésimo.
-	\item \textit{Función objetivo:} encontrar un tablero en el que el caballo se ha desplazado por todas las casillas.
-	\item \textit{Función de poda:} al añadir un movimiento a la solución debe cumplir: el caballo no se sale del tablero (la posición no supera el tamaño de la matriz para ninguna de sus componentes), no ocupa una casilla por la que se ha pasado (el valor de dicha casilla es diferente de 0, valor al que se inicializan todas las casillas del tablero).
+	\item \textit{Representación de la solución:} una matriz de enteros $M=(m_{ij})$ donde cada entrada representa el paso en el que el caballo se situó en la posición (i,j).
+	\item \textit{Restricciones implícitas:} el número de paso añadido tiene que ser menor o igual que $N^2$, donde $N$ es la dimensión del tablero.
+	\item \textit{Restricciones explícitas:} el caballo no puede salirse del tablero ni situarse en una casilla por la que ya se ha pasado. Además, solo puede realizar movimientos válidos.
+	\item \textit{Función objetivo:} encontrar un tablero en el que el caballo se ha desplazado por todas las casillas una única vez.
+	\item \textit{Función de poda:} un nodo será explorado si cumple: el caballo no se sale del tablero (la posición no supera el tamaño de la matriz para ninguna de sus componentes), y además no ocupa una casilla por la que se ha pasado (el valor de dicha casilla es diferente de $0$, valor al que se inicializan todas las casillas del tablero).
+	\item \textit{Representación del árbol implícito:} en cada nivel $i$ del árbol asignamos cada una de las posibles posiciones del caballo en el paso $i$-ésimo. Este árbol es el que muestra la Figura \ref{fig:arbol}.
 \end{itemize}
 
 Una vez que hemos visto las componentes, pasemos a ver un esqueleto o \textit{pseudocódigo} del algoritmo: \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% YA NO ESTÁ REVISADO A PARTIR DE AQUÍ %%%%%%%%%%%%%%%%%%
-$N \equiv \text{ número de nodos del grafo}\\ M \equiv \text{ número de nodos del recubrimiento}\\ L \equiv \text{ matriz de adyacencia}\\ T[1,\dots,M] \equiv \text{ vector de nodos del recubrimiento}\\ V[1,\dots,N] \equiv \text{ vector de incidencias}$\\
 
-\begin{algorithm}
+$Tablero[1,\dots,N][1,\dots,N] \equiv \text{ Representa el tablero. Tras finalizar, representa la solución}\\ N \equiv \text{ Dimensión del tablero }\\ pos \equiv \text{ Posición actual del caballo $(i,j)$ en el tablero}\\ k \equiv \text{ Paso actual}$\\
+
+\begin{algorithm}[H]
 \begin{algorithmic}
 
-\Function{RecubrimientoGrafoGreedy }{$L[1,\dots,N][1,\dots,N]\ $}
-    \State $T = \emptyset$ \Comment Recubrimiento
-    \For{$i=1,\dots,N$}
-        \State $\displaystyle V[i] \gets \sum_{j=1}^N L[i][j]$ \Comment Número de incidencias del nodo $i$
-    \EndFor
-
-    \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección \\
-
-    \While{$V[p] > 0$} \Comment Función solución
-
-        \State $T \gets T \cup \{p\}$
-        \State $V[p] \gets 0$
-        \For{$j=1,\dots,N$}
-            \If{Están conectados $p$ y $j$ \textbf{and} $V[j] > 0$ }
-                \State $V[j] \gets V[j]-1$
-            \EndIf
-        \EndFor
-        \State $p \gets \text{Nodo con más incidencias} \left( V[p] \ge V[i] \ \ \forall i \right)$ \Comment Función de selección
-
-    \EndWhile \\
-    \State \Return $T$
-\EndFunction
+\Function{MovimientosCaballoBT }{$Tablero[1,\dots,N][1,\dots,N]$, pos, $k$}
+     \State $Tablero[pos] \gets k$ \Comment Casilla elegida
+     
+     \If{$k == n^2$} \Comment Hay solución
+     	\State \Return true
+    	\EndIf
+     \For{mov $in$ \textit{Movimientos válidos del caballo}}
+         \State $pos \gets pos + mov$
+         \If{esFactible(mov)} \Comment Función de poda
+         	\State correcto $\gets$ MovimientosCaballoBT(Tablero, pos, $k+1$) \Comment 						Explora siguiente nivel
+         	\If{correcto}
+         		\State \Return true
+         	\Else
+         		\State $Tablero[pos] \gets 0$ \Comment Movimiento sin solución
+         	\EndIf
+         \EndIf
+      \EndFor
+     \State \Return false \Comment  Sin solución en pasos siguientes
+  \EndFunction
 \end{algorithmic}
 \end{algorithm}
 
-Como se puede observar, algunas de las componentes \textit{greedy} listadas anteriormente se han omitido o modificado en la implementación, pues o bien no son necesarias, o bien es más sencillo implementarlas de otra manera.
+Observamos que necesitamos una estructura de datos adicional, donde se almacenen los \textit{movimientos válidos del caballo}. Dichos movimientos serán relativos a la posición que en ese momento ocupe el caballo, es decir, si la posición actual es $(i,j)$, los movimientos válidos son alguno de $(i \pm 2, j \pm 1)$ ó $(i \pm 1, j \pm 2)$.\\
 
-\begin{itemize}
-	\item La \textit{lista de candidatos} y la \textit{lista de candidatos utilizados} están representadas como un vector de incidencias $V$, donde si el nodo $i$ está utilizado, entonces $V[i] = 0$.
-	\item El \textit{criterio de factibilidad}, como ya dijimos, no es necesario, pues todos los nodos de la \textit{lista de candidatos} son factibles. Implícitamente, estamos considerando como factibles los nodos $i$ tales que $V[i] > 0$.
-	\item La \textit{función solución} es que el vector de incidencias $V$ sea distinto del vector $0$, o lo que es lo mismo, que el máximo de las componentes de $V$ no sea $0$. Esto significaría que ya se han considerado todas las aristas que inciden en cada uno de los nodos.
-	\item La \textit{función de selección} consiste en seleccionar, en cada paso, la componente máxima del vector $V$, es decir, el nodo con mayor grado.
-\end{itemize}
-
-En el diseño del algoritmo nos aprovechamos del vector $V$ para identificar \textbf{cada nodo del grafo con cada posición de $V$}. Es decir, $V[i]$ representa el número de incidencias del nodo $i$.
+En la práctica, hemos implementado las \textit{restricciones implícitas} como una comprobación para saber si se ha llegado a una solución, pues por la construcción del algoritmo, cuando se llegue a $N^2$ pasos, se habrá conseguido la \textit{función objetivo}. Además, la \textit{función de poda} se ha separado y renombrado por simplicidad.
 
 \section*{Algoritmo BackTracking}
 
-Veamos ahora el algoritmo implementado en el lenguaje \verb|C++|. En primer lugar, hemos separado la implementación del \textit{criterio de factibilidad}, para que se aprecie con claridad:
+Veamos ahora el algoritmo implementado en el lenguaje \verb|C++|. En primer lugar, hemos separado la implementación de la \textit{función de poda}, para que se aprecie con claridad. Su funcionalidad es la que se describió anteriormente.
 
 	\lstinputlisting[language=C++, linerange={19-24}, caption=Criterio de Factibilidad]{./../src/Algoritmo.cpp}
 \vspace{1em}
 
-Ahora pasemos a la función principal. El algoritmo comienza comprobado si está en el último paso del algoritmo, de ser así habrá encontrado solución y terminará.
+Ahora pasemos a la función principal. En primer lugar, se coloca en la casilla actual el número de paso que se recibe como argumento. A continuación, el algoritmo comprueba si está en el último paso, pues de ser así habrá encontrado solución y terminará, devolviendo \textbf{true}.\\
 
-El algoritmo se repetirá con cada una de las casillas a las que puede moverse el caballo desde la posición en la que se encuentra. Dichas posiciones se encuentran en un vector que se irán sumando a la posición actual para ir calculando las nuevas. Para cada posición se comprobará si es factible la posición con la función anteriormente mostrada.
+En caso contrario, el algoritmo se repetirá con cada una de las casillas a las que puede moverse el caballo desde la posición en la que se encuentra (cumpliendo las restricciones consideradas anteriormente), y aumentando en $1$ el paso. Dichas posiciones se encuentran en un vector que se irán sumando a la posición actual para ir calculando las nuevas. Para cada posición se comprobará si es factible la posición con la función anteriormente mostrada.\\
 
-Si no encontramos una solución por algún camino se podrá un $0$ en las casillas por las que se haya pasado, en caso contrario, es decir, que se encuentre solución se irá devolviendo \verb|true|.
+	\lstinputlisting[language=C++, linerange={15-16}, caption=Vector de movimientos válidos del caballo]{./../src/Algoritmo.cpp}
+	\vspace{1em}
 
+
+Al realizar la llamada recursiva, esta puede devolver \textit{true} o \textit{false}. En el primer caso, significaría que en el nivel siguiente se  ha permitido seguir avanzando (o se ha llegado al final), por lo que el algoritmo finaliza devolviendo \textbf{true}. En el segundo caso, la razón sería que en el siguiente nivel no se ha encontrado ninguna posición válida para colocar el caballo. Entonces, tenemos que volver a poner a $0$ la casilla por la que hemos intentado pasar, y continuar con el siguiente movimiento. En caso de que ningún movimiento sea factible, devolveremos \textbf{false}.\\
 
 El algoritmo continúa repitiendo el paso anterior hasta que se haya pasado por todas las posiciones del tablero (notemos que no volverá a seleccionar nunca una casilla ya considerada). Cuando finalice el algoritmo, tendremos como solución una matriz donde cada casilla contiene el número de paso del caballo.\\
 
 
-\lstinputlisting[language=C++, linerange={26-49}, caption=Algoritmo BackTraking]{./../src/Algoritmo.cpp}
+\lstinputlisting[language=C++, linerange={26-49}, caption=Algoritmo BackTracking]{./../src/Algoritmo.cpp}
 
-Por último veamos el \verb|main| diferenciamos varios casos:
+Por último, comentaremos el programa principal \verb|main|, donde diferenciamos varios casos:
 \begin{itemize}
-	\item Si no se pasa como parámetro la posición inicial generaremos una posición aleatoria hasta que encontremos una solución al problema
-	\item El tamaño del tablero si es menor que 5x5 nunca se obtendrá una solución, por tanto solo se ejecutará el algoritmo si es mayor o igual a 5. Si el tamaño es uno la solución será la única casilla
+	\item Si no se pasa como parámetro la posición inicial generaremos una posición aleatoria hasta que encontremos una solución al problema. Este proceso, en general, puede ser muy costoso, pues como veremos la eficiencia del algoritmo para una posición dada es ya exponencial. La primera posición a comprobar será la $(0,0)$, pues es más probable que empezando en una esquina encontremos una solución.
+	\item Si el tamaño del tablero menor que $5x5$ nunca se obtendrá una solución, por tanto solo se ejecutará el algoritmo si $N\ge5$. Sin embargo, si ejecutásemos el algoritmo, nos devolvería correctamente que no hay solución. Si el tamaño es $1$, la solución (trivial) será la única casilla del tablero. 
 \end{itemize}
 
 
 \section*{Ejemplo paso a paso}
 
-%%% TODO: completar
+%%% TODO: completar. Considerar hacer el ejemplo para un tamaño pequeño, digamos 5x5, y realizar el primer nivel y la primera vuelta atrás, suponiendo que no encuentra la solución. Suponer que en el segundo movimiento ya la encuentra.
 
 \section*{Eficiencia teórica}
 
+Queremos hallar la eficiencia teórica de nuestro algoritmo en el peor de los casos. Esto ocurrirá cuando para llegar a la solución tengamos que recorrer el árbol implícito por completo. Dado que hay 8 movimientos del caballo posibles, en cada nivel el número de nodos se multiplica por 8 con respecto al nivel anterior. Seguiremos añadiendo niveles hasta que el tablero esté completo, es decir, hayamos recorrido las $N \times N$ casillas.\\
 
-%%TODO: completar. Comentar que siempre encuentra una solución, pero en tiempos inviables).
+Por tanto, el número total de nodos que habría que recorrer sería la suma de los nodos de cada nivel, que podemos expresar como:
+\begin{equation} \label{geo}
+1 + 8 + 8^2 + \hdots + 8^{N^2} = \sum_{i=0}^{N^2} 8^i = \frac{8^{N^2} - 1}{8 - 1}
+\end{equation}
 
+Como en cada nodo únicamente realizamos una serie de operaciones con eficiencia constante, afirmamos que la eficiencia del algoritmo es de orden $O\left( 8^{N^2} \right)$. En particular, para un tablero estándar de ajedrez, el orden de eficiencia es: $$ O(8^{64}) = O(6.277 \cdot 10^{57} )$$
 
-%%%%%%%%%%%%%% DE AQUÍ EN ADELANTE ESTÁ REVISADO. FALTA RE-REVISAR %%%%%%%%%%
+Esta eficiencia exponencial la hemos comprobado en múltiples ocasiones a la hora de ejecutar el algoritmo, ya que aunque funciona correctamente, no da una solución en un tiempo razonable para todas las posiciones iniciales.\\
+
+Otra forma de analizar la eficiencia teórica sería resolver la ecuación en recurrencia: $$\begin{cases} T(1) = 8\\
+                             T(N) = 8T(N-1)
+\end{cases}$$ pues en cada paso se realizan, como mucho, $8$ llamadas recursivas, donde habría una casilla menos por rellenar. Esta ecuación en recurrencia no es sino otra forma de expresar la progresión geométrica \eqref{geo}, ya que en cada paso se multiplica por un término constante, concretamente $8$, que es la razón de la progresión.
+
+%%% TODO: revisar ecuación en recurrencia
 
 \section*{Problema real}
 
@@ -260,7 +270,7 @@ No se nos ocurre ninguna situación real de aplicación del problema del recorri
 \section*{Compilación y ejecución del proyecto}
 Para compilar este proyecto simplemente hay que situarse en la carpeta \verb|p4_backtracking| y ejecutar el comando \verb|make|.\\
 
-Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro el tamaño del tablero, y opcionalmente la posición inicial del caballo. Un ejemplo del formato completo sería el siguiente: \verb|./bin/main 8 1 1|.\\
+Una vez compilado, si estamos situados en la misma carpeta ejecutamos \verb|./bin/main| pasando como parámetro el tamaño del tablero, y opcionalmente la posición inicial del caballo. Un ejemplo del formato completo sería el siguiente: \verb|./bin/main 8 0 0|.\\
 
 Si $N$ es el tamaño del tablero, las posiciones del caballo comienzan en $0$ y acaban en $N-1$, tanto para las filas como para las columnas.
 

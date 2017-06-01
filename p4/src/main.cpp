@@ -40,8 +40,8 @@ int main(int argc, char* argv[]) {
     sol_particular = true;
   }
   else {
-    // Empezamos en (N-1,0)
-    pos_inicial.i = N-1;
+    // Empezamos en (0,0)
+    pos_inicial.i = 0;
     pos_inicial.j = 0;
   }
 
