@@ -156,17 +156,17 @@ La solución es una secuencia de pasos que reflejan el movimiento del caballo a 
 
 \section*{Técnica utilizada}
 
-Es obvio que podemos representar nuestro problema utilizando un grafo, en particular, un árbol de estados, donde los nodos serían los tableros con las posibles posiciones del caballo en cada paso. La raíz sería un tablero con la posición inicial, que en cada nivel se va ramificando para permitirnos considerar todas las opciones de desplazamiento disponibles. De las dos técnicas estudiadas para exploración de grafos hemos utilizado \textit{BackTracking} porque consideramos que se adapta mejor al problema que nos enfrentamos.\\
+Notemos que podemos representar nuestro problema utilizando un grafo, en particular, un árbol de estados, donde los nodos serían los tableros con las posibles posiciones del caballo en cada paso. La raíz sería un tablero con la posición inicial, que en cada nivel se va ramificando para permitirnos considerar todas las opciones de desplazamiento disponibles. De las dos técnicas estudiadas para exploración de grafos hemos utilizado \textit{BackTracking} porque consideramos que se adapta mejor al problema que nos enfrentamos.\\
 
 \textit{Branch\&Bound} es un procedimiento enfocado a resolver problemas de optimización, ya que se aprovecha del uso de cotas. En este caso, como simplemente queremos llegar a una solución sin minimizar ni maximizar ninguna función objetivo, no necesitamos esta técnica.
 
 \begin{figure}[h]
   \centering
-\includegraphics[scale=1.3]{img/arbol-estados.pdf}
+\includegraphics[scale=2]{img/arbol-estados.pdf} 
 \caption{Representación simplificada del árbol de estados} \label{fig:árbol}
 \end{figure}
 
-En la representación del árbol de estados, cada nodo tendría 8 hijos (tantos como posibles movimientos del caballo), pero solo se ven el primero y el último por cuestiones de espacio. Además, el problema en su versión más conocida se enuncia en un tablero de $8\times 8$, que tampoco se muestra completo en los nodos porque el mismo problema de espacio.
+En la representación del árbol de estados, cada nodo tendría 8 hijos (tantos como posibles movimientos del caballo), pero solo se ven el primero y el último por cuestiones de espacio. Además, el problema en su versión más conocida se enuncia en un tablero de $8\times 8$, que tampoco se muestra completo en los nodos por el mismo problema de espacio.
 
 \section*{Diseño de la solución}
 
@@ -274,11 +274,9 @@ Como en cada nodo únicamente realizamos una serie de operaciones con eficiencia
 
 Esta eficiencia exponencial la hemos comprobado en múltiples ocasiones a la hora de ejecutar el algoritmo, ya que aunque funciona correctamente, no da una solución en un tiempo razonable para todas las posiciones iniciales.\\
 
-Otra forma de analizar la eficiencia teórica sería resolver la ecuación en recurrencia: $$\begin{cases} T(1) = 8\\
+Otra forma de analizar la eficiencia teórica sería resolver la ecuación en recurrencia: $$\begin{cases} T(1) = 1\\
                              T(N) = 8T(N-1)
 \end{cases}$$ pues en cada paso se realizan como mucho, $8$ llamadas recursivas, donde habría una casilla menos por rellenar. Esta ecuación en recurrencia no es sino otra forma de expresar la progresión geométrica \eqref{geo}, ya que en cada paso se multiplica por un término constante, concretamente $8$, que es la razón de la progresión.
-
-%%% TODO: revisar ecuación en recurrencia
 
 \section*{Problema real}
 
