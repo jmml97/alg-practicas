@@ -162,7 +162,7 @@ Es obvio que podemos representar nuestro problema utilizando un grafo, en partic
 
 \begin{figure}[h]
   \centering
-\includegraphics[scale=1.3]{img/arbol-estados.pdf}
+\includegraphics[scale=1.8]{img/arbol-estados.pdf}
 \caption{Representación simplificada del árbol de estados} \label{fig:árbol}
 \end{figure}
 
@@ -250,6 +250,12 @@ Por último, comentaremos el programa principal \verb|main|, donde diferenciamos
 %%% TODO: completar. Considerar hacer el ejemplo para un tamaño pequeño, digamos 5x5, y realizar el primer nivel y la primera vuelta atrás, suponiendo que no encuentra la solución. Suponer que en el segundo movimiento ya la encuentra.
 
 Supongamos que llamamos a nuestro  programa pasándole como parámetro un 5, que indicará el número de filas y columnas. Así, tendremos un tablero de tamaño $5\times5$ cuyos elementos están inicializado a 0. Como no pasamos ningún otro argumento al ejecutar el programa la posición inicial será la (0,0).\\
+
+\begin{figure}[H]
+  \centering
+\includegraphics[scale=1.3]{img/arbol-ejemplo.pdf}
+\caption{Representación simplificada del árbol de estados del ejemplo} \label{fig:árbol-ejemplo}
+\end{figure}
 
 Invocamos el procedimiento BackTracking pasándole como parámetros el tablero ya inicializado, y por referencia (para evitar el elevado coste que provocaría la copia, ya que llamaremos recursivamente a este procedimiento); la posición inicial; y 1 como número de paso.\\
 
