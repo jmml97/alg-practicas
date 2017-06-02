@@ -160,13 +160,13 @@ Es obvio que podemos representar nuestro problema utilizando un grafo, en partic
 
 \textit{Branch\&Bound} es un procedimiento enfocado a resolver problemas de optimización, ya que se aprovecha del uso de cotas. En este caso, como simplemente queremos llegar a una solución sin minimizar ni maximizar ninguna función objetivo, no necesitamos esta técnica.
 
-%%%TODO: dibujar árbol de estados.
-
 \begin{figure}[h]
   \centering
-\includegraphics[scale=2]{img/arbol-estados.pdf} 
-\caption{Representación del árbol de estados (sólo se muestran estados factibles)} \label{fig:árbol}
+\includegraphics[scale=1.3]{img/arbol-estados.pdf}
+\caption{Representación simplificada del árbol de estados} \label{fig:árbol}
 \end{figure}
+
+En la representación del árbol de estados, cada nodo tendría 8 hijos (tantos como posibles movimientos del caballo), pero solo se ven el primero y el último por cuestiones de espacio. Además, el problema en su versión más conocida se enuncia en un tablero de $8\times 8$, que tampoco se muestra completo en los nodos porque el mismo problema de espacio.
 
 \section*{Diseño de la solución}
 
@@ -249,16 +249,16 @@ Por último, comentaremos el programa principal \verb|main|, donde diferenciamos
 
 %%% TODO: completar. Considerar hacer el ejemplo para un tamaño pequeño, digamos 5x5, y realizar el primer nivel y la primera vuelta atrás, suponiendo que no encuentra la solución. Suponer que en el segundo movimiento ya la encuentra.
 
-Supongamos que llamamos a nuestro  programa pasándole como parámetro un 5, que indicará el número de filas y columnas.
+Supongamos que llamamos a nuestro  programa pasándole como parámetro un 5, que indicará el número de filas y columnas. Así, tendremos un tablero de tamaño $5\times5$ cuyos elementos están inicializado a 0. Como no pasamos ningún otro argumento al ejecutar el programa la posición inicial será la (0,0).\\
 
-Así, tendremos un tablero de tamaño $5\times5$ cuyos elementos están inicializado a 0. Como no pasamos ningún otro argumento al ejecutar el programa la posición inicial será la (0,0).
-
-Invocamos el procedimiento BackTracking pasándole como parámetros el tablero ya inicializado, por referencia (para evitar el elevado coste que provocaría la copia, ya que llamaremos recursivamente a este procedimiento); la posición inicial; y 1 como número de paso.
+Invocamos el procedimiento BackTracking pasándole como parámetros el tablero ya inicializado, y por referencia (para evitar el elevado coste que provocaría la copia, ya que llamaremos recursivamente a este procedimiento); la posición inicial; y 1 como número de paso.\\
 
 Lo primero que se hace es actualizar el contenido de la posición pasada al número de paso correspondiente. Nuestro tablero tendría entonces un 1 en la posición (0,0) y el resto continuaría a 0.
-Se comprueba si estamos en el último paso y, como no lo estamos, continuamos con la ejecución de un bucle \verb|for| en el que se irán explorando los movimientos que puede realizar el caballo. La posición nueva será $(0,0)+$\verb|movimientos[0]|$=(0,0)+(2,1)$ (donde \verb|movimientos| es el vector que almacena las posibles opciones de desplazamiento del caballo). Como esta posición se encuentra en el tablero y además no se ha pasado por ella, se cumple la condición para volver a llamar a la función BackTracking donde el paso será 2 e irá realizando el mismo algoritmo de forma recursiva. Una vez resuelta la recursividad, la función devolverá \textit{true} o \textit{false}.
+Se comprueba si estamos en el último paso y, como no lo estamos, continuamos con la ejecución de un bucle \verb|for| en el que se irán explorando los movimientos que puede realizar el caballo. La posición nueva será $(0,0)+$\verb|movimientos[0]|$=(0,0)+(2,1)$, donde \verb|movimientos| es el vector que almacena las posibles opciones de desplazamiento del caballo. Como esta posición se encuentra en el tablero y además no se ha pasado por ella, se cumple la condición para volver a llamar a la función BackTracking donde el paso será 2 e irá realizando el mismo algoritmo de forma recursiva. Una vez resuelta la recursividad, la función devolverá \textit{true} o \textit{false}.\\
 
-Si devuelve \textit{true} es porque ya ha finalizado, pero si devuelve \textit{false} es porque a partir de la casilla actual no existe una solución, por lo que volvemos a poner a 0 su contenido (dicho contenido cambió al llamar a la función para esta casilla). Continúa con la ejecución del bucle actualizando la posición y ejecutando el mismo algoritmo otra vez para el paso 2.
+Si devuelve \textit{true} es porque ya ha finalizado, es decir, se han ido produciendo las sucesivas llamadas al algoritmo hasta llegar al paso $N^2 = 25$, y se ha encontrado una solución. Pero si devuelve \textit{false} es porque a partir de la casilla actual no existe una solución para el movimiento elegido, por lo que volvemos a poner a 0 su contenido (dicho contenido cambió al llamar a la función para esta casilla). Continúa con la ejecución del bucle actualizando la posición a la siguiente que haya en el vector, es decir, $(0,0)+$\verb|movimientos[1]|, y ejecutando el mismo algoritmo otra vez para el paso 2.\\
+
+Este proceso se repite hasta que el algoritmo finalmente encuentre una solución, que sabemos que ocurre siempre si $N\ge5$, por lo que en este caso sí la encontrará.
 
 
 \section*{Eficiencia teórica}
